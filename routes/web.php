@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Portal\PortalController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::redirect('/', 'portal');
+
+Route::group(['prefix' => 'portal'], function () {
+    Route::get('/', [PortalController::class, 'index']);
+    // route lain portal tambahin di bawah sini
+});
+
+
+Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
+    Route::get('/', [DashboardController::class, 'home']);
+    // route lain dashboard tambahin di bawah sini
 });
