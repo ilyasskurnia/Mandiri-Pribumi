@@ -26,8 +26,16 @@ Route::group(['prefix' => 'portal'], function () {
     // route lain portal tambahin di bawah sini
 });
 
+Auth::routes();
 
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
-    Route::get('/', [DashboardController::class, 'home']);
-    // route lain dashboard tambahin di bawah sini
+    // Rute untuk halaman login kustom
+    Route::get('login', [DashboardController::class, 'login'])->name('dashboard.login');
+
+    
+    Route::get('/', [DashboardController::class, 'dashboard.home']);
+    // tambahkan rute lain untuk dashboard di sini
 });
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

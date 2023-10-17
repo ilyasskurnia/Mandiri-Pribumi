@@ -7,9 +7,12 @@ use App\Http\Controllers\Controller;
 
 class DashboardController extends Controller
 {
+    public function login (){
+        return view('dashboard.auth.login');
+    }
     public function index()
     {
-        return view('dashboard.pages.dashboard-home');
+        return view('dashboard.pages.home');
     }
 
     // buat nambahin function lain disini ges
