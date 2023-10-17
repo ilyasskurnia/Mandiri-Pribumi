@@ -11,6 +11,10 @@ class PortalController extends Controller
     {
         return view('portal.pages.index');
     }
+    public function tentang()
+    {
+        return view('portal.pages.tentang');
+    }
 
    // buat nambahin function lain disini ges
 }
