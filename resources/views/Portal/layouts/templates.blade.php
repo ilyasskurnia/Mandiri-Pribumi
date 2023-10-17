@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Travel</title>
+    <title>Mandiri Pribumi</title>
 
     <!-- Tautan ke stylesheet Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="{!! asset('images/favicon.png') !!}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
     <!-- CSS tambahan untuk mempercantik tampilan -->
     <style>
@@ -53,6 +55,14 @@
             color: #000;
             text-align: center;
             padding: 10px 0;
+        }
+        
+        .address a {
+            display: block; /* Membuat setiap tautan menjadi blok */
+            font-family: 'Sora', sans-serif;
+            text-decoration: none; /* Menghilangkan dekorasi teks */
+            margin-top: 25px; /* Jarak antar tautan */
+            text-align: left;
         }
 
         .footer a {
@@ -117,25 +127,26 @@
     @yield('content')
     <!-- Ini adalah area konten yang akan disesuaikan oleh halaman yang menggunakan layout.templates -->
 
-    <footer class="footer">
+    <footer class="footer mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <!-- Bagian kiri (logo besar) -->
                     <img src="{{ asset('images/logo-footer.png') }}" alt="Logo Perusahaan" class="img-fluid">
                 </div>
-                <div class="col-lg-4">
-                    <!-- Bagian tengah (alamat) -->
-                    <p style="font-family: 'Sora', sans-serif;">Alamat Perusahaan:</p>
-                    <p style="font-family: 'Sora', sans-serif;">Jalan Perjalanan No. 123</p>
-                    <p style="font-family: 'Sora', sans-serif;">Kota Wisata, 12345</p>
-                    <p style="font-family: 'Sora', sans-serif;">Indonesia</p>
+                <div class="col-lg-4 ps-5">
+                    <div class="address">
+                        <a href="#" style="font-family: 'Sora', sans-serif;">Tentang Kami</a>
+                        <a href="#" style="font-family: 'Sora', sans-serif;">Destinasi</a>
+                        <a href="#" style="font-family: 'Sora', sans-serif;">Galeri</a>
+                        <a href="#" style="font-family: 'Sora', sans-serif;">Hubungi Kami</a>
+                    </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 mt-4">
                     <!-- Bagian kanan (contact us dan ikon sosial media) -->
-                    <h5 style="font-family: 'Sora', sans-serif;">Contact Us</h5>
+                    <h5 style="font-family: 'Sora', sans-serif;">Cari tau lebih tentang kami !!!</h5>
                     <ul class="list-unstyled d-flex justify-content-between" style="font-size: 24px;">
-                        <li><a href="#" style="color: #000;"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" style="color: #000; "><i class="fab fa-instagram"></i></a></li>
                         <li><a href="#" style="color: #000;"><i class="fab fa-youtube"></i></a></li>
                         <li><a href="#" style="color: #000;"><i class="fab fa-tiktok"></i></a></li>
                         <li><a href="#" style="color: #000;"><i class="fab fa-whatsapp"></i></a></li>
@@ -143,7 +154,7 @@
                 </div>
             </div>
         </div>
-        <div class="text-center mt-4" style="font-family: 'Sora', sans-serif;">
+        <div class="text-center mt-5" style="font-family: 'Sora', sans-serif;">
             <p>&copy; 2023 Mandiri Pribumi Tour & Travel</p>
         </div>
     </footer>
