@@ -65,24 +65,17 @@
         padding: 5px;
         margin-top: -70px;
         /* Atur margin negatif untuk tumpang tindih dengan Section 1 */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
         max-width: 1300px;
         /* Atur lebar maksimal */
         margin-left: auto;
         margin-right: auto;
     }
+    
 
     a:hover i.fab.fa-whatsapp {
         color: #25d366;
         /* Warna hijau WhatsApp */
-    }
-
-
-    .tagline {
-        text-align: left;
-        padding: 20px 0;
-        font-family: 'Sora', sans-serif;
-        margin-left: 150px;
     }
 
     .tagline p {
@@ -138,6 +131,10 @@
         /* Atur ukuran judul sesuai kebutuhan */
         margin-bottom: 0.25rem;
         /* Tambahkan margin bawah jika diperlukan */
+    }
+
+    .floating-tagline {
+        box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
     }
 
     .card-subtitle {
@@ -306,7 +303,7 @@
 
 <!-- Section 2: Floating Container -->
 <section class="floating-container">
-    <div class="container my-5">
+    <div class="container mt-3 mb-2">
         <div class="row">
             <div class="col-md-6 col-lg-3">
                 <h5>Selamat datang di,</h5>
@@ -314,43 +311,51 @@
                 <p>Rasakan keajaiban Indonesia melalui perjalanan unik dengan alam dan kuliner lokal yang istimewa.</p>
             </div>
             <div class="col-md-6 col-lg-3">
-                <i class="fas fa-hiking fa-3x"></i>
-                <h3>Ekspedisi</h3>
-                <p>Jelajahi alam dengan berbagai destinasi ekspedisi.</p>
+                <div class="text-center mt-3">
+                    <i class="fa-solid fa-route fa-2xl"></i>
+                    {{-- <h3>Ekspedisi</h3> --}}
+                    <p class="mt-5">Menjelahi Pesona Alam Nusantara Bersama Mandiri Pribumi</p>
+                </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <i class="fas fa-umbrella-beach fa-3x"></i>
-                <h3>Pantai</h3>
-                <p>Nikmati matahari dan pantai yang indah.</p>
+                <div class="text-center mt-3">
+                    <i class="fa-solid fa-utensils fa-2xl"></i>
+                    {{-- <h3>Pantai</h3> --}}
+                    <p class="mt-5">Jelajahi Cita Rasa Kuliner Nusantara Bersama Mandiri Pribumi</p>
+                </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <i class="fas fa-plane fa-3x"></i>
-                <h3>Perjalanan Udara</h3>
-                <p>Terbang ke destinasi impian Anda dengan kenyamanan.</p>
+                <div class="text-center mt-3">
+                    <i class="fa-solid fa-plane-departure fa-2xl"></i>
+                    {{-- <h3>Perjalanan Udara</h3> --}}
+                    <p class="mt-5">Menjelajahi dan melestarikan aneka budaya Nusantara Bersama Mandiri Pribumi</p>
+                </div>
             </div>
         </div>
         <hr> <!-- Garis horizontal di bawah konten row -->
         <div class="row">
             <div class="col-md-6 col-lg-6">
-                <h2><b>#Mari Jelajah Nusantara</b></h2>
+                <h2 style="floating-tagline"><b>#Mari Jelajah Nusantara !</b></h2>
             </div>
-            <div class="col-md-6 col-lg-6 d-flex justify-content-end align-items-center">
+            <div class="col-md-6 col-lg-6 d-flex justify-content-end align-items-center" >
                 <a href="https://wa.me/your-whatsapp-number" target="_blank"
                     style="text-decoration: none; color: inherit;">
                     <i class="fab fa-whatsapp fa-3x"></i>
-                    <span style="margin-left: 12px;">
-                        <h2><b>Pesan Sekarang</b></h2>
-                    </span>
                 </a>
+                <h3 class="ps-3"><b>Pesan Sekarang</b></h3>
             </div>
         </div>
     </div>
 </section>
 
+<section class="video-section">
+    <div class="container my-5 mt-5">
 <!-- Tagline -->
-<div class="tagline mt-5">
-    <p><b>Nikmati Keindahan <span style="color: red;">Bumi Nusantara</span> Bersama Kami</b></p>
-</div>
+        <div class="tagline mt-5">
+            <p><b>Nikmati <span style="color: red;">Keindahan</span> Bumi Nusantara <span style="color: red;">Bersama Kami</span></b></p>
+        </div>
+    </div>
+</section>
 
 <!-- Section 3: Video and Greetings -->
 <section class="video-section">

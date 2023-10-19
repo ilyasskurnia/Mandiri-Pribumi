@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Portal\PortalController;
 use Illuminate\Support\Facades\Route;
@@ -25,18 +26,18 @@ Route::group(['prefix' => 'portal'], function () {
     Route::get('/', [PortalController::class, 'index']);
     // route lain portal tambahin di bawah sini
     Route::get('/tentang', [PortalController::class, 'tentang']);
+    Route::get('/galeri', [PortalController::class, 'galeri']);
 });
 
-Auth::routes();
+// Auth::routes();
 
-Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
-    // Rute untuk halaman login kustom
-    Route::get('login', [DashboardController::class, 'login'])->name('dashboard.login');
-
-    
-    Route::get('/', [DashboardController::class, 'dashboard.home']);
+Route::group(['prefix' => 'dashboard'], function () {
+    Route::get('/', [DashboardController::class, 'home']);
     // tambahkan rute lain untuk dashboard di sini
 });
 
+// 'middleware' => 'auth'
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/login', [LoginController::class, 'login']);
+Route::post('/login', [LoginController::class, 'authenticate']);
+
