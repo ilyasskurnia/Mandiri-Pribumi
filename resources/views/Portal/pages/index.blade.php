@@ -407,7 +407,7 @@
                                         </div>
                                         <p class="card-text mt-4"><b>Monumen Bajra Sandhi - GWK Cultural Park - Pura
                                                 Uluwatu dll.</b></p>
-                                        <a href="#" class="btn btn-primary"
+                                        <a href="/portal/detaildestinasibali" class="btn btn-primary"
                                             style="background-color: #2622DE; color: #fff;">Selengkapnya</a>
                                     </div>
                                 </div>
@@ -429,7 +429,7 @@
                                         </div>
                                         <p class="card-text mt-4"><b>Candi Borobudur-Candi Prambanan-Keraton
                                                 Yogyakarta-Gua Pindul</b></p>
-                                        <a href="#" class="btn btn-primary"
+                                        <a href="/portal/detaildestinasijogja" class="btn btn-primary"
                                             style="background-color: #2622DE; color: #fff;">Selengkapnya</a>
                                     </div>
                                 </div>

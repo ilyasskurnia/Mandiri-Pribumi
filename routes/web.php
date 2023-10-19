@@ -26,7 +26,8 @@ Route::group(['prefix' => 'portal'], function () {
     Route::get('/', [PortalController::class, 'index']);
     // route lain portal tambahin di bawah sini
     Route::get('/tentang', [PortalController::class, 'tentang']);
-    Route::get('/galeri', [PortalController::class, 'galeri']);
+    Route::get('/detaildestinasibali', [PortalController::class, 'detaildestinasibali']);
+    Route::get('/detaildestinasijogja', [PortalController::class, 'detaildestinasijogja']);
 });
 
 // Auth::routes();
