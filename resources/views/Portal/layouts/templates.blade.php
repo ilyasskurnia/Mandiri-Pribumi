@@ -123,11 +123,7 @@
                         <a class="nav-link" href="#">Destinasi</a>
                     </li>
                     <li class="nav-item">
-<<<<<<< HEAD
                         <a class="nav-link" href="#">Artikel</a>
-=======
-                        <a class="nav-link" href="{{ url('/portal/tentang')}}">Tentang Kami</a>
->>>>>>> 3ac2c933463227f467c2322da75ee09c14adf524
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Kontak Kami</a>
@@ -158,11 +154,7 @@
                 <div class="col-lg-4 mt-4">
                     <!-- Bagian kanan (contact us dan ikon sosial media) -->
                     <h5 style="font-family: 'Sora', sans-serif;">Cari tau lebih tentang kami !!!</h5>
-<<<<<<< HEAD
                     <ul class="list-unstyled d-flex justify-content-evenly" style="font-size: 40px;">
-=======
-                    <ul class="list-unstyled d-flex justify-content-between mt-5" style="font-size: 36px;">
->>>>>>> 3ac2c933463227f467c2322da75ee09c14adf524
                         <li><a href="#" style="color: #000; "><i class="fab fa-instagram"></i></a></li>
                         <li><a href="#" style="color: #000;"><i class="fab fa-youtube"></i></a></li>
                         <li><a href="#" style="color: #000;"><i class="fab fa-tiktok"></i></a></li>
