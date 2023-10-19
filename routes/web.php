@@ -25,6 +25,7 @@ Route::group(['prefix' => 'portal'], function () {
     Route::get('/', [PortalController::class, 'index']);
     // route lain portal tambahin di bawah sini
     Route::get('/tentang', [PortalController::class, 'tentang']);
+    Route::get('/detaildestinasi', [PortalController::class, 'detaildestinasi']);
 });
 
 Auth::routes();

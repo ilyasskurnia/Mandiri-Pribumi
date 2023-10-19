@@ -105,7 +105,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Beranda</a>
+                        <a class="nav-link" href="{{ url('/portal')}}">Beranda</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Galeri</a>
@@ -114,7 +114,7 @@
                         <a class="nav-link" href="#">Destinasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tentang Kami</a>
+                        <a class="nav-link" href="{{ url('/portal/tentang')}}">Tentang Kami</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Kontak Kami</a>
@@ -136,7 +136,7 @@
                 </div>
                 <div class="col-lg-4 ps-5">
                     <div class="address">
-                        <a href="#" style="font-family: 'Sora', sans-serif;">Tentang Kami</a>
+                        <a href="{{ url('/portal/tentang')}}" style="font-family: 'Sora', sans-serif;">Tentang Kami</a>
                         <a href="#" style="font-family: 'Sora', sans-serif;">Destinasi</a>
                         <a href="#" style="font-family: 'Sora', sans-serif;">Galeri</a>
                         <a href="#" style="font-family: 'Sora', sans-serif;">Hubungi Kami</a>
