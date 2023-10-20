@@ -7,10 +7,10 @@ use App\Http\Controllers\Controller;
 
 class DashboardController extends Controller
 {
-    public function login (){
-        return view('dashboard.auth.login');
-    }
-    public function index()
+    // public function login (){
+    //     return view('dashboard.auth.login');
+    // }
+    public function home()
     {
         return view('dashboard.pages.home');
     }
