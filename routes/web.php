@@ -26,6 +26,9 @@ Route::group(['prefix' => 'portal'], function () {
     Route::get('/', [PortalController::class, 'index']);
     // route lain portal tambahin di bawah sini
     Route::get('/tentang', [PortalController::class, 'tentang']);
+    Route::get('/destinasi', [PortalController::class, 'destinasi']);
+    Route::get('/kontak', [PortalController::class, 'kontak']);
+    Route::get('/detailartikel', [PortalController::class, 'detailartikel']);
     Route::get('/artikel', [PortalController::class, 'artikel']);
     Route::get('/detaildestinasibali', [PortalController::class, 'detaildestinasibali']);
     Route::get('/detaildestinasijogja', [PortalController::class, 'detaildestinasijogja']);
@@ -34,6 +37,12 @@ Route::group(['prefix' => 'portal'], function () {
 
 // Auth::routes();
 
+Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
+    // Rute untuk halaman login kustom
+    Route::get('login', [DashboardController::class, 'login'])->name('dashboard.login');
+
+
+    Route::get('/', [DashboardController::class, 'dashboard.home']);
 Route::group(['prefix' => 'dashboard'], function () {
     Route::get('/', [DashboardController::class, 'home']);
     // tambahkan rute lain untuk dashboard di sini

@@ -71,7 +71,7 @@
         margin-left: auto;
         margin-right: auto;
     }
-    
+
 
     a:hover i.fab.fa-whatsapp {
         color: #25d366;
@@ -295,7 +295,7 @@
         <h1><span style="color: #51604F;"><b>Jelajahi</b></span></h1>
         <h1><b>Nusantara</b></h1>
         <p>Jelajahi indahnya <br>
-            ladscape Nusantara
+            landscape Nusantara
         </p>
 
     </div>
@@ -544,6 +544,7 @@
         </div>
     </div>
 </section>
+@endsection
 
 <!-- Section 5: Mitra Kami -->
 <section class="text-center mt-5">
