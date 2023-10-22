@@ -75,7 +75,7 @@
         <h1><span style="color: #51604F;"><b>Jelajahi</b></span></h1>
         <h1><b>Nusantara</b></h1>
         <p>Jelajahi indahnya <br>
-            ladscape Nusantara
+            landscape Nusantara
         </p>
 
     </div>
