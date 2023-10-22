@@ -79,6 +79,7 @@
     .right-box {
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
         border-radius: 12px;
+        background: #fff;
     }
     .right-box-title {
         border-radius: 12px 12px 0 0;
@@ -153,22 +154,104 @@
     <div class="container-box">
         <div class="left-box">
             <div class="left-box-title">
-                <p>Paket Destinasi</p>
+                <h4>Paket Destinasi</h4>
             </div>
             <div class="left-box-content">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aperiam ab at. Placeat fugit animi aspernatur alias iusto recusandae, quod dignissimos beatae voluptates eligendi ea a, ullam asperiores omnis illum.
-                </p>
+                <div class="container">
+                    <div class="row mt-4 justify-content-between">
+                        <div class="col-1">
+                            <img width="200" height="150" src="{{URL::asset('/images/destinasi2.png') }}" alt="">
+                        </div>
+                        <div class="col-7 mt-4">
+                            <h5>Bali</h5>
+                            <p style="color: #626262">4 Hari 3 Malam</p>
+                            <h6>Start from 1250k/pax</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row mt-4 justify-content-between">
+                        <div class="col-1">
+                            <img width="200" height="150" src="{{URL::asset('/images/destinasi1.png') }}" alt="">
+                        </div>
+                        <div class="col-7 mt-4">
+                            <h5>Yogyakarta</h5>
+                            <p style="color: #626262">2 Hari 1 Malam</p>
+                            <h6>Start from 330k/pax</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row mt-4 justify-content-between">
+                        <div class="col-1">
+                            <img width="200" height="150" src="{{URL::asset('/images/destinasi3.png') }}" alt="">
+                        </div>
+                        <div class="col-7 mt-4">
+                            <h5>Karimun Jawa</h5>
+                            <p style="color: #626262">3 Hari 2 Malam</p>
+                            <h6>Start from 1500k/pax</h6>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="right-box">
             <div class="right-box-title">
-                <p>Artikel</p>
+                <h4>Pesan Masuk</h4>
             </div>
             <div class="right-box-content">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aperiam ab at. Placeat fugit animi aspernatur alias iusto recusandae, quod dignissimos beatae voluptates eligendi ea a, ullam asperiores omnis illum.
-                </p>
+                <div class="container">
+                    <div class="row mt-4 justify-content-between">
+                        <div class="col-sm-3">
+                            <h6>Ilyas Kurnia Ramadhan</h6>
+                        </div>
+                        <div class="col-sm-7">
+                            <p style="color: #626262">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                        <div class="col-sm-2">
+                            <h6>19.30</h6>
+                        </div>
+                    </div>
+                </div><hr>
+                <div class="container">
+                    <div class="row mt-4 justify-content-between">
+                        <div class="col-sm-3">
+                            <h6>Adnin Ramadhani</h6>
+                        </div>
+                        <div class="col-sm-7">
+                            <p style="color: #626262">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                        <div class="col-sm-2">
+                            <h6>19.30</h6>
+                        </div>
+                    </div>
+                </div><hr>
+                <div class="container">
+                    <div class="row mt-4 justify-content-between">
+                        <div class="col-sm-3">
+                            <h6>Naufal Nabil</h6>
+                        </div>
+                        <div class="col-sm-7">
+                            <p style="color: #626262">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                        <div class="col-sm-2">
+                            <h6>19.30</h6>
+                        </div>
+                    </div>
+                </div><hr>
+                <div class="container">
+                    <div class="row mt-4 justify-content-between">
+                        <div class="col-sm-3">
+                            <h6>Hastyantoko Dwiki</h6>
+                        </div>
+                        <div class="col-sm-7">
+                            <p style="color: #626262">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                        <div class="col-sm-2">
+                            <h6>19.30</h6>
+                        </div>
+                    </div>
+                </div><hr>
             </div>
         </div>
     </div>
