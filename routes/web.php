@@ -43,12 +43,8 @@ Route::group(['prefix' => 'portal'], function () {
 
 
 //     Route::get('/', [DashboardController::class, 'dashboard.home']);
-<<<<<<< HEAD
 
-Route::group(['prefix' => 'dashboard'], function () {
-=======
     Route::group(['prefix' => 'dashboard'], function () {
->>>>>>> 88682dbb1243035bb6f0d560be3dab94105a24e8
     Route::get('/', [DashboardController::class, 'home']);
     // tambahkan rute lain untuk dashboard di sini
     Route::get('/artikel', [DashboardController::class, 'artikel']);
