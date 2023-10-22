@@ -114,19 +114,19 @@
                         <a class="nav-link" href="{{ url('/portal')}}">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tentang Kami</a>
+                        <a class="nav-link" href="{{ url('/portal/tentang')}}">Tentang Kami</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Galeri</a>
+                        <a class="nav-link" href="{{ url('/portal/galeri')}}">Galeri</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Destinasi</a>
+                        <a class="nav-link" href="{{ url('/portal/destinasi')}}">Destinasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Artikel</a>
+                        <a class="nav-link" href="{{ url('/portal/artikel')}}">Artikel</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Kontak Kami</a>
+                        <a class="nav-link" href="{{ url('/portal/kontak')}}">Kontak Kami</a>
                     </li>
                 </ul>
             </div>
@@ -146,9 +146,9 @@
                 <div class="col-lg-4 ps-5">
                     <div class="address">
                         <a href="{{ url('/portal/tentang')}}" style="font-family: 'Sora', sans-serif;">Tentang Kami</a>
-                        <a href="#" style="font-family: 'Sora', sans-serif;">Destinasi</a>
-                        <a href="#" style="font-family: 'Sora', sans-serif;">Galeri</a>
-                        <a href="#" style="font-family: 'Sora', sans-serif;">Hubungi Kami</a>
+                        <a href="{{ url('/portal/destinasi')}}" style="font-family: 'Sora', sans-serif;">Destinasi</a>
+                        <a href="{{ url('/portal/galeri')}}" style="font-family: 'Sora', sans-serif;">Galeri</a>
+                        <a href="{{ url('/portal/kontak')}}" style="font-family: 'Sora', sans-serif;">Hubungi Kami</a>
                     </div>
                 </div>
                 <div class="col-lg-4 mt-4">
