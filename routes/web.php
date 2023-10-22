@@ -37,6 +37,10 @@ Route::group(['prefix' => 'portal'], function () {
 Route::group(['prefix' => 'dashboard'], function () {
     Route::get('/', [DashboardController::class, 'home']);
     // tambahkan rute lain untuk dashboard di sini
+    Route::get('/artikel', [DashboardController::class, 'artikel']);
+    Route::get('/pesan', [DashboardController::class, 'pesan']);
+    Route::get('/galeri', [DashboardController::class, 'galeri']);
+    Route::get('/paketdestinasi', [DashboardController::class, 'paketdestinasi']);
 });
 
 // 'middleware' => 'auth'
