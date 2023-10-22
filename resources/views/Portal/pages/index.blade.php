@@ -451,7 +451,7 @@
                                         </div>
                                         <p class="card-text mt-4"><b>Pantai Tanjung Gelam-Sonrkeling: Karang Bintang
                                                 Maer</b></p>
-                                        <a href="#" class="btn btn-primary"
+                                        <a href="/portal/detaildestinasikarimun" class="btn btn-primary"
                                             style="background-color: #2622DE; color: #fff;">Selengkapnya</a>
                                     </div>
                                 </div>
@@ -473,7 +473,7 @@
                                     </picture>
                                     <div class="card-body">
                                         <h5 class="card-title">Banda Neira</h5>
-                                        <h6 class="card-subtitle mb-2 text-muted">2 Hari 1 Malam</h6>
+                                        <h6 class="card-subtitle mb-2 text-muted">4 Hari 3 Malam</h6>
                                         <div class="card-price">
                                             <p class="start-from">Start from</p>
                                             <p class="price">Rp. 330K/pax</p>
@@ -516,7 +516,7 @@
                                             style="max-width: 100%; height: auto;">
                                     </picture>
                                     <div class="card-body">
-                                        <h5 class="card-title">Gunung Merbabu</h5>
+                                        <h5 class="card-title">Malang Batu Bromo</h5>
                                         <h6 class="card-subtitle mb-2 text-muted">2 Hari 1 Malam</h6>
                                         <div class="card-price">
                                             <p class="start-from">Start from</p>

@@ -201,10 +201,10 @@
 </style>
 
 <!-- Section 1: Banner -->
-<section class="banner-section" style="background-image: url('{{ asset('images/detailbannerbali.png') }}');">
+<section class="banner-section" style="background-image: url('{{ asset('images/detailbannerbali.jpg') }}');">
     <div class="container text-right mt-5">
         <h1><b>Paket Tour Bali</b></h1>
-        <h2><b>4 Hari 3 Malam</b></h2>
+        <h2><b>3 Hari 2 Malam</b></h2>
         <a href="#" class="btn-brosur" style="text-align: left; display: inline-block; margin-top: 20px;">Unduh
             Brosur</a>
     </div>
@@ -225,7 +225,7 @@
         <div class="destination-item">
             <div class="destination-layer">
                 <div class="destination-image">
-                    <img src="{{URL::asset('/images/detailbali1.jpg')}}" alt="Image 1">
+                    <img src="{{URL::asset('/images/detailbali1.png')}}" alt="Image 1">
                 </div>
             </div>
             <div class="destination-layer">
@@ -260,7 +260,7 @@
             </div>
             <div class="destination-layer">
                 <div class="destination-image">
-                    <img src="{{URL::asset('/images/detailbali2.jpg')}}" alt="Image 2">
+                    <img src="{{URL::asset('/images/detailbali2.png')}}" alt="Image 2">
                 </div>
             </div>
         </div>
@@ -269,7 +269,7 @@
         <div class="destination-item">
             <div class="destination-layer">
                 <div class="destination-image">
-                    <img src="{{URL::asset('/images/detailbali3.jpg')}}" alt="Image 3">
+                    <img src="{{URL::asset('/images/detailbali3.png')}}" alt="Image 3">
                 </div>
             </div>
             <div class="destination-layer">

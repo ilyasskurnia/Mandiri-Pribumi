@@ -228,7 +228,7 @@
         <div class="destination-item">
             <div class="destination-layer">
                 <div class="destination-image">
-                    <img src="{{URL::asset('/images/detailjogja1.jpg')}}" alt="Image 1">
+                    <img src="{{URL::asset('/images/detailjogja1.png')}}" alt="Image 1">
                 </div>
             </div>
             <div class="destination-layer">
@@ -264,7 +264,7 @@
             </div>
             <div class="destination-layer">
                 <div class="destination-image">
-                    <img src="{{URL::asset('/images/detailjogja2.jpg')}}" alt="Image 2">
+                    <img src="{{URL::asset('/images/detailjogja2.png')}}" alt="Image 2">
                 </div>
             </div>
         </div>
