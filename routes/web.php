@@ -37,12 +37,13 @@ Route::group(['prefix' => 'portal'], function () {
 
 // Auth::routes();
 
-Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
-    // Rute untuk halaman login kustom
-    Route::get('login', [DashboardController::class, 'login'])->name('dashboard.login');
+// Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
+//     // Rute untuk halaman login kustom
+//     Route::get('login', [DashboardController::class, 'login'])->name('dashboard.login');
 
 
-    Route::get('/', [DashboardController::class, 'dashboard.home']);
+//     Route::get('/', [DashboardController::class, 'dashboard.home']);
+
 Route::group(['prefix' => 'dashboard'], function () {
     Route::get('/', [DashboardController::class, 'home']);
     // tambahkan rute lain untuk dashboard di sini

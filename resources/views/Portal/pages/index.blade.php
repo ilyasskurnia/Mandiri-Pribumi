@@ -544,7 +544,6 @@
         </div>
     </div>
 </section>
-@endsection
 
 <!-- Section 5: Mitra Kami -->
 <section class="text-center mt-5">
@@ -607,6 +606,5 @@
         </div>
     </div>
 </section>
-
 
 @endsection
