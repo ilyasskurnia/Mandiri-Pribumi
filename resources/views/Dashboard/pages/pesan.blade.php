@@ -55,22 +55,22 @@
                                 <thead class="bg-grey1">
                                     <tr>
                                         <th class="text-center">No.</th>
-                                        <th class="text-center">Thumbnail</th>
-                                        <th class="text-center">Paket</th>
-                                        <th class="text-center">Waktu</th>
-                                        <th class="text-center">Biaya</th>
-                                        <th class="text-center">Rute</th>
+                                        <th class="text-center">Nama User</th>
+                                        <th class="text-center">Email</th>
+                                        <th class="text-center">Sosial Media</th>
+                                        <th class="text-center">Nomor Telepon</th>
+                                        <th class="text-center">Pesan</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="text-center">1</td>
-                                        <td class="text-center"><img style="max-height: 100px" src="{{URL::asset('/images/destinasi1.png')}}" alt=""></td>
-                                        <td class="text-center">Yogyakarta</td>
-                                        <td class="text-center">2 hari 1 Malam</td>
-                                        <td class="text-center">330k</td>
-                                        <td class="text-center">Candi Borobudur-Candi Prambanan-Keraton Yogyakarta-Gua Pindul</td>
+                                        <td class="text-center">Ilyas Kurnia Ramadhan</td>
+                                        <td class="text-center">ilyas@gmail.com</td>
+                                        <td class="text-center">Instagram : @ilyasskurnia</td>
+                                        <td class="text-center">08132666122</td>
+                                        <td class="text-center">Pelayan dari mandiri pribumi sangat ramah dan menyenangkan</td>
                                         <td>
                                             <div class="d-flex">
                                                 <button
@@ -96,11 +96,11 @@
                                     </tr>
                                     <tr>
                                         <td class="text-center">2</td>
-                                        <td class="text-center"><img style="max-height: 100px" src="{{URL::asset('/images/destinasi2.png')}}" alt=""></td>
-                                        <td class="text-center">Bali</td>
-                                        <td class="text-center">4 hari 3 Malam</td>
-                                        <td class="text-center">1.250k</td>
-                                        <td class="text-center">Monumen Bajra Sandhi - GWK Cultural Park - Pura Uluwatu dll.</td>
+                                        <td class="text-center">Adnin Ramadhani</td>
+                                        <td class="text-center">adnin@gmail.com</td>
+                                        <td class="text-center">Instagram : @adninramadhani</td>
+                                        <td class="text-center">081356789433</td>
+                                        <td class="text-center">Pelayan dari mandiri pribumi sangat ramah dan menyenangkan</td>
                                         <td>
                                             <div class="d-flex">
                                                 <button
@@ -126,11 +126,41 @@
                                     </tr>
                                     <tr>
                                         <td class="text-center">3</td>
-                                        <td class="text-center"><img style="max-height: 100px" src="{{URL::asset('/images/destinasi3.png')}}" alt=""></td>
-                                        <td class="text-center">karimun Jawa</td>
-                                        <td class="text-center">3 hari 2 Malam</td>
-                                        <td class="text-center">1.500k</td>
-                                        <td class="text-center">Pantai Tanjung Gelam-Sonrkeling: Karang Bintang Maer</td>
+                                        <td class="text-center">Naufal Nabil</td>
+                                        <td class="text-center">Naufal@gmail.com</td>
+                                        <td class="text-center">Instagram : @bilss</td>
+                                        <td class="text-center">08132687643</td>
+                                        <td class="text-center">Pelayan dari mandiri pribumi sangat ramah dan menyenangkan</td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-xs bg-primary me-1  text-white"
+                                                >
+                                                    Edit
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-xs btn-danger me-1"
+                                                >
+                                                    Delete
+                                                </button>
+                                                <button
+                                                type="button"
+                                                class="btn btn-xs btn-warning"
+                                            >
+                                                Preview
+                                            </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">4</td>
+                                        <td class="text-center">Hastyantoko Dwiki</td>
+                                        <td class="text-center">Hastyantoko@gmail.com</td>
+                                        <td class="text-center">Instagram : @dwikikhd</td>
+                                        <td class="text-center">08132687213</td>
+                                        <td class="text-center">Pelayan dari mandiri pribumi sangat ramah dan menyenangkan</td>
                                         <td>
                                             <div class="d-flex">
                                                 <button

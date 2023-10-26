@@ -31,4 +31,8 @@ class DashboardController extends Controller
     {
         return view('dashboard.pages.paketdestinasi');
     }
+    public function tambahpaket()
+    {
+        return view('dashboard.pages.destinasi.add');
+    }
 }

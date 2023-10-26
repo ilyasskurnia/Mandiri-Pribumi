@@ -42,7 +42,7 @@
                     <div class="search ">
                         <input style="border-radius: 5px;" type="text" class="form-control" placeholder="Search for...">
                     </div>
-                    <a href="#" type="button" class="btn btn-primary rounded-lg ml-auto">
+                    <a href="{{ url('/dashboard/tambahpaket')}}" type="button" class="btn btn-primary rounded-lg ml-auto">
                         <div class="fa fa-fw fa-plus mr-2"></div> Add Data 
                     </a>
                 </div>
