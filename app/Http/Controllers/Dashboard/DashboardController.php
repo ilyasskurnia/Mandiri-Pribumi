@@ -35,4 +35,12 @@ class DashboardController extends Controller
     {
         return view('dashboard.pages.destinasi.add');
     }
+    public function tambahartikel()
+    {
+        return view('dashboard.pages.artikel.add');
+    }
+    public function tambahgaleri()
+    {
+        return view('dashboard.pages.galeri.add');
+    }
 }

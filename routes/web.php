@@ -53,6 +53,8 @@ Route::group(['prefix' => 'portal'], function () {
     Route::get('/galeri', [DashboardController::class, 'galeri']);
     Route::get('/paketdestinasi', [DashboardController::class, 'paketdestinasi']);
     Route::get('/tambahpaket', [DashboardController::class, 'tambahpaket']);
+    Route::get('/tambahartikel', [DashboardController::class, 'tambahartikel']);
+    Route::get('/tambahgaleri', [DashboardController::class, 'tambahgaleri']);
 });
 
 // 'middleware' => 'auth'
