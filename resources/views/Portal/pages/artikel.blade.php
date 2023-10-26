@@ -73,7 +73,7 @@ color: #fff;
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dolor ad.
                     </p>
-                    <a href="/unduh-pdf" class="btn btn-success mb-3">SHOW MORE</a>
+                    <a href="{{ url('/portal/detailartikel') }}" class="btn btn-success mb-3">SHOW MORE</a>
                 </div>
             </div>
         </div>
@@ -95,7 +95,7 @@ color: #fff;
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dolor ad.
                 </p>
-                <a href="/unduh-pdf" class="btn btn-success mb-3">SHOW MORE</a>
+                <a href="{{ url('/portal/detailartikel') }}" class="btn btn-success mb-3">SHOW MORE</a>
             </div>
         </div>
         </div>
@@ -117,7 +117,7 @@ color: #fff;
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dolor ad.
                     </p>
-                    <a href="/unduh-pdf" class="btn btn-success mb-3">SHOW MORE</a>
+                    <a href="{{ url('/portal/detailartikel') }}" class="btn btn-success mb-3">SHOW MORE</a>
                 </div>
             </div>
         </div>
@@ -139,7 +139,7 @@ color: #fff;
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dolor ad.
                 </p>
-                <a href="/unduh-pdf" class="btn btn-success mb-3">SHOW MORE</a>
+                <a href="{{ url('/portal/detailartikel') }}" class="btn btn-success mb-3">SHOW MORE</a>
             </div>
         </div>
         </div>
@@ -161,7 +161,7 @@ color: #fff;
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dolor ad.
                     </p>
-                    <a href="/unduh-pdf" class="btn btn-success mb-3">SHOW MORE</a><br>
+                    <a href="{{ url('/portal/detailartikel') }}" class="btn btn-success mb-3">SHOW MORE</a><br>
                 </div>
             </div>
         </div>
@@ -183,7 +183,7 @@ color: #fff;
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dolor ad.
                 </p>
-                <a href="/unduh-pdf" class="btn btn-success mb-3">SHOW MORE</a><br>
+                <a href="{{ url('/portal/detailartikel') }}"class="btn btn-success mb-3">SHOW MORE</a><br>
             </div>
         </div>
         </div>
