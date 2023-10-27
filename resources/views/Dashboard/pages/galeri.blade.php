@@ -10,18 +10,16 @@
         left: 240px;
         transition: all 0.5s ease;
     }
-    .page-content {
+    .body-content {
         position: relative;
         padding-top: 104px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
-    .page-content .outer-boxes {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        padding: 0 20px;
-        margin-bottom: 26px;
+    .search {
+        margin-right: 10px;
     }
+
     .copyright {
         margin-top: 1rem;
         display: flex;
@@ -34,10 +32,263 @@
     }
 </style>
 <section class="galeri-section">
-    <div class="page-content">
-        <div class="outer-boxes">
-            <h4>Ini adalah halaman dashboard galeri</h4>
-        </div>
+    <div class="body-content d-flex flex-column">
+        <main class="d-flex flex-column gap-3 grow">
+            <section class="d-flex gap-2 items-center justify-content-between">
+                <h4>
+                    Galeri <br> <a style="font-size: 18px">Anda memiliki total 4 foto galeri.</a >
+                </h4>
+                <div class="d-flex align-items-center ">
+                    <div class="search ">
+                        <input style="border-radius: 5px;" type="text" class="form-control" placeholder="Search for...">
+                    </div>
+                    <a href="{{ url('/dashboard/tambahgaleri')}}" type="button" class="btn btn-primary rounded-lg ml-auto">
+                        <div class="fa fa-fw fa-plus mr-2"></div> Add Data 
+                    </a>
+                </div>
+            </section>
+            <section class="d-flex dlex-column gap-2 mt-4">
+                <div class="card mb-4" style="width: 100%">
+                    <div class="card-body px-0 pt-0 pb-2">
+                        <div class="table-responsive p-0">
+                            <table class="table align-items-center mb-0 table-hover">
+                                <thead class="bg-grey1">
+                                    <tr>
+                                        <th class="text-center">No.</th>
+                                        <th class="text-center">Gambar</th>
+                                        <th class="text-center">Deskripsi</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">1</td>
+                                        <td class="text-center"><img style="max-height: 100px" src="{{URL::asset('/images/destinasi1.png')}}" alt=""></td>
+                                        <td class="text-center">Candi Borobudur-Candi Prambanan-Keraton Yogyakarta-Gua Pindul</td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-xs bg-primary me-1 text-white"
+                                                >
+                                                    Edit
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-xs btn-danger me-1"
+                                                >
+                                                    Delete
+                                                </button>
+                                                <button
+                                                type="button"
+                                                class="btn btn-xs btn-warning"
+                                            >
+                                                Preview
+                                            </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2</td>
+                                        <td class="text-center"><img style="max-height: 100px" src="{{URL::asset('/images/destinasi2.png')}}" alt=""></td>
+                                        <td class="text-center">Monumen Bajra Sandhi - GWK Cultural Park - Pura Uluwatu dll.</td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-xs bg-primary me-1  text-white"
+                                                >
+                                                    Edit
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-xs btn-danger me-1"
+                                                >
+                                                    Delete
+                                                </button>
+                                                <button
+                                                type="button"
+                                                class="btn btn-xs btn-warning"
+                                            >
+                                                Preview
+                                            </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">3</td>
+                                        <td class="text-center"><img style="max-height: 100px" src="{{URL::asset('/images/destinasi3.png')}}" alt=""></td>
+                                        <td class="text-center">Pantai Tanjung Gelam-Sonrkeling: Karang Bintang Maer</td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-xs bg-primary me-1  text-white"
+                                                >
+                                                    Edit
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-xs btn-danger me-1"
+                                                >
+                                                    Delete
+                                                </button>
+                                                <button
+                                                type="button"
+                                                class="btn btn-xs btn-warning"
+                                            >
+                                                Preview
+                                            </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">4</td>
+                                        <td class="text-center"><img style="max-height: 100px" src="{{URL::asset('/images/detailbali6.jpg')}}" alt=""></td>
+                                        <td class="text-center">Pantai Tanjung Gelam-Sonrkeling: Karang Bintang Maer</td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-xs bg-primary me-1  text-white"
+                                                >
+                                                    Edit
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-xs btn-danger me-1"
+                                                >
+                                                    Delete
+                                                </button>
+                                                <button
+                                                type="button"
+                                                class="btn btn-xs btn-warning"
+                                            >
+                                                Preview
+                                            </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">5</td>
+                                        <td class="text-center"><img style="max-height: 100px" src="{{URL::asset('/images/detaillombok1.jpg')}}" alt=""></td>
+                                        <td class="text-center">Pantai Tanjung Gelam-Sonrkeling: Karang Bintang Maer</td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-xs bg-primary me-1  text-white"
+                                                >
+                                                    Edit
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-xs btn-danger me-1"
+                                                >
+                                                    Delete
+                                                </button>
+                                                <button
+                                                type="button"
+                                                class="btn btn-xs btn-warning"
+                                            >
+                                                Preview
+                                            </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">6</td>
+                                        <td class="text-center"><img style="max-height: 100px" src="{{URL::asset('/images/detaillombok2.jpg')}}" alt=""></td>
+                                        <td class="text-center">Pantai Tanjung Gelam-Sonrkeling: Karang Bintang Maer</td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-xs bg-primary me-1  text-white"
+                                                >
+                                                    Edit
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-xs btn-danger me-1"
+                                                >
+                                                    Delete
+                                                </button>
+                                                <button
+                                                type="button"
+                                                class="btn btn-xs btn-warning"
+                                            >
+                                                Preview
+                                            </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">7</td>
+                                        <td class="text-center"><img style="max-height: 100px" src="{{URL::asset('/images/detailbali7.jpg')}}" alt=""></td>
+                                        <td class="text-center">Pantai Tanjung Gelam-Sonrkeling: Karang Bintang Maer</td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-xs bg-primary me-1  text-white"
+                                                >
+                                                    Edit
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-xs btn-danger me-1"
+                                                >
+                                                    Delete
+                                                </button>
+                                                <button
+                                                type="button"
+                                                class="btn btn-xs btn-warning"
+                                            >
+                                                Preview
+                                            </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">8</td>
+                                        <td class="text-center"><img style="max-height: 100px" src="{{URL::asset('/images/komodo1.jpg')}}" alt=""></td>
+                                        <td class="text-center">Pantai Tanjung Gelam-Sonrkeling: Karang Bintang Maer</td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-xs bg-primary me-1  text-white"
+                                                >
+                                                    Edit
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-xs btn-danger me-1"
+                                                >
+                                                    Delete
+                                                </button>
+                                                <button
+                                                type="button"
+                                                class="btn btn-xs btn-warning"
+                                            >
+                                                Preview
+                                            </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="px-5 mt-4">
+                            pagination page
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+        </main>
     </div>
     <div class="copyright">
         <small>© 2023 Mandiri Pribumi Tour & Travel</small>

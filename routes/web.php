@@ -34,6 +34,7 @@ Route::group(['prefix' => 'portal'], function () {
     Route::get('/detaildestinasibali', [PortalController::class, 'detaildestinasibali']);
     Route::get('/detaildestinasijogja', [PortalController::class, 'detaildestinasijogja']);
     Route::get('/detaildestinasikarimun', [PortalController::class, 'detaildestinasikarimun']);
+    Route::get('/galeri', [PortalController::class, 'galeri']);
 });
 
 // Auth::routes();
@@ -44,6 +45,7 @@ Route::group(['prefix' => 'portal'], function () {
 
 
 //     Route::get('/', [DashboardController::class, 'dashboard.home']);
+
     Route::group(['prefix' => 'dashboard'], function () {
     Route::get('/', [DashboardController::class, 'home']);
     // tambahkan rute lain untuk dashboard di sini
@@ -51,6 +53,9 @@ Route::group(['prefix' => 'portal'], function () {
     Route::get('/pesan', [DashboardController::class, 'pesan']);
     Route::get('/galeri', [DashboardController::class, 'galeri']);
     Route::get('/paketdestinasi', [DashboardController::class, 'paketdestinasi']);
+    Route::get('/tambahpaket', [DashboardController::class, 'tambahpaket']);
+    Route::get('/tambahartikel', [DashboardController::class, 'tambahartikel']);
+    Route::get('/tambahgaleri', [DashboardController::class, 'tambahgaleri']);
 });
 
 // 'middleware' => 'auth'

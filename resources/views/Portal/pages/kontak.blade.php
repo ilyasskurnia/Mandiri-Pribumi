@@ -144,12 +144,48 @@ input.untukInput1 {
         <div class="col-4">
             <br><br>
             <h4>Apakah butuh bantuan atau pertanyaan?</h4>
-            <p>Kami sudah mempersiapkan beberapa jawaban umum yang ingin anda sampaikan.</p><br>
-            <h6>Apakah include tiket pesawat?</h6>
-            <h6>Apakah include tiket kereta?</h6>
-            <h6>Apakah menggunakan fasilitas hotel bintang 4?</h6>
+            <p>Kami sudah mempersiapkan beberapa jawaban umum yang ingin anda sampaikan.</p>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Apakah include tiket pesawat ?
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>Ya, sudah termasuk</strong>&nbsp ini adalah contoh jawaban nantinya yang akan diisikan
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Apakah include tiket kereta ?
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Belum termasuk</strong>&nbsp ini adalah contoh jawaban nantinya yang akan diisikan
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Apakah menggunakan hotel bintang 4 ?
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Hotel yang digunakan tergantung kondisi</strong>&nbsp ini adalah contoh jawaban nantinya yang akan diisikan
+                    </div>
+                  </div>
+                </div>
+              </div>
         </div>
     </div>
-</div><br><br><br><br><br>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
 @endsection

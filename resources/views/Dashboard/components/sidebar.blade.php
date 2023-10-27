@@ -66,25 +66,25 @@
         </li>
         <li>
             <a href="{{ url('/dashboard/paketdestinasi') }}">
-                <i><iconify-icon icon="bx:grid-alt"></iconify-icon></i>
+                <i class="fa-solid fa-cart-plus" style="color: #2b78ff;"></i>
                 <span class="links_name">Paket Destinasi</span>
             </a>
         </li>
         <li>
             <a href="{{ url('/dashboard/galeri') }}">
-                <i><iconify-icon icon="bx:grid-alt"></iconify-icon></i>
+                <i class="fa-solid fa-image" style="color: #2b78ff;"></i>
                 <span class="links_name">Galeri</span>
             </a>
         </li>
         <li>
             <a href="{{ url('/dashboard/pesan') }}">
-                <i><iconify-icon icon="bx:grid-alt"></iconify-icon></i>
+                <i class="fa-solid fa-envelope-open-text" style="color: #2b78ff;"></i>
                 <span class="links_name">Pesan</span>
             </a>
         </li>
         <li>
             <a href="{{ url('/dashboard/artikel') }}">
-                <i><iconify-icon icon="bx:grid-alt"></iconify-icon></i>
+                <i class="fa-solid fa-envelope-open-text" style="color: #2b78ff;"></i>
                 <span class="links_name">Artikel</span>
             </a>
         </li>
