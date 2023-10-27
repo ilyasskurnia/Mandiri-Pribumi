@@ -2,7 +2,7 @@
 
 @section('content')
 <style>
-        .banner-section {
+    .banner-section {
         font-family: 'Sora', sans-serif;
         background-image: url('{{ asset('images/headergallery.png') }}');
         background-size: cover;
@@ -20,11 +20,12 @@
 
         color: #fff;
     }
+
     .gallery-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
     .gallery-item {
         width: 30%;
@@ -41,24 +42,30 @@
     }
 
     .owl-carousel {
-    display: flex;
-    flex-direction: row;
-}
-.owl-item {
-    width: 100%; /* Atur lebar item Owl Carousel agar 100% */
-}
-.owl-carousel .item img {
-    max-height: 350px;
-    width: 100%; /* Atur lebar gambar agar 100% */
-}
-.image-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+        display: flex;
+        flex-direction: row;
+    }
+
+    .owl-item {
+        width: 100%;
+        /* Atur lebar item Owl Carousel agar 100% */
+    }
+
+    .owl-carousel .item img {
+        max-height: 350px;
+        width: 100%;
+        /* Atur lebar gambar agar 100% */
+    }
+
+    .image-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
     .image {
-        flex: 0 0 30%; /* Atur lebar masing-masing gambar */
+        flex: 0 0 30%;
+        /* Atur lebar masing-masing gambar */
         position: relative;
     }
 
@@ -68,13 +75,53 @@
     }
 
     .image:nth-child(1) {
-        z-index: 1; /* Atur gambar pertama agar berada di depan */
+        z-index: 1;
+        /* Atur gambar pertama agar berada di depan */
     }
+
+    /* Responsivitas Banner Section */
+    @media (max-width: 768px) {
+        .banner-section {
+            padding: 100px 0;
+            /* Atur padding agar lebih kompak */
+        }
+    }
+
+    /* Responsivitas Galeri Kami Section */
+    @media (max-width: 768px) {
+        .image-container {
+            flex-direction: column;
+            /* Tumpuk gambar di perangkat seluler */
+        }
+
+        .image {
+            flex: 0 0 100%;
+            /* Lebar gambar 100% */
+            margin-top: 10px;
+            /* Berikan jarak atas antar gambar */
+        }
+    }
+
+    /* Responsivitas Testimoni Foto Section */
+    @media (max-width: 768px) {
+        .gallery-container {
+            flex-direction: column;
+            /* Tumpuk galeri di perangkat seluler */
+        }
+
+        .gallery-item {
+            width: 100%;
+            /* Lebar galeri 100% */
+            margin: 10px 0;
+            /* Berikan jarak atas dan bawah antar galeri */
+        }
+    }
+
 </style>
 <section class="banner-section">
     <div class="container text-right my-5">
         <h1>
-        <span style="color: #2622DE;"><b>Your Adventure Travel Expert <br> with Mandiri Pribumi</b></span>
+            <span style="color: #2622DE;"><b>Your Adventure Travel Expert <br> with Mandiri Pribumi</b></span>
         </h1>
     </div>
 </section>
@@ -115,17 +162,18 @@
 <div class="container mt-5">
     <div class="gallery-container" id="Galeri">
         {{-- @foreach ($images as $image) --}}
-            <div class="gallery-item">
-                {{-- <img src="{{ URL::asset('images/' . $image->filename) }}" class="gallery-image" alt="{{ $image->description }}"> --}}
-                <img class="gallery-image" src="{{URL::asset('images/card1.jpg') }}" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="{{URL::asset('images/card2.jpg') }}" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="{{URL::asset('images/card3.jpg') }}" alt="">
-            </div>
-            {{-- @if ($loop->iteration % 3 == 0) --}}
+        <div class="gallery-item">
+            {{-- <img src="{{ URL::asset('images/' . $image->filename) }}" class="gallery-image"
+            alt="{{ $image->description }}"> --}}
+            <img class="gallery-image" src="{{URL::asset('images/card1.jpg') }}" alt="">
+        </div>
+        <div class="gallery-item">
+            <img class="gallery-image" src="{{URL::asset('images/card2.jpg') }}" alt="">
+        </div>
+        <div class="gallery-item">
+            <img class="gallery-image" src="{{URL::asset('images/card3.jpg') }}" alt="">
+        </div>
+        {{-- @if ($loop->iteration % 3 == 0) --}}
     </div>
     <div class="gallery-container">
         <div class="gallery-item">
@@ -143,16 +191,17 @@
 </div>
 
 <script>
-    $(document).ready(function(){
-      $(".owl-carousel").owlCarousel({
-        items: 1, // Jumlah item yang ditampilkan
-        autoplay: true, // Aktifkan autoplay
-        autoplayTimeout: 3000, // Waktu tunggu antara slide (dalam milidetik)
-        loop: true, // Aktifkan loop
-        nav: true, // Tampilkan tombol navigasi
-        dots: true, // Tampilkan titik navigasi
-      });
+    $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+            items: 1, // Jumlah item yang ditampilkan
+            autoplay: true, // Aktifkan autoplay
+            autoplayTimeout: 3000, // Waktu tunggu antara slide (dalam milidetik)
+            loop: true, // Aktifkan loop
+            nav: true, // Tampilkan tombol navigasi
+            dots: true, // Tampilkan titik navigasi
+        });
     });
-  </script>
-  
+
+</script>
+
 @endsection

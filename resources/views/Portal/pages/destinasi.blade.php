@@ -3,6 +3,46 @@
 @section('content')
 
 <style>
+/* Responsivitas Logo di Kolom Kiri */
+.logo-image {
+    max-height: 200px; /* Atur tinggi maksimum gambar sesuai kebutuhan */
+    width: auto; /* Biarkan lebar disesuaikan agar gambar tidak terdistorsi */
+}
+@media (max-width: 768px) {
+    .col-1 img {
+        max-height: 50px; /* Atur tinggi gambar */
+    }
+    .logo-image {
+        max-height: 100px; /* Atur tinggi maksimum gambar untuk layar kecil */
+    }
+
+}
+
+/* Responsivitas Isi Konten */
+@media (max-width: 768px) {
+    .col-8 {
+        width: 100%; /* Lebar konten menjadi 100% */
+    }
+    .col-1 {
+        width: 30%; /* Lebar kolom gambar menjadi 30% */
+        text-align: center; /* Pusatkan gambar */
+    }
+    .btn-secondary {
+        margin-top: 15px; /* Berikan jarak atas tombol */
+    }
+}
+
+/* Margin atas tambahan */
+.container {
+    margin-top: 30px; /* Atur margin atas untuk setiap container */
+}
+
+/* Atur warna teks tombol */
+.btn-secondary {
+    color: #fff;
+    background-color: #343a40; /* Ubah warna latar belakang tombol */
+    border-color: #343a40; /* Ubah warna border tombol */
+}
 
 </style>
 
@@ -17,7 +57,7 @@
             <a href="/unduh-pdf" class="btn btn-primary">Hubungi Kami</a>
         </div>
         <div class="col-2">
-            <img style="max-height: 200px" src="{{URL::asset('/images/Logo-tentang.png') }}" alt="Logo">
+            <img class="logo-image" src="{{URL::asset('/images/Logo-tentang.png') }}" alt="Logo">
         </div>
     </div>
 </div><br><br><br><br><br>

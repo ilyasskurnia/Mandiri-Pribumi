@@ -30,6 +30,7 @@ Route::group(['prefix' => 'portal'], function () {
     Route::get('/kontak', [PortalController::class, 'kontak']);
     Route::get('/detailartikel', [PortalController::class, 'detailartikel']);
     Route::get('/artikel', [PortalController::class, 'artikel']);
+    Route::get('/galeri', [PortalController::class, 'galeri']);
     Route::get('/detaildestinasibali', [PortalController::class, 'detaildestinasibali']);
     Route::get('/detaildestinasijogja', [PortalController::class, 'detaildestinasijogja']);
     Route::get('/detaildestinasikarimun', [PortalController::class, 'detaildestinasikarimun']);

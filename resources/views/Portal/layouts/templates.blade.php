@@ -114,16 +114,16 @@
                         <a class="nav-link" href="{{ url('/portal')}}">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tentang Kami</a>
+                        <a class="nav-link" href="{{ url('/portal/tentang')}}">Tentang Kami</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Galeri</a>
+                        <a class="nav-link" href="{{ url('/portal/galeri')}}">Galeri</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Destinasi</a>
+                        <a class="nav-link" href="{{ url('/portal/destinasi')}}">Destinasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Artikel</a>
+                        <a class="nav-link" href="{{ url('/portal/artikel')}}">Artikel</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Kontak Kami</a>
