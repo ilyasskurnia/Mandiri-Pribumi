@@ -88,6 +88,15 @@
                 <span class="links_name">Artikel</span>
             </a>
         </li>
+        <li>
+            <div class="mt-5">
+                <form id="logout-form" action="/logout" method="POST">
+                    @csrf
+                    <button type="submit" class="btn"><i class="fa-solid fa-right-from-bracket"></i>Logout</button>
+                </form>
+            </div>
+        </li>
+        
     </ul>
 </div>
 {{-- <a href="{{ route('logout') }}" class="logout-link">Logout</a> --}}
