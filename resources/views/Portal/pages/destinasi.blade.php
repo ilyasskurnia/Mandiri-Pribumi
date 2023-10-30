@@ -10,10 +10,12 @@
 }
 @media (max-width: 768px) {
     .col-1 img {
-        max-height: 50px; /* Atur tinggi gambar */
+        max-height: 100%; /* Atur tinggi gambar */
     }
     .logo-image {
-        max-height: 100px; /* Atur tinggi maksimum gambar untuk layar kecil */
+        max-height: 150px; /* Atur tinggi maksimum gambar untuk layar kecil */
+        margin-left: -110px;
+        margin-top: 10px;
     }
 
 }
@@ -26,6 +28,7 @@
     .col-1 {
         width: 30%; /* Lebar kolom gambar menjadi 30% */
         text-align: center; /* Pusatkan gambar */
+
     }
     .btn-secondary {
         margin-top: 15px; /* Berikan jarak atas tombol */

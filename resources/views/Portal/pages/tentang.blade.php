@@ -101,7 +101,7 @@
 </div>
 <div class="container mt-5">
     <div class="row mt-3">
-        <h3><span style="color: black;">Apa Yang Kawi</span> <span style="color: red;">Tawarkan ?</span></h3>
+        <h3><span style="color: black;">Apa Yang Kami</span> <span style="color: red;">Tawarkan ?</span></h3>
     </div>
     <div class="row mt-3">
         <div class="col-md-6">
