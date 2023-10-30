@@ -88,7 +88,7 @@
             </div>
             <div class="profile-details">
                 <i class="fa-solid fa-user fa-xl" style=" margin-right : 10px; margin-left : 10px"></i>
-                <span class="admin_name" style="margin-left: 10px">Admin name</span>
+                <span class="admin_name" style="margin-left: 10px">{{ auth()->user()->name }}</span>
                 <i class="fa-solid fa-sort-down fa-xl" style="margin-left : 20px; margin-bottom: 9px"></i>
             </div>
         </nav>
@@ -102,8 +102,3 @@
     </div>
 </body>
 </html>
-    {{-- <footer>
-        <p>&copy; {{ date('Y') }} Nama Perusahaan Anda</p>
-        <a href="{{ route('tentang-kami') }}">Tentang Kami</a>
-        <a href="{{ route('kontak-kami') }}">Kontak Kami</a>
-    </footer> --}}

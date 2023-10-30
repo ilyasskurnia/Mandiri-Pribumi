@@ -8,30 +8,33 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    // public function showLoginForm()
-    // {
-    //     return view('auth.login');
-    // }
-
-    public function postLoginForm(Request $request)
-    {
-        //
-    }
-
-        public function login()
+    public function login()
     {
         return view('auth.login');
     }
     
-    public function authenticate (Request $request) 
+    public function authenticate(Request $request)
     {
         $request->validate([
-            'email' => 'required|email:dns',
-            'password' => 'required'
+            'email' => 'required|email',
+            'password' => 'required',
         ]);
 
-        dd('berhasil login');
+        // Coba melakukan otentikasi
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+            // Otentikasi berhasil, arahkan ke halaman dashboard atau yang sesuai
+            return redirect('/dashboard');
+        } else {
+            // Otentikasi gagal, kembali ke halaman login dengan pesan kesalahan
+            return back()->withErrors(['email' => 'Email atau password salah']);
+        }
+    }
+    public function logout(Request $request)
+    {
+        Auth::logout(); // Logout pengguna
+        $request->session()->invalidate(); // Menghapus sesi
+        $request->session()->regenerateToken(); // Membuat token sesi yang baru
+        return redirect('/'); // Redirect ke halaman login atau halaman lain yang sesuai
     }
 
-    // buat nambahin function lain disini ges
 }
