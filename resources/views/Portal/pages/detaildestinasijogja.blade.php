@@ -268,6 +268,10 @@
                 </div>
             </div>
         </div>
+        <div class="text-center">
+            <h1> PETA JOGJA </h1>
+            <img width="1000" height="750" src="/images/JogjaMap.jpg" alt="">
+        </div>
     </div>
 </section>
 

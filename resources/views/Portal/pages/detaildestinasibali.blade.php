@@ -282,7 +282,13 @@
                         mengucapkan selamat tinggal kepada Pulau Bali dengan menikmati santapan makan malam,
                         sembari ditemani matahari Terbenam di Pantai Jimbaran..</p>
                 </div>
+                
             </div>
+            
+        </div>
+        <div class="text-center">
+            <h1> PETA BALI </h1>
+            <img width="1000" height="750" src="/images/Balimap.jpg" alt="">
         </div>
     </div>
 </section>
