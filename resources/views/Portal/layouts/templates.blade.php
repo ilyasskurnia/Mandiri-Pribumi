@@ -100,7 +100,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/portal">
                 <img src="{{ asset('images/logo-navbar.png') }}" alt="Logo Perusahaan"
                     style="width: 100px; margin-left: 50px;">
             </a>

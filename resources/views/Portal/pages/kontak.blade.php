@@ -35,6 +35,28 @@ input.untukInput1 {
     align-self: right;
     padding-left: 120px;
 }
+
+@media (max-width: 768px) {
+        .container {
+            padding: 10px;
+        }
+
+        .col-5 {
+            text-align: center;
+        }
+
+        .col-2 img {
+            max-width: 100px;
+        }
+
+        .x-1 {
+            margin-top: 20px;
+        }
+
+        .vl {
+            display: none; /* Sembunyikan garis vertikal di perangkat seluler */
+        }
+    }
 </style>
 
 <div class="container">
@@ -138,8 +160,8 @@ input.untukInput1 {
 <div class="container">
     <div class="row mt-5 justify-content-between">
         <div class="col-1">
-            <p>FAQ</p>
-            <h2>Frequently asked question.</h2>
+            <h5><b>FAQ</b></h5>
+            <h1><b>Frequently asked question.</b></h1>
         </div>
         <div class="col-4">
             <br><br>
