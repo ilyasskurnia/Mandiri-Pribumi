@@ -35,7 +35,7 @@
             padding: 0 20px;
             box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
             transition: all 0.5s ease;
-            
+
         }
         nav .sidebar-button {
             display: flex;
@@ -89,10 +89,9 @@
             <div class="profile-details">
                 <i class="fa-solid fa-user fa-xl" style=" margin-right : 10px; margin-left : 10px"></i>
                 <span class="admin_name" style="margin-left: 10px">{{ auth()->user()->name }}</span>
-                <i class="fa-solid fa-sort-down fa-xl" style="margin-left : 20px; margin-bottom: 9px"></i>
             </div>
         </nav>
-    
+
     <div class="sidebar">
         @include('dashboard.components.sidebar')
     </div>

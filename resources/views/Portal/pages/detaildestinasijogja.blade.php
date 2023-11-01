@@ -132,6 +132,10 @@
     .right .destination-image.right {
         order: 2;
     }
+    .peta-image {
+        width: 15cm;
+        height: 10cm;
+    }
 
     /* Responsive Styles */
     @media (max-width: 768px) {
@@ -270,7 +274,7 @@
         </div>
         <div class="text-center">
             <h1> PETA JOGJA </h1>
-            <img width="1000" height="750" src="/images/JogjaMap.jpg" alt="">
+            <img class="peta-image"  src="/images/JogjaMap.jpg" alt="">
         </div>
     </div>
 </section>

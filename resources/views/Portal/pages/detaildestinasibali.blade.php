@@ -132,6 +132,11 @@
         order: 2;
     }
 
+    .peta-image {
+        width: 15cm;
+        height: 10cm;
+    }
+
     /* Responsive Styles */
     @media (max-width: 768px) {
         .banner-content {
@@ -288,7 +293,7 @@
         </div>
         <div class="text-center">
             <h1> PETA BALI </h1>
-            <img width="1000" height="750" src="/images/Balimap.jpg" alt="">
+            <img class="peta-image"  src="/images/Balimap.jpg" alt="">
         </div>
     </div>
 </section>
