@@ -204,9 +204,9 @@
 </style>
 
 <!-- Section 1: Banner -->
-<section class="banner-section" style="background-image: url('{{ asset('images/detailbannerjogja.png') }}');">
+<section class="banner-section" style="background-image: url('{{ asset('images/malang.png') }}');">
     <div class="container text-right mt-5">
-        <h1><b>Paket Tour Yogyakarta</b></h1>
+        <h1><b>Paket Tour Malang-Batu-Bromo</b></h1>
         <h2><b>2 Hari 1 Malam</b></h2>
         <a href="#" class="btn-brosur" style="text-align: left; display: inline-block; margin-top: 20px;">Unduh
             Brosur</a>
@@ -228,19 +228,14 @@
         <div class="destination-item">
             <div class="destination-layer">
                 <div class="destination-image">
-                    <img src="{{URL::asset('/images/detailjogja1.png')}}" alt="Image 1">
+                    <img src="{{URL::asset('/images/malang1.png')}}" alt="Image 1">
                 </div>
             </div>
             <div class="destination-layer">
                 <div class="destination-description">
                     <h4 style="padding-left: 50px" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 1</b></h4>
-                    <h3><b>Candi Borobudur-Candi Prambanan</b></h3>
-                    <p>Mari kita mulai petualangan kita! Dalam perjalanan
-                        menuju Kota Yogyakarta, kita akan berkunjung pada
-                        salah satu warisan nenek moyang yang diakui dunia, Candi Borobudur. Sesampai nya di Kota
-                        Yogyakarta, kita akan menikmati makan siang di salah satu restoran pilihan kami. Sebagal penutup
-                        hari pertama petualangan, kita akan mengunjungi Candi Prambanan untuk menyaksikan
-                        pentas teater seni tradisional</p>
+                    <h3><b>Semarang - Malang - Bromo - Batu</b></h3>
+                    <p>Selamat datang di Pulau Bali! Hari ini, kami akan membawa Anda untuk menikmati keindahan alam dan budaya pulau ini. Kami akan memulai hari dengan sarapan pagi di pinggir Danau Beretan sambil menikmati matahari terbit. Kemudian, Anda akan berpetualang ke Ubud Monkey Forest, mengeksplorasi alam dan keanekaragaman fauna Bali. Di samping itu, Anda akan merasakan kebudayaan Bali dengan mengunjungi Ubud Palace. Hari ini akan ditutup dengan pemandangan matahari terbenam yang spektakuler di Tanah Lot</p>
                 </div>
             </div>
         </div>
@@ -249,28 +244,20 @@
             <div class="destination-layer">
                 <div class="destination-description">
                     <h4 style="padding-left: 50px" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 2</b></h4>
-                    <h3><b>Keraton Yogyakarta-Gua Pindul-Pantai Gumuk Pasir</b></h3>
-                    <p>Petualangan kita di hari kedua akan dimulai dengan mengunjungi Keraton Kesultanan Ngayogyakarta,
-                        untuk mempelajari dan mendalami sejarah Wilayah
-                        Yogyakarta. Untuk mengawali petualangan alam, kita akan berwisata air dan menyusuri gua nan
-                        indah di lokasi
-                        wisata Gua PindulSetelahnya, kita akan memacu adrenalin dengan menyisir pasir pantal selatan
-                        Yogyakarta ditemani dengan pemandangan matahari Lerbenam menggunakan
-                        jeep di Pantai Gumuk Pasir Untuk menutup petualangan
-                        kita di Yogyakarta, kita akan menikmati santapan
-                        makan malam dan membeli oleh-oleh sebelum pulang
-                        ke Kota Semarang.</p>
+                    <h3><b>Batu - Semarang</b></h3>
+                    <p>Setelah kita menyantap sarapan dan check out dari hotel, kita akan berkunjung di Jatim Park II untuk mendapatkan pesona fauna. Sebagai penutup dari petualangan bersama kita di Malang, Bromo, dan Batu, kita akan menyantap dan menikmati makan siang sebelum bertolak kembali menuju Kota Semarang.</p>
                 </div>
             </div>
             <div class="destination-layer">
                 <div class="destination-image">
-                    <img src="{{URL::asset('/images/detailjogja2.png')}}" alt="Image 2">
+                    <img src="{{URL::asset('/images/malang2.png')}}" alt="Image 2">
                 </div>
             </div>
         </div>
+
         <div class="text-center">
-            <h1> PETA JOGJA </h1>
-            <img width="1000" height="750" src="/images/JogjaMap.jpg" alt="">
+            <h1> PETA MALANG </h1>
+            <img width="1000" height="750" src="/images/petamalang.jpg" alt="">
         </div>
     </div>
 </section>

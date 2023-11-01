@@ -77,7 +77,7 @@
             <h5>Nuansa Alam di Kota Budaya</h5>
             <p>Paket wisata ini cocok bagi anda yang ingin menelusuri rekam sejarah kerajaan Mataram Kuno dan Kesultanan Ngayogakarta.</p>
             <br>
-            <a href="#" class="btn btn-secondary">Selengkapnya</a>
+            <a href="/portal/detaildestinasijogja" class="btn btn-secondary">Selengkapnya</a>
         </div>
     </div>
 </div><br><br>
@@ -94,7 +94,7 @@
             <h5>Ikon Wisata Indonesia</h5>
             <p>Paket wisata ini cocok untuk anda yang ingin menikmati 3 pengalaman sekaligus.</p>
             <br>
-            <a href="#" class="btn btn-secondary">Selengkapnya</a>
+            <a href="/portal/detaildestinasibali" class="btn btn-secondary">Selengkapnya</a>
         </div>
     </div>
 </div><br><br>
@@ -111,7 +111,7 @@
             <h5>Surga wisata bahari Pulau Jawa</h5>
             <p>Dalam paket ini anda akan diajak menjelajahi dan menikmati pesona pulau pulau dengan kekayaan biota laut.</p>
             <br>
-            <a href="#" class="btn btn-secondary">Selengkapnya</a>
+            <a href="/portal/detaildestinasikarimun" class="btn btn-secondary">Selengkapnya</a>
         </div>
     </div>
 </div><br><br>
@@ -128,7 +128,7 @@
             <h5>Golden Sunrise Terbaik Pulau Jawa</h5>
             <p>Paket wisata ini cocok bagi anda  yang ingin menikmati keindahan Gunung Bromo dan mencari sensasi petualangan</p>
             <br>
-            <a href="#" class="btn btn-secondary">Selengkapnya</a>
+            <a href="/portal/detaildestinasimalang" class="btn btn-secondary">Selengkapnya</a>
         </div>
     </div>
 </div><br><br>

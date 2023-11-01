@@ -233,7 +233,7 @@
             </div>
             <div class="destination-layer">
                 <div class="destination-description">
-                    <h4 class="destination-tagline"><b>Day 1</b></h4>
+                    <h4 style="padding-left: 50px" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 1</b></h4>
                     <h3><b>Keberangkatan - Pantai Tanjung Gelam - Bukit Anora
                             -pantai batu lawang</b></h3>
                     <p>Kita akan memulai petualangan kita dengan berangkat
@@ -251,7 +251,7 @@
         <div class="destination-item1">
             <div class="destination-layer">
                 <div class="destination-description">
-                    <h4 class="destination-tagline"><b>Day 2</b></h4>
+                    <h4 style="padding-left: 50px" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 2</b></h4>
                     <h3><b>Pulau Mejangan Kecil - Penangkaran Hiu Karimun Jawa</b></h3>
                     <p>Hari ini adalah puncak petualangan kita. Setelah
                         sarapan di hotel, kita akan menuju Karang Bintang Maer
@@ -278,7 +278,7 @@
             </div>
             <div class="destination-layer">
                 <div class="destination-description">
-                    <h4 class="destination-tagline"><b>Day 3</b></h4>
+                    <h4 style="padding-left: 50px" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 3</b></h4>
                     <h3><b>Point View Karimun Jawa - Kepulangan</b></h3>
                     <p>Setelah kita melakukan checkout di hotel, kita akan
                         langsung kembali ke Dermaga Karimunjawa dan
