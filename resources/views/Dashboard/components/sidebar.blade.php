@@ -43,6 +43,12 @@
         font-weight: 400;
         white-space: nowrap;
     }
+    .sidebar-content .nav-links li a .links_name:hover {
+        color: #be0000;
+    }
+    .logout {
+        margin-left: -5%;
+    }
     /* .sidebar-content .nav-links li a.active {
         background: rgb(191, 95, 95);
     } */
@@ -88,15 +94,16 @@
                 <span class="links_name">Artikel</span>
             </a>
         </li>
+    </ul>
+    <ul class="nav-links">
         <li>
-            <div class="mt-5">
+            <div class="logout" style="margin-top: 230px" >
                 <form id="logout-form" action="/logout" method="POST">
                     @csrf
                     <button type="submit" class="btn"><i class="fa-solid fa-right-from-bracket"></i>Logout</button>
                 </form>
             </div>
         </li>
-        
     </ul>
 </div>
 {{-- <a href="{{ route('logout') }}" class="logout-link">Logout</a> --}}

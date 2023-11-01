@@ -47,6 +47,11 @@ class PortalController extends Controller
     {
         return view('portal.pages.detaildestinasikarimun');
     }
+    public function detailDestinasiMalang()
+    {
+        return view('portal.pages.detaildestinasimalang');
+    }
+
 
    // buat nambahin function lain disini ges
    public function galeri()

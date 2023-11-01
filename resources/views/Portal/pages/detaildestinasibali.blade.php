@@ -132,6 +132,11 @@
         order: 2;
     }
 
+    .peta-image {
+        width: 15cm;
+        height: 10cm;
+    }
+
     /* Responsive Styles */
     @media (max-width: 768px) {
         .banner-content {
@@ -230,7 +235,7 @@
             </div>
             <div class="destination-layer">
                 <div class="destination-description">
-                    <h4 class="destination-tagline"><b>Day 1</b></h4>
+                    <h4 style="padding-left: 50px" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 1</b></h4>
                     <h3><b>Tiba di Bali-Danau Beratan-Ubud Monkey Forest
                         -Ubud Palace-Tanah Lot</b></h3>
                     <p>Selamat datang di Pulau Bali! Hari ini, kami akan membawa Anda untuk menikmati keindahan alam dan
@@ -246,7 +251,7 @@
         <div class="destination-item1">
             <div class="destination-layer">
                 <div class="destination-description">
-                    <h4 class="destination-tagline"><b>Day 2</b></h4>
+                    <h4 style="padding-left: 50px" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 2</b></h4>
                     <h3><b>Monumen Bajra Sandhi-GWK Cultural Park-Pura Uluwatu</b></h3>
                     <p>Petualangan kita pada hari ini, dibuka dengan mempelajari dan menghayati riwayat perjuangan
                         Rakyat Bali dalam menghadapi penjajah dengan mengunjungi Monumen
@@ -274,7 +279,7 @@
             </div>
             <div class="destination-layer">
                 <div class="destination-description">
-                    <h4 class="destination-tagline"><b>Day 3</b></h4>
+                    <h4 style="padding-left: 50px" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 3</b></h4>
                     <h3><b>Tanjung Benoa Water sports-Pantai Jimbaran</b></h3>
                     <p>Hari terakhir kita di Pulau Dewata dimulai dengan berbelanja cinderamata khas Bali di salah satu
                         toko pilihan kami. Puncak kegiatan kita adalah
@@ -282,13 +287,13 @@
                         mengucapkan selamat tinggal kepada Pulau Bali dengan menikmati santapan makan malam,
                         sembari ditemani matahari Terbenam di Pantai Jimbaran..</p>
                 </div>
-                
+
             </div>
-            
+
         </div>
         <div class="text-center">
             <h1> PETA BALI </h1>
-            <img width="1000" height="750" src="/images/Balimap.jpg" alt="">
+            <img class="peta-image"  src="/images/Balimap.jpg" alt="">
         </div>
     </div>
 </section>
