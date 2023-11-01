@@ -67,7 +67,6 @@ input.untukInput1 {
             <p>
                 Kami sangat menghargai pesan dan kesan anda terhadap pelayanan kami.
             </p>
-            <a href="/unduh-pdf" class="btn btn-primary">Hubungi Kami</a>
         </div>
         <div class="col-2">
             <img style="max-height: 200px" src="{{URL::asset('/images/Logo-tentang.png') }}" alt="Logo">

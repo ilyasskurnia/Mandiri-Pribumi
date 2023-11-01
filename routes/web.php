@@ -48,21 +48,10 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::get('/galeri', [DashboardController::class, 'galeri']);
     Route::get('/paketdestinasi', [DashboardController::class, 'paketdestinasi']);
     Route::get('/tambahpaket', [DashboardController::class, 'tambahpaket']);
+    Route::post('/tambahpaket', [DashboardController::class, 'postdestinasi']);
     Route::get('/tambahartikel', [DashboardController::class, 'tambahartikel']);
     Route::get('/tambahgaleri', [DashboardController::class, 'tambahgaleri']);
 });
-
-// Route::group(['prefix' => 'dashboard'], function () {
-//     Route::get('/', [DashboardController::class, 'home']);
-//     // tambahkan rute lain untuk dashboard di sini
-//     Route::get('/artikel', [DashboardController::class, 'artikel']);
-//     Route::get('/pesan', [DashboardController::class, 'pesan']);
-//     Route::get('/galeri', [DashboardController::class, 'galeri']);
-//     Route::get('/paketdestinasi', [DashboardController::class, 'paketdestinasi']);
-//     Route::get('/tambahpaket', [DashboardController::class, 'tambahpaket']);
-//     Route::get('/tambahartikel', [DashboardController::class, 'tambahartikel']);
-//     Route::get('/tambahgaleri', [DashboardController::class, 'tambahgaleri']);
-// });
 
 
 Route::get('/login', [LoginController::class, 'login'])->name('login');

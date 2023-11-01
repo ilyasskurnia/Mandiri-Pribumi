@@ -125,7 +125,7 @@
 <div class="container">
     <div class="row mt-5 justify-content-end">
         <div class="col-1">
-            <img class="img-icon" src="{{URL::asset('/images/icon-tentang.png') }}" alt="">
+            <img class="img-icon" src="{{URL::asset('/images/icontentang.png') }}" alt="">
         </div>
         <div class="col-7">
             <h5><strong>#Jelajah <span style="color: red;">Nusantara</span> - Tagline ini merepresentasikan akar
@@ -142,7 +142,7 @@
     </div>
     <div class="row mt-3 justify-content-start">
         <div class="col-1">
-            <img class="img-icon" src="{{URL::asset('/images/icon-tentang.png') }}" alt="">
+            <img class="img-icon" src="{{URL::asset('/images/icontentang.png') }}" alt="">
         </div>
         <div class="col-6">
             <h6>Kualitas Pelayanan</h6>
@@ -153,7 +153,7 @@
 <div class="container mt-3">
     <div class="row mt-3 justify-content-start">
         <div class="col-1">
-            <img class="img-icon" src="{{URL::asset('/images/icon-tentang.png') }}" alt="">
+            <img class="img-icon" src="{{URL::asset('/images/icontentang.png') }}" alt="">
         </div>
         <div class="col-8">
             <h6>Terpercaya</h6>
@@ -165,7 +165,7 @@
 <div class="container">
     <div class="row mt-3 justify-content-start">
         <div class="col-1">
-            <img class="img-icon" src="{{URL::asset('/images/icon-tentang.png') }}" alt="">
+            <img class="img-icon" src="{{URL::asset('/images/icontentang.png') }}" alt="">
         </div>
         <div class="col-8">
             <h6>Dukungan Lokal</h6>

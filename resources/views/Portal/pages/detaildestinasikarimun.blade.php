@@ -287,6 +287,10 @@
                 </div>
             </div>
         </div>
+        <div class="text-center">
+            <h1> PETA KARIMUN JAWA </h1>
+            <img width="1000" height="750" src="/images/KarimunMap.jpg" alt="">
+        </div>
     </div>
 </section>
 
