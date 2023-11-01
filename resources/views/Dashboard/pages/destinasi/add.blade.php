@@ -37,50 +37,49 @@
             <section class="d-flex dlex-column gap-2 mt-4">
                 <div class="page-inner" style="width: 100%">
                     <div id="add-data-paket" class="card">
+                        @if(session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
                         <div class="card-header pb-2">
                             <div class="d-flex align-items-center">
                                 <h4 class="card-title">Tambah Data Paket Destinasi</h4>
                             </div>
                         </div>
                         <div class="card-body">
-                            {{-- <form action="{{ route('your_route_name_here') }}" method="post" enctype="multipart/form-data"> --}}
-                            <form action="#" method="post" enctype="multipart/form-data">
+                                <form action="\dashboard\tambahpaket" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="form-control-label">Foto Destinasi</label>
-                                            <input name="foto" class="form-control" type="file">
+                                            <input name="thumbnail" class="form-control" type="file">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Nama Objek Destinasi</label>
-                                            <input name="nama_barang" class="form-control" type="text">
+                                            <input name="destinasi" class="form-control" type="text">
                                         </div>
                                         <div class="form-group">
-                                            <label class="form-control-label">Harga Supplier</label>
-                                            <input name="harga_supplier" class="form-control" type="number">
+                                            <label class="form-control-label">Peta wisata</label>
+                                            <input name="peta_wisata" class="form-control" type="file">
                                         </div>
                                         <div class="form-group">
-                                            <label class="form-control-label">Harga Umum</label>
-                                            <input name="harga_umum" class="form-control" type="number">
+                                            <label class="form-control-label">Rute</label>
+                                            <input name="rute" class="form-control" type="text">
                                         </div>
                                         <div class="form-group">
-                                            <label class="form-control-label">Diskon</label>
-                                            <input name="diskon" class="form-control" type="number">
+                                            <label class="form-control-label">Brosure</label>
+                                            <input name="brosure" class="form-control" type="file">
                                         </div>
                                         <div class="form-group">
-                                            <label class="form-control-label">Keterangan</label>
-                                            <textarea name="keterangan" class="form-control" rows="3"></textarea>
+                                            <label class="form-control-label">Lama Waktu Tour</label>
+                                            <input name="total_waktu" class="form-control" type="text">
                                         </div>
                                         <div class="form-group">
-                                            <label class="form-control-label">Info Penting</label>
-                                            <textarea name="info_penting" class="form-control" rows="3"></textarea>
+                                            <label class="form-control-label">Biaya</label>
+                                            <input name="biaya" class="form-control" type="text">
                                         </div>
-                                        <div class="form-group">
-                                            <label class="form-control-label">Stok</label>
-                                            <input name="stock_global" class="form-control" type="number">
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="d-flex justify-content-end mt-4">
                                     <button type="button" class="btn btn-sm bg-warning me-2 text-white" onclick="goBack()">
@@ -101,4 +100,10 @@
         <small>© 2023 Mandiri Pribumi Tour & Travel</small>
     </div>
 </section>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+    </script>
+    
 @endsection

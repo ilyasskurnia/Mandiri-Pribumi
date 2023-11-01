@@ -56,10 +56,12 @@
                                     <tr>
                                         <th class="text-center">No.</th>
                                         <th class="text-center">Thumbnail</th>
-                                        <th class="text-center">Paket</th>
-                                        <th class="text-center">Waktu</th>
-                                        <th class="text-center">Biaya</th>
+                                        <th class="text-center">Destinasi</th>
+                                        <th class="text-center">Peta Wisata</th>
                                         <th class="text-center">Rute</th>
+                                        <th class="text-center">Brosur</th>
+                                        <th class="text-center">Total Waktu</th>
+                                        <th class="text-center">Biaya</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -68,9 +70,11 @@
                                         <td class="text-center">1</td>
                                         <td class="text-center"><img style="max-height: 100px" src="{{URL::asset('/images/destinasi1.png')}}" alt=""></td>
                                         <td class="text-center">Yogyakarta</td>
+                                        <td class="text-center">ini peta</td>
+                                        <td class="text-center">Candi Borobudur-Candi Prambanan-Keraton Yogyakarta-Gua Pindul</td>
+                                        <td class="text-center">Ini Brosur</td>
                                         <td class="text-center">2 hari 1 Malam</td>
                                         <td class="text-center">330k</td>
-                                        <td class="text-center">Candi Borobudur-Candi Prambanan-Keraton Yogyakarta-Gua Pindul</td>
                                         <td>
                                             <div class="d-flex">
                                                 <button
@@ -89,7 +93,7 @@
                                                 type="button"
                                                 class="btn btn-xs btn-warning"
                                             >
-                                                Preview
+                                                Detail
                                             </button>
                                             </div>
                                         </td>
@@ -98,9 +102,11 @@
                                         <td class="text-center">2</td>
                                         <td class="text-center"><img style="max-height: 100px" src="{{URL::asset('/images/destinasi2.png')}}" alt=""></td>
                                         <td class="text-center">Bali</td>
+                                        <td class="text-center">ini peta</td>
+                                        <td class="text-center">Monumen Bajra Sandhi - GWK Cultural Park - Pura Uluwatu dll.</td>
+                                        <td class="text-center">Ini Brosur</td>
                                         <td class="text-center">4 hari 3 Malam</td>
                                         <td class="text-center">1.250k</td>
-                                        <td class="text-center">Monumen Bajra Sandhi - GWK Cultural Park - Pura Uluwatu dll.</td>
                                         <td>
                                             <div class="d-flex">
                                                 <button
@@ -119,7 +125,7 @@
                                                 type="button"
                                                 class="btn btn-xs btn-warning"
                                             >
-                                                Preview
+                                                Detail
                                             </button>
                                             </div>
                                         </td>
@@ -128,9 +134,11 @@
                                         <td class="text-center">3</td>
                                         <td class="text-center"><img style="max-height: 100px" src="{{URL::asset('/images/destinasi3.png')}}" alt=""></td>
                                         <td class="text-center">karimun Jawa</td>
+                                        <td class="text-center">Ini Peta</td>
+                                        <td class="text-center">Pantai Tanjung Gelam-Sonrkeling: Karang Bintang Maer</td>
+                                        <td class="text-center">Ini Brosur</td>
                                         <td class="text-center">3 hari 2 Malam</td>
                                         <td class="text-center">1.500k</td>
-                                        <td class="text-center">Pantai Tanjung Gelam-Sonrkeling: Karang Bintang Maer</td>
                                         <td>
                                             <div class="d-flex">
                                                 <button
