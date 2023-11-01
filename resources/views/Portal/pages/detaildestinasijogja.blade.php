@@ -203,6 +203,10 @@
         .destination-tagline {
             font-size: 20px;
         }
+        .peta-image{
+            width: 10cm;
+            height: 5cm;
+        }
     }
 
 </style>
@@ -237,7 +241,7 @@
             </div>
             <div class="destination-layer">
                 <div class="destination-description">
-                    <h4 style="padding-left: 50px" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 1</b></h4>
+                    <h4 style="" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 1</b></h4>
                     <h3><b>Candi Borobudur-Candi Prambanan</b></h3>
                     <p>Mari kita mulai petualangan kita! Dalam perjalanan
                         menuju Kota Yogyakarta, kita akan berkunjung pada
@@ -252,7 +256,7 @@
         <div class="destination-item1">
             <div class="destination-layer">
                 <div class="destination-description">
-                    <h4 style="padding-left: 50px" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 2</b></h4>
+                    <h4 style="" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 2</b></h4>
                     <h3><b>Keraton Yogyakarta-Gua Pindul-Pantai Gumuk Pasir</b></h3>
                     <p>Petualangan kita di hari kedua akan dimulai dengan mengunjungi Keraton Kesultanan Ngayogyakarta,
                         untuk mempelajari dan mendalami sejarah Wilayah
