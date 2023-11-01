@@ -57,7 +57,7 @@
             <p>
                 Kami menyediakan tarif yang kompetitif dan terjangkau bagi Anda.
             </p>
-            <a href="/unduh-pdf" class="btn btn-primary">Hubungi Kami</a>
+            <a href="/portal/kontak" class="btn btn-primary">Hubungi Kami</a>
         </div>
         <div class="col-2">
             <img class="logo-image" src="{{URL::asset('/images/Logo-tentang.png') }}" alt="Logo">
