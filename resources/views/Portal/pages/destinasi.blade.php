@@ -74,7 +74,6 @@
             <h4>Yogyakarta</h4>
             <h6 style="color: #626262">2 Hari 1 Malam</h6>
             <h5 style="text-align: right">Start from 330k/pax</h5>
-            <h5>Nuansa Alam di Kota Budaya</h5>
             <p>Paket wisata ini cocok bagi anda yang ingin menelusuri rekam sejarah kerajaan Mataram Kuno dan Kesultanan Ngayogakarta.</p>
             <br>
             <a href="/portal/detaildestinasijogja" class="btn btn-secondary">Selengkapnya</a>
@@ -91,7 +90,6 @@
             <h4>Bali</h4>
             <h6 style="color: #626262">4 Hari 3 Malam</h6>
             <h5 style="text-align: right">Start from 1250k/pax</h5>
-            <h5>Ikon Wisata Indonesia</h5>
             <p>Paket wisata ini cocok untuk anda yang ingin menikmati 3 pengalaman sekaligus.</p>
             <br>
             <a href="/portal/detaildestinasibali" class="btn btn-secondary">Selengkapnya</a>
@@ -108,7 +106,6 @@
             <h4>Karimun Jawa</h4>
             <h6 style="color: #626262">3 Hari 2 Malam</h6>
             <h5 style="text-align: right">Start from 1500k/pax</h5>
-            <h5>Surga wisata bahari Pulau Jawa</h5>
             <p>Dalam paket ini anda akan diajak menjelajahi dan menikmati pesona pulau pulau dengan kekayaan biota laut.</p>
             <br>
             <a href="/portal/detaildestinasikarimun" class="btn btn-secondary">Selengkapnya</a>
@@ -125,7 +122,6 @@
             <h4>Malang - Batu Bromo</h4>
             <h6 style="color: #626262">2 Hari 1 Malam</h6>
             <h5 style="text-align: right">Start from 1100k/pax</h5>
-            <h5>Golden Sunrise Terbaik Pulau Jawa</h5>
             <p>Paket wisata ini cocok bagi anda  yang ingin menikmati keindahan Gunung Bromo dan mencari sensasi petualangan</p>
             <br>
             <a href="/portal/detaildestinasimalang" class="btn btn-secondary">Selengkapnya</a>
