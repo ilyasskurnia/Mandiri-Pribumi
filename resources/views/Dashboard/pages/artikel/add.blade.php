@@ -48,7 +48,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                                <form action="\dashboard\tambahpaket" method="post" enctype="multipart/form-data">
+                                {{-- <form action="\dashboard\tambahpaket" method="post" enctype="multipart/form-data"> --}}
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-12">
@@ -93,5 +93,5 @@
         window.history.back();
     }
     </script>
-    
+
 @endsection
