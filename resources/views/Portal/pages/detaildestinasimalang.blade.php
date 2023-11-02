@@ -105,6 +105,11 @@
         padding: 15px;
         background: #fff;
         margin-top: 10px;
+        padding-right: 50px;
+    }
+    .destination-image {
+        padding: 15px;
+        margin-top: 10px;
     }
 
     .destination-tagline {
@@ -244,7 +249,7 @@
                 <div class="destination-description">
                     <h4 style="" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 1</b></h4>
                     <h3><b>Semarang - Malang - Bromo - Batu</b></h3>
-                    <p>Selamat datang di Pulau Bali! Hari ini, kami akan membawa Anda untuk menikmati keindahan alam dan budaya pulau ini. Kami akan memulai hari dengan sarapan pagi di pinggir Danau Beretan sambil menikmati matahari terbit. Kemudian, Anda akan berpetualang ke Ubud Monkey Forest, mengeksplorasi alam dan keanekaragaman fauna Bali. Di samping itu, Anda akan merasakan kebudayaan Bali dengan mengunjungi Ubud Palace. Hari ini akan ditutup dengan pemandangan matahari terbenam yang spektakuler di Tanah Lot</p>
+                    <p style="text-align: justify">Selamat datang di Pulau Bali! Hari ini, kami akan membawa Anda untuk menikmati keindahan alam dan budaya pulau ini. Kami akan memulai hari dengan sarapan pagi di pinggir Danau Beretan sambil menikmati matahari terbit. Kemudian, Anda akan berpetualang ke Ubud Monkey Forest, mengeksplorasi alam dan keanekaragaman fauna Bali. Di samping itu, Anda akan merasakan kebudayaan Bali dengan mengunjungi Ubud Palace. Hari ini akan ditutup dengan pemandangan matahari terbenam yang spektakuler di Tanah Lot</p>
                 </div>
             </div>
         </div>
@@ -254,7 +259,7 @@
                 <div class="destination-description">
                     <h4 style="" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 2</b></h4>
                     <h3><b>Batu - Semarang</b></h3>
-                    <p>Setelah kita menyantap sarapan dan check out dari hotel, kita akan berkunjung di Jatim Park II untuk mendapatkan pesona fauna. Sebagai penutup dari petualangan bersama kita di Malang, Bromo, dan Batu, kita akan menyantap dan menikmati makan siang sebelum bertolak kembali menuju Kota Semarang.</p>
+                    <p style="text-align: justify">Setelah kita menyantap sarapan dan check out dari hotel, kita akan berkunjung di Jatim Park II untuk mendapatkan pesona fauna. Sebagai penutup dari petualangan bersama kita di Malang, Bromo, dan Batu, kita akan menyantap dan menikmati makan siang sebelum bertolak kembali menuju Kota Semarang.</p>
                 </div>
             </div>
             <div class="destination-layer">

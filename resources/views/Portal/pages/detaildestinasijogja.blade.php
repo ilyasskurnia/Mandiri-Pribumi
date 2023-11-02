@@ -105,6 +105,11 @@
         padding: 15px;
         background: #fff;
         margin-top: 10px;
+        padding-right: 50px;
+    }
+    .destination-image {
+        padding: 15px;
+        margin-top: 10px;
     }
 
     .destination-tagline {
@@ -243,7 +248,7 @@
                 <div class="destination-description">
                     <h4 style="" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 1</b></h4>
                     <h3><b>Candi Borobudur-Candi Prambanan</b></h3>
-                    <p>Mari kita mulai petualangan kita! Dalam perjalanan
+                    <p style="text-align: justify">Mari kita mulai petualangan kita! Dalam perjalanan
                         menuju Kota Yogyakarta, kita akan berkunjung pada
                         salah satu warisan nenek moyang yang diakui dunia, Candi Borobudur. Sesampai nya di Kota
                         Yogyakarta, kita akan menikmati makan siang di salah satu restoran pilihan kami. Sebagal penutup
@@ -258,7 +263,7 @@
                 <div class="destination-description">
                     <h4 style="" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 2</b></h4>
                     <h3><b>Keraton Yogyakarta-Gua Pindul-Pantai Gumuk Pasir</b></h3>
-                    <p>Petualangan kita di hari kedua akan dimulai dengan mengunjungi Keraton Kesultanan Ngayogyakarta,
+                    <p style="text-align: justify">Petualangan kita di hari kedua akan dimulai dengan mengunjungi Keraton Kesultanan Ngayogyakarta,
                         untuk mempelajari dan mendalami sejarah Wilayah
                         Yogyakarta. Untuk mengawali petualangan alam, kita akan berwisata air dan menyusuri gua nan
                         indah di lokasi

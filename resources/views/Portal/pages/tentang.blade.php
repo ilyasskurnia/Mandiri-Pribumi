@@ -52,7 +52,7 @@
         <div class="col-md-6 mt-4">
             <h1 class="mt-2">Mandiri Pribumi</h1>
             <h3 class="mt-2">Tour & Travel</h3>
-            <p>
+            <p style="text-align: justify">
                 Mandiri Pribumi tour and travel adalah travel agent terpercaya di Indonesia yang telah berdiri sejak
                 2004 dengan kantor yang berada di Kota Semarang dan Kota Bandung. Kami hadir untuk memberikan perjalanan
                 terbaik untuk anda.
@@ -69,7 +69,7 @@
         <h3><span style="color: red;">Sejarah</span> <span style="color: black;">Perusahaan</span></h3>
     </div>
     <div class="row mt-3">
-        <p>Didirikan pada tahun 2004 sebagai travel agent terpercaya di Kota Bandung, oleh Drs Edy Suroso. Mandiri
+        <p style="text-align: justify">Didirikan pada tahun 2004 sebagai travel agent terpercaya di Kota Bandung, oleh Drs Edy Suroso. Mandiri
             Pribumi tour and travel telah melayani pelanggan dari lingkup sekolah hingga perusahaan. Karena tingginya
             permintaan jumlah pelanggan, pada tahun 2023, Mandiri Pribumi tour and travel membuka kantor cabang di Kota
             Semarang. Hingga saat ini, kami telah melayani 245 pelanggan dari berbagai kalangan, dan akan terus
@@ -83,7 +83,7 @@
         </h3>
     </div>
     <div class="row mt-3">
-        <p>Perusahaan tour dan travel yang terpercaya dengan mengedepankan kepuasan pelanggan melalui layanan yang
+        <p style="text-align: justify">Perusahaan tour dan travel yang terpercaya dengan mengedepankan kepuasan pelanggan melalui layanan yang
             berkualitas dan berdedikasi untuk memberikan manfaat dalam sektor pariwisata.</p>
     </div>
 </div>
@@ -94,7 +94,7 @@
         </h3>
     </div>
     <div class="row mt-3">
-        <p>Menjamin pelayanan perjalanan dan wisata yang aman serta nyaman kepada pelanggan Berkomitmen dengan standar
+        <p style="text-align: justify">Menjamin pelayanan perjalanan dan wisata yang aman serta nyaman kepada pelanggan Berkomitmen dengan standar
             yang tinggi dalam melayani pelanggan
             Melengkapi dengan pelayanan handal, harga yang kompetitif dan kejujuran</p>
     </div>
@@ -117,8 +117,7 @@
 <div class="container mt-5">
     <div class="row mt-3">
         <h5><strong>Kami melayani paket <span style="color: red;">perjalanan wisata domestik</span> ke berbagai <br>
-                destinasi terbaik di Indonesia untuk rombongan maupun
-                pribadi.</strong>
+                destinasi terbaik di Indonesia untuk rombongan maupun pribadi.</strong>
         </h5>
     </div>
 </div>

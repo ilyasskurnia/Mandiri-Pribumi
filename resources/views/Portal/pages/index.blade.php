@@ -247,6 +247,15 @@
         /* Atur gambar untuk mengisi container tanpa merubah aspek ratio */
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
+    .welcome {
+        padding-left: 2%;
+    }
+    .banner3 {
+        padding-right: 2%;
+    }
+    .video-welcome {
+        text-align: justify;
+    }
 
 
     /*Responsive Styles */
@@ -294,7 +303,7 @@
         <h1><b>#Mari</b></h1>
         <h1><span style="color: #51604F;"><b>Jelajahi</b></span></h1>
         <h1><b>Nusantara</b></h1>
-        <p>Jelajahi indahnya <br>
+        <p style="text-align: justify">Jelajahi indahnya <br>
             landscape Nusantara
         </p>
 
@@ -305,10 +314,10 @@
 <section class="floating-container">
     <div class="container mt-3 mb-2">
         <div class="row">
-            <div class="col-md-6 col-lg-3">
+            <div class="col-md-6 col-lg-3 welcome">
                 <h5>Selamat datang di,</h5>
                 <h2>Mandiri <span style="color: #51604F;"> Pribumi</span></h2>
-                <p>Rasakan keajaiban Indonesia melalui perjalanan unik dengan alam dan kuliner lokal yang istimewa.</p>
+                <p style="text-align: justify">Rasakan keajaiban Indonesia melalui perjalanan unik dengan alam dan kuliner lokal yang istimewa.</p>
             </div>
             <div class="col-md-6 col-lg-3">
                 <div class="text-center mt-3">
@@ -325,7 +334,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="text-center mt-3">
+                <div class="text-center mt-3 banner3">
                     <i class="fa-solid fa-plane-departure fa-2xl"></i>
                     {{-- <h3>Perjalanan Udara</h3> --}}
                     <p class="mt-5">Menjelajahi dan melestarikan aneka budaya Nusantara Bersama Mandiri Pribumi</p>
@@ -365,16 +374,9 @@
                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/pFXrf10y3-U" frameborder="0"
                     allowfullscreen></iframe>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 mt-4 video-welcome">
                 <h2>Selamat Datang di Mandiri Pribumi</h2>
-                <p><span style="font-size : 20px">Selamat datang di perjalanan petualangan tak terlupakan bersama
-                        Mandiri Pribumi! Kami mengundang Anda
-                        untuk merasakan keajaiban Indonesia dengan cara yang belum pernah Anda alami sebelumnya. Kami
-                        telah
-                        merancang rangkaian perjalanan yang menakjubkan dan unik,
-                        memberi Anda kesempatan untuk mengeksplorasi
-                        kekayaan alam yang luar biasa dan menikmati kelezatan kuliner lokal.
-                    </span></p>
+                <p><span style="font-size : 20px">Selamat datang di perjalanan petualangan tak terlupakan bersama Mandiri Pribumi! Kami mengundang Anda untuk merasakan keajaiban Indonesia dengan cara yang belum pernah Anda alami sebelumnya. Kami telah merancang rangkaian perjalanan yang menakjubkan dan unik, memberi Anda kesempatan untuk mengeksplorasi kekayaan alam yang luar biasa dan menikmati kelezatan kuliner lokal. </span></p>
             </div>
         </div>
     </div>
@@ -396,7 +398,7 @@
                                     <picture>
                                         <source srcset="{{URL::asset('/images/card1.jpg')}}" media="(min-width: 768px)">
                                         <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
-                                            style="max-width: 100%; height: auto;">
+                                            style="max-width: 100%; height: 400px;">
                                     </picture>
                                     <div class="card-body">
                                         <h5 class="card-title">Bali</h5>
@@ -406,7 +408,7 @@
                                             <p class="price">Rp. 1.250K/pax</p>
                                         </div>
                                         <p class="card-text mt-4"><b>Monumen Bajra Sandhi - GWK Cultural Park - Pura
-                                                Uluwatu dll.</b></p>
+                                                Uluwatu - dll.</b></p>
                                         <a href="/portal/detaildestinasibali" class="btn btn-primary"
                                             style="background-color: #2622DE; color: #fff;">Selengkapnya</a>
                                     </div>
@@ -418,7 +420,7 @@
                                     <picture>
                                         <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
                                         <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
-                                            style="max-width: 100%; height: auto;">
+                                            style="max-width: 100%; height: 400px;">
                                     </picture>
                                     <div class="card-body">
                                         <h5 class="card-title">Yogyakarta</h5>
@@ -440,7 +442,7 @@
                                     <picture>
                                         <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
                                         <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
-                                            style="max-width: 100%; height: auto;">
+                                            style="max-width: 100%; height: 400px;">
                                     </picture>
                                     <div class="card-body">
                                         <h5 class="card-title">Karimun Jawa</h5>
@@ -469,7 +471,7 @@
                                     <picture>
                                         <source srcset="{{URL::asset('/images/card4.jpg')}}" media="(min-width: 768px)">
                                         <img src="{{URL::asset('/images/card4.jpg')}}" alt="Bali"
-                                            style="max-width: 100%; height: auto;">
+                                            style="max-width: 100%; height: 400px;">
                                     </picture>
                                     <div class="card-body">
                                         <h5 class="card-title">Banda Neira</h5>
@@ -491,7 +493,7 @@
                                     <picture>
                                         <source srcset="{{URL::asset('/images/card5.jpg')}}" media="(min-width: 768px)">
                                         <img src="{{URL::asset('/images/card5.jpg')}}" alt="Bali"
-                                            style="max-width: 100%; height: auto;">
+                                            style="max-width: 100%; height: 400px;">
                                     </picture>
                                     <div class="card-body">
                                         <h5 class="card-title">Pantai Seribu</h5>
@@ -513,7 +515,7 @@
                                     <picture>
                                         <source srcset="{{URL::asset('/images/card6.jpg')}}" media="(min-width: 768px)">
                                         <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
-                                            style="max-width: 100%; height: auto;">
+                                            style="max-width: 100%; height: 400px;">
                                     </picture>
                                     <div class="card-body">
                                         <h5 class="card-title">Malang Batu Bromo</h5>

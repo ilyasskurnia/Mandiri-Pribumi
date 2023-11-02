@@ -105,6 +105,11 @@
         padding: 15px;
         background: #fff;
         margin-top: 10px;
+        padding-right: 50px;
+    }
+    .destination-image {
+        padding: 15px;
+        margin-top: 10px;
     }
 
     .destination-tagline {
@@ -244,7 +249,7 @@
                     <h4 style="" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 1</b></h4>
                     <h3><b>Keberangkatan - Pantai Tanjung Gelam - Bukit Anora
                             -pantai batu lawang</b></h3>
-                    <p>Kita akan memulai petualangan kita dengan berangkat
+                    <p style="text-align: justify">Kita akan memulai petualangan kita dengan berangkat
                         dari Pelabuhan Jepara menuju Pulau Karimunjawa
                         menggunakan KMP Ekspres Bahari kelas VIP. Setiba nya
                         di Karimunjawa, kita akan check in hotel terlebih dahulu
@@ -261,7 +266,7 @@
                 <div class="destination-description">
                     <h4 style="" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 2</b></h4>
                     <h3><b>Pulau Mejangan Kecil - Penangkaran Hiu Karimun Jawa</b></h3>
-                    <p>Hari ini adalah puncak petualangan kita. Setelah
+                    <p style="text-align: justify">Hari ini adalah puncak petualangan kita. Setelah
                         sarapan di hotel, kita akan menuju Karang Bintang Maer
                         dan melakukan aktifitas snorkeling disana. Kemudian
                         kita akan berkunjung dan berfoto-foto dibawah air di
@@ -288,7 +293,7 @@
                 <div class="destination-description">
                     <h4 style="" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 3</b></h4>
                     <h3><b>Point View Karimun Jawa - Kepulangan</b></h3>
-                    <p>Setelah kita melakukan checkout di hotel, kita akan
+                    <p style="text-align: justify">Setelah kita melakukan checkout di hotel, kita akan
                         langsung kembali ke Dermaga Karimunjawa dan
                         kembali menuju Kota Jepara. Selamat tinggal Karimun-
                         jawa</p>
