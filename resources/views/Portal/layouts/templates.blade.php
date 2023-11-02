@@ -23,6 +23,9 @@
 
     <!-- CSS tambahan untuk mempercantik tampilan -->
     <style>
+        body{
+            background-image: url('{{ asset('images/bg_mandiripribumi.png') }}');
+        }
         /* Tambahkan CSS kustom Anda di sini */
         .navbar {
             background-color: #BDCDEA;
