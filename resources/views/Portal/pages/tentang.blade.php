@@ -19,10 +19,30 @@
         margin: 0 auto;
         /* Pusatkan gambar dalam parent */
     }
+    .image-overlay1 {
+        height: 90%;
+        width: 80%;
+        padding-left: 0px;
+    }
+    .visi-misi {
+        padding-right: 250px;
+    }
 
     @media (max-width: 768px) {
         .image-overlay {
             margin-left: 0;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .image-overlay1{
+            margin-left: 40px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .logo{
+            margin-left: 60px;
             max-width: 100%;
             height: auto;
         }
@@ -44,12 +64,16 @@
             max-width: 25px;
             /* Gambar tidak melebihi lebar parent */
         }
+
+        .visi-misi{
+            padding: 0px;
+        }
     }
 
 </style>
 <div class="container">
     <div class="row justify-content-between">
-        <div class="col-md-6 mt-4">
+        <div class="col-md-6 mt-5">
             <h1 class="mt-2">Mandiri Pribumi</h1>
             <h3 class="mt-2">Tour & Travel</h3>
             <p style="text-align: justify">
@@ -59,24 +83,30 @@
             </p>
             <a href="/unduh-pdf" class="btn btn-primary">Unduh Company Profile</a>
         </div>
-        <div class="col-md-4">
-            <img style="max-height: 350px" src="{{URL::asset('/images/Logo-tentang.png') }}" alt="Logo">
+        <div class="col-md-2 mt-4 logo">
+            <img style="max-height: 200px" src="{{URL::asset('/images/Logo-tentang.png') }}" alt="Logo">
         </div>
     </div>
-</div>
+</div><br><br><br>
 <div class="container mt-5">
     <div class="row">
         <h3><span style="color: red;">Sejarah</span> <span style="color: black;">Perusahaan</span></h3>
     </div>
-    <div class="row mt-3">
-        <p style="text-align: justify">Didirikan pada tahun 2004 sebagai travel agent terpercaya di Kota Bandung, oleh Drs Edy Suroso. Mandiri
-            Pribumi tour and travel telah melayani pelanggan dari lingkup sekolah hingga perusahaan. Karena tingginya
-            permintaan jumlah pelanggan, pada tahun 2023, Mandiri Pribumi tour and travel membuka kantor cabang di Kota
-            Semarang. Hingga saat ini, kami telah melayani 245 pelanggan dari berbagai kalangan, dan akan terus
-            bertambah.</p>
+    <div class="row justify-content-between">
+        <div class="col-md-6 mt-3">
+            <p style="text-align: justify">Didirikan pada tahun 2004 sebagai travel agent terpercaya di Kota Bandung, oleh Drs Edy Suroso. Mandiri
+                Pribumi tour and travel telah melayani pelanggan dari lingkup sekolah hingga perusahaan. </p>
+            <p style="text-align: justify">Karena tingginya permintaan jumlah pelanggan, pada tahun 2023, Mandiri Pribumi tour and travel membuka kantor cabang di Kota
+                Semarang. </p>
+            <p style="text-align: justify">Hingga saat ini, kami telah melayani 245 pelanggan dari berbagai kalangan, dan akan terus
+                bertambah.</p>
+        </div>
+        <div class="col-md-2 mt-3">
+            <img class="image-overlay1" src="{{URL::asset('/images/pendiri.png') }}" alt="">
+        </div>
     </div>
 </div>
-<div class="container mt-5">
+<div class="container mt-5 visi-misi">
     <div class="row">
         <h3 style="color: red;">
             Visi
@@ -87,7 +117,7 @@
             berkualitas dan berdedikasi untuk memberikan manfaat dalam sektor pariwisata.</p>
     </div>
 </div>
-<div class="container mt-5">
+<div class="container mt-5 visi-misi">
     <div class="row">
         <h3>
             Misi
