@@ -108,23 +108,50 @@
             <p>
                 Ajukan pertanyaan, pesan, atau kesan terhadap pelayanan kami.
             </p>
-            <form method="POST" action="/kirimPesan">
+            @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+            @endif
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+            <form method="POST" action="/portal/kontak" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
                     <label for="nama" class="form-label">Nama:</label>
-                    <input type="text" class="form-control" id="nama" name="nama">
+                    <input type="text" class="form-control" id="nama" name="nama" required>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Alamat Email:</label>
-                    <input type="email" class="form-control" id="email" name="email">
+                    <input type="email" class="form-control" id="email" name="email" required>
                 </div>
                 <div class="mb-3">
                     <label for="sosmed" class="form-label">Social Media:</label>
-                    <input type="text" class="form-control" id="sosmed" name="sosmed">
+                    <input type="text" class="form-control" id="social_media" name="social_media" required>
                 </div>
                 <div class="mb-3">
-                    <label for="telp" class="form-label">Nomor Telepon:</label>
-                    <input type="tel" class="form-control" id="telp" name="telp">
+                    <label for="telepon" class="form-label">Nomor Telepon:</label>
+                    <input type="number" class="form-control" id="telepon" name="telepon" required>
+                </div>
+                <div class="mb-3">
+                    <label for="destinasi" class="form-label">Paket Destinasi</label>
+                    <select class="form-select" id="destinasi" name="destinasi" required>
+                        <option value="">pilih destinasi</option>
+                        @foreach($data_destinasi as $nama_destinasi)
+                            <option value="{{ $nama_destinasi}}">{{ $nama_destinasi }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="tanggal" class="form-label">Pilih Tanggal Keberangkatan</label>
+                    <input type="date" class="form-select" name="tanggal" id="tanggal"> 
                 </div>
                 <div class="mb-3">
                     <label for="pesan" class="form-label">Pesan:</label>
@@ -137,16 +164,16 @@
         <div class="col-lg-5 col-md-12 mt-5 side-detail">
             <h4>Call Us</h4>
             <p>Jika Anda memiliki keluhan atau permintaan, Anda dapat menghubungi kami.</p>
-            <div class="mb-3">
+            <div class="mb-3 d-flex">
                 <img style="max-height: 25px" src="{{ URL::asset('/images/call.png') }}" alt="">
-                <p style="color: #FFBE2C">+62 1234567890</p>
+                <p style="color: #FFBE2C; padding-left:10px;">+62 1234567890</p>
             </div>
 
             <h4>Visit Us</h4>
             <p>Anda dapat mengunjungi kantor kami pada alamat berikut:</p>
-            <div class="mb-3">
+            <div class="mb-3 d-flex">
                 <img style="max-height: 25px" src="{{ URL::asset('/images/map.png') }}" alt="">
-                <p style="color: #FFBE2C">Jl. Jend. Sudirman, Jakarta, Indonesia</p>
+                <p style="color: #FFBE2C; padding-left:10px;">Jl. Jend. Sudirman, Jakarta, Indonesia</p>
             </div>
         </div>
     </div>
@@ -172,51 +199,24 @@
             <h4>Apakah butuh bantuan atau pertanyaan?</h4>
             <p>Kami sudah mempersiapkan beberapa jawaban umum yang ingin anda sampaikan.</p>
             <div class="accordion" id="accordionExample">
+                @foreach ($get_faq as $faq)
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Apakah include tiket pesawat ?
+                            {{ $faq->pertanyaan}}
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <strong>Ya, sudah termasuk</strong>&nbsp ini adalah contoh jawaban nantinya yang akan
-                            diisikan
+                            {{ $faq->jawaban }}
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Apakah include tiket kereta ?
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>Belum termasuk</strong>&nbsp ini adalah contoh jawaban nantinya yang akan diisikan
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Apakah menggunakan hotel bintang 4 ?
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>Hotel yang digunakan tergantung kondisi</strong>&nbsp ini adalah contoh jawaban
-                            nantinya yang akan diisikan
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
+            
         </div>
     </div>
 </div>

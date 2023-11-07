@@ -94,6 +94,12 @@
                 <span class="links_name">Artikel</span>
             </a>
         </li>
+        <li>
+            <a href="{{ url('/dashboard/faq') }}">
+                <i class="fa-solid fa-envelope-open-text" style="color: #2b78ff;"></i>
+                <span class="links_name">FAQ</span>
+            </a>
+        </li>
     </ul>
     <ul class="nav-links">
         <li>

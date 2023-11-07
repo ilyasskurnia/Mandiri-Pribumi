@@ -53,41 +53,46 @@
                         @endif
                         <div class="card-header pb-2">
                             <div class="d-flex align-items-center">
-                                <h4 class="card-title">Tambah Data Paket Destinasi</h4>
+                                <h4 class="card-title">Tambah Data Pesan Masuk</h4>
                             </div>
                         </div>
                         <div class="card-body">
-                                <form action="\dashboard\tambahpaket" method="post" enctype="multipart/form-data">
+                                <form action="\dashboard\tambahpesan" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label class="form-control-label">Foto Destinasi</label>
-                                            <input name="thumbnail" class="form-control" type="file">
+                                            <label class="form-control-label">Nama user</label>
+                                            <input name="nama" class="form-control" type="text" value="{{ old('nama') }}">
                                         </div>
                                         <div class="form-group">
-                                            <label class="form-control-label">Nama Objek Destinasi</label>
-                                            <input name="destinasi" class="form-control" type="text" value="{{ old('destinasi') }}">
+                                            <label class="form-control-label">Email</label>
+                                            <input name="email" class="form-control" type="email" value="{{ old('email') }}">
                                         </div>
                                         <div class="form-group">
-                                            <label class="form-control-label">Peta wisata</label>
-                                            <input name="peta_wisata" class="form-control" type="file">
+                                            <label class="form-control-label">Sosial Media</label>
+                                            <input name="social_media" class="form-control" type="text" value="{{ old('social_media') }}">
                                         </div>
                                         <div class="form-group">
-                                            <label class="form-control-label">Rute</label>
-                                            <input name="rute" class="form-control" type="text" value="{{ old('rute') }}">
+                                            <label class="form-control-label">Nomor Telepon</label>
+                                            <input name="telepon" class="form-control" type="text" value="{{ old('telepon') }}">
                                         </div>
                                         <div class="form-group">
-                                            <label class="form-control-label">Brosure</label>
-                                            <input name="brosure" class="form-control" type="file">
+                                            <label for="destinasi" class="form-label">Paket Destinasi</label>
+                                            <select class="form-select" id="destinasi" name="destinasi" required>
+                                                <option value="">pilih destinasi</option>
+                                                @foreach($data_destinasi as $nama_destinasi)
+                                                    <option value="{{ $nama_destinasi}}">{{ $nama_destinasi }}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                         <div class="form-group">
-                                            <label class="form-control-label">Lama Waktu Tour</label>
-                                            <input name="total_waktu" class="form-control" type="text" value="{{ old('total_waktu') }}">
+                                            <label class="form-control-label">Tanggal Keberangkatan</label>
+                                            <input name="tanggal" class="form-control" type="date" value="{{ old('tanggal') }}">
                                         </div>
                                         <div class="form-group">
-                                            <label class="form-control-label">Biaya</label>
-                                            <input name="biaya" class="form-control" type="text" value="{{ old('biaya') }}">
+                                            <label class="form-control-label">Pesan</label>
+                                            <textarea name="pesan" class="form-control" type="text"  rows="4" value="{{ old('pesan') }}"></textarea>
                                         </div>
                                 </div>
                                 <div class="d-flex justify-content-end mt-4">

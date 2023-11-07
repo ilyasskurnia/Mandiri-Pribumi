@@ -53,41 +53,21 @@
                         @endif
                         <div class="card-header pb-2">
                             <div class="d-flex align-items-center">
-                                <h4 class="card-title">Tambah Data Paket Destinasi</h4>
+                                <h4 class="card-title">Tambah Data Frequently Asked Questions</h4>
                             </div>
                         </div>
                         <div class="card-body">
-                                <form action="\dashboard\tambahpaket" method="post" enctype="multipart/form-data">
+                                <form action="\dashboard\tambahfaq" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label class="form-control-label">Foto Destinasi</label>
-                                            <input name="thumbnail" class="form-control" type="file">
+                                            <label class="form-control-label">Pertanyaan</label>
+                                            <input name="pertanyaan" class="form-control" type="text" value="{{ old('pertanyaan') }}">
                                         </div>
                                         <div class="form-group">
-                                            <label class="form-control-label">Nama Objek Destinasi</label>
-                                            <input name="destinasi" class="form-control" type="text" value="{{ old('destinasi') }}">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="form-control-label">Peta wisata</label>
-                                            <input name="peta_wisata" class="form-control" type="file">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="form-control-label">Rute</label>
-                                            <input name="rute" class="form-control" type="text" value="{{ old('rute') }}">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="form-control-label">Brosure</label>
-                                            <input name="brosure" class="form-control" type="file">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="form-control-label">Lama Waktu Tour</label>
-                                            <input name="total_waktu" class="form-control" type="text" value="{{ old('total_waktu') }}">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="form-control-label">Biaya</label>
-                                            <input name="biaya" class="form-control" type="text" value="{{ old('biaya') }}">
+                                            <label class="form-control-label">Jawaban Pertanyaan</label>
+                                            <input name="jawaban" class="form-control" type="text" value="{{ old('jawaban') }}">
                                         </div>
                                 </div>
                                 <div class="d-flex justify-content-end mt-4">

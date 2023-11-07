@@ -21,7 +21,7 @@
 </head>
 <body>
     <style>
-        nav {
+        .navbar-templates {
             display: flex;
             justify-content: space-between;
             height: 80px;
@@ -37,19 +37,19 @@
             transition: all 0.5s ease;
 
         }
-        nav .sidebar-button {
+        .navbar-templates .sidebar-button {
             display: flex;
             align-items: center;
             font-size: var(--fs-20);
             font-weight: 500;
             color: #f5f5f5;
         }
-        nav .sidebar-button i {
+        .navbar-templates .sidebar-button i {
             font-size: 35px;
             margin-right: 10px;
             color: #f5f5f5;
         }
-        nav .profile-details {
+        .navbar-templates .profile-details {
             display: flex;
             align-items: center;
             background: #F5F6FA;
@@ -59,7 +59,7 @@
             min-width: 190px;
             padding: 0 15px 0 2px;
         }
-        nav .profile-details fa-solid {
+        .navbar-templates .profile-details fa-solid {
             height: 40px;
             width: 40px;
             border-radius: 15px;
@@ -70,25 +70,27 @@
         }
     </style>
         <nav>
-            <div class="sidebar-button">
-                <i class="fa-solid fa-bars sidebarBtn"></i>
-                <span class="page-title" style="font-size: 20px; color :black">
-                    @if(Request::is('dashboard/pesan'))
-                        Pesan
-                    @elseif(Request::is('dashboard/artikel'))
-                        Artikel
-                    @elseif(Request::is('dashboard/galeri'))
-                        Galeri
-                    @elseif(Request::is('dashboard/paketdestinasi'))
-                        Paket Destinasi
-                    @else
-                        Dashboard
-                    @endif
-                </span>
-            </div>
-            <div class="profile-details">
-                <i class="fa-solid fa-user fa-xl" style=" margin-right : 10px; margin-left : 10px"></i>
-                <span class="admin_name" style="margin-left: 10px">{{ auth()->user()->name }}</span>
+            <div class="navbar-templates">
+                <div class="sidebar-button">
+                    <i class="fa-solid fa-bars sidebarBtn"></i>
+                    <span class="page-title" style="font-size: 20px; color :black">
+                        @if(Request::is('dashboard/pesan'))
+                            Pesan
+                        @elseif(Request::is('dashboard/artikel'))
+                            Artikel
+                        @elseif(Request::is('dashboard/galeri'))
+                            Galeri
+                        @elseif(Request::is('dashboard/paketdestinasi'))
+                            Paket Destinasi
+                        @else
+                            Dashboard
+                        @endif
+                    </span>
+                </div>
+                <div class="profile-details">
+                    <i class="fa-solid fa-user fa-xl" style=" margin-right : 10px; margin-left : 10px"></i>
+                    <span class="admin_name" style="margin-left: 10px">{{ auth()->user()->name }}</span>
+                </div>
             </div>
         </nav>
 

@@ -39,13 +39,13 @@
         <main class="d-flex flex-column gap-3 grow">
             <section class="d-flex gap-2 items-center justify-content-between">
                 <h4>
-                    Pesan Masuk <br> <a style="font-size: 18px">Anda memiliki {{ $data['total_item'] }} Pesan Masuk.</a >
+                    Frequently Asked Question<br> <a style="font-size: 18px">Anda memiliki {{ $data['total_item'] }} Frequently Asked Question.</a >
                 </h4>
                 <div class="d-flex align-items-center ">
                     <div class="search ">
                         <input style="border-radius: 5px;" type="text" class="form-control" placeholder="Search for...">
                     </div>
-                    <a href="{{ url('/dashboard/tambahpesan')}}"" type="button" class="btn btn-primary rounded-lg ml-auto">
+                    <a href="{{ url('/dashboard/tambahfaq')}}"" type="button" class="btn btn-primary rounded-lg ml-auto">
                         <div class="fa fa-fw fa-plus mr-2"></div> Add Data 
                     </a>
                 </div>
@@ -58,33 +58,21 @@
                                 <thead class="bg-grey1">
                                     <tr>
                                         <th class="text-center">No.</th>
-                                        <th class="text-center">Nama</th>
-                                        <th class="text-center">Email</th>
-                                        <th class="text-center">Sosial Media</th>
-                                        <th class="text-center">Nomor Telepon</th>
-                                        <th class="text-center">Pilihan Destinasi</th>
-                                        <th class="text-center">Tanggal Keberangkatan</th>
-                                        <th class="text-center">Pesan</th>
-                                        <th class="text-center">Pesan Masuk Pada</th>
+                                        <th class="text-center">Pertanyaan</th>
+                                        <th class="text-center">Jawaban</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($data['get_data'] as $pesan)
+                                    @foreach ($data['get_data'] as $faq)
                                     <tr>
                                         <td class="text-center">{{ $nomor++ }}</td>
-                                        <td class="text-center">{{ $pesan->nama }}</td>
-                                        <td class="text-center">{{ $pesan->email }}</td>
-                                        <td class="text-center">{{ $pesan->social_media }}</td>
-                                        <td class="text-center">{{ $pesan->telepon }}</td>
-                                        <td class="text-center">{{ $pesan->destinasi }}</td>
-                                        <td class="text-center">{{ $pesan->tanggal }}</td>
-                                        <td class="text-center">{{ $pesan->pesan }}</td>
-                                        <td class="text-center">{{ $pesan->created_at }}</td>
+                                        <td class="text-center">{{ $faq->pertanyaan }}</td>
+                                        <td class="text-center">{{ $faq->jawaban }}</td>
                                         <td>
                                             <div class="d-flex">
-                                                <a href="/dashboard/{{ $pesan->id }}/editpesan" class="btn btn-xs bg-primary me-1 text-white">Edit</a>
-                                                <form action="/dashboard/pesan/{{ $pesan->id }}" method="POST">
+                                                <a href="/dashboard/{{ $faq->id }}/editfaq" class="btn btn-xs bg-primary me-1 text-white">Edit</a>
+                                                <form action="/dashboard/faq/{{ $faq->id }}" method="POST">
                                                     @csrf
                                                     @method('delete')
                                                     <input type="submit" name="submit" value="delete" class="btn btn-xs btn-danger me-1">

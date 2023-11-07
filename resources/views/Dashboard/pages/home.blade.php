@@ -116,7 +116,7 @@
             <div class="box">
                 <div class="right-side">
                     <div class="box-topic">Paket Destinasi</div>
-                    <div class="number">4</div>
+                    <div class="number">{{ $card['total_destinasi'] }}</div>
                 </div>
                 <div class="icon-box">
                     <i class="fa-solid fa-truck-fast fa-xl"></i>
@@ -125,7 +125,7 @@
             <div class="box">
                 <div class="right-side">
                     <div class="box-topic">Pesan Masuk</div>
-                    <div class="number">7</div>
+                    <div class="number">{{ $card['total_pesan'] }}</div>
                 </div>
                 <div class="icon-box">
                     <i class="fa-solid fa-envelope fa-xl"></i>
@@ -156,6 +156,7 @@
             <div class="left-box-title">
                 <h4>Paket Destinasi</h4>
             </div>
+            @foreach ($card['paket_destinasi'] as $destinasi)
             <div class="left-box-content">
                 <div class="container">
                     <div class="row mt-4 justify-content-between">
@@ -163,95 +164,35 @@
                             <img width="200" height="150" src="{{URL::asset('/images/destinasi2.png') }}" alt="">
                         </div>
                         <div class="col-7 mt-4">
-                            <h5>Bali</h5>
-                            <p style="color: #626262">4 Hari 3 Malam</p>
-                            <h6>Start from 1250k/pax</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row mt-4 justify-content-between">
-                        <div class="col-1">
-                            <img width="200" height="150" src="{{URL::asset('/images/destinasi1.png') }}" alt="">
-                        </div>
-                        <div class="col-7 mt-4">
-                            <h5>Yogyakarta</h5>
-                            <p style="color: #626262">2 Hari 1 Malam</p>
-                            <h6>Start from 330k/pax</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row mt-4 justify-content-between">
-                        <div class="col-1">
-                            <img width="200" height="150" src="{{URL::asset('/images/destinasi3.png') }}" alt="">
-                        </div>
-                        <div class="col-7 mt-4">
-                            <h5>Karimun Jawa</h5>
-                            <p style="color: #626262">3 Hari 2 Malam</p>
-                            <h6>Start from 1500k/pax</h6>
+                            <h5>{{ $destinasi->destinasi }}</h5>
+                            <p style="color: #626262">{{ $destinasi->total_waktu }}</p>
+                            <h6>Start from {{ $destinasi->biaya }}</h6>
                         </div>
                     </div>
                 </div>
             </div>
+            @endforeach
         </div>
         <div class="right-box">
             <div class="right-box-title">
                 <h4>Pesan Masuk</h4>
             </div>
             <div class="right-box-content">
+                @foreach ($card['pesan_masuk'] as $pesan)
                 <div class="container">
                     <div class="row mt-4 justify-content-between">
                         <div class="col-sm-3">
-                            <h6>Ilyas Kurnia Ramadhan</h6>
+                            <h6>{{ $pesan->nama }}</h6>
                         </div>
-                        <div class="col-sm-7">
-                            <p style="color: #626262">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <div class="col-sm-6">
+                            <p style="color: #626262">{{ $pesan->pesan }}</p>
                         </div>
-                        <div class="col-sm-2">
-                            <h6>19.30</h6>
-                        </div>
-                    </div>
-                </div><hr>
-                <div class="container">
-                    <div class="row mt-4 justify-content-between">
                         <div class="col-sm-3">
-                            <h6>Adnin Ramadhani</h6>
-                        </div>
-                        <div class="col-sm-7">
-                            <p style="color: #626262">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                        </div>
-                        <div class="col-sm-2">
-                            <h6>19.30</h6>
+                            <h6>{{ $pesan->created_at }}</h6>
                         </div>
                     </div>
                 </div><hr>
-                <div class="container">
-                    <div class="row mt-4 justify-content-between">
-                        <div class="col-sm-3">
-                            <h6>Naufal Nabil</h6>
-                        </div>
-                        <div class="col-sm-7">
-                            <p style="color: #626262">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                        </div>
-                        <div class="col-sm-2">
-                            <h6>19.30</h6>
-                        </div>
-                    </div>
-                </div><hr>
-                <div class="container">
-                    <div class="row mt-4 justify-content-between">
-                        <div class="col-sm-3">
-                            <h6>Hastyantoko Dwiki</h6>
-                        </div>
-                        <div class="col-sm-7">
-                            <p style="color: #626262">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                        </div>
-                        <div class="col-sm-2">
-                            <h6>19.30</h6>
-                        </div>
-                    </div>
-                </div><hr>
+                @endforeach
             </div>
         </div>
     </div>
