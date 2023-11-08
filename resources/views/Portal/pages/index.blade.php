@@ -42,6 +42,7 @@
         background-position: center;
         color: #000;
         padding: 150px 0;
+        height: 120vh;
     }
 
     .banner-section h1 {
@@ -54,6 +55,24 @@
         color: #fff;
     }
 
+    .fade-in {
+        opacity: 0;
+        /* Opacity awal */
+        transition: opacity 1s ease;
+        /* Waktu transisi 1 detik */
+    }
+
+    .fade-in.active {
+        opacity: 1;
+        /* Opacity saat efek perlahan muncul */
+    }
+
+    .fade-in:not(.active) {
+        opacity: 0;
+        /* Opacity saat efek fade out */
+    }
+
+
     /* Section 2: Floating Container */
     .floating-container {
         font-family: 'Sora', sans-serif;
@@ -63,7 +82,7 @@
         background-color: #F5F5F5;
         border-radius: 10px;
         padding: 5px;
-        margin-top: -70px;
+        margin-top: -150px;
         /* Atur margin negatif untuk tumpang tindih dengan Section 1 */
         box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
         max-width: 1300px;
@@ -93,9 +112,138 @@
         font-family: 'Sora', sans-serif;
     }
 
-    /* Section 4: Card Carousel */
+    /* Section 4: Galeri Carousel */
+    .galeri-section {
+        font-family: 'Sora', sans-serif;
+        background-color: #ffffff;
+        padding: 30px;
+    }
+
+    .galeri-vertical {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 200px;
+        /* Sesuaikan dengan tinggi card yang diinginkan */
+    }
+
+    .galeri {
+        max-width: 100%;
+        /* Sesuaikan lebar maksimal card sesuai kebutuhan */
+    }
+
+    .galeri-body {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 3px;
+    }
+
+    .galeri-container {
+        width: 100%;
+        max-width: 18rem;
+        /* Sesuaikan dengan lebar maksimal card */
+        margin-right: 20px;
+        /* Atur jarak antara card */
+        margin-bottom: 20px;
+        /* Atur jarak bawah antara card */
+    }
+
+    .galeri-img-top {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .galeri-title {
+        font-size: 1.25rem;
+        /* Atur ukuran judul sesuai kebutuhan */
+        margin-bottom: 0.25rem;
+        /* Tambahkan margin bawah jika diperlukan */
+    }
+
+    .floating-tagline {
+        box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .galeri-subtitle {
+        font-size: 1rem;
+        /* Atur ukuran subjudul sesuai kebutuhan */
+        margin-bottom: 0.5rem;
+        /* Tambahkan margin bawah jika diperlukan */
+    }
+
+    .galeri-text {
+        font-size: 0.875rem;
+        /* Atur ukuran teks sesuai kebutuhan */
+        margin-bottom: 1rem;
+        /* Tambahkan margin bawah jika diperlukan */
+    }
+
+    .galeri-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+        /* Sesuaikan tinggi container */
+    }
+
+    .judul-galeri {
+        text-align: center;
+        align-items: center;
+    }
+
+    /* Section 1: Partisan */
+    .partisan-section {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left center;
+        color: #fff;
+        padding: 200px 0;
+    }
+
+    .partisan-content {
+        max-width: 600px;
+        margin: 0 auto;
+        padding-left: 20px;
+        text-align: left;
+    }
+
+    .partisan-word {
+        align-content: center;
+    }
+
+    .partisan-content h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .btn-brosur {
+        display: inline-block;
+        background-color: #D50505;
+        /* Ganti warna button */
+        color: #fff;
+        padding: 10px 20px;
+        margin-top: 20px;
+        text-decoration: none;
+        text-align: left;
+        opacity: 0.8;
+        /* Efek setengah transparan */
+        border-radius: 10px;
+    }
+
+    .btn-brosur:hover {
+        font-weight: bold;
+        /* Menebalkan teks pada hover */
+        background-color: #38A2E3;
+        /* Warna latar belakang lebih cerah saat di hover */
+        box-shadow: 0 0 10px rgba(56, 162, 227, 0.5);
+        /* Efek bayangan saat di hover */
+    }
+
+    /* Section 5: Card Carousel */
     .card-section {
         font-family: 'Sora', sans-serif;
+        background-color: #F2EEEB;
+        padding: 30px;
     }
 
     .card-vertical {
@@ -109,6 +257,12 @@
     .card {
         max-width: 100%;
         /* Sesuaikan lebar maksimal card sesuai kebutuhan */
+    }
+
+    .card-body {
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 3px;
     }
 
     .card-container {
@@ -169,8 +323,8 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        background-color: rgba(0, 0, 0, 0.4);
-        border: 1px solid rgba(0, 0, 0, 0.2);
+        /* background-color: rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(0, 0, 0, 0.2); */
         border-radius: 50%;
         width: 40px;
         height: 40px;
@@ -203,7 +357,7 @@
         right: 10px;
     }
 
-    /* Section 5: Mitra Kami */
+    /* Section 6: Mitra Kami */
 
     .mitra-container {
         display: flex;
@@ -247,14 +401,27 @@
         /* Atur gambar untuk mengisi container tanpa merubah aspek ratio */
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
+
     .welcome {
         padding-left: 2%;
     }
+
     .banner3 {
         padding-right: 2%;
     }
+
     .video-welcome {
         text-align: justify;
+    }
+
+    .video-section{
+        background-color: #F2EEEB;
+        padding: 15px;
+    }
+
+    .judul-card {
+        text-align: center;
+        align-items: center;
     }
 
 
@@ -299,15 +466,13 @@
 
 <!-- Section 1: Banner -->
 <section class="banner-section">
-    <div class="container text-right my-5">
-        <h1><b>#Mari</b></h1>
-        <h1><span style="color: #51604F;"><b>Jelajahi</b></span></h1>
-        <h1><b>Nusantara</b></h1>
-        <p style="text-align: justify">Jelajahi indahnya <br>
-            landscape Nusantara
-        </p>
-
+    <div class="container text-right my-5 fade-in">
+        <h1 style="font-size: 48px;"><b>#Mari</b></h1>
+        <h1 style="font-size: 72px; color: #51604F;"><b>Jelajahi</b></h1>
+        <h1 style="font-size: 48px;"><b>Nusantara</b></h1>
+        <p style="text-align: justify; font-size: 24px;">Jelajahi indahnya <br> landscape Nusantara</p>
     </div>
+
 </section>
 
 <!-- Section 2: Floating Container -->
@@ -317,25 +482,26 @@
             <div class="col-md-6 col-lg-3 welcome">
                 <h5>Selamat datang di,</h5>
                 <h2>Mandiri <span style="color: #51604F;"> Pribumi</span></h2>
-                <p style="text-align: justify">Rasakan keajaiban Indonesia melalui perjalanan unik dengan alam dan kuliner lokal yang istimewa.</p>
+                <p style="text-align: justify">Rasakan keajaiban Indonesia melalui perjalanan unik dengan alam dan
+                    kuliner lokal yang istimewa.</p>
             </div>
             <div class="col-md-6 col-lg-3">
                 <div class="text-center mt-3">
-                    <i class="fa-solid fa-route fa-2xl"></i>
+                    <img style="max-height: 100px" src="{{URL::asset('/images/iconfloating1.png') }}" alt="Logo">
                     {{-- <h3>Ekspedisi</h3> --}}
                     <p class="mt-5">Menjelahi Pesona Alam Nusantara Bersama Mandiri Pribumi</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
                 <div class="text-center mt-3">
-                    <i class="fa-solid fa-utensils fa-2xl"></i>
+                    <img style="max-height: 100px" src="{{URL::asset('/images/iconfloating2.png') }}" alt="Logo">
                     {{-- <h3>Pantai</h3> --}}
                     <p class="mt-5">Jelajahi Cita Rasa Kuliner Nusantara Bersama Mandiri Pribumi</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
                 <div class="text-center mt-3 banner3">
-                    <i class="fa-solid fa-plane-departure fa-2xl"></i>
+                    <img style="max-height: 100px" src="{{URL::asset('/images/iconfloating3.png') }}" alt="Logo">
                     {{-- <h3>Perjalanan Udara</h3> --}}
                     <p class="mt-5">Menjelajahi dan melestarikan aneka budaya Nusantara Bersama Mandiri Pribumi</p>
                 </div>
@@ -346,7 +512,7 @@
             <div class="col-md-6 col-lg-6">
                 <h2 style="floating-tagline"><b>#Mari Jelajah Nusantara !</b></h2>
             </div>
-            <div class="col-md-6 col-lg-6 d-flex justify-content-end align-items-center" >
+            <div class="col-md-6 col-lg-6 d-flex justify-content-end align-items-center">
                 <a href="https://wa.me/your-whatsapp-number" target="_blank"
                     style="text-decoration: none; color: inherit;">
                     <i class="fab fa-whatsapp fa-3x"></i>
@@ -355,19 +521,18 @@
             </div>
         </div>
     </div>
-</section>
+</section> <br><br><br>
 
 <section class="video-section">
     <div class="container my-5 mt-5">
-<!-- Tagline -->
-        <div class="tagline mt-5">
-            <p><b>Nikmati <span style="color: red;">Keindahan</span> Bumi Nusantara <span style="color: red;">Bersama Kami</span></b></p>
+        <!-- Tagline -->
+        <div class="tagline mt-5 text-center">
+            <p style="font-size: 24px; font-weight: bold; color: #51604F;">Nikmati <span style="color: red; font-size: 28px;">Keindahan</span> Bumi Nusantara <span style="color: red; font-size: 28px;">Bersama Kami</span></p>
         </div>
     </div>
-</section>
 
-<!-- Section 3: Video and Greetings -->
-<section class="video-section">
+
+    <!-- Section 3: Video and Greetings -->
     <div class="container my-5 mt-5">
         <div class="row">
             <div class="col-lg-6 mb-4 mb-lg-2">
@@ -376,16 +541,252 @@
             </div>
             <div class="col-lg-6 mt-4 video-welcome">
                 <h2>Selamat Datang di Mandiri Pribumi</h2>
-                <p><span style="font-size : 20px">Selamat datang di perjalanan petualangan tak terlupakan bersama Mandiri Pribumi! Kami mengundang Anda untuk merasakan keajaiban Indonesia dengan cara yang belum pernah Anda alami sebelumnya. Kami telah merancang rangkaian perjalanan yang menakjubkan dan unik, memberi Anda kesempatan untuk mengeksplorasi kekayaan alam yang luar biasa dan menikmati kelezatan kuliner lokal. </span></p>
+                <p><span style="font-size : 20px">Selamat datang di perjalanan petualangan tak terlupakan bersama
+                        Mandiri Pribumi! Kami mengundang Anda untuk merasakan keajaiban Indonesia dengan cara yang belum
+                        pernah Anda alami sebelumnya. Kami telah merancang rangkaian perjalanan yang menakjubkan dan
+                        unik, memberi Anda kesempatan untuk mengeksplorasi kekayaan alam yang luar biasa dan menikmati
+                        kelezatan kuliner lokal. </span></p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Section 4: Card Carousel -->
+<!-- Section 4: Galllery -->
+<section class="galeri-section">
+    <div class="container my-5 mt-5">
+        <div class="judul-galeri">
+            <img style="max-height: 40px" src="{{URL::asset('/images/logonama.png') }}" alt="Logo">
+            <h1>Galeri Kami</h1>
+        </div>
+        <div class="row mt-5">
+            <!-- Galeri Item 1 -->
+            <div class="col-md-3">
+                <div class="galeri">
+                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card1.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                    </div>
+                    <div class="galeri-body">
+                        <h4 class="galeri-title">Bali</h4>
+                        {{-- <p class="galeri-subtitle mb-2 text-muted">4 Hari 3 Malam</p> --}}
+                        <!-- Isi galeri 1 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri Item 2 -->
+            <div class="col-md-3">
+                <div class="galeri">
+                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                    </div>
+                    <div class="galeri-body">
+                        <h4 class="galeri-title">Yogyakarta</h4>
+                        {{-- <p class="galeri-subtitle mb-2 text-muted">2 Hari 1 Malam</p> --}}
+                        <!-- Isi galeri 2 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri Item 3 -->
+            <div class="col-md-3">
+                <div class = "galeri">
+                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                    </div>
+                    <div class="galeri-body">
+                        <h4 class="galeri-title">Karimun Jawa</h4>
+                        {{-- <p class="galeri-subtitle mb-2 text-muted">3 Hari 2 Malam</p> --}}
+                        <!-- Isi galeri 3 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri Item 4-->
+            <div class="col-md-3">
+                <div class="galeri">
+                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                    </div>
+                    <div class="galeri-body">
+                        <h4 class="galeri-title">Yogyakarta</h4>
+                        {{-- <p class="galeri-subtitle mb-2 text-muted">2 Hari 1 Malam</p> --}}
+                        <!-- Isi galeri 4 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <!-- Galeri Item 1 -->
+            <div class="col-md-3">
+                <div class="galeri">
+                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card1.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                    </div>
+                    <div class="galeri-body">
+                        <h4 class="galeri-title">Bali</h4>
+                        {{-- <p class="galeri-subtitle mb-2 text-muted">4 Hari 3 Malam</p> --}}
+                        <!-- Isi galeri 1 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri Item 2 -->
+            <div class="col-md-3">
+                <div class="galeri">
+                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                    </div>
+                    <div class="galeri-body">
+                        <h4 class="galeri-title">Yogyakarta</h4>
+                        {{-- <p class="galeri-subtitle mb-2 text-muted">2 Hari 1 Malam</p> --}}
+                        <!-- Isi galeri 2 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri Item 3 -->
+            <div class="col-md-3">
+                <div class = "galeri">
+                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                    </div>
+                    <div class="galeri-body">
+                        <h4 class="galeri-title">Karimun Jawa</h4>
+                        {{-- <p class="galeri-subtitle mb-2 text-muted">3 Hari 2 Malam</p> --}}
+                        <!-- Isi galeri 3 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri Item 4-->
+            <div class="col-md-3">
+                <div class="galeri">
+                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                    </div>
+                    <div class="galeri-body">
+                        <h4 class="galeri-title">Yogyakarta</h4>
+                        {{-- <p class="galeri-subtitle mb-2 text-muted">2 Hari 1 Malam</p> --}}
+                        <!-- Isi galeri 4 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <!-- Galeri Item 1 -->
+            <div class="col-md-3">
+                <div class="galeri">
+                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card1.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                    </div>
+                    <div class="galeri-body">
+                        <h4 class="galeri-title">Bali</h4>
+                        {{-- <p class="galeri-subtitle mb-2 text-muted">4 Hari 3 Malam</p> --}}
+                        <!-- Isi galeri 1 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri Item 2 -->
+            <div class="col-md-3">
+                <div class="galeri">
+                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                    </div>
+                    <div class="galeri-body">
+                        <h4 class="galeri-title">Yogyakarta</h4>
+                        {{-- <p class="galeri-subtitle mb-2 text-muted">2 Hari 1 Malam</p> --}}
+                        <!-- Isi galeri 2 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri Item 3 -->
+            <div class="col-md-3">
+                <div class = "galeri">
+                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                    </div>
+                    <div class="galeri-body">
+                        <h4 class="galeri-title">Karimun Jawa</h4>
+                        {{-- <p class="galeri-subtitle mb-2 text-muted">3 Hari 2 Malam</p> --}}
+                        <!-- Isi galeri 3 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri Item 4-->
+            <div class="col-md-3">
+                <div class="galeri">
+                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                    </div>
+                    <div class="galeri-body">
+                        <h4 class="galeri-title">Yogyakarta</h4>
+                        {{-- <p class="galeri-subtitle mb-2 text-muted">2 Hari 1 Malam</p> --}}
+                        <!-- Isi galeri 4 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Section 5: Partisan -->
+<section class="partisan-section" style="background-image: url('{{ asset('images/partisan.png') }}');">
+    <div class="container text-right mt-5 partisan-word">
+        <h1><b>KENALAN LEBIH DEKAT</b></h1>
+        <h1><b>DENGAN KAMI</b></h1>
+        <a href="/portal/tentang" class="btn-brosur" style="display: inline-block; margin-top: 20px;">Tentang Kami</a>
+    </div>
+</section>
+
+<!-- Section 6: Card Carousel -->
 <section class="card-section">
     <div class="container my-5 mt-5">
-        <h2>Penawaran Jasa</h2>
+        <div class="judul-card">
+            <img style="max-height: 40px" src="{{URL::asset('/images/logonama.png') }}" alt="Logo">
+            <h1>Penawaran Jasa</h1>
+        </div>
         <div id="carouselExample" class="carousel slide mt-5" data-ride="carousel">
             <div class="carousel-inner">
                 <!-- Carousel Item 1 -->
@@ -401,16 +802,16 @@
                                             style="max-width: 100%; height: 400px;">
                                     </picture>
                                     <div class="card-body">
-                                        <h5 class="card-title">Bali</h5>
-                                        <h6 class="card-subtitle mb-2 text-muted">4 Hari 3 Malam</h6>
-                                        <div class="card-price">
+                                        <h4 class="card-title">Bali</h4>
+                                        <p class="card-subtitle mb-2 text-muted">4 Hari 3 Malam</p>
+                                        {{-- <div class="card-price">
                                             <p class="start-from">Start from</p>
                                             <p class="price">Rp. 1.250K/pax</p>
                                         </div>
                                         <p class="card-text mt-4"><b>Monumen Bajra Sandhi - GWK Cultural Park - Pura
                                                 Uluwatu - dll.</b></p>
                                         <a href="/portal/detaildestinasibali" class="btn btn-primary"
-                                            style="background-color: #2622DE; color: #fff;">Selengkapnya</a>
+                                            style="background-color: #2622DE; color: #fff;">Selengkapnya</a> --}}
                                     </div>
                                 </div>
                             </div>
@@ -423,16 +824,16 @@
                                             style="max-width: 100%; height: 400px;">
                                     </picture>
                                     <div class="card-body">
-                                        <h5 class="card-title">Yogyakarta</h5>
-                                        <h6 class="card-subtitle mb-2 text-muted">2 Hari 1 Malam</h6>
-                                        <div class="card-price">
+                                        <h4 class="card-title">Yogyakarta</h4>
+                                        <p class="card-subtitle mb-2 text-muted">2 Hari 1 Malam</p>
+                                        {{-- <div class="card-price">
                                             <p class="start-from">Start from</p>
                                             <p class="price">Rp. 330K/pax</p>
                                         </div>
                                         <p class="card-text mt-4"><b>Candi Borobudur-Candi Prambanan-Keraton
                                                 Yogyakarta-Gua Pindul</b></p>
                                         <a href="/portal/detaildestinasijogja" class="btn btn-primary"
-                                            style="background-color: #2622DE; color: #fff;">Selengkapnya</a>
+                                            style="background-color: #2622DE; color: #fff;">Selengkapnya</a> --}}
                                     </div>
                                 </div>
                             </div>
@@ -445,16 +846,38 @@
                                             style="max-width: 100%; height: 400px;">
                                     </picture>
                                     <div class="card-body">
-                                        <h5 class="card-title">Karimun Jawa</h5>
-                                        <h6 class="card-subtitle mb-2 text-muted">3 Hari 2 Malam</h6>
-                                        <div class="card-price">
+                                        <h4 class="card-title">Karimun Jawa</h4>
+                                        <p class="card-subtitle mb-2 text-muted">3 Hari 2 Malam</p>
+                                        {{-- <div class="card-price">
                                             <p class="start-from">Start from</p>
                                             <p class="price">Rp. 1.500K/pax</p>
                                         </div>
                                         <p class="card-text mt-4"><b>Pantai Tanjung Gelam-Sonrkeling: Karang Bintang
                                                 Maer</b></p>
                                         <a href="/portal/detaildestinasikarimun" class="btn btn-primary"
-                                            style="background-color: #2622DE; color: #fff;">Selengkapnya</a>
+                                            style="background-color: #2622DE; color: #fff;">Selengkapnya</a> --}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 card-container">
+                                <!-- Card 4 -->
+                                <div class="card">
+                                    <picture>
+                                        <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
+                                        <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
+                                            style="max-width: 100%; height: 400px;">
+                                    </picture>
+                                    <div class="card-body">
+                                        <h4 class="card-title">Karimun Jawa</h4>
+                                        <p class="card-subtitle mb-2 text-muted">3 Hari 2 Malam</p>
+                                        {{-- <div class="card-price">
+                                            <p class="start-from">Start from</p>
+                                            <p class="price">Rp. 1.500K/pax</p>
+                                        </div>
+                                        <p class="card-text mt-4"><b>Pantai Tanjung Gelam-Sonrkeling: Karang Bintang
+                                                Maer</b></p>
+                                        <a href="/portal/detaildestinasikarimun" class="btn btn-primary"
+                                            style="background-color: #2622DE; color: #fff;">Selengkapnya</a> --}}
                                     </div>
                                 </div>
                             </div>
@@ -466,7 +889,7 @@
                     <div class="carousel-container">
                         <div class="row">
                             <div class="col-md-4 card-container">
-                                <!-- Card 4 -->
+                                <!-- Card 5 -->
                                 <div class="card">
                                     <picture>
                                         <source srcset="{{URL::asset('/images/card4.jpg')}}" media="(min-width: 768px)">
@@ -474,38 +897,16 @@
                                             style="max-width: 100%; height: 400px;">
                                     </picture>
                                     <div class="card-body">
-                                        <h5 class="card-title">Banda Neira</h5>
-                                        <h6 class="card-subtitle mb-2 text-muted">4 Hari 3 Malam</h6>
-                                        <div class="card-price">
+                                        <h4 class="card-title">Banda Neira</h4>
+                                        <p class="card-subtitle mb-2 text-muted">4 Hari 3 Malam</p>
+                                        {{-- <div class="card-price">
                                             <p class="start-from">Start from</p>
                                             <p class="price">Rp. 330K/pax</p>
                                         </div>
                                         <p class="card-text mt-4"><b>Candi Borobudur-Candi Prambanan-Keraton
                                                 Yogyakarta-Gua Pindul</b></p>
                                         <a href="#" class="btn btn-primary"
-                                            style="background-color: #2622DE; color: #fff;">Selengkapnya</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 card-container">
-                                <!-- Card 5 -->
-                                <div class="card">
-                                    <picture>
-                                        <source srcset="{{URL::asset('/images/card5.jpg')}}" media="(min-width: 768px)">
-                                        <img src="{{URL::asset('/images/card5.jpg')}}" alt="Bali"
-                                            style="max-width: 100%; height: 400px;">
-                                    </picture>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Pantai Seribu</h5>
-                                        <h6 class="card-subtitle mb-2 text-muted">2 Hari 1 Malam</h6>
-                                        <div class="card-price">
-                                            <p class="start-from">Start from</p>
-                                            <p class="price">Rp. 330K/pax</p>
-                                        </div>
-                                        <p class="card-text mt-4"><b>Candi Borobudur-Candi Prambanan-Keraton
-                                                Yogyakarta-Gua Pindul</b></p>
-                                        <a href="#" class="btn btn-primary"
-                                            style="background-color: #2622DE; color: #fff;">Selengkapnya</a>
+                                            style="background-color: #2622DE; color: #fff;">Selengkapnya</a> --}}
                                     </div>
                                 </div>
                             </div>
@@ -513,21 +914,65 @@
                                 <!-- Card 6 -->
                                 <div class="card">
                                     <picture>
-                                        <source srcset="{{URL::asset('/images/card6.jpg')}}" media="(min-width: 768px)">
-                                        <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
+                                        <source srcset="{{URL::asset('/images/card5.jpg')}}" media="(min-width: 768px)">
+                                        <img src="{{URL::asset('/images/card5.jpg')}}" alt="Bali"
                                             style="max-width: 100%; height: 400px;">
                                     </picture>
                                     <div class="card-body">
-                                        <h5 class="card-title">Malang Batu Bromo</h5>
-                                        <h6 class="card-subtitle mb-2 text-muted">2 Hari 1 Malam</h6>
-                                        <div class="card-price">
+                                        <h4 class="card-title">Pantai Seribu</h4>
+                                        <p class="card-subtitle mb-2 text-muted">2 Hari 1 Malam</p>
+                                        {{-- <div class="card-price">
                                             <p class="start-from">Start from</p>
                                             <p class="price">Rp. 330K/pax</p>
                                         </div>
                                         <p class="card-text mt-4"><b>Candi Borobudur-Candi Prambanan-Keraton
                                                 Yogyakarta-Gua Pindul</b></p>
                                         <a href="#" class="btn btn-primary"
-                                            style="background-color: #2622DE; color: #fff;">Selengkapnya</a>
+                                            style="background-color: #2622DE; color: #fff;">Selengkapnya</a> --}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 card-container">
+                                <!-- Card 7 -->
+                                <div class="card">
+                                    <picture>
+                                        <source srcset="{{URL::asset('/images/card6.jpg')}}" media="(min-width: 768px)">
+                                        <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
+                                            style="max-width: 100%; height: 400px;">
+                                    </picture>
+                                    <div class="card-body">
+                                        <h4 class="card-title">Malang Batu Bromo</h4>
+                                        <p class="card-subtitle mb-2 text-muted">2 Hari 1 Malam</p>
+                                        {{-- <div class="card-price">
+                                            <p class="start-from">Start from</p>
+                                            <p class="price">Rp. 330K/pax</p>
+                                        </div>
+                                        <p class="card-text mt-4"><b>Candi Borobudur-Candi Prambanan-Keraton
+                                                Yogyakarta-Gua Pindul</b></p>
+                                        <a href="#" class="btn btn-primary"
+                                            style="background-color: #2622DE; color: #fff;">Selengkapnya</a> --}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 card-container">
+                                <!-- Card 8 -->
+                                <div class="card">
+                                    <picture>
+                                        <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
+                                        <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
+                                            style="max-width: 100%; height: 400px;">
+                                    </picture>
+                                    <div class="card-body">
+                                        <h4 class="card-title">Karimun Jawa</h4>
+                                        <p class="card-subtitle mb-2 text-muted">3 Hari 2 Malam</p>
+                                        {{-- <div class="card-price">
+                                            <p class="start-from">Start from</p>
+                                            <p class="price">Rp. 1.500K/pax</p>
+                                        </div>
+                                        <p class="card-text mt-4"><b>Pantai Tanjung Gelam-Sonrkeling: Karang Bintang
+                                                Maer</b></p>
+                                        <a href="/portal/detaildestinasikarimun" class="btn btn-primary"
+                                            style="background-color: #2622DE; color: #fff;">Selengkapnya</a> --}}
                                     </div>
                                 </div>
                             </div>
@@ -535,6 +980,7 @@
                     </div>
                 </div>
             </div>
+
             <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
@@ -547,7 +993,7 @@
     </div>
 </section>
 
-<!-- Section 5: Mitra Kami -->
+<!-- Section 7: Mitra Kami -->
 <section class="text-center mt-5">
     <h2 class="title">Mitra Kami</h2>
     <div class="container my-5">
@@ -608,5 +1054,27 @@
         </div>
     </div>
 </section>
+
+<script>
+    // Fungsi untuk menambahkan class "active" saat elemen berada dalam viewport
+    function handleScroll() {
+        const elements = document.querySelectorAll('.fade-in');
+        elements.forEach((element) => {
+            const elementRect = element.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            if (elementRect.top < windowHeight && elementRect.bottom >= 0) {
+                element.classList.add('active');
+            } else {
+                element.classList.remove('active');
+            }
+        });
+    }
+
+    // Memanggil fungsi saat halaman dimuat dan saat menggulir
+    window.addEventListener('load', handleScroll);
+    window.addEventListener('scroll', handleScroll);
+</script>
+
 
 @endsection

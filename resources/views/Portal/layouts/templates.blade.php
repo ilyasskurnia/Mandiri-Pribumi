@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,18 +17,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-    
-
-
     <!-- CSS tambahan untuk mempercantik tampilan -->
     <style>
-        body{
+        body {
             background-image: url('{{ asset('images/bg_mandiripribumi.png') }}');
         }
-        /* Tambahkan CSS kustom Anda di sini */
+
         .navbar {
-            background-color: #BDCDEA;
+            background-color: transparent;
+            transition: background-color 0.5s, color 0.5s;
             padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar.navbar-scrolled {
+            background-color: #ffffff;
+            color: #000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
 
         .navbar-brand {
@@ -46,17 +52,14 @@
             padding: 15px 20px;
             transition: color 0.3s;
             margin-right: 40px;
-            /* Efek perubahan warna ketika dihover */
         }
 
         .navbar-nav .nav-link:hover {
             color: #007bff;
-            /* Warna saat dihover */
         }
 
         .ml-auto {
             margin-left: auto;
-            /* Menggeser menu ke kanan */
         }
 
         .footer {
@@ -65,51 +68,43 @@
             text-align: center;
             padding: 10px 0;
         }
-        
+
         .address a {
-            display: block; /* Membuat setiap tautan menjadi blok */
+            display: block;
             font-family: 'Sora', sans-serif;
-            text-decoration: none; /* Menghilangkan dekorasi teks */
-            margin-top: 25px; /* Jarak antar tautan */
+            text-decoration: none;
+            margin-top: 25px;
             text-align: left;
         }
 
         .footer a {
             color: #000;
-            /* Warna awal link */
             transition: color 0.3s;
-            /* Efek perubahan warna ketika dihover */
         }
 
         .footer a:hover {
             color: #007bff;
-            /* Warna saat dihover */
         }
 
         .footer i {
             font-size: 35px;
-            /* Ukuran ikon */
             transition: color 0.3s;
-            /* Efek perubahan warna ikon saat dihover */
         }
 
         .footer i:hover {
             color: #007bff;
-            /* Warna ikon saat dihover */
         }
     </style>
 </head>
-
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="/portal">
-                <img src="{{ asset('images/logo-navbar.png') }}" alt="Logo Perusahaan"
-                    style="width: 100px; margin-left: 50px;">
+                <img src="{{ asset('images/logo-navbar.png') }}" alt="Logo Perusahaan" style="width: 100px; margin-left: 50px;">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"style="margin-right: 40px;">
-                <span class="navbar-toggler-icon" ></span>
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="margin-right: 40px;">
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
@@ -120,7 +115,7 @@
                         <a class="nav-link" href="{{ url('/portal/tentang')}}">Tentang Kami</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/portal/galeri')}}">Galeri</a>
+                        <a class= "nav-link" href="{{ url('/portal/galeri')}}">Galeri</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/portal/destinasi')}}">Destinasi</a>
@@ -137,13 +132,11 @@
     </header>
 
     @yield('content')
-    <!-- Ini adalah area konten yang akan disesuaikan oleh halaman yang menggunakan layout.templates -->
 
     <footer class="footer mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
-                    <!-- Bagian kiri (logo besar) -->
                     <img src="{{ asset('images/logo-footer.png') }}" alt="Logo Perusahaan" class="img-fluid">
                 </div>
                 <div class="col-lg-4 ps-5">
@@ -155,10 +148,9 @@
                     </div>
                 </div>
                 <div class="col-lg-4 mt-4">
-                    <!-- Bagian kanan (contact us dan ikon sosial media) -->
-                    <h5 style="font-family: 'Sora', sans-serif;">Cari tau lebih tentang kami !!!</h5>
+                    <h5 style="font-family: 'Sora', sans-serif;">Cari tahu lebih tentang kami !!!</h5>
                     <ul class="list-unstyled d-flex justify-content-evenly" style="font-size: 40px;">
-                        <li><a href="#" style="color: #000; "><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" style="color: #000;"><i class="fab fa-instagram"></i></a></li>
                         <li><a href="#" style="color: #000;"><i class="fab fa-youtube"></i></a></li>
                         <li><a href="#" style="color: #000;"><i class="fab fa-tiktok"></i></a></li>
                         <li><a href="#" style="color: #000;"><i class="fab fa-whatsapp"></i></a></li>
@@ -170,6 +162,17 @@
             <p>&copy; 2023 Mandiri Pribumi Tour & Travel</p>
         </div>
     </footer>
-</body>
 
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 50) {
+                    $('.navbar').addClass('navbar-scrolled');
+                } else {
+                    $('.navbar').removeClass('navbar-scrolled');
+                }
+            });
+        });
+    </script>
+</body>
 </html>
