@@ -2,6 +2,18 @@
 
 @section('content')
 <style>
+    body {
+        margin: 0;
+        /* Hapus margin dari body */
+        padding: 0;
+        /* Hapus padding dari body */
+    }
+
+    .container {
+        padding: 0;
+        /* Hapus padding dari elemen .container */
+    }
+
     .vl {
         border-left: 1px solid #000000;
         height: 55%;
@@ -45,6 +57,10 @@
 
     .logo-img {}
 
+    .banner {
+        padding-top: 150px;
+    }
+
     @media (max-width: 768px) {
         .container {
             padding: 10px;
@@ -85,7 +101,7 @@
 
 </style>
 
-<div class="container mt-5">
+<div class="container banner">
     <div class="row justify-content-between">
         <div class="col-lg-5 col-md-12 mt-4">
             <h1 class="mt-2">Mandiri Pribumi</h1>
@@ -151,7 +167,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="tanggal" class="form-label">Pilih Tanggal Keberangkatan</label>
-                    <input type="date" class="form-select" name="tanggal" id="tanggal"> 
+                    <input type="date" class="form-select" name="tanggal" id="tanggal">
                 </div>
                 <div class="mb-3">
                     <label for="pesan" class="form-label">Pesan:</label>
@@ -216,7 +232,7 @@
                 </div>
                 @endforeach
             </div>
-            
+
         </div>
     </div>
 </div>

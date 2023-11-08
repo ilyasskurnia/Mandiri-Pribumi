@@ -102,6 +102,110 @@
         }
     }
 
+    /* Section 4: Galeri Carousel */
+    .galeri-section {
+        font-family: 'Sora', sans-serif;
+        background-color: #ffffff;
+        padding: 30px;
+    }
+
+    .galeri-vertical {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 200px;
+        /* Sesuaikan dengan tinggi card yang diinginkan */
+    }
+
+    .galeri {
+        max-width: 100%;
+        /* Sesuaikan lebar maksimal card sesuai kebutuhan */
+    }
+
+    .galeri-body {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 3px;
+    }
+
+    .galeri-container {
+        width: 100%;
+        max-width: 18rem;
+        /* Sesuaikan dengan lebar maksimal card */
+        margin-right: 20px;
+        /* Atur jarak antara card */
+        margin-bottom: 20px;
+        /* Atur jarak bawah antara card */
+    }
+
+    .galeri-img-top {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .galeri-title {
+        font-size: 1.25rem;
+        /* Atur ukuran judul sesuai kebutuhan */
+        margin-bottom: 0.25rem;
+        /* Tambahkan margin bawah jika diperlukan */
+    }
+
+    .floating-tagline {
+        box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .galeri-subtitle {
+        font-size: 1rem;
+        /* Atur ukuran subjudul sesuai kebutuhan */
+        margin-bottom: 0.5rem;
+        /* Tambahkan margin bawah jika diperlukan */
+    }
+
+    .galeri-text {
+        font-size: 0.875rem;
+        /* Atur ukuran teks sesuai kebutuhan */
+        margin-bottom: 1rem;
+        /* Tambahkan margin bawah jika diperlukan */
+    }
+
+    .galeri-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+        /* Sesuaikan tinggi container */
+    }
+
+    .judul-galeri {
+        text-align: center;
+        align-items: center;
+    }
+
+    .image-container {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        padding-top: 150px;
+    }
+
+    .image-container:hover .image-overlay {
+        opacity: 1;
+    }
+
+
     /* Responsivitas Testimoni Foto Section */
     @media (max-width: 768px) {
         .gallery-container {
@@ -159,36 +263,201 @@
     </div>
 </div>
 
-<div class="container mt-5">
-    <div class="gallery-container" id="Galeri">
-        {{-- @foreach ($images as $image) --}}
-        <div class="gallery-item">
-            {{-- <img src="{{ URL::asset('images/' . $image->filename) }}" class="gallery-image"
-            alt="{{ $image->description }}"> --}}
-            <img class="gallery-image" src="{{URL::asset('images/card1.jpg') }}" alt="">
+<!-- Section 4: Galllery -->
+<section class="galeri-section">
+    <div class="container my-5 mt-5">
+        {{-- <div class="judul-galeri">
+            <img style="max-height: 40px" src="{{URL::asset('/images/logonama.png') }}" alt="Logo">
+            <h1>Galeri Kami</h1>
+        </div> --}}
+        <div class="row mt-1">
+            <!-- Galeri Item 1 -->
+            <div class="col-md-3">
+                <div class="galeri">
+                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card1.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                        <div class="image-overlay">
+                            <h5>Bali</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri Item 2 -->
+            <div class="col-md-3">
+                <div class="galeri">
+                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                        <div class="image-overlay">
+                            <h5>Yogyakarta</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri Item 3 -->
+            <div class="col-md-3">
+                <div class = "galeri">
+                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                        <div class="image-overlay">
+                            <h5>Karimun Jawa</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri Item 4-->
+            <div class="col-md-3">
+                <div class="galeri">
+                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                        <div class="image-overlay">
+                            <h5>Yogyakarta</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="gallery-item">
-            <img class="gallery-image" src="{{URL::asset('images/card2.jpg') }}" alt="">
+
+        <div class="row mt-3">
+            <!-- Galeri Item 1 -->
+            <div class="col-md-3">
+                <div class="galeri">
+                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card1.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                        <div class="image-overlay">
+                            <h5>Bali</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri Item 2 -->
+            <div class="col-md-3">
+                <div class="galeri">
+                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                        <div class="image-overlay">
+                            <h5>Yogyakarta</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri Item 3 -->
+            <div class="col-md-3">
+                <div class = "galeri">
+                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                        <div class="image-overlay">
+                            <h5>Karimun Jawa</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri Item 4-->
+            <div class="col-md-3">
+                <div class="galeri">
+                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                        <div class="image-overlay">
+                            <h5>Yogyakarta</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="gallery-item">
-            <img class="gallery-image" src="{{URL::asset('images/card3.jpg') }}" alt="">
+
+        <div class="row mt-3">
+            <!-- Galeri Item 1 -->
+            <div class="col-md-3">
+                <div class="galeri">
+                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card1.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                        <div class="image-overlay">
+                            <h5>Bali</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri Item 2 -->
+            <div class="col-md-3">
+                <div class="galeri">
+                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                        <div class="image-overlay">
+                            <h5>Yogyakarta</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri Item 3 -->
+            <div class="col-md-3">
+                <div class = "galeri">
+                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                        <div class="image-overlay">
+                            <h5>Karimun Jawa</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri Item 4-->
+            <div class="col-md-3">
+                <div class="galeri">
+                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
+                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
+                        </picture>
+                        <div class="image-overlay">
+                            <h5>Yogyakarta</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        {{-- @if ($loop->iteration % 3 == 0) --}}
+
     </div>
-    <div class="gallery-container">
-        <div class="gallery-item">
-            <img class="gallery-image" src="{{URL::asset('images/card3.jpg') }}" alt="">
-        </div>
-        <div class="gallery-item">
-            <img class="gallery-image" src="{{URL::asset('images/card2.jpg') }}" alt="">
-        </div>
-        <div class="gallery-item">
-            <img class="gallery-image" src="{{URL::asset('images/card1.jpg') }}" alt="">
-        </div>
-        {{-- @endif
-        @endforeach --}}
-    </div>
-</div>
+</section>
 
 <script>
     $(document).ready(function () {
@@ -199,6 +468,16 @@
             loop: true, // Aktifkan loop
             nav: true, // Tampilkan tombol navigasi
             dots: true, // Tampilkan titik navigasi
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const imageContainers = document.querySelectorAll(".image-container");
+
+        imageContainers.forEach(function(container) {
+            container.addEventListener("click", function() {
+                // Tambahkan tindakan yang ingin dilakukan saat gambar di-klik di sini
+            });
         });
     });
 

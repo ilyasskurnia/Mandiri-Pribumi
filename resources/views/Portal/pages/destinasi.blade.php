@@ -20,6 +20,10 @@
 
 }
 
+.banner {
+    padding-top: 150px;
+}
+
 /* Responsivitas Isi Konten */
 @media (max-width: 768px) {
     .col-8 {
@@ -37,7 +41,7 @@
 
 /* Margin atas tambahan */
 .container {
-    margin-top: 30px; /* Atur margin atas untuk setiap container */
+    margin-top: ; /* Atur margin atas untuk setiap container */
 }
 
 /* Atur warna teks tombol */
@@ -49,7 +53,7 @@
 
 </style>
 
-<div class="container">
+<div class="container banner">
     <div class="row justify-content-between">
         <div class="col-5 mt-4">
             <h1 class="mt-2">Mandiri Pribumi</h1>
