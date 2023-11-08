@@ -134,7 +134,7 @@
             <div class="box">
                 <div class="right-side">
                     <div class="box-topic">Total Artikel</div>
-                    <div class="number">5</div>
+                    <div class="number">{{ $card['total_artikel'] }}</div>
                 </div>
                 <div class="icon-box">
                     <i class="fa-solid fa-newspaper fa-xl"></i>
@@ -143,7 +143,7 @@
             <div class="box">
                 <div class="right-side">
                     <div class="box-topic">Total Galeri</div>
-                    <div class="number">10</div>
+                    <div class="number">{{ $card['total_galeri'] }}</div>
                 </div>
                 <div class="icon-box">
                     <i class="fa-regular fa-images fa-xl"></i>
@@ -161,7 +161,7 @@
                 <div class="container">
                     <div class="row mt-4 justify-content-between">
                         <div class="col-1">
-                            <img width="200" height="150" src="{{URL::asset('/images/destinasi2.png') }}" alt="">
+                            <img width="200" height="150" src="{{ asset('storage/' . $destinasi->thumbnail) }}" alt="">
                         </div>
                         <div class="col-7 mt-4">
                             <h5>{{ $destinasi->destinasi }}</h5>

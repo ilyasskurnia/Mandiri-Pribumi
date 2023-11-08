@@ -42,13 +42,22 @@
                                 {{ session('success') }}
                             </div>
                         @endif
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <div class="card-header pb-2">
                             <div class="d-flex align-items-center">
-                                <h4 class="card-title">Tambah Data Paket Destinasi</h4>
+                                <h4 class="card-title">Tambah Data Galeri</h4>
                             </div>
                         </div>
                         <div class="card-body">
-                                {{-- <form action="\dashboard\tambahpaket" method="post" enctype="multipart/form-data"> --}}
+                                <form action="\dashboard\tambahgaleri" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-12">

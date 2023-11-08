@@ -31,12 +31,15 @@
         border-top: 1px solid #c0bfbf65;
     }
 </style>
+@php
+    $nomor=1;
+@endphp
 <section class="artikel-section">
     <div class="body-content d-flex flex-column">
         <main class="d-flex flex-column gap-3 grow">
             <section class="d-flex gap-2 items-center justify-content-between">
                 <h4>
-                    Artikel <br> <a style="font-size: 18px">Anda memiliki total 3 Artikel.</a >
+                    Artikel <br> <a style="font-size: 18px">Anda memiliki total {{ $data['total_item'] }} Artikel.</a >
                 </h4>
                 <div class="d-flex align-items-center ">
                     <div class="search ">
@@ -55,110 +58,40 @@
                                 <thead class="bg-grey1">
                                     <tr>
                                         <th class="text-center">No.</th>
+                                        <th class="text-center">Author</th>
+                                        <th class="text-center">Judul Artikel</th>
+                                        <th class="text-center">Isi konten</th>
                                         <th class="text-center">Thumbnail</th>
-                                        <th class="text-center">Paket</th>
-                                        <th class="text-center">Waktu</th>
-                                        <th class="text-center">Biaya</th>
-                                        <th class="text-center">Rute</th>
+                                        <th class="text-center">Artikel Dibuat Pada</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($data['get_data'] as $artikel)
                                     <tr>
-                                        <td class="text-center">1</td>
-                                        <td class="text-center"><img style="max-height: 100px" src="{{URL::asset('/images/destinasi1.png')}}" alt=""></td>
-                                        <td class="text-center">Yogyakarta</td>
-                                        <td class="text-center">2 hari 1 Malam</td>
-                                        <td class="text-center">330k</td>
-                                        <td class="text-center">Candi Borobudur-Candi Prambanan-Keraton Yogyakarta-Gua Pindul</td>
+                                        <td class="text-center">{{ $nomor++ }}</td>
+                                        <td class="text-center">{{ $artikel->author }}</td>
+                                        <td class="text-center">{{ $artikel->title }}</td>
+                                        <td class="text-center">{{ $artikel->content }}</td>
+                                        <td class="text-center"><img style="max-height: 100px" src="{{ asset('storage/' . $artikel->thumbnail) }}" alt=""></td>
+                                        <td class="text-center">{{ $artikel->created_at }}</td>
                                         <td>
                                             <div class="d-flex">
-                                                <button
-                                                    type="button"
-                                                    class="btn btn-xs bg-primary me-1 text-white"
-                                                >
-                                                    Edit
-                                                </button>
-                                                <button
-                                                    type="button"
-                                                    class="btn btn-xs btn-danger me-1"
-                                                >
-                                                    Delete
-                                                </button>
-                                                <button
-                                                type="button"
-                                                class="btn btn-xs btn-warning"
-                                            >
-                                                Preview
-                                            </button>
+                                                <a href="/dashboard/{{ $artikel->id }}/editartikel" class="btn btn-xs bg-primary me-1 text-white">Edit</a>
+                                                <form action="/dashboard/artikel/{{ $artikel->id }}" method="POST">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <input type="submit" name="submit" value="delete" class="btn btn-xs btn-danger me-1">
+                                                </form>
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td class="text-center">2</td>
-                                        <td class="text-center"><img style="max-height: 100px" src="{{URL::asset('/images/destinasi2.png')}}" alt=""></td>
-                                        <td class="text-center">Bali</td>
-                                        <td class="text-center">4 hari 3 Malam</td>
-                                        <td class="text-center">1.250k</td>
-                                        <td class="text-center">Monumen Bajra Sandhi - GWK Cultural Park - Pura Uluwatu dll.</td>
-                                        <td>
-                                            <div class="d-flex">
-                                                <button
-                                                    type="button"
-                                                    class="btn btn-xs bg-primary me-1  text-white"
-                                                >
-                                                    Edit
-                                                </button>
-                                                <button
-                                                    type="button"
-                                                    class="btn btn-xs btn-danger me-1"
-                                                >
-                                                    Delete
-                                                </button>
-                                                <button
-                                                type="button"
-                                                class="btn btn-xs btn-warning"
-                                            >
-                                                Preview
-                                            </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">3</td>
-                                        <td class="text-center"><img style="max-height: 100px" src="{{URL::asset('/images/destinasi3.png')}}" alt=""></td>
-                                        <td class="text-center">karimun Jawa</td>
-                                        <td class="text-center">3 hari 2 Malam</td>
-                                        <td class="text-center">1.500k</td>
-                                        <td class="text-center">Pantai Tanjung Gelam-Sonrkeling: Karang Bintang Maer</td>
-                                        <td>
-                                            <div class="d-flex">
-                                                <button
-                                                    type="button"
-                                                    class="btn btn-xs bg-primary me-1  text-white"
-                                                >
-                                                    Edit
-                                                </button>
-                                                <button
-                                                    type="button"
-                                                    class="btn btn-xs btn-danger me-1"
-                                                >
-                                                    Delete
-                                                </button>
-                                                <button
-                                                type="button"
-                                                class="btn btn-xs btn-warning"
-                                            >
-                                                Preview
-                                            </button>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
-                        <div class="px-5 mt-4">
-                            pagination page
+                        <div class="px-4 mt-4">
+                            {{ $data['get_data']->links() }}
                         </div>
                     </div>
                 </div>

@@ -53,11 +53,11 @@
                         @endif
                         <div class="card-header pb-2">
                             <div class="d-flex align-items-center">
-                                <h4 class="card-title">Edit Data Frequently Asked Questions</h4>
+                                <h4 class="card-title">Edit Data Pesan</h4>
                             </div>
                         </div>
                         <div class="card-body">
-                                <form action="\dashboard\{{ $data->id }}" method="post" enctype="multipart/form-data">
+                                <form action="\dashboard\pesan\{{ $data->id }}" method="post" enctype="multipart/form-data">
                                 @method('put')
                                 @csrf
                                 <div class="row">

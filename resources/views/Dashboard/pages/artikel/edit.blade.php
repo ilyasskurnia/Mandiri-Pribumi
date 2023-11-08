@@ -44,25 +44,25 @@
                         @endif
                         <div class="card-header pb-2">
                             <div class="d-flex align-items-center">
-                                <h4 class="card-title">Tambah Data Artikel</h4>
+                                <h4 class="card-title">Edit Data Artikel</h4>
                             </div>
                         </div>
                         <div class="card-body">
-                                <form action="\dashboard\tambahartikel" method="post" enctype="multipart/form-data">
+                                <form action="\dashboard\artikel\{{ $data->id }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="form-control-label">Author</label>
-                                            <input name="author" class="form-control" type="text">
+                                            <input name="author" class="form-control" type="text" value="{{ $data->author }}">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Judul Artikel</label>
-                                            <input name="title" class="form-control" type="text">
+                                            <input name="title" class="form-control" type="text" value="{{ $data->title }}">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Isi Konten</label>
-                                            <textarea name="content" class="form-control" type="text" rows="4"></textarea>
+                                            <textarea name="content" class="form-control" type="text" rows="4">{{ $data->content }}</textarea>
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Thumbnail</label>

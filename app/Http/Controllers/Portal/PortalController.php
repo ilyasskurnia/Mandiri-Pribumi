@@ -21,7 +21,7 @@ class PortalController extends Controller
     public function kontak()
     {
         $get_faq = Faq::select('*')->get();
-        $data_destinasi = Destinasi::pluck('destinasi', 'id');
+        $data_destinasi = Destinasi::pluck('destinasi');
 
         $data = [
             'get_faq' => $get_faq,

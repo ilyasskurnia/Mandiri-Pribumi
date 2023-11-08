@@ -57,7 +57,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                                <form action="\dashboard\{{ $data->id }}" method="post" enctype="multipart/form-data">
+                                <form action="\dashboard\faq\{{ $data->id }}" method="post" enctype="multipart/form-data">
                                 @method('put')
                                 @csrf
                                 <div class="row">

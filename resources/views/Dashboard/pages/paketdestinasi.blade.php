@@ -75,7 +75,7 @@
                                         <td class="text-center"><img style="max-height: 100px" src="{{ asset('storage/' . $destinasi->thumbnail) }}" alt=""></td>
                                         <td class="text-center">{{ $destinasi->destinasi }}</td>
                                         <td class="text-center"><img style="max-height: 100px" src="{{ asset('storage/' . $destinasi->peta_wisata) }}" alt=""></td>
-                                        <td class="text-center">{{ $destinasi->peta_wisata }}</td>
+                                        <td class="text-center">{{ $destinasi->rute }}</td>
                                         <td class="text-center"><a style="text-decoration:none;" href="{{ asset('storage/' . $destinasi->brosure) }}" target="_blank">Lihat Brosure</a></td>
                                         <td class="text-center">{{ $destinasi->total_waktu }}</td>
                                         <td class="text-center">{{ $destinasi->biaya }}</td>
