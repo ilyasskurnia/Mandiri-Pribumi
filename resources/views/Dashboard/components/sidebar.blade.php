@@ -103,7 +103,7 @@
     </ul>
     <ul class="nav-links">
         <li>
-            <div class="logout" style="margin-top: 230px" >
+            <div class="logout" style="margin-top: 150px" >
                 <form id="logout-form" action="/logout" method="POST">
                     @csrf
                     <button type="submit" class="btn"><i class="fa-solid fa-right-from-bracket"></i>Logout</button>

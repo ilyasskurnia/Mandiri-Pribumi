@@ -2,6 +2,18 @@
 
 @section('content')
 <style>
+    body {
+        margin: 0;
+        /* Hapus margin dari body */
+        padding: 0;
+        /* Hapus padding dari body */
+    }
+
+    .container {
+        padding: 0;
+        /* Hapus padding dari elemen .container */
+    }
+
     .image-overlay {
         position: relative;
         z-index: -1;
@@ -26,6 +38,10 @@
     }
     .visi-misi {
         padding-right: 250px;
+    }
+
+    .banner {
+        padding-top: 150px;
     }
 
     @media (max-width: 768px) {
@@ -71,7 +87,7 @@
     }
 
 </style>
-<div class="container">
+<div class="container banner">
     <div class="row justify-content-between">
         <div class="col-md-6 mt-5">
             <h1 class="mt-2">Mandiri Pribumi</h1>

@@ -24,7 +24,7 @@
         .navbar-templates {
             display: flex;
             justify-content: space-between;
-            height: 80px;
+            height: 100px;
             background: #BDCDEA;
             display: flex;
             align-items: center;
