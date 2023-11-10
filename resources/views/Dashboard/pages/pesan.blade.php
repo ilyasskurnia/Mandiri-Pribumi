@@ -10,12 +10,14 @@
         left: 240px;
         transition: all 0.5s ease;
     }
+
     .body-content {
         position: relative;
         padding-top: 125px;
         padding-left: 20px;
         padding-right: 20px;
     }
+
     .search {
         margin-right: 10px;
     }
@@ -32,20 +34,21 @@
     }
 </style>
 @php
-    $nomor=1;
+$nomor=1;
 @endphp
 <section class="pesan-section">
     <div class="body-content d-flex flex-column">
         <main class="d-flex flex-column gap-3 grow">
             <section class="d-flex gap-2 items-center justify-content-between">
                 <h4>
-                    Pesan Masuk <br> <a style="font-size: 18px">Anda memiliki {{ $data['total_item'] }} Pesan Masuk.</a >
+                    Pesan Masuk <br> <a style="font-size: 18px">Anda memiliki {{ $data['total_item'] }} Pesan Masuk.</a>
                 </h4>
                 <div class="d-flex align-items-center ">
                     <div class="search ">
                         <input style="border-radius: 5px;" type="text" class="form-control" placeholder="Search for...">
                     </div>
-                    <a href="{{ url('/dashboard/tambahpesan')}}"" type="button" class="btn btn-primary rounded-lg ml-auto">
+                    <a href="{{ url('/dashboard/tambahpesan')}}"" type=" button"
+                        class="btn btn-primary rounded-lg ml-auto">
                         <div class="fa fa-fw fa-plus mr-2"></div> Add Data
                     </a>
                 </div>
@@ -83,11 +86,13 @@
                                         <td class="text-center">{{ $pesan->created_at }}</td>
                                         <td>
                                             <div class="d-flex">
-                                                <a href="/dashboard/{{ $pesan->id }}/editpesan" class="btn btn-xs bg-primary me-1 text-white">Edit</a>
+                                                <a href="/dashboard/{{ $pesan->id }}/editpesan"
+                                                    class="btn btn-xs bg-primary me-1 text-white">Edit</a>
                                                 <form action="/dashboard/pesan/{{ $pesan->id }}" method="POST">
                                                     @csrf
                                                     @method('delete')
-                                                    <input type="submit" name="submit" value="delete" class="btn btn-xs btn-danger me-1">
+                                                    <input type="submit" name="submit" value="delete"
+                                                        class="btn btn-xs btn-danger me-1">
                                                 </form>
                                             </div>
                                         </td>

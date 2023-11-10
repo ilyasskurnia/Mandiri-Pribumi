@@ -547,23 +547,26 @@
     }
 
     .card-title1 {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #333; /* warna teks */
-      margin-bottom: 10px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+        /* warna teks */
+        margin-bottom: 10px;
     }
 
     /* Gaya untuk Card Text */
     .card-text1 {
-      font-size: 1rem;
-      color: #555; /* warna teks */
-      margin-bottom: 15px;
+        font-size: 1rem;
+        color: #555;
+        /* warna teks */
+        margin-bottom: 15px;
     }
 
     /* Gaya untuk Small Text (Last updated) */
     .text-muted {
-      font-size: 0.8rem;
-      color: #888; /* warna teks */
+        font-size: 0.8rem;
+        color: #888;
+        /* warna teks */
     }
 
 
@@ -571,60 +574,71 @@
     /*Responsive Styles */
     @media (max-width: 768px) {
         .fade-in {
-        margin: 15px;
-    }
+            margin: 15px;
+        }
 
-    .floating-container {
-        margin-top: 0;
-        /* Remove negative margin on small screens */
-    }
+        .floating-container {
+            margin-top: 0;
+            /* Remove negative margin on small screens */
+        }
 
-    .floating-container .col-lg-6 {
-        margin-bottom: 20px;
-        /* Add space between column elements */
-    }
+        .floating-container .col-lg-6 {
+            margin-bottom: 20px;
+            /* Add space between column elements */
+        }
 
-    .video-section {
-        padding: 15px; /* Add padding to the video section */
-        box-sizing: border-box; /* Ensure padding is included in the total width */
-    }
+        .video-section {
+            padding: 15px;
+            /* Add padding to the video section */
+            box-sizing: border-box;
+            /* Ensure padding is included in the total width */
+        }
 
-    .video-section iframe {
-        width: 100%;
-        height: 250px;
-        /* Adjust width and height of the video for smaller screens */
-    }
+        .video-section iframe {
+            width: 100%;
+            height: 250px;
+            /* Adjust width and height of the video for smaller screens */
+        }
 
-    .video-youtube {
-        margin-left: -15px; /* Adjust the negative margin */
-        margin-right: -15px; /* Add margin to the right side */
-        width: calc(100% + 30px); /* Adjust the width to include the added margins */
-        height: 250px;
-    }
+        .video-youtube {
+            margin-left: -15px;
+            /* Adjust the negative margin */
+            margin-right: -15px;
+            /* Add margin to the right side */
+            width: calc(100% + 30px);
+            /* Adjust the width to include the added margins */
+            height: 250px;
+        }
 
-    .video-welcome {
-        padding: 0 15px; /* Add padding to the text beside the video */
-        /* Padding on both sides */
-        margin-left: -15px; /* Adjust the negative margin */
-        margin-right: -15px; /* Add margin to the right side */
-        width: calc(100% + 30px); /* Adjust the width to include the added margins */
-    }
+        .video-welcome {
+            padding: 0 15px;
+            /* Add padding to the text beside the video */
+            /* Padding on both sides */
+            margin-left: -15px;
+            /* Adjust the negative margin */
+            margin-right: -15px;
+            /* Add margin to the right side */
+            width: calc(100% + 30px);
+            /* Adjust the width to include the added margins */
+        }
 
-    .greeting {
-        margin: 15px;
-        /* Add margin to the greeting section */
-    }
+        .greeting {
+            margin: 15px;
+            /* Add margin to the greeting section */
+        }
 
-    .word-video {
-        margin: 15px;
-        /* Add margin to the tagline */
-    }
+        .word-video {
+            margin: 15px;
+            /* Add margin to the tagline */
+        }
 
-    .welcome{
-        margin-left: 15px; /* Adjust the negative margin */
-        padding-right: 30px;
-        width: calc(90% + 30px); /* Adjust the width to include the added margins */
-    }
+        .welcome {
+            margin-left: 15px;
+            /* Adjust the negative margin */
+            padding-right: 30px;
+            width: calc(90% + 30px);
+            /* Adjust the width to include the added margins */
+        }
 
         .card-container {
             width: 100%;
@@ -639,20 +653,19 @@
         }
 
         .partisan-word {
-        text-align: center;
-        padding: 20px 0;
-    }
+            text-align: center;
+            padding: 20px 0;
+        }
 
-    .btn-brosur {
-        display: block;
-        margin: 20px auto;
-    }
+        .btn-brosur {
+            display: block;
+            margin: 20px auto;
+        }
 
         .mitra-grid {
             grid-template-columns: repeat(2, 1fr);
         }
     }
-
 </style>
 
 <!-- Section 1: Banner -->
@@ -718,7 +731,9 @@
     <div class="container my-5 mt-5">
         <!-- Tagline -->
         <div class="tagline mt-5 text-center">
-            <p style="font-size: 24px; font-weight: bold; color: #51604F;">Nikmati <span style="color: red; font-size: 28px;">Keindahan</span> Bumi Nusantara <span style="color: red; font-size: 28px;">Bersama Kami</span></p>
+            <p style="font-size: 24px; font-weight: bold; color: #51604F;">Nikmati <span
+                    style="color: red; font-size: 28px;">Keindahan</span> Bumi Nusantara <span
+                    style="color: red; font-size: 28px;">Bersama Kami</span></p>
         </div>
     </div>
 
@@ -727,8 +742,8 @@
     <div class="container my-5 mt-5 greeting">
         <div class="row">
             <div class="col-lg-6 mb-4 mb-lg-2 ">
-                <iframe class="video-youtube" width="100%" height="315" src="https://www.youtube.com/embed/pFXrf10y3-U" frameborder="0"
-                    allowfullscreen></iframe>
+                <iframe class="video-youtube" width="100%" height="315" src="https://www.youtube.com/embed/pFXrf10y3-U"
+                    frameborder="0" allowfullscreen></iframe>
             </div>
             <div class="col-lg-6 mt-4 video-welcome">
                 <h2>Selamat Datang di Mandiri Pribumi</h2>
@@ -1285,19 +1300,21 @@
 
 <div class="overlay" id="overlay">
     <div class="card mb-3" style="max-width: 360px;">
-    <div class="row g-0">
-        <div class="col-md-4">
-        <img src="{{URL::asset('/images/float.png') }}" class="img-fluid rounded-start" alt="...">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{{URL::asset('/images/float.png') }}" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title1"><b>Ada Yang Bisa Kami Bantu?</b></h5>
+                    <p class="card-text1">Tanyakan pada admin <b>Mandiri Pribumi</b> <a
+                            href="https://wa.me/your-whatsapp-number">di sini</a></p>
+                    <p class="card-text1"><small class="text-muted">Atau hubungi kami langsung <a
+                                href="/portal/kontak">di sini</a></small></p>
+                    <span class="close" id="close">&times;</span>
+                </div>
+            </div>
         </div>
-        <div class="col-md-8">
-        <div class="card-body">
-                <h5 class="card-title1"><b>Ada Yang Bisa Kami Bantu?</b></h5>
-                <p class="card-text1">Tanyakan pada admin <b>Mandiri Pribumi</b> <a href="https://wa.me/your-whatsapp-number">di sini</a></p>
-                <p class="card-text1"><small class="text-muted">Atau hubungi kami langsung <a href="/portal/kontak">di sini</a></small></p>
-            <span class="close" id="close">&times;</span>
-        </div>
-        </div>
-    </div>
     </div>
 </div>
 
@@ -1332,7 +1349,6 @@
     closeButton.addEventListener('click', () => {
         overlay.style.display = 'none';
     });
-
 </script>
 
 

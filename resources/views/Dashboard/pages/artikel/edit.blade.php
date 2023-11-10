@@ -10,12 +10,14 @@
         left: 240px;
         transition: all 0.5s ease;
     }
+
     .body-content {
         position: relative;
         padding-top: 104px;
         padding-left: 20px;
         padding-right: 20px;
     }
+
     .search {
         margin-right: 10px;
     }
@@ -38,9 +40,9 @@
                 <div class="page-inner" style="width: 100%">
                     <div id="add-data-paket" class="card">
                         @if(session('success'))
-                            <div class="alert alert-success">
-                                {{ session('success') }}
-                            </div>
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
                         @endif
                         <div class="card-header pb-2">
                             <div class="d-flex align-items-center">
@@ -48,37 +50,43 @@
                             </div>
                         </div>
                         <div class="card-body">
-                                <form action="\dashboard\artikel\{{ $data->id }}" method="post" enctype="multipart/form-data">
+                            <form action="\dashboard\artikel\{{ $data->id }}" method="post"
+                                enctype="multipart/form-data">
                                 @method('put')
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="form-control-label">Author</label>
-                                            <input name="author" class="form-control" type="text" value="{{ $data->author }}">
+                                            <input name="author" class="form-control" type="text"
+                                                value="{{ $data->author }}">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Judul Artikel</label>
-                                            <input name="title" class="form-control" type="text" value="{{ $data->title }}">
+                                            <input name="title" class="form-control" type="text"
+                                                value="{{ $data->title }}">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Isi Konten</label>
-                                            <textarea name="content" class="form-control" type="text" rows="4">{{ $data->content }}</textarea>
+                                            <textarea name="content" class="form-control" type="text"
+                                                rows="4">{{ $data->content }}</textarea>
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Thumbnail</label>
                                             <input name="thumbnail" class="form-control" type="file">
-                                            <img style="max-height: 100px" src="{{ asset('storage/' . $data->thumbnail) }}" alt="">
+                                            <img style="max-height: 100px"
+                                                src="{{ asset('storage/' . $data->thumbnail) }}" alt="">
                                         </div>
-                                </div>
-                                <div class="d-flex justify-content-end mt-4">
-                                    <button type="button" class="btn btn-sm bg-warning me-2 text-white" onclick="goBack()">
-                                        Cancel
-                                    </button>
-                                    <button type="submit" class="btn btn-sm bg-primary mr-2 text-white">
-                                        Save Data
-                                    </button>
-                                </div>
+                                    </div>
+                                    <div class="d-flex justify-content-end mt-4">
+                                        <button type="button" class="btn btn-sm bg-warning me-2 text-white"
+                                            onclick="goBack()">
+                                            Cancel
+                                        </button>
+                                        <button type="submit" class="btn btn-sm bg-primary mr-2 text-white">
+                                            Save Data
+                                        </button>
+                                    </div>
                             </form>
                         </div>
                     </div>
@@ -94,6 +102,6 @@
     function goBack() {
         window.history.back();
     }
-    </script>
+</script>
 
 @endsection

@@ -3,24 +3,29 @@
         position: fixed;
         height: 100%;
         width: 240px;
-        background : #BDCDEA;
+        background: #BDCDEA;
         transition: all 0.5s ease;
     }
+
     .sidebar-content .logo-details {
         height: 70px;
         display: flex;
     }
+
     .sidebar-content .logo-details img {
         width: 105px;
         margin: auto;
     }
+
     .nav-links {
         margin-top: 5rem;
     }
+
     .sidebar-content .nav-links li {
         position: relative;
         list-style: none;
     }
+
     .sidebar-content .nav-links li a {
         height: 100%;
         width: 100%;
@@ -29,6 +34,7 @@
         text-decoration: none;
         transition: all 0.4s ease;
     }
+
     .sidebar-content .nav-links li i {
         min-width: 60px;
         text-align: center;
@@ -43,12 +49,15 @@
         font-weight: 400;
         white-space: nowrap;
     }
+
     .sidebar-content .nav-links li a .links_name:hover {
         color: #be0000;
     }
+
     .logout {
         margin-left: -5%;
     }
+
     /* .sidebar-content .nav-links li a.active {
         background: rgb(191, 95, 95);
     } */
@@ -66,7 +75,9 @@
     <ul class="nav-links">
         <li>
             <a href="{{ url('/dashboard') }}" class="active">
-                <i><iconify-icon icon="bx:grid-alt"></iconify-icon></i>
+                <i>
+                    <iconify-icon icon="bx:grid-alt"></iconify-icon>
+                </i>
                 <span class="links_name">Dashboard</span>
             </a>
         </li>
@@ -103,7 +114,7 @@
     </ul>
     <ul class="nav-links">
         <li>
-            <div class="logout" style="margin-top: 150px" >
+            <div class="logout" style="margin-top: 150px">
                 <form id="logout-form" action="/logout" method="POST">
                     @csrf
                     <button type="submit" class="btn"><i class="fa-solid fa-right-from-bracket"></i>Logout</button>

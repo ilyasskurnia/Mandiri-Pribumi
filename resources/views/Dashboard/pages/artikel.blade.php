@@ -10,12 +10,14 @@
         left: 240px;
         transition: all 0.5s ease;
     }
+
     .body-content {
         position: relative;
         padding-top: 125px;
         padding-left: 20px;
         padding-right: 20px;
     }
+
     .search {
         margin-right: 10px;
     }
@@ -32,20 +34,21 @@
     }
 </style>
 @php
-    $nomor=1;
+$nomor=1;
 @endphp
 <section class="artikel-section">
     <div class="body-content d-flex flex-column">
         <main class="d-flex flex-column gap-3 grow">
             <section class="d-flex gap-2 items-center justify-content-between">
                 <h4>
-                    Artikel <br> <a style="font-size: 18px">Anda memiliki total {{ $data['total_item'] }} Artikel.</a >
+                    Artikel <br> <a style="font-size: 18px">Anda memiliki total {{ $data['total_item'] }} Artikel.</a>
                 </h4>
                 <div class="d-flex align-items-center ">
                     <div class="search ">
                         <input style="border-radius: 5px;" type="text" class="form-control" placeholder="Search for...">
                     </div>
-                    <a href="{{ url('/dashboard/tambahartikel')}}" type="button" class="btn btn-primary rounded-lg ml-auto">
+                    <a href="{{ url('/dashboard/tambahartikel')}}" type="button"
+                        class="btn btn-primary rounded-lg ml-auto">
                         <div class="fa fa-fw fa-plus mr-2"></div> Add Data
                     </a>
                 </div>
@@ -73,15 +76,18 @@
                                         <td class="text-center">{{ $artikel->author }}</td>
                                         <td class="text-center">{{ $artikel->title }}</td>
                                         <td class="text-center">{{ $artikel->content }}</td>
-                                        <td class="text-center"><img style="max-height: 100px" src="{{ asset('storage/' . $artikel->thumbnail) }}" alt=""></td>
+                                        <td class="text-center"><img style="max-height: 100px"
+                                                src="{{ asset('storage/' . $artikel->thumbnail) }}" alt=""></td>
                                         <td class="text-center">{{ $artikel->created_at }}</td>
                                         <td>
                                             <div class="d-flex">
-                                                <a href="/dashboard/{{ $artikel->id }}/editartikel" class="btn btn-xs bg-primary me-1 text-white">Edit</a>
+                                                <a href="/dashboard/{{ $artikel->id }}/editartikel"
+                                                    class="btn btn-xs bg-primary me-1 text-white">Edit</a>
                                                 <form action="/dashboard/artikel/{{ $artikel->id }}" method="POST">
                                                     @csrf
                                                     @method('delete')
-                                                    <input type="submit" name="submit" value="delete" class="btn btn-xs btn-danger me-1">
+                                                    <input type="submit" name="submit" value="delete"
+                                                        class="btn btn-xs btn-danger me-1">
                                                 </form>
                                             </div>
                                         </td>

@@ -10,12 +10,14 @@
         left: 240px;
         transition: all 0.5s ease;
     }
+
     .body-content {
         position: relative;
         padding-top: 104px;
         padding-left: 20px;
         padding-right: 20px;
     }
+
     .search {
         margin-right: 10px;
     }
@@ -38,18 +40,18 @@
                 <div class="page-inner" style="width: 100%">
                     <div id="add-data-paket" class="card">
                         @if(session('success'))
-                            <div class="alert alert-success">
-                                {{ session('success') }}
-                            </div>
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
                         @endif
                         @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
                         @endif
                         <div class="card-header pb-2">
                             <div class="d-flex align-items-center">
@@ -57,53 +59,60 @@
                             </div>
                         </div>
                         <div class="card-body">
-                                <form action="\dashboard\pesan\{{ $data->id }}" method="post" enctype="multipart/form-data">
+                            <form action="\dashboard\pesan\{{ $data->id }}" method="post" enctype="multipart/form-data">
                                 @method('put')
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="form-control-label">Nama</label>
-                                            <input name="nama" class="form-control" type="text" value="{{ $data->nama }}">
+                                            <input name="nama" class="form-control" type="text"
+                                                value="{{ $data->nama }}">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Email</label>
-                                            <input name="email" class="form-control" type="text" value="{{ $data->email }}">
+                                            <input name="email" class="form-control" type="text"
+                                                value="{{ $data->email }}">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Social Media</label>
-                                            <input name="social_media" class="form-control" type="text" value="{{ $data->social_media }}">
+                                            <input name="social_media" class="form-control" type="text"
+                                                value="{{ $data->social_media }}">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Telepon</label>
-                                            <input name="telepon" class="form-control" type="text" value="{{ $data->telepon }}">
+                                            <input name="telepon" class="form-control" type="text"
+                                                value="{{ $data->telepon }}">
                                         </div>
                                         <div class="mb-3">
                                             <label for="destinasi" class="form-label">Paket Destinasi</label>
                                             <select class="form-select" id="destinasi" name="destinasi" required>
                                                 <option value="">pilih destinasi</option>
                                                 @foreach($data_destinasi as $nama_destinasi)
-                                                    <option value="{{ $nama_destinasi}}">{{ $nama_destinasi }}</option>
+                                                <option value="{{ $nama_destinasi}}">{{ $nama_destinasi }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
                                         <div class="mb-3">
                                             <label for="tanggal" class="form-label">Pilih Tanggal Keberangkatan</label>
-                                            <input type="date" class="form-select" name="tanggal" id="tanggal" value="{{ $data->tanggal }}"> 
+                                            <input type="date" class="form-select" name="tanggal" id="tanggal"
+                                                value="{{ $data->tanggal }}">
                                         </div>
                                         <div class="mb-3">
                                             <label for="pesan" class="form-label">Pesan:</label>
-                                            <textarea class="form-control" id="pesan" name="pesan" rows="4">{{ $data->pesan }}</textarea>
-                                        </div>                                        
-                                </div>
-                                <div class="d-flex justify-content-end mt-4">
-                                    <button type="button" class="btn btn-sm bg-warning me-2 text-white" onclick="goBack()">
-                                        Cancel
-                                    </button>
-                                    <button type="submit" class="btn btn-sm bg-primary mr-2 text-white">
-                                        Save Data
-                                    </button>
-                                </div>
+                                            <textarea class="form-control" id="pesan" name="pesan"
+                                                rows="4">{{ $data->pesan }}</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-end mt-4">
+                                        <button type="button" class="btn btn-sm bg-warning me-2 text-white"
+                                            onclick="goBack()">
+                                            Cancel
+                                        </button>
+                                        <button type="submit" class="btn btn-sm bg-primary mr-2 text-white">
+                                            Save Data
+                                        </button>
+                                    </div>
                             </form>
                         </div>
                     </div>
@@ -119,6 +128,6 @@
     function goBack() {
         window.history.back();
     }
-    </script>
-    
+</script>
+
 @endsection

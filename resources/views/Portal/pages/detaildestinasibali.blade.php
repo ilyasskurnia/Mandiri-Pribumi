@@ -11,12 +11,13 @@
 
     /* Section 1: Banner */
     .banner-section {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left center;
-    color: #fff;
-    padding: 200px 0;
-}
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left center;
+        color: #fff;
+        padding: 200px 0;
+    }
+
     .banner-content {
         max-width: 600px;
         margin: 0 auto;
@@ -106,6 +107,7 @@
         margin-top: 10px;
         padding-right: 50px;
     }
+
     .destination-image {
         padding: 15px;
         margin-top: 10px;
@@ -173,6 +175,7 @@
             margin-top: 20px;
             margin-bottom: 20px;
         }
+
         .destination-item1 {
             display: flex;
             flex-direction: column-reverse;
@@ -207,7 +210,8 @@
         .destination-tagline {
             font-size: 20px;
         }
-        .peta-image{
+
+        .peta-image {
             width: 10cm;
             height: 5cm;
         }
@@ -244,10 +248,12 @@
             </div>
             <div class="destination-layer">
                 <div class="destination-description">
-                    <h4 style="" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 1</b></h4>
+                    <h4 style="" class="destination-tagline"><b><span><img style="max-height: 30px"
+                                    src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 1</b></h4>
                     <h3><b>Tiba di Bali-Danau Beratan-Ubud Monkey Forest
-                        -Ubud Palace-Tanah Lot</b></h3>
-                    <p style="text-align: justify">Selamat datang di Pulau Bali! Hari ini, kami akan membawa Anda untuk menikmati keindahan alam dan
+                            -Ubud Palace-Tanah Lot</b></h3>
+                    <p style="text-align: justify">Selamat datang di Pulau Bali! Hari ini, kami akan membawa Anda untuk
+                        menikmati keindahan alam dan
                         budaya pulau ini. Kami akan memulai hari dengan sarapan pagi di pinggir Danau Beretan sambil
                         menikmati matahari terbit. Kemudian, Anda akan berpetualang ke Ubud Monkey Forest,
                         mengeksplorasi alam dan keanekaragaman fauna Bali. Di samping itu, Anda akan merasakan
@@ -260,9 +266,11 @@
         <div class="destination-item1">
             <div class="destination-layer">
                 <div class="destination-description">
-                    <h4 style="" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 2</b></h4>
+                    <h4 style="" class="destination-tagline"><b><span><img style="max-height: 30px"
+                                    src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 2</b></h4>
                     <h3><b>Monumen Bajra Sandhi-GWK Cultural Park-Pura Uluwatu</b></h3>
-                    <p style="text-align: justify">Petualangan kita pada hari ini, dibuka dengan mempelajari dan menghayati riwayat perjuangan
+                    <p style="text-align: justify">Petualangan kita pada hari ini, dibuka dengan mempelajari dan
+                        menghayati riwayat perjuangan
                         Rakyat Bali dalam menghadapi penjajah dengan mengunjungi Monumen
                         Braja Sandhi, Selepas dari Monumen Braja Sandhi, kita
                         akan menuju Bali Selatan untuk menyaksikan karya
@@ -288,9 +296,11 @@
             </div>
             <div class="destination-layer">
                 <div class="destination-description">
-                    <h4 style="" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 3</b></h4>
+                    <h4 style="" class="destination-tagline"><b><span><img style="max-height: 30px"
+                                    src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 3</b></h4>
                     <h3><b>Tanjung Benoa Water sports-Pantai Jimbaran</b></h3>
-                    <p style="text-align: justify">Hari terakhir kita di Pulau Dewata dimulai dengan berbelanja cinderamata khas Bali di salah satu
+                    <p style="text-align: justify">Hari terakhir kita di Pulau Dewata dimulai dengan berbelanja
+                        cinderamata khas Bali di salah satu
                         toko pilihan kami. Puncak kegiatan kita adalah
                         berpetualang di wisata bahari Tanjung Benoa Watersports yang memacu adrenalin. Kita akan
                         mengucapkan selamat tinggal kepada Pulau Bali dengan menikmati santapan makan malam,
@@ -302,7 +312,7 @@
         </div>
         <div class="text-center">
             <h1> PETA BALI </h1>
-            <img class="peta-image"  src="/images/Balimap.jpg" alt="">
+            <img class="peta-image" src="/images/Balimap.jpg" alt="">
         </div>
     </div>
 </section>
