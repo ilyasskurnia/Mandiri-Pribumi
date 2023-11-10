@@ -10,6 +10,7 @@ use App\Models\Destinasi;
 use App\Models\Faq;
 use App\Models\Galeri;
 use App\Models\Pesan;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardController extends Controller
 {
@@ -68,7 +69,7 @@ class DashboardController extends Controller
             'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif',
         ]);
 
-        // Simpan data ke database menggunakan model galeri
+        // Simpan data ke database menggunakan model artikel
         $artikel = new Artikel();
         $artikel->author = $request->author;
         $artikel->title = $request->title;
@@ -85,6 +86,9 @@ class DashboardController extends Controller
     public function destroyartikel ($id)
     {
         $data = Artikel::find($id);
+        if ($data->thumbnail) {
+            Storage::delete($data->thumbnail);
+        }
         $data->delete();
         return redirect()->route('artikel');
     }
@@ -94,21 +98,27 @@ class DashboardController extends Controller
         
         return view('dashboard.pages.artikel.edit', ['data' => $data]);
     }
-    public function updateartikel ($id, Request $request)
+    public function updateartikel($id, Request $request)
     {
+        // Temukan artikel berdasarkan ID
         $data = Artikel::find($id);
-        if ($request->hasFile('thumbnail')) {
-            // Pengguna mengunggah gambar thumbnail baru, simpan dan gantikan yang lama
-            $thumbnail = $request->file('thumbnail');
-            $thumbnailPath = $thumbnail->store('path_tujuan_penyimpanan', 'disk_yang_digunakan');
-            // Simpan $thumbnailPath ke dalam model atau database
-        } else {
-            // Pengguna tidak mengunggah gambar baru, gunakan thumbnail saat ini
-            // Tidak perlu melakukan apa-apa dengan thumbnail
+
+        $input = $request->all();
+
+        if ($thumbnail = $request->file('thumbnail')) {
+            // Hapus thumbnail lama jika ada
+            Storage::delete($data->thumbnail);
+            $thumbnailPath = $thumbnail->store('artikel/thumbnail');
+            $input['thumbnail'] = $thumbnailPath;
+        }else{
+            unset($input['thumbnail']);
         }
-        
-        $data->update($request->except(['_token','submit']));
-        return redirect()->route('pesan');
+
+        // Update data artikel
+        $data->update($input);
+
+        // Redirect ke halaman lain atau tampilkan pesan sukses
+        return redirect()->route('artikel');
     }
 
     public function pesan()
@@ -200,12 +210,16 @@ class DashboardController extends Controller
     public function postgaleri (Request $request) 
     {
         $data = $request->validate([
+            'author' => 'required|string',
+            'title' => 'required|string',
             'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif',
             'keterangan' => 'required|string',
         ]);
 
         // Simpan data ke database menggunakan model galeri
         $galeri = new Galeri;
+        $galeri->author = $request->author;
+        $galeri->title = $request->title;
         $galeri->thumbnail = $request->file('thumbnail')->store('galeri/thumbnail');
         $galeri->keterangan = $request->keterangan;
 
@@ -219,7 +233,37 @@ class DashboardController extends Controller
     public function destroygaleri ($id)
     {
         $data = Galeri::find($id);
+        if ($data->thumbnail) {
+            Storage::delete($data->thumbnail);
+        }
         $data->delete();
+        return redirect()->route('galeri');
+    }
+    public function editgaleri ($id)
+    {
+        $data = Galeri::find($id);
+        
+        return view('dashboard.pages.galeri.edit', ['data' => $data]);
+    }
+    public function updategaleri($id, Request $request)
+    {
+        // Temukan galeri berdasarkan ID
+        $data = Galeri::find($id);
+
+        $input = $request->all();
+
+        if ($thumbnail = $request->file('thumbnail')) {
+            // Hapus thumbnail lama jika ada
+            Storage::delete($data->thumbnail);
+            $thumbnailPath = $thumbnail->store('galeri/thumbnail');
+            $input['thumbnail'] = $thumbnailPath;
+        }else{
+            unset($input['thumbnail']);
+        }
+        // Update data galeri
+        $data->update($input);
+
+        // Redirect ke halaman lain atau tampilkan pesan sukses
         return redirect()->route('galeri');
     }
     public function paketdestinasi()
@@ -270,7 +314,59 @@ class DashboardController extends Controller
     public function destroydestinasi ($id)
     {
         $data = Destinasi::find($id);
+        if ($data->thumbnail) {
+            Storage::delete($data->thumbnail);
+        }
+        if ($data->peta_wisata) {
+            Storage::delete($data->peta_wisata);
+        }
+        if ($data->brosure) {
+            Storage::delete($data->brosure);
+        }
         $data->delete();
+        return redirect()->route('paketdestinasi');
+    }
+    public function editpaket ($id)
+    {
+        $data = Destinasi::find($id);
+        
+        return view('dashboard.pages.destinasi.edit', ['data' => $data]);
+    }
+    public function updatepaket ($id, Request $request)
+    {
+        $data = Destinasi::find($id);
+
+        $input = $request->all();
+
+        if ($thumbnail = $request->file('thumbnail')) {
+            // Hapus thumbnail lama jika ada
+            Storage::delete($data->thumbnail);
+            $thumbnailPath = $thumbnail->store('destinasi/thumbnail');
+            $input['thumbnail'] = $thumbnailPath;
+        }else{
+            unset($input['thumbnail']);
+        }
+        if ($peta_wisata = $request->file('peta_wisata')) {
+            // Hapus thumbnail lama jika ada
+            Storage::delete($data->peta_wisata);
+            $peta_wisataPath = $peta_wisata->store('destinasi/peta_wisata');
+            $input['peta_wisata'] = $peta_wisataPath;
+        }else{
+            unset($input['peta_wisata']);
+        }
+        if ($brosure = $request->file('brosure')) {
+            // Hapus thumbnail lama jika ada
+            Storage::delete($data->brosure);
+            $brosurePath = $brosure->store('destinasi/brosure');
+            $input['brosure'] = $brosurePath;
+        }else{
+            unset($input['brosure']);
+        }
+
+        // Update data galeri
+        $data->update($input);
+
+        // Redirect ke halaman lain atau tampilkan pesan sukses
         return redirect()->route('paketdestinasi');
     }
     public function faq()

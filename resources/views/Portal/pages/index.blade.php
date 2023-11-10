@@ -444,7 +444,7 @@
         text-align: justify;
     }
 
-    .video-section{
+    .video-section {
         background-color: #F2EEEB;
         padding: 15px;
     }
@@ -453,6 +453,119 @@
         text-align: center;
         align-items: center;
     }
+
+    .floating-content {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.5);
+        /* Latar belakang putih tulang dengan opacity 50% */
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        /* Menambahkan border radius */
+        box-shadow: none;
+        cursor: pointer;
+        transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .floating-content:hover {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+
+    .floating-content i {
+        color: #25d366;
+        font-size: 30px;
+    }
+
+    .floating-content h3 {
+        margin: 0;
+        font-weight: bold;
+    }
+
+    .floating-content a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        /* Posisi tinggi floating box di kanan bawah */
+        right: 20px;
+        /* Posisi horizontal floating box di kanan bawah */
+        /* background: rgba(0, 0, 0, 0.5); */
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    /* Perubahan gaya untuk floating box */
+    .floating-box {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+        width: 100%;
+        font-family: "Sora", sans-serif;
+        /* Menggunakan jenis huruf Arial atau jenis huruf sans-serif lainnya */
+    }
+
+    .floating-box h3 {
+        font-size: 20px;
+        /* Ukuran huruf yang lebih besar untuk judul */
+        margin: 10px 0;
+        /* Margin atas dan bawah judul */
+    }
+
+    .floating-box p {
+        font-size: 16px;
+        /* Ukuran huruf yang lebih besar untuk konten */
+    }
+
+    .floating-box a {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #0088cc;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: 20px;
+        /* Margin di atas tombol */
+    }
+
+    .card-title1 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333; /* warna teks */
+      margin-bottom: 10px;
+    }
+
+    /* Gaya untuk Card Text */
+    .card-text1 {
+      font-size: 1rem;
+      color: #555; /* warna teks */
+      margin-bottom: 15px;
+    }
+
+    /* Gaya untuk Small Text (Last updated) */
+    .text-muted {
+      font-size: 0.8rem;
+      color: #888; /* warna teks */
+    }
+
 
 
     /*Responsive Styles */
@@ -539,6 +652,7 @@
             grid-template-columns: repeat(2, 1fr);
         }
     }
+
 </style>
 
 <!-- Section 1: Banner -->
@@ -586,8 +700,8 @@
         </div>
         <hr> <!-- Garis horizontal di bawah konten row -->
         <div class="row">
-            <div class="col-md-6 col-lg-6 floating-word2">
-                <h2 style="floating-tagline"><b>#Mari Jelajah Nusantara !</b></h2>
+            <div class="col-md-6 col-lg-6">
+                <h2 style="floating-tagline"><b>#MariJelajahNusantara!</b></h2>
             </div>
             <div class="col-md-6 col-lg-6 d-flex justify-content-end align-items-center floating-word3">
                 <a href="https://wa.me/your-whatsapp-number" target="_blank"
@@ -603,7 +717,7 @@
 <section class="video-section">
     <div class="container my-5 mt-5">
         <!-- Tagline -->
-        <div class="tagline mt-5 text-center word-video">
+        <div class="tagline mt-5 text-center">
             <p style="font-size: 24px; font-weight: bold; color: #51604F;">Nikmati <span style="color: red; font-size: 28px;">Keindahan</span> Bumi Nusantara <span style="color: red; font-size: 28px;">Bersama Kami</span></p>
         </div>
     </div>
@@ -633,7 +747,7 @@
     <div class="container my-5 mt-5">
         <div class="judul-galeri">
             <img style="max-height: 40px" src="{{URL::asset('/images/logonama.png') }}" alt="Logo">
-            <h1 class="galeri-kami-judul">Galeri Kami</h1>
+            <h1>Galeri Kami</h1>
         </div>
         <div class="row mt-5">
             <!-- Galeri Item 1 -->
@@ -642,7 +756,8 @@
                     <div style="width: 100%; padding-bottom: 100%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                             <source srcset="{{URL::asset('/images/card1.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
+                                style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                     </div>
                     <div class="galeri-body">
@@ -659,7 +774,8 @@
                     <div style="width: 100%; padding-bottom: 100%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                             <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta"
+                                style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                     </div>
                     <div class="galeri-body">
@@ -672,11 +788,12 @@
 
             <!-- Galeri Item 3 -->
             <div class="col-md-3">
-                <div class = "galeri">
+                <div class="galeri">
                     <div style="width: 100%; padding-bottom: 100%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                             <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa"
+                                style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                     </div>
                     <div class="galeri-body">
@@ -693,7 +810,8 @@
                     <div style="width: 100%; padding-bottom: 100%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                             <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta"
+                                style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                     </div>
                     <div class="galeri-body">
@@ -712,7 +830,8 @@
                     <div style="width: 100%; padding-bottom: 100%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                             <source srcset="{{URL::asset('/images/card1.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
+                                style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                     </div>
                     <div class="galeri-body">
@@ -729,7 +848,8 @@
                     <div style="width: 100%; padding-bottom: 100%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                             <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta"
+                                style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                     </div>
                     <div class="galeri-body">
@@ -742,11 +862,12 @@
 
             <!-- Galeri Item 3 -->
             <div class="col-md-3">
-                <div class = "galeri">
+                <div class="galeri">
                     <div style="width: 100%; padding-bottom: 100%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                             <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa"
+                                style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                     </div>
                     <div class="galeri-body">
@@ -763,7 +884,8 @@
                     <div style="width: 100%; padding-bottom: 100%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                             <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta"
+                                style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                     </div>
                     <div class="galeri-body">
@@ -782,7 +904,8 @@
                     <div style="width: 100%; padding-bottom: 100%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                             <source srcset="{{URL::asset('/images/card1.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
+                                style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                     </div>
                     <div class="galeri-body">
@@ -799,7 +922,8 @@
                     <div style="width: 100%; padding-bottom: 100%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                             <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta"
+                                style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                     </div>
                     <div class="galeri-body">
@@ -812,11 +936,12 @@
 
             <!-- Galeri Item 3 -->
             <div class="col-md-3">
-                <div class = "galeri">
+                <div class="galeri">
                     <div style="width: 100%; padding-bottom: 100%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                             <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa"
+                                style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                     </div>
                     <div class="galeri-body">
@@ -833,7 +958,8 @@
                     <div style="width: 100%; padding-bottom: 100%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                             <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta"
+                                style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                     </div>
                     <div class="galeri-body">
@@ -862,7 +988,7 @@
     <div class="container my-5 mt-5">
         <div class="judul-card">
             <img style="max-height: 40px" src="{{URL::asset('/images/logonama.png') }}" alt="Logo">
-            <h1 class="galeri-kami-judul">Penawaran Jasa</h1>
+            <h1>Penawaran Jasa</h1>
         </div>
         <div id="carouselExample" class="carousel slide mt-5" data-ride="carousel">
             <div class="carousel-inner">
@@ -1135,6 +1261,46 @@
     </div>
 </section>
 
+<div class="floating-content" id="floating-content">
+    <a href="" target="_blank" style="text-decoration: none; color: inherit;">
+        <i class="fab fa-whatsapp fa-3x"></i>
+    </a>
+    <h6 class="ps-3"><b>Ada Yang Bisa Kami Bantu?</b></h6>
+</div>
+
+<!-- <div class="overlay" id="overlay">
+    <div class="floating-box">
+    <div style="background: #0088cc;">
+    <h3>Ada yang bisa kami bantu</h3>
+</div>
+<div style="background: #fff; color: #333;">
+    <p>Silahkan hubungi kami di sini</p>
+</div>
+<div style="background: #ccc;">
+    <p>Atau Anda bisa menghubungi kami di sini</p>
+</div>
+        <span class="close" id="close">&times;</span>
+    </div>
+</div> -->
+
+<div class="overlay" id="overlay">
+    <div class="card mb-3" style="max-width: 360px;">
+    <div class="row g-0">
+        <div class="col-md-4">
+        <img src="{{URL::asset('/images/float.png') }}" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+        <div class="card-body">
+                <h5 class="card-title1"><b>Ada Yang Bisa Kami Bantu?</b></h5>
+                <p class="card-text1">Tanyakan pada admin <b>Mandiri Pribumi</b> <a href="https://wa.me/your-whatsapp-number">di sini</a></p>
+                <p class="card-text1"><small class="text-muted">Atau hubungi kami langsung <a href="/portal/kontak">di sini</a></small></p>
+            <span class="close" id="close">&times;</span>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+
 <script>
     // Fungsi untuk menambahkan class "active" saat elemen berada dalam viewport
     function handleScroll() {
@@ -1154,7 +1320,21 @@
     // Memanggil fungsi saat halaman dimuat dan saat menggulir
     window.addEventListener('load', handleScroll);
     window.addEventListener('scroll', handleScroll);
+
+    const floatingContent = document.getElementById('floating-content');
+    const overlay = document.getElementById('overlay');
+    const closeButton = document.getElementById('close');
+
+    floatingContent.addEventListener('click', () => {
+        overlay.style.display = 'block';
+    });
+
+    closeButton.addEventListener('click', () => {
+        overlay.style.display = 'none';
+    });
+
 </script>
+
 
 
 @endsection

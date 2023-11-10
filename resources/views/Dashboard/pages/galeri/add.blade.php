@@ -62,12 +62,20 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
+                                            <label class="form-control-label">Author</label>
+                                            <input name="author" class="form-control" type="text">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-control-label">Title</label>
+                                            <input name="title" class="form-control" type="text">
+                                        </div>
+                                        <div class="form-group">
                                             <label class="form-control-label">Foto Galeri</label>
                                             <input name="thumbnail" class="form-control" type="file">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Keterangan Gambar</label>
-                                            <input name="keterangan" class="form-control" type="text">
+                                            <textarea name="keterangan" class="form-control" type="text"></textarea>
                                         </div>
                                 </div>
                                 <div class="d-flex justify-content-end mt-4">
