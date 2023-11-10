@@ -10,12 +10,14 @@
         left: 240px;
         transition: all 0.5s ease;
     }
+
     .body-content {
         position: relative;
-        padding-top: 104px;
+        padding-top: 125px;
         padding-left: 20px;
         padding-right: 20px;
     }
+
     .search {
         margin-right: 10px;
     }
@@ -32,7 +34,7 @@
     }
 </style>
 @php
-    $nomor=1;
+$nomor=1;
 @endphp
 <section class="galeri-section">
     <div class="body-content d-flex flex-column">
@@ -66,20 +68,24 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                   @foreach ($card['get_data'] as $detail_destinasi)
+                                    @foreach ($card['get_data'] as $detail_destinasi)
                                     <tr>
                                         <td class="text-center">{{ $nomor++ }}</td>
                                         <td class="text-center">{{ $detail_destinasi->days }}</td>
                                         <td class="text-center">{{ $detail_destinasi->detail_rute }}</td>
                                         <td class="text-center">{{ $detail_destinasi->deskripsi }}</td>
-                                        <td class="text-center"><img style="max-height: 100px" src="{{ asset('storage/' . $detail_destinasi->thumbnail) }}" alt=""></td>
+                                        <td class="text-center"><img style="max-height: 100px"
+                                                src="{{ asset('storage/' . $detail_destinasi->thumbnail) }}" alt="">
+                                        </td>
                                         <td>
                                             <div class="d-flex">
-                                                {{-- <a href="/dashboard/{{ $galeri->id }}/editgaleri" class="btn btn-xs bg-primary me-1 text-white">Edit</a> --}}
+                                                {{-- <a href="/dashboard/{{ $galeri->id }}/editgaleri" class="btn btn-xs
+                                                bg-primary me-1 text-white">Edit</a> --}}
                                                 {{-- <form action="/dashboard/galeri/{{ $galeri->id }}" method="POST">
-                                                    @csrf
-                                                    @method('delete')
-                                                    <input type="submit" name="submit" value="delete" class="btn btn-xs btn-danger me-1">
+                                                @csrf
+                                                @method('delete')
+                                                <input type="submit" name="submit" value="delete"
+                                                    class="btn btn-xs btn-danger me-1">
                                                 </form> --}}
                                             </div>
                                         </td>
@@ -93,7 +99,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             </section>
         </main>
     </div>

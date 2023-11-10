@@ -3,54 +3,68 @@
 @section('content')
 
 <style>
-/* Responsivitas Logo di Kolom Kiri */
-.logo-image {
-    max-height: 200px; /* Atur tinggi maksimum gambar sesuai kebutuhan */
-    width: auto; /* Biarkan lebar disesuaikan agar gambar tidak terdistorsi */
-}
-@media (max-width: 768px) {
-    .col-1 img {
-        max-height: 100%; /* Atur tinggi gambar */
-    }
+    /* Responsivitas Logo di Kolom Kiri */
     .logo-image {
-        max-height: 150px; /* Atur tinggi maksimum gambar untuk layar kecil */
-        margin-left: -110px;
-        margin-top: 10px;
+        max-height: 200px;
+        /* Atur tinggi maksimum gambar sesuai kebutuhan */
+        width: auto;
+        /* Biarkan lebar disesuaikan agar gambar tidak terdistorsi */
     }
 
-}
+    @media (max-width: 768px) {
+        .col-1 img {
+            max-height: 100%;
+            /* Atur tinggi gambar */
+        }
 
-.banner {
-    padding-top: 150px;
-}
-
-/* Responsivitas Isi Konten */
-@media (max-width: 768px) {
-    .col-8 {
-        width: 100%; /* Lebar konten menjadi 100% */
-    }
-    .col-1 {
-        width: 30%; /* Lebar kolom gambar menjadi 30% */
-        text-align: center; /* Pusatkan gambar */
+        .logo-image {
+            max-height: 150px;
+            /* Atur tinggi maksimum gambar untuk layar kecil */
+            margin-left: -110px;
+            margin-top: 10px;
+        }
 
     }
+
+    .banner {
+        padding-top: 150px;
+    }
+
+    /* Responsivitas Isi Konten */
+    @media (max-width: 768px) {
+        .col-8 {
+            width: 100%;
+            /* Lebar konten menjadi 100% */
+        }
+
+        .col-1 {
+            width: 30%;
+            /* Lebar kolom gambar menjadi 30% */
+            text-align: center;
+            /* Pusatkan gambar */
+
+        }
+
+        .btn-secondary {
+            margin-top: 15px;
+            /* Berikan jarak atas tombol */
+        }
+    }
+
+    /* Margin atas tambahan */
+    .container {
+        margin-top: ;
+        /* Atur margin atas untuk setiap container */
+    }
+
+    /* Atur warna teks tombol */
     .btn-secondary {
-        margin-top: 15px; /* Berikan jarak atas tombol */
+        color: #fff;
+        background-color: #343a40;
+        /* Ubah warna latar belakang tombol */
+        border-color: #343a40;
+        /* Ubah warna border tombol */
     }
-}
-
-/* Margin atas tambahan */
-.container {
-    margin-top: ; /* Atur margin atas untuk setiap container */
-}
-
-/* Atur warna teks tombol */
-.btn-secondary {
-    color: #fff;
-    background-color: #343a40; /* Ubah warna latar belakang tombol */
-    border-color: #343a40; /* Ubah warna border tombol */
-}
-
 </style>
 
 <div class="container banner">
@@ -78,7 +92,8 @@
             <h4>Yogyakarta</h4>
             <h6 style="color: #626262">2 Hari 1 Malam</h6>
             <h5 style="text-align: right">Start from 330k/pax</h5>
-            <p>Paket wisata ini cocok bagi anda yang ingin menelusuri rekam sejarah kerajaan Mataram Kuno dan Kesultanan Ngayogakarta.</p>
+            <p>Paket wisata ini cocok bagi anda yang ingin menelusuri rekam sejarah kerajaan Mataram Kuno dan Kesultanan
+                Ngayogakarta.</p>
             <br>
             <a href="/portal/detaildestinasijogja" class="btn btn-secondary">Selengkapnya</a>
         </div>
@@ -110,7 +125,8 @@
             <h4>Karimun Jawa</h4>
             <h6 style="color: #626262">3 Hari 2 Malam</h6>
             <h5 style="text-align: right">Start from 1500k/pax</h5>
-            <p>Dalam paket ini anda akan diajak menjelajahi dan menikmati pesona pulau pulau dengan kekayaan biota laut.</p>
+            <p>Dalam paket ini anda akan diajak menjelajahi dan menikmati pesona pulau pulau dengan kekayaan biota laut.
+            </p>
             <br>
             <a href="/portal/detaildestinasikarimun" class="btn btn-secondary">Selengkapnya</a>
         </div>
@@ -126,7 +142,8 @@
             <h4>Malang - Batu Bromo</h4>
             <h6 style="color: #626262">2 Hari 1 Malam</h6>
             <h5 style="text-align: right">Start from 1100k/pax</h5>
-            <p>Paket wisata ini cocok bagi anda  yang ingin menikmati keindahan Gunung Bromo dan mencari sensasi petualangan</p>
+            <p>Paket wisata ini cocok bagi anda yang ingin menikmati keindahan Gunung Bromo dan mencari sensasi
+                petualangan</p>
             <br>
             <a href="/portal/detaildestinasimalang" class="btn btn-secondary">Selengkapnya</a>
         </div>

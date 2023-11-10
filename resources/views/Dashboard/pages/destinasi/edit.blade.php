@@ -10,12 +10,14 @@
         left: 240px;
         transition: all 0.5s ease;
     }
+
     .body-content {
         position: relative;
         padding-top: 104px;
         padding-left: 20px;
         padding-right: 20px;
     }
+
     .search {
         margin-right: 10px;
     }
@@ -38,18 +40,18 @@
                 <div class="page-inner" style="width: 100%">
                     <div id="add-data-paket" class="card">
                         @if(session('success'))
-                            <div class="alert alert-success">
-                                {{ session('success') }}
-                            </div>
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
                         @endif
                         @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
                         @endif
                         <div class="card-header pb-2">
                             <div class="d-flex align-items-center">
@@ -57,51 +59,60 @@
                             </div>
                         </div>
                         <div class="card-body">
-                                <form action="\dashboard\{{ $data->id }}\paketdestinasi" method="post" enctype="multipart/form-data">
+                            <form action="\dashboard\{{ $data->id }}\paketdestinasi" method="post"
+                                enctype="multipart/form-data">
                                 @method('put')
-                                @csrf                                
+                                @csrf
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="form-control-label">Foto Destinasi</label>
                                             <input name="thumbnail" class="form-control" type="file">
-                                            <img style="max-height: 100px" src="{{ asset('storage/' . $data->thumbnail) }}" alt="">
+                                            <img style="max-height: 100px"
+                                                src="{{ asset('storage/' . $data->thumbnail) }}" alt="">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Nama Objek Destinasi</label>
-                                            <input name="destinasi" class="form-control" type="text" value="{{ $data->destinasi }}">
+                                            <input name="destinasi" class="form-control" type="text"
+                                                value="{{ $data->destinasi }}">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Peta wisata</label>
                                             <input name="peta_wisata" class="form-control" type="file">
-                                            <img style="max-height: 100px" src="{{ asset('storage/' . $data->peta_wisata) }}" alt="">
+                                            <img style="max-height: 100px"
+                                                src="{{ asset('storage/' . $data->peta_wisata) }}" alt="">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Rute</label>
-                                            <input name="rute" class="form-control" type="text" value="{{ $data->rute }}">
+                                            <input name="rute" class="form-control" type="text"
+                                                value="{{ $data->rute }}">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Brosure</label>
                                             <input name="brosure" class="form-control" type="file">
-                                            <embed src="{{ asset('storage/' . $data->brosure) }}" type="application/pdf" width="100%" height="600px">
+                                            <embed src="{{ asset('storage/' . $data->brosure) }}" type="application/pdf"
+                                                width="100%" height="600px">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Lama Waktu Tour</label>
-                                            <input name="total_waktu" class="form-control" type="text" value="{{ $data->total_waktu }}">
+                                            <input name="total_waktu" class="form-control" type="text"
+                                                value="{{ $data->total_waktu }}">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Biaya</label>
-                                            <input name="biaya" class="form-control" type="text" value="{{ $data->biaya }}">
+                                            <input name="biaya" class="form-control" type="text"
+                                                value="{{ $data->biaya }}">
                                         </div>
-                                </div>
-                                <div class="d-flex justify-content-end mt-4">
-                                    <button type="button" class="btn btn-sm bg-warning me-2 text-white" onclick="goBack()">
-                                        Cancel
-                                    </button>
-                                    <button type="submit" class="btn btn-sm bg-primary mr-2 text-white">
-                                        Save Data
-                                    </button>
-                                </div>
+                                    </div>
+                                    <div class="d-flex justify-content-end mt-4">
+                                        <button type="button" class="btn btn-sm bg-warning me-2 text-white"
+                                            onclick="goBack()">
+                                            Cancel
+                                        </button>
+                                        <button type="submit" class="btn btn-sm bg-primary mr-2 text-white">
+                                            Save Data
+                                        </button>
+                                    </div>
                             </form>
                         </div>
                     </div>
@@ -117,6 +128,6 @@
     function goBack() {
         window.history.back();
     }
-    </script>
-    
+</script>
+
 @endsection

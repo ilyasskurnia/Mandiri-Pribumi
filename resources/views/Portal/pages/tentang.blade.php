@@ -14,23 +14,28 @@
         /* Hapus padding dari elemen .container */
     }
 
-    h1, h3 {
-        font-size: 2rem; /* You can adjust the size as needed */
+    h1,
+    h3 {
+        font-size: 2rem;
+        /* You can adjust the size as needed */
     }
 
     /* Increase the font size for p elements */
     p {
-        font-size: 1.2rem; /* You can adjust the size as needed */
+        font-size: 1.2rem;
+        /* You can adjust the size as needed */
     }
 
     /* Increase the font size for h5 */
     h5 {
-        font-size: 1.5rem; /* You can adjust the size as needed */
+        font-size: 1.5rem;
+        /* You can adjust the size as needed */
     }
 
     /* Increase the font size for h6 */
     h6 {
-        font-size: 1.2rem; /* You can adjust the size as needed */
+        font-size: 1.2rem;
+        /* You can adjust the size as needed */
     }
 
     .image-overlay {
@@ -50,11 +55,13 @@
         margin: 0 auto;
         /* Pusatkan gambar dalam parent */
     }
+
     .image-overlay1 {
         height: 90%;
         width: 80%;
         padding-left: 0px;
     }
+
     .visi-misi {
         padding-right: 250px;
     }
@@ -70,13 +77,13 @@
             height: auto;
         }
 
-        .image-overlay1{
+        .image-overlay1 {
             margin-left: 40px;
             max-width: 100%;
             height: auto;
         }
 
-        .logo{
+        .logo {
             margin-left: 60px;
             max-width: 100%;
             height: auto;
@@ -100,11 +107,10 @@
             /* Gambar tidak melebihi lebar parent */
         }
 
-        .visi-misi{
+        .visi-misi {
             padding: 0px;
         }
     }
-
 </style>
 <div class="container banner">
     <div class="row justify-content-between">
@@ -129,11 +135,14 @@
     </div>
     <div class="row justify-content-between">
         <div class="col-md-6 mt-3">
-            <p style="text-align: justify">Didirikan pada tahun 2004 sebagai travel agent terpercaya di Kota Bandung, oleh Drs Edy Suroso. Mandiri
+            <p style="text-align: justify">Didirikan pada tahun 2004 sebagai travel agent terpercaya di Kota Bandung,
+                oleh Drs Edy Suroso. Mandiri
                 Pribumi tour and travel telah melayani pelanggan dari lingkup sekolah hingga perusahaan. </p>
-            <p style="text-align: justify">Karena tingginya permintaan jumlah pelanggan, pada tahun 2023, Mandiri Pribumi tour and travel membuka kantor cabang di Kota
+            <p style="text-align: justify">Karena tingginya permintaan jumlah pelanggan, pada tahun 2023, Mandiri
+                Pribumi tour and travel membuka kantor cabang di Kota
                 Semarang. </p>
-            <p style="text-align: justify">Hingga saat ini, kami telah melayani 245 pelanggan dari berbagai kalangan, dan akan terus
+            <p style="text-align: justify">Hingga saat ini, kami telah melayani 245 pelanggan dari berbagai kalangan,
+                dan akan terus
                 bertambah.</p>
         </div>
         <div class="col-md-2 mt-3">
@@ -148,7 +157,8 @@
         </h3>
     </div>
     <div class="row mt-3">
-        <p style="text-align: justify">Perusahaan tour dan travel yang terpercaya dengan mengedepankan kepuasan pelanggan melalui layanan yang
+        <p style="text-align: justify">Perusahaan tour dan travel yang terpercaya dengan mengedepankan kepuasan
+            pelanggan melalui layanan yang
             berkualitas dan berdedikasi untuk memberikan manfaat dalam sektor pariwisata.</p>
     </div>
 </div>
@@ -159,7 +169,8 @@
         </h3>
     </div>
     <div class="row mt-3">
-        <p style="text-align: justify">Menjamin pelayanan perjalanan dan wisata yang aman serta nyaman kepada pelanggan Berkomitmen dengan standar
+        <p style="text-align: justify">Menjamin pelayanan perjalanan dan wisata yang aman serta nyaman kepada pelanggan
+            Berkomitmen dengan standar
             yang tinggi dalam melayani pelanggan
             Melengkapi dengan pelayanan handal, harga yang kompetitif dan kejujuran</p>
     </div>
