@@ -4,7 +4,7 @@
 <style>
     .banner-section {
         font-family: 'Sora', sans-serif;
-        background-image: url('{{ asset('images/headergallery.png') }}');
+        background-image: url('{{ asset('images/headergallery.jpg') }}');
         background-size: cover;
         background-position: center;
         color: #000;
@@ -198,7 +198,7 @@
         padding: 20px;
         opacity: 0;
         transition: opacity 0.3s;
-        padding-top: 150px;
+        padding-top: 75px;
     }
 
     .image-container:hover .image-overlay {
@@ -224,17 +224,15 @@
 </style>
 <section class="banner-section">
     <div class="container text-right my-5">
-        <h1>
-            <span style="color: #2622DE;"><b>Your Adventure Travel Expert <br> with Mandiri Pribumi</b></span>
-        </h1>
+        <h1>Rayakan <span style="color: #FFBE2C;"> Moment</span> Kebersamaan Bersama Mandiri Pribumi</h1>
     </div>
 </section>
 <div class="container mt-5">
     <div class="row justify-content-between">
         <div class="col-4 mt-4">
-            <h5 class="mt-2" style="color : #FFBE2C">Mandiri Pribumi</h5>
-            <h3 class="mt-2" style="color: #1815CA">Galeri Kami</h3>
-            <p>
+            <h4 class="mt-2" style="color: #FFBE2C; font-size: 24px;">Mandiri Pribumi</h4>
+            <h2 class="mt-2" style="color: #51604F; font-size: 36px;">Galeri Kami</h2>
+            <p style="font-size: 18px;">
                 Berikut adalah beberapa testimoni dari customer kami di beberapa destinasi wisata yang kami layankan.
             </p>
             <a href="#Galeri" class="btn btn-primary">Lihat lebih</a>
@@ -242,24 +240,25 @@
         <div class="col-5">
             <div class="image-container">
                 <div class="image">
-                    <img src="{{URL::asset('images/card2.jpg') }}" alt="Gambar 1">
+                    <img src="{{URL::asset('images/card2.jpg') }}" alt="Gambar 1" style="width: 100%; height: auto;">
                 </div>
                 <div class="image">
-                    <img src="{{URL::asset('images/card3.jpg') }}" alt="Gambar 2">
+                    <img src="{{URL::asset('images/card3.jpg') }}" alt="Gambar 2" style="width: 100%; height: auto;">
                 </div>
                 <div class="image">
-                    <img src="{{URL::asset('images/card1.jpg') }}" alt="Gambar 3">
+                    <img src="{{URL::asset('images/card1.jpg') }}" alt="Gambar 3" style="width: 100%; height: auto;">
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <div class="container  text-center" style="margin-top: 180px">
     <div class="row">
         <h3 style="color: #FFBE2C">Mandiri Pribumi</h3>
     </div>
     <div class="row">
-        <h2 style="color: #2622DE">Testimoni Foto dari Pelanggan Kami</h2>
+        <h2 style="color: #51604F">Testimoni Foto dari Pelanggan Kami</h2>
     </div>
 </div>
 
@@ -280,7 +279,9 @@
                             <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali" style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                         <div class="image-overlay">
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
                             <h5>Bali</h5>
+                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
                         </div>
                     </div>
                 </div>
@@ -295,7 +296,9 @@
                             <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                         <div class="image-overlay">
-                            <h5>Yogyakarta</h5>
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
+                            <h5>Bali</h5>
+                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
                         </div>
                     </div>
                 </div>
@@ -310,7 +313,9 @@
                             <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa" style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                         <div class="image-overlay">
-                            <h5>Karimun Jawa</h5>
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
+                            <h5>Bali</h5>
+                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
                         </div>
                     </div>
                 </div>
@@ -325,7 +330,9 @@
                             <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                         <div class="image-overlay">
-                            <h5>Yogyakarta</h5>
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
+                            <h5>Bali</h5>
+                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
                         </div>
                     </div>
                 </div>
@@ -342,7 +349,9 @@
                             <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali" style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                         <div class="image-overlay">
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
                             <h5>Bali</h5>
+                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
                         </div>
                     </div>
                 </div>
@@ -357,7 +366,9 @@
                             <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                         <div class="image-overlay">
-                            <h5>Yogyakarta</h5>
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
+                            <h5>Bali</h5>
+                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
                         </div>
                     </div>
                 </div>
@@ -372,7 +383,9 @@
                             <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa" style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                         <div class="image-overlay">
-                            <h5>Karimun Jawa</h5>
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
+                            <h5>Bali</h5>
+                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
                         </div>
                     </div>
                 </div>
@@ -387,7 +400,9 @@
                             <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                         <div class="image-overlay">
-                            <h5>Yogyakarta</h5>
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
+                            <h5>Bali</h5>
+                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
                         </div>
                     </div>
                 </div>
@@ -404,7 +419,9 @@
                             <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali" style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                         <div class="image-overlay">
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
                             <h5>Bali</h5>
+                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
                         </div>
                     </div>
                 </div>
@@ -419,7 +436,9 @@
                             <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                         <div class="image-overlay">
-                            <h5>Yogyakarta</h5>
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
+                            <h5>Bali</h5>
+                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
                         </div>
                     </div>
                 </div>
@@ -434,7 +453,9 @@
                             <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa" style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                         <div class="image-overlay">
-                            <h5>Karimun Jawa</h5>
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
+                            <h5>Bali</h5>
+                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
                         </div>
                     </div>
                 </div>
@@ -449,7 +470,9 @@
                             <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                         <div class="image-overlay">
-                            <h5>Yogyakarta</h5>
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
+                            <h5>Bali</h5>
+                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
                         </div>
                     </div>
                 </div>

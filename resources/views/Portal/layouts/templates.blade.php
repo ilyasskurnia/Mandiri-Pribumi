@@ -52,6 +52,7 @@
             padding: 15px 20px;
             transition: color 0.3s;
             margin-right: 40px;
+            font-size: 20px;
         }
 
         .navbar-nav .nav-link:hover {

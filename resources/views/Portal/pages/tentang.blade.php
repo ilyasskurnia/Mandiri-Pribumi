@@ -14,6 +14,25 @@
         /* Hapus padding dari elemen .container */
     }
 
+    h1, h3 {
+        font-size: 2rem; /* You can adjust the size as needed */
+    }
+
+    /* Increase the font size for p elements */
+    p {
+        font-size: 1.2rem; /* You can adjust the size as needed */
+    }
+
+    /* Increase the font size for h5 */
+    h5 {
+        font-size: 1.5rem; /* You can adjust the size as needed */
+    }
+
+    /* Increase the font size for h6 */
+    h6 {
+        font-size: 1.2rem; /* You can adjust the size as needed */
+    }
+
     .image-overlay {
         position: relative;
         z-index: -1;
