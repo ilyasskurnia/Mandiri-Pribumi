@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Dashboard\DestinasiController;
 use App\Http\Controllers\Portal\PortalController;
 use Illuminate\Support\Facades\Route;
 
@@ -64,11 +65,15 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::get('/tambahgaleri', [DashboardController::class, 'tambahgaleri']);
     Route::post('/tambahgaleri', [DashboardController::class, 'postgaleri']);
     Route::delete('/galeri/{id}', [DashboardController::class, 'destroygaleri']);
+    Route::get('/{id}/editgaleri', [DashboardController::class, 'editgaleri']);
+    Route::put('/galeri/{id}', [DashboardController::class, 'updategaleri']);
 
     Route::get('/paketdestinasi', [DashboardController::class, 'paketdestinasi'])->name('paketdestinasi');
     Route::get('/tambahpaket', [DashboardController::class, 'tambahpaket']);
     Route::post('/tambahpaket', [DashboardController::class, 'postdestinasi']);
     Route::delete('/paketdestinasi/{id}', [DashboardController::class, 'destroydestinasi']);
+    Route::get('/{id}/paketdestinasi', [DashboardController::class, 'editpaket']);
+    Route::put('/{id}/paketdestinasi', [DashboardController::class, 'updatepaket']);
 
     Route::get('/faq', [DashboardController::class, 'faq'])->name('faq');
     Route::get('/tambahfaq', [DashboardController::class, 'tambahfaq']);
@@ -76,6 +81,15 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::delete('/faq/{id}', [DashboardController::class, 'destroyfaq']);
     Route::get('/{id}/editfaq', [DashboardController::class, 'editfaq']);
     Route::put('/faq/{id}', [DashboardController::class, 'updatefaq']);
+    
+    Route::group(['prefix' => '{destinasi_id}/detail_destinasi'], function () {
+        Route::get('/', [DestinasiController::class, 'index'])->name('detail_destinasi');
+        Route::get('/tambah_detail', [DestinasiController::class, 'tambah_detail']);
+        Route::post('/tambah_detail', [DestinasiController::class, 'post_detail']);
+        Route::get('/{destinasi_id}/edit', [DestinasiController::class, 'edit_detail']);
+        Route::put('/{destinasi_id}', [DestinasiController::class, 'update_detail']);
+        Route::delete('/{destinasi_id}', [DestinasiController::class, 'destroy_detail']);
+    });
 });
 
 

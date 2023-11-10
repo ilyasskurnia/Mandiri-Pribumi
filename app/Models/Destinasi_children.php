@@ -13,6 +13,6 @@ class Destinasi_children extends Model
 
     public function destinasi () 
     {
-        return $this->belongsTo(Destinasi::class, 'id');
+        return $this->belongsTo(Destinasi::class, 'destinasi_id');
     }
 }

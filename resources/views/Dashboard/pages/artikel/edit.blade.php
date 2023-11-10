@@ -49,6 +49,7 @@
                         </div>
                         <div class="card-body">
                                 <form action="\dashboard\artikel\{{ $data->id }}" method="post" enctype="multipart/form-data">
+                                @method('put')
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-12">
@@ -67,6 +68,7 @@
                                         <div class="form-group">
                                             <label class="form-control-label">Thumbnail</label>
                                             <input name="thumbnail" class="form-control" type="file">
+                                            <img style="max-height: 100px" src="{{ asset('storage/' . $data->thumbnail) }}" alt="">
                                         </div>
                                 </div>
                                 <div class="d-flex justify-content-end mt-4">

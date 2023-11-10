@@ -81,23 +81,13 @@
                                         <td class="text-center">{{ $destinasi->biaya }}</td>
                                         <td>
                                             <div class="d-flex">
-                                                <button
-                                                    type="button"
-                                                    class="btn btn-xs bg-primary me-1 text-white"
-                                                >
-                                                    Edit
-                                                </button>
+                                                <a href="/dashboard/{{ $destinasi->id }}/paketdestinasi" class="btn btn-xs bg-primary me-1 text-white">Edit</a>
                                                 <form action="/dashboard/paketdestinasi/{{ $destinasi->id }}" method="POST">
                                                     @csrf
                                                     @method('delete')
                                                     <input type="submit" name="submit" value="delete" class="btn btn-xs btn-danger me-1">
                                                 </form>
-                                                <button
-                                                type="button"
-                                                class="btn btn-xs btn-warning"
-                                            >
-                                                Detail
-                                            </button>
+                                                <a href="/dashboard/{{ $destinasi->id }}/detail_destinasi" class="btn btn-xs btn-warning">Detail</a>
                                             </div>
                                         </td>
                                     </tr>

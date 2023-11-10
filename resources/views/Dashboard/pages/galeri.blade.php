@@ -58,6 +58,8 @@
                                 <thead class="bg-grey1">
                                     <tr>
                                         <th class="text-center">No.</th>
+                                        <th class="text-center">Author</th>
+                                        <th class="text-center">Title</th>
                                         <th class="text-center">Gambar</th>
                                         <th class="text-center">Deskripsi</th>
                                         <th>Actions</th>
@@ -67,16 +69,13 @@
                                     @foreach ($data['get_data'] as $galeri)
                                     <tr>
                                         <td class="text-center">{{ $nomor++ }}</td>
+                                        <td class="text-center">{{ $galeri->author }}</td>
+                                        <td class="text-center">{{ $galeri->title }}</td>
                                         <td class="text-center"><img style="max-height: 100px" src="{{ asset('storage/' . $galeri->thumbnail) }}" alt=""></td>
                                         <td class="text-center">{{ $galeri->keterangan }}</td>
                                         <td>
                                             <div class="d-flex">
-                                                <button
-                                                    type="button"
-                                                    class="btn btn-xs bg-primary me-1 text-white"
-                                                >
-                                                    Edit
-                                                </button>
+                                                <a href="/dashboard/{{ $galeri->id }}/editgaleri" class="btn btn-xs bg-primary me-1 text-white">Edit</a>
                                                 <form action="/dashboard/galeri/{{ $galeri->id }}" method="POST">
                                                     @csrf
                                                     @method('delete')
