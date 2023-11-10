@@ -12,7 +12,7 @@
     }
     .page-content {
         position: relative;
-        padding-top: 104px;
+        padding-top: 125px;
     }
     .page-content .outer-boxes {
         align-items: center;

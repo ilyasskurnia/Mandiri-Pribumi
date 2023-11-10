@@ -12,7 +12,7 @@
     }
     .body-content {
         position: relative;
-        padding-top: 104px;
+        padding-top: 125px;
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -46,7 +46,7 @@
                         <input style="border-radius: 5px;" type="text" class="form-control" placeholder="Search for...">
                     </div>
                     <a href="{{ url('/dashboard/tambahfaq')}}"" type="button" class="btn btn-primary rounded-lg ml-auto">
-                        <div class="fa fa-fw fa-plus mr-2"></div> Add Data 
+                        <div class="fa fa-fw fa-plus mr-2"></div> Add Data
                     </a>
                 </div>
             </section>
@@ -89,7 +89,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             </section>
         </main>
     </div>
