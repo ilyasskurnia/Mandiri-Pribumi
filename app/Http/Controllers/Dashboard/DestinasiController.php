@@ -45,7 +45,7 @@ class DestinasiController extends Controller
 
         // Simpan data ke database menggunakan model galeri
         $destinasi_children = new Destinasi_children();
-        $destinasi_children->$get_data = $request->destinasi_id;
+        $destinasi_children->destinasi_id = $request->destinasi_id;
         $destinasi_children->days = $request->days;
         $destinasi_children->detail_rute = $request->detail_rute;
         $destinasi_children->deskripsi = $request->deskripsi;
@@ -55,7 +55,7 @@ class DestinasiController extends Controller
 
         session()->flash('success', 'Data berhasil disimpan.');
 
-        return view('dashboard.pages.destinasi_children.add');
+        return view('dashboard.pages.paketdestinasi');
         
     }
 }

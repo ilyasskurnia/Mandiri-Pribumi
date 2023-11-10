@@ -45,9 +45,9 @@
                     <div class="search ">
                         <input style="border-radius: 5px;" type="text" class="form-control" placeholder="Search for...">
                     </div>
-                    {{-- <a href="{{ url('/dashboard/' . $destinasi->id . '/detail_destinasi/tambah_detail')}}" type="button" class="btn btn-primary rounded-lg ml-auto">
+                    <a href="{{ url('/dashboard/' . $card['destinasi']->id . '/detail_destinasi/tambah_detail') }}" type="button" class="btn btn-primary rounded-lg ml-auto">
                         <div class="fa fa-fw fa-plus mr-2"></div> Add Data 
-                    </a> --}}
+                    </a>                    
                 </div>
             </section>
             <section class="d-flex dlex-column gap-2 mt-4">
