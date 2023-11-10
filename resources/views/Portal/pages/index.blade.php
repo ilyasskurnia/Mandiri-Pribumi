@@ -132,6 +132,10 @@
         /* Sesuaikan lebar maksimal card sesuai kebutuhan */
     }
 
+    .galeri-kami-judul {
+        margin-top: 10px;
+    }
+
     .galeri-body {
         text-align: center;
         margin-top: 20px;
@@ -195,7 +199,7 @@
     .partisan-section {
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: left center;
+        background-position: center center;
         color: #fff;
         padding: 200px 0;
     }
@@ -209,6 +213,7 @@
 
     .partisan-word {
         align-content: center;
+        padding: 50px 0;
     }
 
     .partisan-content h1 {
@@ -357,6 +362,31 @@
         right: 10px;
     }
 
+    .btn-brosur1 {
+        align-self: center;
+        display: inline-block;
+        background-color: #D50505;
+        /* Ganti warna button */
+        color: #fff;
+        padding: 10px 20px;
+        margin-top: 20px;
+        text-decoration: none;
+        text-align: center;
+        opacity: 0.8;
+        /* Efek setengah transparan */
+        border-radius: 10px;
+
+    }
+
+    .btn-brosur1:hover {
+        font-weight: bold;
+        /* Menebalkan teks pada hover */
+        background-color: #38A2E3;
+        /* Warna latar belakang lebih cerah saat di hover */
+        box-shadow: 0 0 10px rgba(56, 162, 227, 0.5);
+        /* Efek bayangan saat di hover */
+    }
+
     /* Section 6: Mitra Kami */
 
     .mitra-container {
@@ -427,24 +457,61 @@
 
     /*Responsive Styles */
     @media (max-width: 768px) {
-        .floating-container {
-            margin-top: 0;
-            /* Hapus margin negatif pada layar kecil */
-        }
+        .fade-in {
+        margin: 15px;
+    }
 
-        .floating-container .col-md-6 {
-            margin-bottom: 20px;
-            /* Tambahkan jarak antara elemen kolom */
-        }
+    .floating-container {
+        margin-top: 0;
+        /* Remove negative margin on small screens */
+    }
 
-        .video-section {
-            padding: 30px 0;
-        }
+    .floating-container .col-lg-6 {
+        margin-bottom: 20px;
+        /* Add space between column elements */
+    }
 
-        .video-section iframe {
-            width: 100%;
-            height: 250px;
-        }
+    .video-section {
+        padding: 15px; /* Add padding to the video section */
+        box-sizing: border-box; /* Ensure padding is included in the total width */
+    }
+
+    .video-section iframe {
+        width: 100%;
+        height: 250px;
+        /* Adjust width and height of the video for smaller screens */
+    }
+
+    .video-youtube {
+        margin-left: -15px; /* Adjust the negative margin */
+        margin-right: -15px; /* Add margin to the right side */
+        width: calc(100% + 30px); /* Adjust the width to include the added margins */
+        height: 250px;
+    }
+
+    .video-welcome {
+        padding: 0 15px; /* Add padding to the text beside the video */
+        /* Padding on both sides */
+        margin-left: -15px; /* Adjust the negative margin */
+        margin-right: -15px; /* Add margin to the right side */
+        width: calc(100% + 30px); /* Adjust the width to include the added margins */
+    }
+
+    .greeting {
+        margin: 15px;
+        /* Add margin to the greeting section */
+    }
+
+    .word-video {
+        margin: 15px;
+        /* Add margin to the tagline */
+    }
+
+    .welcome{
+        margin-left: 15px; /* Adjust the negative margin */
+        padding-right: 30px;
+        width: calc(90% + 30px); /* Adjust the width to include the added margins */
+    }
 
         .card-container {
             width: 100%;
@@ -457,6 +524,16 @@
             display: none;
             /* Sembunyikan tombol carousel pada layar kecil */
         }
+
+        .partisan-word {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .btn-brosur {
+        display: block;
+        margin: 20px auto;
+    }
 
         .mitra-grid {
             grid-template-columns: repeat(2, 1fr);
@@ -478,7 +555,7 @@
 <!-- Section 2: Floating Container -->
 <section class="floating-container">
     <div class="container mt-3 mb-2">
-        <div class="row">
+        <div class="row floating-word">
             <div class="col-md-6 col-lg-3 welcome">
                 <h5>Selamat datang di,</h5>
                 <h2>Mandiri <span style="color: #51604F;"> Pribumi</span></h2>
@@ -509,10 +586,10 @@
         </div>
         <hr> <!-- Garis horizontal di bawah konten row -->
         <div class="row">
-            <div class="col-md-6 col-lg-6">
+            <div class="col-md-6 col-lg-6 floating-word2">
                 <h2 style="floating-tagline"><b>#Mari Jelajah Nusantara !</b></h2>
             </div>
-            <div class="col-md-6 col-lg-6 d-flex justify-content-end align-items-center">
+            <div class="col-md-6 col-lg-6 d-flex justify-content-end align-items-center floating-word3">
                 <a href="https://wa.me/your-whatsapp-number" target="_blank"
                     style="text-decoration: none; color: inherit;">
                     <i class="fab fa-whatsapp fa-3x"></i>
@@ -526,17 +603,17 @@
 <section class="video-section">
     <div class="container my-5 mt-5">
         <!-- Tagline -->
-        <div class="tagline mt-5 text-center">
+        <div class="tagline mt-5 text-center word-video">
             <p style="font-size: 24px; font-weight: bold; color: #51604F;">Nikmati <span style="color: red; font-size: 28px;">Keindahan</span> Bumi Nusantara <span style="color: red; font-size: 28px;">Bersama Kami</span></p>
         </div>
     </div>
 
 
     <!-- Section 3: Video and Greetings -->
-    <div class="container my-5 mt-5">
+    <div class="container my-5 mt-5 greeting">
         <div class="row">
-            <div class="col-lg-6 mb-4 mb-lg-2">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/pFXrf10y3-U" frameborder="0"
+            <div class="col-lg-6 mb-4 mb-lg-2 ">
+                <iframe class="video-youtube" width="100%" height="315" src="https://www.youtube.com/embed/pFXrf10y3-U" frameborder="0"
                     allowfullscreen></iframe>
             </div>
             <div class="col-lg-6 mt-4 video-welcome">
@@ -556,7 +633,7 @@
     <div class="container my-5 mt-5">
         <div class="judul-galeri">
             <img style="max-height: 40px" src="{{URL::asset('/images/logonama.png') }}" alt="Logo">
-            <h1>Galeri Kami</h1>
+            <h1 class="galeri-kami-judul">Galeri Kami</h1>
         </div>
         <div class="row mt-5">
             <!-- Galeri Item 1 -->
@@ -785,7 +862,7 @@
     <div class="container my-5 mt-5">
         <div class="judul-card">
             <img style="max-height: 40px" src="{{URL::asset('/images/logonama.png') }}" alt="Logo">
-            <h1>Penawaran Jasa</h1>
+            <h1 class="galeri-kami-judul">Penawaran Jasa</h1>
         </div>
         <div id="carouselExample" class="carousel slide mt-5" data-ride="carousel">
             <div class="carousel-inner">
@@ -989,6 +1066,9 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
+            <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
+                <a href="/portal/destinasi" class="btn-brosur1" style="width: 150px;">View More</a>
+            </div>
         </div>
     </div>
 </section>
