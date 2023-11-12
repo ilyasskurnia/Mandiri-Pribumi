@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class DestinasiController extends Controller
 {
-    public function index($id) 
+    public function index($id)
     {
         // Ambil data destinasi berdasarkan ID
         $destinasi = Destinasi::find($id);
@@ -31,7 +31,7 @@ class DestinasiController extends Controller
 
         return view('dashboard.pages.detail_destinasi.add', ['destinasi' => $destinasi]);
     }
-    public function post_detail (Request $request, $id) 
+    public function post_detail (Request $request, $id)
     {
         $destinasi = Destinasi::find($id);
         $get_data = Destinasi_children::where('destinasi_id', $id)->get();
@@ -45,7 +45,7 @@ class DestinasiController extends Controller
 
         // Simpan data ke database menggunakan model galeri
         $destinasi_children = new Destinasi_children();
-        $destinasi_children->$get_data = $request->destinasi_id;
+        $destinasi_children->destinasi_id = $request->destinasi_id;
         $destinasi_children->days = $request->days;
         $destinasi_children->detail_rute = $request->detail_rute;
         $destinasi_children->deskripsi = $request->deskripsi;
@@ -55,7 +55,7 @@ class DestinasiController extends Controller
 
         session()->flash('success', 'Data berhasil disimpan.');
 
-        return view('dashboard.pages.destinasi_children.add');
-        
+        return view('dashboard.pages.paketdestinasi');
+
     }
 }

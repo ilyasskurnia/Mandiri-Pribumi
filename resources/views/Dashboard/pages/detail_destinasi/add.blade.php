@@ -10,12 +10,14 @@
         left: 240px;
         transition: all 0.5s ease;
     }
+
     .body-content {
         position: relative;
         padding-top: 104px;
         padding-left: 20px;
         padding-right: 20px;
     }
+
     .search {
         margin-right: 10px;
     }
@@ -38,18 +40,18 @@
                 <div class="page-inner" style="width: 100%">
                     <div id="add-data-paket" class="card">
                         @if(session('success'))
-                            <div class="alert alert-success">
-                                {{ session('success') }}
-                            </div>
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
                         @endif
                         @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
                         @endif
                         <div class="card-header pb-2">
                             <div class="d-flex align-items-center">
@@ -57,13 +59,15 @@
                             </div>
                         </div>
                         <div class="card-body">
-                                <form action="/dashboard/' . $destinasi->id . '/detail_destinasi/tambah_detail" method="post" enctype="multipart/form-data">
+                            <form action="/dashboard/' . $destinasi->id . '/detail_destinasi/tambah_detail"
+                                method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="form-control-label">destinasi_id</label>
-                                            <input name="destinasi_id" class="form-control" type="text" value="{{ $destinasi->id }}">
+                                            <input name="destinasi_id" class="form-control" type="text"
+                                                value="{{ $destinasi->id }}">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Hari Ke</label>
@@ -81,15 +85,16 @@
                                             <label class="form-control-label">Thumbnail</label>
                                             <input name="thumbnail" class="form-control" type="file">
                                         </div>
-                                </div>
-                                <div class="d-flex justify-content-end mt-4">
-                                    <button type="button" class="btn btn-sm bg-warning me-2 text-white" onclick="goBack()">
-                                        Cancel
-                                    </button>
-                                    <button type="submit" class="btn btn-sm bg-primary mr-2 text-white">
-                                        Save Data
-                                    </button>
-                                </div>
+                                    </div>
+                                    <div class="d-flex justify-content-end mt-4">
+                                        <button type="button" class="btn btn-sm bg-warning me-2 text-white"
+                                            onclick="goBack()">
+                                            Cancel
+                                        </button>
+                                        <button type="submit" class="btn btn-sm bg-primary mr-2 text-white">
+                                            Save Data
+                                        </button>
+                                    </div>
                             </form>
                         </div>
                     </div>
@@ -105,6 +110,6 @@
     function goBack() {
         window.history.back();
     }
-    </script>
+</script>
 
 @endsection

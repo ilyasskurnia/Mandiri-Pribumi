@@ -220,7 +220,6 @@
             /* Berikan jarak atas dan bawah antar galeri */
         }
     }
-
 </style>
 <section class="banner-section">
     <div class="container text-right my-5">
@@ -267,217 +266,241 @@
     <div class="container my-5 mt-5">
         {{-- <div class="judul-galeri">
             <img style="max-height: 40px" src="{{URL::asset('/images/logonama.png') }}" alt="Logo">
-            <h1>Galeri Kami</h1>
-        </div> --}}
-        <div class="row mt-1">
-            <!-- Galeri Item 1 -->
-            <div class="col-md-3">
-                <div class="galeri">
-                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card1.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali" style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                        <div class="image-overlay">
-                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
-                            <h5>Bali</h5>
+        <h1>Galeri Kami</h1>
+    </div> --}}
+    <div class="row mt-1">
+        <!-- Galeri Item 1 -->
+        <div class="col-md-3">
+            <div class="galeri">
+                <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                    <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        <source srcset="{{URL::asset('/images/card1.jpg')}}" media="(min-width: 768px)">
+                        <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </picture>
+                    <div class="image-overlay">
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}"
+                                    alt=""></span> Admin, 20 Oktober 2023</p>
+                        <h5>Bali</h5>
                         <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Galeri Item 2 -->
-            <div class="col-md-3">
-                <div class="galeri">
-                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                        <div class="image-overlay">
-                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
-                            <h5>Bali</h5>
-                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Galeri Item 3 -->
-            <div class="col-md-3">
-                <div class = "galeri">
-                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa" style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                        <div class="image-overlay">
-                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
-                            <h5>Bali</h5>
-                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Galeri Item 4-->
-            <div class="col-md-3">
-                <div class="galeri">
-                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                        <div class="image-overlay">
-                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
-                            <h5>Bali</h5>
-                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row mt-3">
-            <!-- Galeri Item 1 -->
-            <div class="col-md-3">
-                <div class="galeri">
-                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card1.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali" style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                        <div class="image-overlay">
-                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
-                            <h5>Bali</h5>
+        <!-- Galeri Item 2 -->
+        <div class="col-md-3">
+            <div class="galeri">
+                <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                    <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
+                        <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </picture>
+                    <div class="image-overlay">
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}"
+                                    alt=""></span> Admin, 20 Oktober 2023</p>
+                        <h5>Bali</h5>
                         <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Galeri Item 2 -->
-            <div class="col-md-3">
-                <div class="galeri">
-                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                        <div class="image-overlay">
-                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
-                            <h5>Bali</h5>
-                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Galeri Item 3 -->
-            <div class="col-md-3">
-                <div class = "galeri">
-                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa" style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                        <div class="image-overlay">
-                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
-                            <h5>Bali</h5>
-                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Galeri Item 4-->
-            <div class="col-md-3">
-                <div class="galeri">
-                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                        <div class="image-overlay">
-                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
-                            <h5>Bali</h5>
-                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row mt-3">
-            <!-- Galeri Item 1 -->
-            <div class="col-md-3">
-                <div class="galeri">
-                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card1.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali" style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                        <div class="image-overlay">
-                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
-                            <h5>Bali</h5>
+        <!-- Galeri Item 3 -->
+        <div class="col-md-3">
+            <div class="galeri">
+                <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                    <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
+                        <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </picture>
+                    <div class="image-overlay">
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}"
+                                    alt=""></span> Admin, 20 Oktober 2023</p>
+                        <h5>Bali</h5>
                         <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Galeri Item 2 -->
-            <div class="col-md-3">
-                <div class="galeri">
-                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                        <div class="image-overlay">
-                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
-                            <h5>Bali</h5>
-                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Galeri Item 3 -->
-            <div class="col-md-3">
-                <div class = "galeri">
-                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa" style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                        <div class="image-overlay">
-                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
-                            <h5>Bali</h5>
-                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Galeri Item 4-->
-            <div class="col-md-3">
-                <div class="galeri">
-                    <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta" style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                        <div class="image-overlay">
-                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}" alt=""></span> Admin, 20 Oktober 2023</p>
-                            <h5>Bali</h5>
-                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Galeri Item 4-->
+        <div class="col-md-3">
+            <div class="galeri">
+                <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                    <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
+                        <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </picture>
+                    <div class="image-overlay">
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}"
+                                    alt=""></span> Admin, 20 Oktober 2023</p>
+                        <h5>Bali</h5>
+                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <!-- Galeri Item 1 -->
+        <div class="col-md-3">
+            <div class="galeri">
+                <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                    <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        <source srcset="{{URL::asset('/images/card1.jpg')}}" media="(min-width: 768px)">
+                        <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </picture>
+                    <div class="image-overlay">
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}"
+                                    alt=""></span> Admin, 20 Oktober 2023</p>
+                        <h5>Bali</h5>
+                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Galeri Item 2 -->
+        <div class="col-md-3">
+            <div class="galeri">
+                <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                    <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
+                        <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </picture>
+                    <div class="image-overlay">
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}"
+                                    alt=""></span> Admin, 20 Oktober 2023</p>
+                        <h5>Bali</h5>
+                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Galeri Item 3 -->
+        <div class="col-md-3">
+            <div class="galeri">
+                <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                    <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
+                        <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </picture>
+                    <div class="image-overlay">
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}"
+                                    alt=""></span> Admin, 20 Oktober 2023</p>
+                        <h5>Bali</h5>
+                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Galeri Item 4-->
+        <div class="col-md-3">
+            <div class="galeri">
+                <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                    <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
+                        <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </picture>
+                    <div class="image-overlay">
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}"
+                                    alt=""></span> Admin, 20 Oktober 2023</p>
+                        <h5>Bali</h5>
+                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <!-- Galeri Item 1 -->
+        <div class="col-md-3">
+            <div class="galeri">
+                <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                    <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        <source srcset="{{URL::asset('/images/card1.jpg')}}" media="(min-width: 768px)">
+                        <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </picture>
+                    <div class="image-overlay">
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}"
+                                    alt=""></span> Admin, 20 Oktober 2023</p>
+                        <h5>Bali</h5>
+                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Galeri Item 2 -->
+        <div class="col-md-3">
+            <div class="galeri">
+                <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                    <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
+                        <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </picture>
+                    <div class="image-overlay">
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}"
+                                    alt=""></span> Admin, 20 Oktober 2023</p>
+                        <h5>Bali</h5>
+                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Galeri Item 3 -->
+        <div class="col-md-3">
+            <div class="galeri">
+                <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                    <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
+                        <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </picture>
+                    <div class="image-overlay">
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}"
+                                    alt=""></span> Admin, 20 Oktober 2023</p>
+                        <h5>Bali</h5>
+                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Galeri Item 4-->
+        <div class="col-md-3">
+            <div class="galeri">
+                <div class="image-container" style="width: 100%; padding-bottom: 100%; position: relative;">
+                    <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
+                        <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </picture>
+                    <div class="image-overlay">
+                        <p><span><img style="max-height: 50px" src="{{ URL::asset('/images/admin.png') }}"
+                                    alt=""></span> Admin, 20 Oktober 2023</p>
+                        <h5>Bali</h5>
+                        <p>Keindahan yang diambil adalah bukti nyata dari kepuasan customer kami</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     </div>
 </section>
@@ -494,16 +517,15 @@
         });
     });
 
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         const imageContainers = document.querySelectorAll(".image-container");
 
-        imageContainers.forEach(function(container) {
-            container.addEventListener("click", function() {
+        imageContainers.forEach(function (container) {
+            container.addEventListener("click", function () {
                 // Tambahkan tindakan yang ingin dilakukan saat gambar di-klik di sini
             });
         });
     });
-
 </script>
 
 @endsection

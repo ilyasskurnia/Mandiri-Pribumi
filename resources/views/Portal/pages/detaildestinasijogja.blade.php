@@ -107,6 +107,7 @@
         margin-top: 10px;
         padding-right: 50px;
     }
+
     .destination-image {
         padding: 15px;
         margin-top: 10px;
@@ -137,6 +138,7 @@
     .right .destination-image.right {
         order: 2;
     }
+
     .peta-image {
         width: 15cm;
         height: 10cm;
@@ -208,12 +210,12 @@
         .destination-tagline {
             font-size: 20px;
         }
-        .peta-image{
+
+        .peta-image {
             width: 10cm;
             height: 5cm;
         }
     }
-
 </style>
 
 <!-- Section 1: Banner -->
@@ -246,7 +248,8 @@
             </div>
             <div class="destination-layer">
                 <div class="destination-description">
-                    <h4 style="" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 1</b></h4>
+                    <h4 style="" class="destination-tagline"><b><span><img style="max-height: 30px"
+                                    src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 1</b></h4>
                     <h3><b>Candi Borobudur-Candi Prambanan</b></h3>
                     <p style="text-align: justify">Mari kita mulai petualangan kita! Dalam perjalanan
                         menuju Kota Yogyakarta, kita akan berkunjung pada
@@ -261,9 +264,11 @@
         <div class="destination-item1">
             <div class="destination-layer">
                 <div class="destination-description">
-                    <h4 style="" class="destination-tagline"><b><span><img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 2</b></h4>
+                    <h4 style="" class="destination-tagline"><b><span><img style="max-height: 30px"
+                                    src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 2</b></h4>
                     <h3><b>Keraton Yogyakarta-Gua Pindul-Pantai Gumuk Pasir</b></h3>
-                    <p style="text-align: justify">Petualangan kita di hari kedua akan dimulai dengan mengunjungi Keraton Kesultanan Ngayogyakarta,
+                    <p style="text-align: justify">Petualangan kita di hari kedua akan dimulai dengan mengunjungi
+                        Keraton Kesultanan Ngayogyakarta,
                         untuk mempelajari dan mendalami sejarah Wilayah
                         Yogyakarta. Untuk mengawali petualangan alam, kita akan berwisata air dan menyusuri gua nan
                         indah di lokasi
@@ -283,7 +288,7 @@
         </div>
         <div class="text-center">
             <h1> PETA JOGJA </h1>
-            <img class="peta-image"  src="/images/JogjaMap.jpg" alt="">
+            <img class="peta-image" src="/images/JogjaMap.jpg" alt="">
         </div>
     </div>
 </section>

@@ -10,12 +10,14 @@
         left: 240px;
         transition: all 0.5s ease;
     }
+
     .body-content {
         position: relative;
         padding-top: 104px;
         padding-left: 20px;
         padding-right: 20px;
     }
+
     .search {
         margin-right: 10px;
     }
@@ -38,18 +40,18 @@
                 <div class="page-inner" style="width: 100%">
                     <div id="add-data-paket" class="card">
                         @if(session('success'))
-                            <div class="alert alert-success">
-                                {{ session('success') }}
-                            </div>
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
                         @endif
                         @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
                         @endif
                         <div class="card-header pb-2">
                             <div class="d-flex align-items-center">
@@ -57,52 +59,59 @@
                             </div>
                         </div>
                         <div class="card-body">
-                                <form action="\dashboard\tambahpesan" method="post" enctype="multipart/form-data">
+                            <form action="\dashboard\tambahpesan" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="form-control-label">Nama user</label>
-                                            <input name="nama" class="form-control" type="text" value="{{ old('nama') }}">
+                                            <input name="nama" class="form-control" type="text"
+                                                value="{{ old('nama') }}">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Email</label>
-                                            <input name="email" class="form-control" type="email" value="{{ old('email') }}">
+                                            <input name="email" class="form-control" type="email"
+                                                value="{{ old('email') }}">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Sosial Media</label>
-                                            <input name="social_media" class="form-control" type="text" value="{{ old('social_media') }}">
+                                            <input name="social_media" class="form-control" type="text"
+                                                value="{{ old('social_media') }}">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Nomor Telepon</label>
-                                            <input name="telepon" class="form-control" type="text" value="{{ old('telepon') }}">
+                                            <input name="telepon" class="form-control" type="text"
+                                                value="{{ old('telepon') }}">
                                         </div>
                                         <div class="form-group">
                                             <label for="destinasi" class="form-label">Paket Destinasi</label>
                                             <select class="form-select" id="destinasi" name="destinasi" required>
                                                 <option value="">pilih destinasi</option>
                                                 @foreach($data_destinasi as $nama_destinasi)
-                                                    <option value="{{ $nama_destinasi}}">{{ $nama_destinasi }}</option>
+                                                <option value="{{ $nama_destinasi}}">{{ $nama_destinasi }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Tanggal Keberangkatan</label>
-                                            <input name="tanggal" class="form-control" type="date" value="{{ old('tanggal') }}">
+                                            <input name="tanggal" class="form-control" type="date"
+                                                value="{{ old('tanggal') }}">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Pesan</label>
-                                            <textarea name="pesan" class="form-control" type="text"  rows="4" value="{{ old('pesan') }}"></textarea>
+                                            <textarea name="pesan" class="form-control" type="text" rows="4"
+                                                value="{{ old('pesan') }}"></textarea>
                                         </div>
-                                </div>
-                                <div class="d-flex justify-content-end mt-4">
-                                    <button type="button" class="btn btn-sm bg-warning me-2 text-white" onclick="goBack()">
-                                        Cancel
-                                    </button>
-                                    <button type="submit" class="btn btn-sm bg-primary mr-2 text-white">
-                                        Save Data
-                                    </button>
-                                </div>
+                                    </div>
+                                    <div class="d-flex justify-content-end mt-4">
+                                        <button type="button" class="btn btn-sm bg-warning me-2 text-white"
+                                            onclick="goBack()">
+                                            Cancel
+                                        </button>
+                                        <button type="submit" class="btn btn-sm bg-primary mr-2 text-white">
+                                            Save Data
+                                        </button>
+                                    </div>
                             </form>
                         </div>
                     </div>
@@ -118,6 +127,6 @@
     function goBack() {
         window.history.back();
     }
-    </script>
-    
+</script>
+
 @endsection

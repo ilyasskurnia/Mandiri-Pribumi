@@ -98,7 +98,6 @@
             display: none;
         }
     }
-
 </style>
 
 <div class="container banner">
@@ -130,13 +129,13 @@
             </div>
             @endif
             @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
             @endif
             <form method="POST" action="/portal/kontak" enctype="multipart/form-data">
                 @csrf
@@ -161,7 +160,7 @@
                     <select class="form-select" id="destinasi" name="destinasi" required>
                         <option value="">pilih destinasi</option>
                         @foreach($data_destinasi as $nama_destinasi)
-                            <option value="{{ $nama_destinasi}}">{{ $nama_destinasi }}</option>
+                        <option value="{{ $nama_destinasi}}">{{ $nama_destinasi }}</option>
                         @endforeach
                     </select>
                 </div>
