@@ -1190,21 +1190,6 @@
     <h6 class="ps-3"><b>Ada Yang Bisa Kami Bantu?</b></h6>
 </div>
 
-<!-- <div class="overlay" id="overlay">
-    <div class="floating-box">
-    <div style="background: #0088cc;">
-    <h3>Ada yang bisa kami bantu</h3>
-</div>
-<div style="background: #fff; color: #333;">
-    <p>Silahkan hubungi kami di sini</p>
-</div>
-<div style="background: #ccc;">
-    <p>Atau Anda bisa menghubungi kami di sini</p>
-</div>
-        <span class="close" id="close">&times;</span>
-    </div>
-</div> -->
-
 <div class="overlay" id="overlay">
     <div class="card mb-3" style="max-width: 360px;">
     <div class="row g-0">
