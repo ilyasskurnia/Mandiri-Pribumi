@@ -388,54 +388,54 @@
     }
 
     /* Section 7: Artikel Kami */
-        .artikel{
-            background-color: #F2EEEB;
-            padding: 50px;
-        }
+    .artikel {
+        background-color: #F2EEEB;
+        padding: 50px;
+    }
 
-        .artikel-heading {
-            text-align: center;
-        }
+    .artikel-heading {
+        text-align: center;
+    }
 
-        .artikel-sub-heading {
-            text-align: center;
-        }
+    .artikel-sub-heading {
+        text-align: center;
+    }
 
-        .artikel-box {
-            display: flex;
-            margin-top: 50px;
-            margin-left: 100px;
-        }
+    .artikel-box {
+        display: flex;
+        margin-top: 50px;
+        margin-left: 100px;
+    }
 
-        .artikel-foreach {
-            display: flex;
-        }
+    .artikel-foreach {
+        display: flex;
+    }
 
-        .right-content {
-            padding-left: 30px;
-        }
+    .right-content {
+        padding-left: 30px;
+    }
 
-        .bottom-detail {
-            display: flex;
-        }
+    .bottom-detail {
+        display: flex;
+    }
 
-        .artikel-date {
-            display: flex;
-        }
+    .artikel-date {
+        display: flex;
+    }
 
-        .artikel-created {
-            display: flex;
-        }
+    .artikel-created {
+        display: flex;
+    }
 
-        .right-content{
-            padding-right: 80px;
-        }
+    .right-content {
+        padding-right: 80px;
+    }
 
 
     /* Section 8: Mitra Kami */
 
     .mitra-container {
-        display:block;
+        display: block;
         background-color: gainsboro;
         justify-content: center;
         align-items: center;
@@ -685,7 +685,7 @@
             padding-bottom: 15px;
         }
 
-        .floating-content1{
+        .floating-content1 {
             padding: 0;
             padding-right: 0;
             background-color: #DCF8C6;
@@ -701,7 +701,7 @@
         }
 
         .floating-box {
-        width: 30%;
+            width: 30%;
         }
 
         .iconwa {
@@ -716,7 +716,7 @@
             font-size: 10px;
         }
 
-        .text-muted{
+        .text-muted {
             font-size: 10px;
         }
     }
@@ -1281,9 +1281,15 @@
                     <img src="{{URL::asset('/images/destinasi2.png') }}" alt="">
                 </div>
                 <div class="right-content">
-                    <div class="artikel-jenis"><p>jenis apa</p></div>
-                    <div class="artikel-title"><h5>sdada</h5></div>
-                    <div class="artikel-content"><p>sdkkajdk adjkajfijan kmfakjfkajf</p></div>
+                    <div class="artikel-jenis">
+                        <p>jenis apa</p>
+                    </div>
+                    <div class="artikel-title">
+                        <h5>sdada</h5>
+                    </div>
+                    <div class="artikel-content">
+                        <p>sdkkajdk adjkajfijan kmfakjfkajf</p>
+                    </div>
                     <div class="bottom-detail">
                         <div class="artikel-date">
                             <div class="artikel-icon">
@@ -1307,9 +1313,15 @@
                     <img src="{{URL::asset('/images/destinasi2.png') }}" alt="">
                 </div>
                 <div class="right-content">
-                    <div class="artikel-jenis"><p>jenis apa</p></div>
-                    <div class="artikel-title"><h5>sdada</h5></div>
-                    <div class="artikel-content"><p>sdkkajdk adjkajfijan kmfakjfkajf</p></div>
+                    <div class="artikel-jenis">
+                        <p>jenis apa</p>
+                    </div>
+                    <div class="artikel-title">
+                        <h5>sdada</h5>
+                    </div>
+                    <div class="artikel-content">
+                        <p>sdkkajdk adjkajfijan kmfakjfkajf</p>
+                    </div>
                     <div class="bottom-detail">
                         <div class="artikel-date">
                             <div class="artikel-icon">
@@ -1335,7 +1347,8 @@
         <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
             <a href="/portal/destinasi" class="btn-brosur1" style="width: 150px;">View More</a>
         </div>
-    </div>
+            
+    </div>
 </section>
 
 <!-- Section 8: Mitra Kami -->
@@ -1344,7 +1357,7 @@
     <div class="container my-5">
         <div class="mitra-container">
 
-                <img style="max-height: 80vh" src="{{URL::asset('/images/mitra-kami.png') }}" alt="Logo">
+            <img style="max-height: 80vh" src="{{URL::asset('/images/mitra-kami.png') }}" alt="Logo">
 
         </div>
     </div>
