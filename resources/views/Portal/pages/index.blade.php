@@ -732,8 +732,8 @@
         <!-- Tagline -->
         <div class="tagline mt-5 text-center">
             <p style="font-size: 24px; font-weight: bold; color: #51604F;">Nikmati <span
-                    style="color: red; font-size: 28px;">Keindahan</span> Bumi Nusantara <span
-                    style="color: red; font-size: 28px;">Bersama Kami</span></p>
+                    style="color: #661b2b; font-size: 28px;">Keindahan</span> Bumi Nusantara <span
+                    style="color: #661b2b; font-size: 28px;">Bersama Kami</span></p>
         </div>
     </div>
 

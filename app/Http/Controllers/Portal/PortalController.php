@@ -18,6 +18,11 @@ class PortalController extends Controller
     {
         return view('portal.pages.tentang');
     }
+
+    public function tentang1()
+    {
+        return view('portal.pages.tentang1');
+    }
     public function kontak()
     {
         $get_faq = Faq::select('*')->get();
