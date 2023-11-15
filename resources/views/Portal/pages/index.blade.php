@@ -1361,6 +1361,18 @@
 
         </div>
     </div>
+</section><br><br>
+
+<!-- Section 9: Client Kami -->
+<section class="text-center mt-5">
+    <h2 class="title">Client Kami</h2>
+    <div class="container my-5">
+        <div class="mitra-container">
+
+            <img style="max-height: 80vh" src="{{URL::asset('/images/clientkami.png') }}" alt="Logo">
+
+        </div>
+    </div>
 </section>
 
 <div class="container">

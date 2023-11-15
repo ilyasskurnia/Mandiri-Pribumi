@@ -256,6 +256,20 @@
         transform: scale(1.1);
     }
 
+    .mitra-container {
+        display: block;
+        background-color: gainsboro;
+        justify-content: center;
+        align-items: center;
+        overflow-x: auto;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 30px 0;
+        border: 1px solid gainsboro;
+        border-radius: 10px;
+        box-shadow: 0 20px 10px rgba(0, 0, 0, 0.3);
+    }
+
     /* Gaya untuk bagian "Apa Yang Kami Tawarkan" */
     .what-we-offer {
         padding: 100px 0;
@@ -511,8 +525,19 @@
             </div>
         </div>
     </div>
-</section>
+</section><br><br>
 
+<!-- Section 9: Client Kami -->
+<section class="text-center mt-5">
+    <h2 class="title">Client Kami</h2>
+    <div class="container my-5">
+        <div class="mitra-container">
+
+            <img style="max-height: 80vh" src="{{URL::asset('/images/clientkami.png') }}" alt="Logo">
+
+        </div>
+    </div>
+</section>
 
 
 
