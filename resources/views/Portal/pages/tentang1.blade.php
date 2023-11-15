@@ -339,7 +339,6 @@
     .card-text {
         font-size: 16px;
     }
-
 </style>
 
 
@@ -410,7 +409,7 @@
     </div>
 </section>
 
-<section class="company-vision-mission" style="background-image: url('{{ asset('images/bannertentangkami.png') }}');">
+<section class="company-vision-mission" style="background-image: url('{{ asset('images/visimisi.png') }}');">
     <div class="vision-mission-container">
         <div class="container">
             <div class="row">
@@ -499,7 +498,7 @@
             <div class="col-md-3">
                 <div class="card text-center">
                     <div class="card-body">
-                    <i class="fa-solid fa-earth-asia" style="color: #023997;"></i>
+                        <i class="fa-solid fa-earth-asia" style="color: #023997;"></i>
                         <h5 class="card-title">#JelajahPesona</h5>
                         <p class="card-text">Mengajak anda untuk menjelajahi pesona alam nusantara</p>
                     </div>
@@ -508,7 +507,7 @@
             <div class="col-md-3">
                 <div class="card text-center">
                     <div class="card-body">
-                    <i class="fa-solid fa-utensils" style="color: #023997;"></i>
+                        <i class="fa-solid fa-utensils" style="color: #023997;"></i>
                         <h5 class="card-title">#JelajahRasa</h5>
                         <p class="card-text">Mengajak anda untuk menjelajahi citra rasa kuliner nusantara</p>
                     </div>
@@ -517,12 +516,24 @@
             <div class="col-md-3">
                 <div class="card text-center">
                     <div class="card-body">
-                    <i class="fa-solid fa-gopuram" style="color: #023997;"></i>
+                        <i class="fa-solid fa-gopuram" style="color: #023997;"></i>
                         <h5 class="card-title">#JelajahBudaya</h5>
                         <p class="card-text">Mengajak anda untuk menjelajahi dan melestarikan aneka ragam nusantara</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</section><br><br>
+
+<!-- Section 8: Mitra Kami -->
+<section class="text-center mt-5">
+    <h2 class="title">Mitra Kami</h2>
+    <div class="container my-5">
+        <div class="mitra-container">
+
+            <img style="max-height: 80vh" src="{{URL::asset('/images/mitra-kami.png') }}" alt="Logo">
+
         </div>
     </div>
 </section><br><br>
@@ -553,7 +564,6 @@
             });
         }
     });
-
 </script>
 
 

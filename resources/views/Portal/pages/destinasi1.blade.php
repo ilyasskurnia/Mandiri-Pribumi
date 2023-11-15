@@ -76,7 +76,7 @@
         /* Warna teks judul */
     }
 
-    .box-card{
+    .box-card {
         align-content: center;
         padding-left: 200px;
     }
@@ -280,7 +280,8 @@
         <h1><b>Your Adventure</b></h1>
         <h1><b>Travel Expert With</b></h1>
         <h1><b>Mandiri Pribumi</b></h1>
-        <a href="#" class="btn-brosur" style="text-align: left; display: inline-block; margin-top: 20px;">Hubungi Kami</a>
+        <a href="#" class="btn-brosur" style="text-align: left; display: inline-block; margin-top: 20px;">Hubungi
+            Kami</a>
     </div>
 </section>
 
@@ -289,32 +290,32 @@
     <div class="container">
         <h4 class="section-title1 text-center mb-5">Jangan Lewatkan</h4>
         <h2 class="section-title2 text-center mb-5">Penawaran Spesial</h2>
-            <div class="row box-card">
-                <div class="col-md-3">
-                    <div class="card1 text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Studi Tour Sekolah</h5>
-                            <p class="card-text">Up to 20% off</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card2 text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Liburan Musim Panas</h5>
-                            <p class="card-text">Up to 20% off</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card3 text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Member Exclusive</h5>
-                            <p class="card-text">Up to 20% off</p>
-                        </div>
+        <div class="row box-card">
+            <div class="col-md-3">
+                <div class="card1 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Studi Tour Sekolah</h5>
+                        <p class="card-text">Up to 20% off</p>
                     </div>
                 </div>
             </div>
+            <div class="col-md-3">
+                <div class="card2 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Liburan Musim Panas</h5>
+                        <p class="card-text">Up to 20% off</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card3 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Member Exclusive</h5>
+                        <p class="card-text">Up to 20% off</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
