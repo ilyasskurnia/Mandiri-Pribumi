@@ -71,6 +71,10 @@
             padding: 10px 0;
         }
 
+        .address {
+            text-align: left;
+        }
+
         .address a {
             display: block;
             font-family: 'Sora', sans-serif;
@@ -95,6 +99,16 @@
 
         .footer i:hover {
             color: #007bff;
+        }
+        .contact {
+            text-align: left;
+        }
+        .contact a {
+            display: block;
+            font-family: 'Sora', sans-serif;
+            text-decoration: none;
+            margin-top: 18px;
+            text-align: left;
         }
     </style>
 </head>
@@ -141,11 +155,17 @@
     <footer class="footer mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
-                    <img src="{{ asset('images/logo-footer.png') }}" alt="Logo Perusahaan" class="img-fluid">
+                <div class="col-lg-4 mt-4">
+                    <div class="contact">
+                        <h5><strong>CONTACT</strong></h5>
+                        <a> Jl. Graha Aura No.29, Ketileng, Kel. Sendang Mulyo, Kec. Tembalang, Kota Semarang</a><br>
+                        <a> P. +6289546782</a><br>
+                        <a>E. mandiripribumitour@gmail.com</a>
+                    </div>
                 </div>
-                <div class="col-lg-4 ps-5">
+                <div class="col-lg-4 ps-5 mt-4">
                     <div class="address">
+                        <h5><strong>COMPANY</strong></h5>
                         <a href="{{ url('/portal/tentang')}}" style="font-family: 'Sora', sans-serif;">Tentang Kami</a>
                         <a href="{{ url('/portal/destinasi')}}" style="font-family: 'Sora', sans-serif;">Destinasi</a>
                         <a href="{{ url('/portal/galeri')}}" style="font-family: 'Sora', sans-serif;">Galeri</a>
@@ -153,7 +173,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 mt-4">
-                    <h5 style="font-family: 'Sora', sans-serif;">Cari tahu lebih tentang kami !!!</h5>
+                    <h5 style="font-family: 'Sora', sans-serif;"><strong>Cari tahu lebih tentang kami !!!</strong></h5>
                     <ul class="list-unstyled d-flex justify-content-evenly" style="font-size: 40px;">
                         <li><a href="#" style="color: #000;"><i class="fab fa-instagram"></i></a></li>
                         <li><a href="#" style="color: #000;"><i class="fab fa-youtube"></i></a></li>
