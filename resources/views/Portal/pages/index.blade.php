@@ -411,6 +411,11 @@
         display: flex;
     }
 
+    .artikel-jenis {
+        background-color: rgb(247, 16, 0);
+        width: fit-content;
+    }
+
     .right-content {
         padding-left: 30px;
     }
@@ -422,13 +427,20 @@
     .artikel-date {
         display: flex;
     }
+    .date {
+        padding-left: 10px;
+    }
 
     .artikel-created {
         display: flex;
+        padding-left: 20px;
     }
 
     .right-content {
         padding-right: 80px;
+    }
+    .artikel-user {
+        padding-left: 10px;
     }
 
 
@@ -1282,7 +1294,7 @@
                 </div>
                 <div class="right-content">
                     <div class="artikel-jenis">
-                        <p>jenis apa</p>
+                        <p>Jenis Apa</p>
                     </div>
                     <div class="artikel-title">
                         <h5>sdada</h5>
@@ -1314,7 +1326,7 @@
                 </div>
                 <div class="right-content">
                     <div class="artikel-jenis">
-                        <p>jenis apa</p>
+                        <p>Jenis Apa</p>
                     </div>
                     <div class="artikel-title">
                         <h5>sdada</h5>

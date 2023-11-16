@@ -63,6 +63,7 @@ class DashboardController extends Controller
     public function postartikel (Request $request)
     {
         $data = $request->validate([
+            'jenis_artikel' => 'required|string',
             'author' => 'required|string',
             'title' => 'required|string',
             'content' => 'required|string',
@@ -71,6 +72,7 @@ class DashboardController extends Controller
 
         // Simpan data ke database menggunakan model artikel
         $artikel = new Artikel();
+        $artikel->jenis_artikel = $request->jenis_artikel;
         $artikel->author = $request->author;
         $artikel->title = $request->title;
         $artikel->content = $request->content;

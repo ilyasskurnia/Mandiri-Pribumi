@@ -57,6 +57,10 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
+                                            <label class="form-control-label">Jenis Artikel</label>
+                                            <input name="jenis_artikel" class="form-control" type="text" value="{{ $data->jenis_artikel}}">
+                                        </div>
+                                        <div class="form-group">
                                             <label class="form-control-label">Author</label>
                                             <input name="author" class="form-control" type="text"
                                                 value="{{ $data->author }}">
