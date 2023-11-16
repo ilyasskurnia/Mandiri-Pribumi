@@ -307,9 +307,30 @@
         </div>
         <div class="text-center">
             <h1> PETA KARIMUN JAWA </h1>
-            <img class="peta-image" src="/images/KarimunMap.jpg" alt="">
+            <a class="zoom-image" href="/images/KarimunMap.jpg">
+                <img class="peta-image" src="/images/KarimunMap.jpg" alt="">
+            </a>
         </div>
     </div>
 </section>
+<script>
+    $(document).ready(function() {
+    $('.zoom-image').magnificPopup({
+        type: 'image',
+        closeOnContentClick: true,
+        closeBtnInside: false,
+        fixedContentPos: true,
+        mainClass: 'mfp-no-margins mfp-with-zoom',
+        image: {
+            verticalFit: true
+        },
+        zoom: {
+            enabled: true,
+            duration: 300,
+            easing: 'ease-in-out'
+        }
+    });
+});
+</script>
 
 @endsection

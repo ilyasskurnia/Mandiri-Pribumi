@@ -282,9 +282,30 @@
 
         <div class="text-center">
             <h1> PETA MALANG </h1>
-            <img class="peta-image" src="/images/petamalang.jpg" alt="">
+            <a class="zoom-image" href="/images/petamalang.jpg">
+                <img class="peta-image" src="/images/petamalang.jpg" alt="">
+            </a>
         </div>
     </div>
 </section>
 
+<script>
+        $(document).ready(function() {
+    $('.zoom-image').magnificPopup({
+        type: 'image',
+        closeOnContentClick: true,
+        closeBtnInside: false,
+        fixedContentPos: true,
+        mainClass: 'mfp-no-margins mfp-with-zoom',
+        image: {
+            verticalFit: true
+        },
+        zoom: {
+            enabled: true,
+            duration: 300,
+            easing: 'ease-in-out'
+        }
+    });
+});
+</script>
 @endsection
