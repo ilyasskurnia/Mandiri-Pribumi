@@ -719,6 +719,37 @@
         .text-muted {
             font-size: 10px;
         }
+        .artikel {
+            padding: 0px;
+            margin-left: 10px;
+            align-content: center;
+        }
+        .artikel-box {
+            margin-left: 0px;
+        }
+        .right-content {
+            padding-left: 0px;
+        }
+        .artikel-box {
+            margin-left: 0px;
+        }
+        .artikel-foreach {
+            flex-direction: column;
+            align-content: center;
+        }
+        .right-content {
+            padding-right: 0px;
+            padding-left: 20px;
+        }
+        .artikel-image {
+            padding-top: 50px;
+        }
+        .artikel-created {
+            padding-left: 20px;
+        }
+        .artikel-jenis {
+            padding-top: 10px;
+        }
     }
 </style>
 
