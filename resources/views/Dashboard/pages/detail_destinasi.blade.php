@@ -79,14 +79,14 @@ $nomor=1;
                                         </td>
                                         <td>
                                             <div class="d-flex">
-                                                {{-- <a href="/dashboard/{{ $galeri->id }}/editgaleri" class="btn btn-xs
-                                                bg-primary me-1 text-white">Edit</a> --}}
-                                                {{-- <form action="/dashboard/galeri/{{ $galeri->id }}" method="POST">
+                                                <a href="{{ url('/dashboard/' . $card['destinasi']->id . '/detail_destinasi/' . $card['get_data'] . '/editdetail') }}" class="btn btn-xs
+                                                bg-primary me-1 text-white">Edit</a>
+                                                <form action="{{ url('/dashboard/' . $card['destinasi']->id . '/detail_destinasi') }}" method="POST">
                                                 @csrf
                                                 @method('delete')
                                                 <input type="submit" name="submit" value="delete"
                                                     class="btn btn-xs btn-danger me-1">
-                                                </form> --}}
+                                                </form>
                                             </div>
                                         </td>
                                     </tr>

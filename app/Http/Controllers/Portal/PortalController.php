@@ -62,7 +62,7 @@ class PortalController extends Controller
 
         $pesan->save();
 
-        session()->flash('success', 'Data berhasil disimpan.');
+        session()->flash('success', 'Pesan Anda Sudah kami terima, terimakasih atas kepercayaan anda. Untuk info lebih lanjut kami akan menghubungi anda');
 
         return view('portal.pages.kontak', ['data' => $data, 'data_destinasi' => $data_destinasi, 'get_faq' => $get_faq]);
     }
