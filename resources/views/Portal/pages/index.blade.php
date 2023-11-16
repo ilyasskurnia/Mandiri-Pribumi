@@ -411,6 +411,11 @@
         display: flex;
     }
 
+    .artikel-jenis {
+        background-color: rgb(247, 16, 0);
+        width: fit-content;
+    }
+
     .right-content {
         padding-left: 30px;
     }
@@ -422,16 +427,20 @@
     .artikel-date {
         display: flex;
     }
+    .date {
+        padding-left: 10px;
+    }
 
     .artikel-created {
         display: flex;
+        padding-left: 20px;
     }
 
     .right-content {
         padding-right: 80px;
     }
-    .artikel-jenis{
-        background-color: #2622DE;
+    .artikel-user {
+        padding-left: 10px;
     }
 
 
@@ -721,6 +730,37 @@
 
         .text-muted {
             font-size: 10px;
+        }
+        .artikel {
+            padding: 0px;
+            margin-left: 10px;
+            align-content: center;
+        }
+        .artikel-box {
+            margin-left: 0px;
+        }
+        .right-content {
+            padding-left: 0px;
+        }
+        .artikel-box {
+            margin-left: 0px;
+        }
+        .artikel-foreach {
+            flex-direction: column;
+            align-content: center;
+        }
+        .right-content {
+            padding-right: 0px;
+            padding-left: 20px;
+        }
+        .artikel-image {
+            padding-top: 50px;
+        }
+        .artikel-created {
+            padding-left: 20px;
+        }
+        .artikel-jenis {
+            padding-top: 10px;
         }
     }
 </style>
@@ -1285,7 +1325,7 @@
                 </div>
                 <div class="right-content">
                     <div class="artikel-jenis">
-                        <p>jenis apa</p>
+                        <p>Jenis Apa</p>
                     </div>
                     <div class="artikel-title">
                         <h5>sdada</h5>
@@ -1317,7 +1357,7 @@
                 </div>
                 <div class="right-content">
                     <div class="artikel-jenis">
-                        <p>jenis apa</p>
+                        <p>Jenis Apa</p>
                     </div>
                     <div class="artikel-title">
                         <h5>sdada</h5>

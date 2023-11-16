@@ -63,6 +63,7 @@ class DashboardController extends Controller
     public function postartikel (Request $request)
     {
         $data = $request->validate([
+            'jenis_artikel' => 'required|string',
             'author' => 'required|string',
             'title' => 'required|string',
             'content' => 'required|string',
@@ -71,6 +72,7 @@ class DashboardController extends Controller
 
         // Simpan data ke database menggunakan model artikel
         $artikel = new Artikel();
+        $artikel->jenis_artikel = $request->jenis_artikel;
         $artikel->author = $request->author;
         $artikel->title = $request->title;
         $artikel->content = $request->content;
@@ -329,7 +331,8 @@ class DashboardController extends Controller
     public function editpaket ($id)
     {
         $data = Destinasi::find($id);
-
+        dd($data);
+        
         return view('dashboard.pages.destinasi.edit', ['data' => $data]);
     }
     public function updatepaket ($id, Request $request)
