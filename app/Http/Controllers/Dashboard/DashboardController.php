@@ -329,6 +329,7 @@ class DashboardController extends Controller
     public function editpaket ($id)
     {
         $data = Destinasi::find($id);
+        dd($data);
         
         return view('dashboard.pages.destinasi.edit', ['data' => $data]);
     }

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Destinasi;
 use App\Models\Destinasi_children;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class DestinasiController extends Controller
 {
@@ -15,11 +16,13 @@ class DestinasiController extends Controller
         $destinasi = Destinasi::find($id);
         $get_destinasi = Destinasi::select('destinasi')->find($id);
         $get_data = Destinasi_children::where('destinasi_id', $id)->paginate(5);
-
+        $get_id = Destinasi_children::where('destinasi_id', $id)->pluck('id');
+        
         $card = [
             'destinasi' => $destinasi,
             'get_destinasi' => $get_destinasi,
             'get_data' => $get_data,
+            'get_id' => $get_id
         ];
 
         // Kirim data destinasi ke view
@@ -55,7 +58,24 @@ class DestinasiController extends Controller
 
         session()->flash('success', 'Data berhasil disimpan.');
 
-        return view('dashboard.pages.paketdestinasi');
+        return view('dashboard.pages.detail_destinasi.add', ['destinasi' => $destinasi, 'get_data' => $get_data, 'id' => $id]);
         
+    }
+    public function editdetail ($id)
+    {
+        $data = Destinasi_children::find($id);
+        $data = Destinasi_children::where('destinasi_id', $id)->get();
+        dd($data);
+    
+        return view('dashboard.pages.detail_destinasi.edit', ['data' => $data]);
+    }
+    public function destroy_detail ($id)
+    {
+        $data = Destinasi_children::find($id);
+        if ($data->thumbnail) {
+            Storage::delete($data->thumbnail);
+        }
+        $data->delete();
+        return redirect()->route('detail_destinasi');
     }
 }
