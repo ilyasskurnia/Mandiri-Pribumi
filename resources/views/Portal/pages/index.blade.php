@@ -112,7 +112,7 @@
         font-family: 'Sora', sans-serif;
     }
 
-    /* Section 4: Galeri Carousel */
+    /* Section 4: Galeri */
     .galeri-section {
         font-family: 'Sora', sans-serif;
         background-color: #ffffff;
@@ -195,7 +195,7 @@
         align-items: center;
     }
 
-    /* Section 1: Partisan */
+    /* Section 4: Partisan */
     .partisan-section {
         background-size: cover;
         background-repeat: no-repeat;
@@ -247,7 +247,7 @@
     /* Section 5: Card Carousel */
     .card-section {
         font-family: 'Sora', sans-serif;
-        background-color: #F2EEEB;
+        background-color: #ffffff;
         padding: 30px;
     }
 
@@ -387,50 +387,67 @@
         /* Efek bayangan saat di hover */
     }
 
-    /* Section 6: Mitra Kami */
+    /* Section 7: Artikel Kami */
+    .artikel {
+        background-color: #F2EEEB;
+        padding: 50px;
+    }
+
+    .artikel-heading {
+        text-align: center;
+    }
+
+    .artikel-sub-heading {
+        text-align: center;
+    }
+
+    .artikel-box {
+        display: flex;
+        margin-top: 50px;
+        margin-left: 100px;
+    }
+
+    .artikel-foreach {
+        display: flex;
+    }
+
+    .right-content {
+        padding-left: 30px;
+    }
+
+    .bottom-detail {
+        display: flex;
+    }
+
+    .artikel-date {
+        display: flex;
+    }
+
+    .artikel-created {
+        display: flex;
+    }
+
+    .right-content {
+        padding-right: 80px;
+    }
+
+
+    /* Section 8: Mitra Kami */
 
     .mitra-container {
-        display: flex;
+        display: block;
         background-color: gainsboro;
         justify-content: center;
         align-items: center;
         overflow-x: auto;
         margin-left: auto;
         margin-right: auto;
-        padding: 20px 0;
-        border: 1px solid #2622DE;
+        padding: 30px 0;
+        border: 1px solid gainsboro;
         border-radius: 10px;
+        box-shadow: 0 20px 10px rgba(0, 0, 0, 0.3);
     }
 
-    .mitra-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 10px;
-        /* Atur jarak antar bagian */
-        max-width: 800px;
-        /* Atur lebar maksimum container */
-        margin: 0 auto;
-        /* Pusatkan horizontal */
-        padding: 30px;
-    }
-
-    .mitra-cell {
-        display: flex;
-        justify-content: flex-start;
-        /* Ratakan gambar ke kiri */
-        align-items: center;
-        height: 80px;
-        /* Sesuaikan tinggi dengan cell container */
-    }
-
-    .mitra-logo img {
-        max-width: 100%;
-        /* Membatasi ukuran gambar agar tidak melebihi kotak */
-        max-height: 80px;
-        object-fit: contain;
-        /* Atur gambar untuk mengisi container tanpa merubah aspek ratio */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
 
     .welcome {
         padding-left: 2%;
@@ -454,7 +471,7 @@
         align-items: center;
     }
 
-    .floating-content {
+    .floating-content1 {
         position: fixed;
         bottom: 20px;
         right: 20px;
@@ -471,22 +488,22 @@
         transition: transform 0.2s, opacity 0.2s;
     }
 
-    .floating-content:hover {
+    .floating-content1:hover {
         transform: scale(1.1);
         opacity: 0.8;
     }
 
-    .floating-content i {
+    .floating-content1 i {
         color: #25d366;
         font-size: 30px;
     }
 
-    .floating-content h3 {
+    .floating-content1 h3 {
         margin: 0;
         font-weight: bold;
     }
 
-    .floating-content a {
+    .floating-content1 a {
         text-decoration: none;
         color: inherit;
     }
@@ -662,8 +679,45 @@
             margin: 20px auto;
         }
 
-        .mitra-grid {
-            grid-template-columns: repeat(2, 1fr);
+        .mitra-container {
+            padding: 10px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .floating-content1 {
+            padding: 0;
+            padding-right: 0;
+            background-color: #DCF8C6;
+        }
+
+        .floating-content1 i {
+            display: none;
+        }
+
+        .floating-content1 h6 {
+            font-size: 12px;
+            padding: 10px;
+        }
+
+        .floating-box {
+            width: 30%;
+        }
+
+        .iconwa {
+            display: none;
+        }
+
+        .card-title1 {
+            font-size: 10px;
+        }
+
+        .card-text1 {
+            font-size: 10px;
+        }
+
+        .text-muted {
+            font-size: 10px;
         }
     }
 </style>
@@ -732,8 +786,8 @@
         <!-- Tagline -->
         <div class="tagline mt-5 text-center">
             <p style="font-size: 24px; font-weight: bold; color: #51604F;">Nikmati <span
-                    style="color: red; font-size: 28px;">Keindahan</span> Bumi Nusantara <span
-                    style="color: red; font-size: 28px;">Bersama Kami</span></p>
+                    style="color: #661b2b; font-size: 28px;">Keindahan</span> Bumi Nusantara <span
+                    style="color: #661b2b; font-size: 28px;">Bersama Kami</span></p>
         </div>
     </div>
 
@@ -1214,98 +1268,135 @@
     </div>
 </section>
 
-<!-- Section 7: Mitra Kami -->
+<!-- Section 7: Artikel Kami -->
+<section class="artikel-kami">
+    <div class="artikel">
+        <div class="judul-card">
+            <img style="max-height: 40px" src="{{URL::asset('/images/logonama.png') }}" alt="Logo">
+            <h1 style="margin-top: 10px;">Artikel Kami</h1>
+        </div>
+        <div class="artikel-box">
+            <div class="artikel-foreach">
+                <div class="artikel-image">
+                    <img src="{{URL::asset('/images/destinasi2.png') }}" alt="">
+                </div>
+                <div class="right-content">
+                    <div class="artikel-jenis">
+                        <p>jenis apa</p>
+                    </div>
+                    <div class="artikel-title">
+                        <h5>sdada</h5>
+                    </div>
+                    <div class="artikel-content">
+                        <p>sdkkajdk adjkajfijan kmfakjfkajf</p>
+                    </div>
+                    <div class="bottom-detail">
+                        <div class="artikel-date">
+                            <div class="artikel-icon">
+                                <img src="{{URL::asset('/images/admin.png') }}" alt="">
+                            </div>
+                            <div class="date">
+                                11/10/2023
+                            </div>
+                        </div>
+                        <div class="artikel-created">
+                            <div class="artikel-created-icon">
+                                <img src="{{URL::asset('/images/admin.png') }}" alt="">
+                            </div>
+                            <div class="artikel-user">
+                                By Admin
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="artikel-image">
+                    <img src="{{URL::asset('/images/destinasi2.png') }}" alt="">
+                </div>
+                <div class="right-content">
+                    <div class="artikel-jenis">
+                        <p>jenis apa</p>
+                    </div>
+                    <div class="artikel-title">
+                        <h5>sdada</h5>
+                    </div>
+                    <div class="artikel-content">
+                        <p>sdkkajdk adjkajfijan kmfakjfkajf</p>
+                    </div>
+                    <div class="bottom-detail">
+                        <div class="artikel-date">
+                            <div class="artikel-icon">
+                                <img src="{{URL::asset('/images/admin.png') }}" alt="">
+                            </div>
+                            <div class="date">
+                                11/10/2023
+                            </div>
+                        </div>
+                        <div class="artikel-created">
+                            <div class="artikel-created-icon">
+                                <img src="{{URL::asset('/images/admin.png') }}" alt="">
+                            </div>
+                            <div class="artikel-user">
+                                By Admin
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+        <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
+            <a href="/portal/destinasi" class="btn-brosur1" style="width: 150px;">View More</a>
+        </div>
+            
+    </div>
+</section>
+
+<!-- Section 8: Mitra Kami -->
 <section class="text-center mt-5">
     <h2 class="title">Mitra Kami</h2>
     <div class="container my-5">
         <div class="mitra-container">
-            <div class="mitra-grid">
-                <!-- Kolom 1 -->
-                <div class="mitra-cell">
-                    <div class="mitra-logo">
-                        <img src="{{URL::asset('/images/mitra1.jpg')}}" alt="Mitra 1">
-                    </div>
-                </div>
-                <div class="mitra-cell">
-                    <div class="mitra-logo">
-                        <img src="{{URL::asset('/images/mitra2.jpg')}}" alt="Mitra 2">
-                    </div>
-                </div>
-                <!-- Tambahkan logo lebih lanjut di sini jika diperlukan -->
 
-                <!-- Kolom 2 -->
-                <div class="mitra-cell">
-                    <div class="mitra-logo">
-                        <img src="{{URL::asset('/images/mitra3.jpg')}}" alt="Mitra 3">
-                    </div>
-                </div>
-                <div class="mitra-cell">
-                    <div class="mitra-logo">
-                        <img src="{{URL::asset('/images/mitra4.jpg')}}" alt="Mitra 4">
-                    </div>
-                </div>
-                <!-- Tambahkan logo lebih lanjut di sini jika diperlukan -->
+            <img style="max-height: 80vh" src="{{URL::asset('/images/mitra-kami.png') }}" alt="Logo">
 
-                <!-- Kolom 3 -->
-                <div class="mitra-cell">
-                    <div class="mitra-logo">
-                        <img src="{{URL::asset('/images/mitra5.jpg')}}" alt="Mitra 5">
-                    </div>
-                </div>
-                <div class="mitra-cell">
-                    <div class="mitra-logo">
-                        <img src="{{URL::asset('/images/mitra6.jpg')}}" alt="Mitra 6">
-                    </div>
-                </div>
-                <!-- Tambahkan logo lebih lanjut di sini jika diperlukan -->
+        </div>
+    </div>
+</section><br><br>
 
-                <!-- Kolom 4 -->
-                <div class="mitra-cell">
-                    <div class="mitra-logo">
-                        <img src="{{URL::asset('/images/mitra7.jpg')}}" alt="Mitra 7">
-                    </div>
-                </div>
-                <div class="mitra-cell">
-                    <div class="mitra-logo">
-                        <img src="{{URL::asset('/images/mitra8.jpg')}}" alt="Mitra 8">
-                    </div>
-                </div>
-                <!-- Tambahkan logo lebih lanjut di sini jika diperlukan -->
-            </div>
+<!-- Section 9: Client Kami -->
+<section class="text-center mt-5">
+    <h2 class="title">Client Kami</h2>
+    <div class="container my-5">
+        <div class="mitra-container">
+
+            <img style="max-height: 80vh" src="{{URL::asset('/images/clientkami.png') }}" alt="Logo">
+
         </div>
     </div>
 </section>
 
-<div class="floating-content" id="floating-content">
-    <a href="" target="_blank" style="text-decoration: none; color: inherit;">
-        <i class="fab fa-whatsapp fa-3x"></i>
-    </a>
-    <h6 class="ps-3"><b>Ada Yang Bisa Kami Bantu?</b></h6>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="floating-content1" id="floating-content1">
+                <a href="" target="" style="text-decoration: none; color: inherit;">
+                    <i class="fab fa-whatsapp fa-2x"></i>
+                </a>
+                <h6 class="ps-md-3 mt-2 mt-md-0"><b>Ada Yang Bisa Kami Bantu?</b></h6>
+            </div>
+        </div>
+    </div>
 </div>
 
-<!-- <div class="overlay" id="overlay">
-    <div class="floating-box">
-    <div style="background: #0088cc;">
-    <h3>Ada yang bisa kami bantu</h3>
-</div>
-<div style="background: #fff; color: #333;">
-    <p>Silahkan hubungi kami di sini</p>
-</div>
-<div style="background: #ccc;">
-    <p>Atau Anda bisa menghubungi kami di sini</p>
-</div>
-        <span class="close" id="close">&times;</span>
-    </div>
-</div> -->
 
 <div class="overlay" id="overlay">
     <div class="card mb-3" style="max-width: 360px;">
         <div class="row g-0">
-            <div class="col-md-4">
+            <div class="col-md-4 iconwa">
                 <img src="{{URL::asset('/images/float.png') }}" class="img-fluid rounded-start" alt="...">
             </div>
-            <div class="col-md-8">
-                <div class="card-body">
+            <div class="col-md-8 word-iconwa">
+                <div class="card-body ">
                     <h5 class="card-title1"><b>Ada Yang Bisa Kami Bantu?</b></h5>
                     <p class="card-text1">Tanyakan pada admin <b>Mandiri Pribumi</b> <a
                             href="https://wa.me/your-whatsapp-number">di sini</a></p>
@@ -1338,11 +1429,11 @@
     window.addEventListener('load', handleScroll);
     window.addEventListener('scroll', handleScroll);
 
-    const floatingContent = document.getElementById('floating-content');
+    const floatingContent1 = document.getElementById('floating-content1');
     const overlay = document.getElementById('overlay');
     const closeButton = document.getElementById('close');
 
-    floatingContent.addEventListener('click', () => {
+    floatingContent1.addEventListener('click', () => {
         overlay.style.display = 'block';
     });
 

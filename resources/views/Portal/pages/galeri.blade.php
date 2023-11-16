@@ -223,7 +223,7 @@
 </style>
 <section class="banner-section">
     <div class="container text-right my-5">
-        <h1>Rayakan <span style="color: #FFBE2C;"> Moment</span> Kebersamaan Bersama Mandiri Pribumi</h1>
+        <h1>Rayakan <span style="color: #FFBE2C;"> Moment</span> Kebersamaan <br> Bersama Mandiri Pribumi</h1>
     </div>
 </section>
 <div class="container mt-5">

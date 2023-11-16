@@ -38,6 +38,8 @@ Route::group(['prefix' => 'portal'], function () {
     Route::get('/detaildestinasikarimun', [PortalController::class, 'detaildestinasikarimun']);
     Route::get('/detaildestinasimalang', [PortalController::class, 'detaildestinasimalang']);
     Route::get('/galeri', [PortalController::class, 'galeri']);
+    Route::get('/tentang1', [PortalController::class, 'tentang1']);
+    Route::get('/destinasi1', [PortalController::class, 'destinasi1']);
 });
 
 Auth::routes();
@@ -45,14 +47,14 @@ Auth::routes();
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     // Rute untuk halaman login kustom
     Route::get('/', [DashboardController::class, 'home']);
-    
+
     Route::get('/artikel', [DashboardController::class, 'artikel'])->name('artikel');
     Route::get('/tambahartikel', [DashboardController::class, 'tambahartikel']);
     Route::post('/tambahartikel', [DashboardController::class, 'postartikel']);
     Route::delete('/artikel/{id}', [DashboardController::class, 'destroyartikel']);
     Route::get('/{id}/editartikel', [DashboardController::class, 'editartikel']);
     Route::put('/artikel/{id}', [DashboardController::class, 'updateartikel']);
-    
+
 
     Route::get('/pesan', [DashboardController::class, 'pesan'])->name('pesan');
     Route::get('/tambahpesan', [DashboardController::class, 'tambahpesan']);
@@ -60,7 +62,7 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::delete('/pesan/{id}', [DashboardController::class, 'destroypesan']);
     Route::get('/{id}/editpesan', [DashboardController::class, 'editpesan']);
     Route::put('/pesan/{id}', [DashboardController::class, 'updatepesan']);
-    
+
     Route::get('/galeri', [DashboardController::class, 'galeri'])->name('galeri');
     Route::get('/tambahgaleri', [DashboardController::class, 'tambahgaleri']);
     Route::post('/tambahgaleri', [DashboardController::class, 'postgaleri']);
@@ -81,7 +83,7 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::delete('/faq/{id}', [DashboardController::class, 'destroyfaq']);
     Route::get('/{id}/editfaq', [DashboardController::class, 'editfaq']);
     Route::put('/faq/{id}', [DashboardController::class, 'updatefaq']);
-    
+
     Route::group(['prefix' => '{destinasi_id}/detail_destinasi'], function () {
         Route::get('/', [DestinasiController::class, 'index'])->name('detail_destinasi');
         Route::get('/tambah_detail', [DestinasiController::class, 'tambah_detail']);
@@ -96,4 +98,3 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-

@@ -26,7 +26,7 @@ class DashboardController extends Controller
         foreach ($pesan_masuk as $pesan) {
             $pesan->created_at = Carbon::parse($pesan->created_at)->timezone('Asia/Jakarta');
         }
-        
+
         $card = [
             'total_pesan' => $total_pesan,
             'total_destinasi' => $total_destinasi,
@@ -46,7 +46,7 @@ class DashboardController extends Controller
 
         foreach ($get_data as $artikel) {
             $artikel->created_at = Carbon::parse($artikel->created_at)->timezone('Asia/Jakarta');
-            
+
         }
 
         $data = [
@@ -60,7 +60,7 @@ class DashboardController extends Controller
     {
         return view('dashboard.pages.artikel.add');
     }
-    public function postartikel (Request $request) 
+    public function postartikel (Request $request)
     {
         $data = $request->validate([
             'author' => 'required|string',
@@ -81,7 +81,7 @@ class DashboardController extends Controller
         session()->flash('success', 'Data berhasil disimpan.');
 
         return view('dashboard.pages.artikel.add');
-        
+
     }
     public function destroyartikel ($id)
     {
@@ -95,7 +95,7 @@ class DashboardController extends Controller
     public function editartikel ($id)
     {
         $data = Artikel::find($id);
-        
+
         return view('dashboard.pages.artikel.edit', ['data' => $data]);
     }
     public function updateartikel($id, Request $request)
@@ -128,7 +128,7 @@ class DashboardController extends Controller
         $total_item = Pesan::count();
         foreach ($get_data as $pesan) {
             $pesan->created_at = Carbon::parse($pesan->created_at)->timezone('Asia/Jakarta');
-            
+
         }
 
         $data = [
@@ -163,7 +163,7 @@ class DashboardController extends Controller
         $pesan->social_media = $request->social_media;
         $pesan->telepon = $request->telepon;
         $pesan->destinasi = $request->destinasi;
-        $pesan->tanggal = $request->tanggal; 
+        $pesan->tanggal = $request->tanggal;
         $pesan->pesan = $request->pesan;
 
         $pesan->save();
@@ -182,7 +182,7 @@ class DashboardController extends Controller
     {
         $data = Pesan::find($id);
         $data_destinasi = Destinasi::pluck('destinasi');
-        
+
         return view('dashboard.pages.pesan.edit', ['data' => $data, 'data_destinasi' => $data_destinasi]);
     }
     public function updatepesan ($id, Request $request)
@@ -207,7 +207,7 @@ class DashboardController extends Controller
     {
         return view('dashboard.pages.galeri.add');
     }
-    public function postgaleri (Request $request) 
+    public function postgaleri (Request $request)
     {
         $data = $request->validate([
             'author' => 'required|string',
@@ -228,7 +228,7 @@ class DashboardController extends Controller
         session()->flash('success', 'Data berhasil disimpan.');
 
         return view('dashboard.pages.galeri.add');
-        
+
     }
     public function destroygaleri ($id)
     {
@@ -242,7 +242,7 @@ class DashboardController extends Controller
     public function editgaleri ($id)
     {
         $data = Galeri::find($id);
-        
+
         return view('dashboard.pages.galeri.edit', ['data' => $data]);
     }
     public function updategaleri($id, Request $request)
@@ -282,7 +282,7 @@ class DashboardController extends Controller
     {
         return view('dashboard.pages.destinasi.add');
     }
-    public function postdestinasi (Request $request) 
+    public function postdestinasi (Request $request)
     {
         $data = $request->validate([
             'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif',
@@ -300,7 +300,7 @@ class DashboardController extends Controller
         $destinasi->destinasi = $request->destinasi;
         $destinasi->peta_wisata = $request->file('peta_wisata')->store('destinasi/peta_wisata');
         $destinasi->rute = $request->rute;
-        $destinasi->brosure = $request->file('brosure')->store('destinasi/brosure'); 
+        $destinasi->brosure = $request->file('brosure')->store('destinasi/brosure');
         $destinasi->total_waktu = $request->total_waktu;
         $destinasi->biaya = $request->biaya;
 
@@ -309,7 +309,7 @@ class DashboardController extends Controller
         session()->flash('success', 'Data berhasil disimpan.');
 
         return view('dashboard.pages.destinasi.add');
-        
+
     }
     public function destroydestinasi ($id)
     {
@@ -414,7 +414,7 @@ class DashboardController extends Controller
     public function editfaq ($id)
     {
         $data = Faq::find($id);
-        
+
         return view('dashboard.pages.faq.edit',['data' => $data]);
     }
     public function updatefaq ($id, Request $request)
