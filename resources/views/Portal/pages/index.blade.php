@@ -430,6 +430,9 @@
     .right-content {
         padding-right: 80px;
     }
+    .artikel-jenis{
+        background-color: #2622DE;
+    }
 
 
     /* Section 8: Mitra Kami */
