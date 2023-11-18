@@ -38,11 +38,6 @@ Route::group(['prefix' => 'portal'], function () {
     Route::get('/detaildestinasikarimun', [PortalController::class, 'detaildestinasikarimun']);
     Route::get('/detaildestinasimalang', [PortalController::class, 'detaildestinasimalang']);
     Route::get('/galeri', [PortalController::class, 'galeri']);
-<<<<<<< HEAD
-=======
-    Route::get('/tentang1', [PortalController::class, 'tentang1']);
-    Route::get('/destinasi1', [PortalController::class, 'destinasi1']);
->>>>>>> 13e5b389112c389b788d6253d2ef548e27956d21
 });
 
 Auth::routes();
