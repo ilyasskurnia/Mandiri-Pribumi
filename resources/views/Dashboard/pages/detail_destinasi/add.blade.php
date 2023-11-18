@@ -65,9 +65,9 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label class="form-control-label">destinasi_id</label>
+                                            <label class="form-control-label">destinasi_id <strong>(field ini jangan diubah)</strong><strong>&nbsp&nbsp(Jika Nilai field ini kosong harap kembali ke halaman destinasi dan klik preview lagi)</strong></label>
                                             <input name="destinasi_id" class="form-control" type="text"
-                                                value="{{ $destinasi->id }}">
+                                            value="{{ $destinasi ? $destinasi->id : '' }}">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Hari Ke</label>

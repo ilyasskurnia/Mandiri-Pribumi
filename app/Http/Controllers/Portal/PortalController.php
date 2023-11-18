@@ -52,12 +52,12 @@ class PortalController extends Controller
         $pesan->social_media = $request->social_media;
         $pesan->telepon = $request->telepon;
         $pesan->destinasi = $request->destinasi;
-        $pesan->tanggal = $request->tanggal; 
+        $pesan->tanggal = $request->tanggal;
         $pesan->pesan = $request->pesan;
 
         $pesan->save();
 
-        session()->flash('success', 'Data berhasil disimpan.');
+        session()->flash('success', 'Pesan Anda Sudah kami terima, terimakasih atas kepercayaan anda. Untuk info lebih lanjut kami akan menghubungi anda');
 
         return view('portal.pages.kontak', ['data' => $data, 'data_destinasi' => $data_destinasi, 'get_faq' => $get_faq]);
     }
@@ -65,6 +65,12 @@ class PortalController extends Controller
     {
         return view('portal.pages.destinasi');
     }
+
+    public function destinasi1()
+    {
+        return view('portal.pages.destinasi1');
+    }
+
     public function detailartikel()
     {
         return view('portal.pages.detailartikel');

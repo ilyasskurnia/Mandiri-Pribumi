@@ -404,15 +404,20 @@
     .artikel-box {
         display: flex;
         margin-top: 50px;
-        margin-left: 100px;
     }
 
     .artikel-foreach {
         display: flex;
     }
 
+    .artikel-jenis {
+        background-color: rgb(247, 16, 0);
+        width: fit-content;
+        height: fit-content;
+    }
+
     .right-content {
-        padding-left: 30px;
+        padding-left: 20px;
     }
 
     .bottom-detail {
@@ -422,13 +427,21 @@
     .artikel-date {
         display: flex;
     }
+    .date {
+        padding-left: 10px;
+    }
 
     .artikel-created {
         display: flex;
+        padding-left: 20px;
     }
 
     .right-content {
+        padding-top: 20px;
         padding-right: 80px;
+    }
+    .artikel-user {
+        padding-left: 10px;
     }
 
 
@@ -604,6 +617,13 @@
             /* Add space between column elements */
         }
 
+        .tagline-wa {
+            text-align: center;
+        }
+        .floating-word3 a {
+            text-align: center;
+        }
+
         .video-section {
             padding: 15px;
             /* Add padding to the video section */
@@ -719,6 +739,38 @@
         .text-muted {
             font-size: 10px;
         }
+        .artikel {
+            padding: 0px;
+            margin-left: 10px;
+            align-content: center;
+        }
+        .artikel-box {
+            margin-left: 0px;
+        }
+        .right-content {
+            padding-left: 0px;
+        }
+        .artikel-box {
+            margin-left: 0px;
+        }
+        .artikel-foreach {
+            flex-direction: column;
+            align-content: center;
+        }
+        .right-content {
+            padding-right: 0px;
+            padding-left: 20px;
+        }
+        .artikel-image {
+            padding-top: 50px;
+            padding-left: 20px;
+        }
+        .artikel-created {
+            padding-left: 20px;
+        }
+        /* .artikel-jenis {
+            padding-top: 10px;
+        } */
     }
 </style>
 
@@ -766,7 +818,7 @@
             </div>
         </div>
         <hr> <!-- Garis horizontal di bawah konten row -->
-        <div class="row">
+        <div class="row tagline-wa">
             <div class="col-md-6 col-lg-6">
                 <h2 style="floating-tagline"><b>#MariJelajahNusantara!</b></h2>
             </div>
@@ -805,7 +857,8 @@
                         Mandiri Pribumi! Kami mengundang Anda untuk merasakan keajaiban Indonesia dengan cara yang belum
                         pernah Anda alami sebelumnya. Kami telah merancang rangkaian perjalanan yang menakjubkan dan
                         unik, memberi Anda kesempatan untuk mengeksplorasi kekayaan alam yang luar biasa dan menikmati
-                        kelezatan kuliner lokal. </span></p>
+                        kelezatan kuliner lokal. 
+                </span></p>
             </div>
         </div>
     </div>
@@ -1282,7 +1335,7 @@
                 </div>
                 <div class="right-content">
                     <div class="artikel-jenis">
-                        <p>jenis apa</p>
+                        <p>Jenis Apa</p>
                     </div>
                     <div class="artikel-title">
                         <h5>sdada</h5>
@@ -1314,7 +1367,7 @@
                 </div>
                 <div class="right-content">
                     <div class="artikel-jenis">
-                        <p>jenis apa</p>
+                        <p>Jenis Apa</p>
                     </div>
                     <div class="artikel-title">
                         <h5>sdada</h5>
@@ -1347,7 +1400,6 @@
         <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
             <a href="/portal/destinasi" class="btn-brosur1" style="width: 150px;">View More</a>
         </div>
-            
     </div>
 </section>
 
@@ -1358,6 +1410,18 @@
         <div class="mitra-container">
 
             <img style="max-height: 80vh" src="{{URL::asset('/images/mitra-kami.png') }}" alt="Logo">
+
+        </div>
+    </div>
+</section><br><br>
+
+<!-- Section 9: Client Kami -->
+<section class="text-center mt-5">
+    <h2 class="title">Client Kami</h2>
+    <div class="container my-5">
+        <div class="mitra-container">
+
+            <img style="max-height: 80vh" src="{{URL::asset('/images/clientkami.png') }}" alt="Logo">
 
         </div>
     </div>

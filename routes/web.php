@@ -38,6 +38,11 @@ Route::group(['prefix' => 'portal'], function () {
     Route::get('/detaildestinasikarimun', [PortalController::class, 'detaildestinasikarimun']);
     Route::get('/detaildestinasimalang', [PortalController::class, 'detaildestinasimalang']);
     Route::get('/galeri', [PortalController::class, 'galeri']);
+<<<<<<< HEAD
+=======
+    Route::get('/tentang1', [PortalController::class, 'tentang1']);
+    Route::get('/destinasi1', [PortalController::class, 'destinasi1']);
+>>>>>>> 13e5b389112c389b788d6253d2ef548e27956d21
 });
 
 Auth::routes();
@@ -86,9 +91,9 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
         Route::get('/', [DestinasiController::class, 'index'])->name('detail_destinasi');
         Route::get('/tambah_detail', [DestinasiController::class, 'tambah_detail']);
         Route::post('/tambah_detail', [DestinasiController::class, 'post_detail']);
-        Route::get('/{destinasi_id}/edit', [DestinasiController::class, 'edit_detail']);
-        Route::put('/{destinasi_id}', [DestinasiController::class, 'update_detail']);
-        Route::delete('/{destinasi_id}', [DestinasiController::class, 'destroy_detail']);
+        Route::get('/{id}/editdetail', [DestinasiController::class, 'editdetail']);
+        Route::put('/{id}', [DestinasiController::class, 'update_detail']);
+        Route::delete('/{id}', [DestinasiController::class, 'destroy_detail']);
     });
 });
 

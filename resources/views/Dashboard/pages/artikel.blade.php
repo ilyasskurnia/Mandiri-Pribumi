@@ -61,6 +61,7 @@ $nomor=1;
                                 <thead class="bg-grey1">
                                     <tr>
                                         <th class="text-center">No.</th>
+                                        <th class="text-center">Jenis Artikel</th>
                                         <th class="text-center">Author</th>
                                         <th class="text-center">Judul Artikel</th>
                                         <th class="text-center">Isi konten</th>
@@ -73,6 +74,7 @@ $nomor=1;
                                     @foreach ($data['get_data'] as $artikel)
                                     <tr>
                                         <td class="text-center">{{ $nomor++ }}</td>
+                                        <td class="text-center">{{ $artikel->jenis_artikel }}</td>
                                         <td class="text-center">{{ $artikel->author }}</td>
                                         <td class="text-center">{{ $artikel->title }}</td>
                                         <td class="text-center">{{ $artikel->content }}</td>
