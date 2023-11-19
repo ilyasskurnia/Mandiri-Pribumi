@@ -785,15 +785,12 @@
         .right-content {
             padding-left: 0px;
         }
-<<<<<<< HEAD
         .artikel-box {
             margin-left: 0px;
         }
         .judul-card{
             padding-top: 20px;
         }
-=======
->>>>>>> fb5bfb721ed1acde973f66f8647dfa9b549c5f0e
         .artikel-foreach {
             flex-direction: column;
             align-content: center;
@@ -1384,7 +1381,7 @@
                     <div class="bottom-detail">
                         <div class="artikel-date">
                             <div class="artikel-icon">
-                                <img src="{{URL::asset('/images/admin.png') }}" alt="">
+                                <img src="{{URL::asset('/images/calender.png') }}" alt="">
                             </div>
                             <div class="date">11/10/2023</div>
                         </div>
@@ -1408,7 +1405,7 @@
                     <div class="bottom-detail">
                         <div class="artikel-date">
                             <div class="artikel-icon">
-                                <img src="{{URL::asset('/images/admin.png') }}" alt="">
+                                <img src="{{URL::asset('/images/calender.png') }}" alt="">
                             </div>
                             <div class="date">11/10/2023</div>
                         </div>
