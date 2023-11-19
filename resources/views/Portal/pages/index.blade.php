@@ -753,6 +753,9 @@
         .artikel-box {
             margin-left: 0px;
         }
+        .judul-card{
+            padding-top: 20px;
+        }
         .artikel-foreach {
             flex-direction: column;
             align-content: center;
@@ -763,10 +766,13 @@
         }
         .artikel-image {
             padding-top: 50px;
-            padding-left: 20px;
+            padding-left: 3px;
         }
         .artikel-created {
             padding-left: 20px;
+        }
+        .btn-brosur1{
+            margin-bottom: 15px;
         }
         /* .artikel-jenis {
             padding-top: 10px;
@@ -857,7 +863,7 @@
                         Mandiri Pribumi! Kami mengundang Anda untuk merasakan keajaiban Indonesia dengan cara yang belum
                         pernah Anda alami sebelumnya. Kami telah merancang rangkaian perjalanan yang menakjubkan dan
                         unik, memberi Anda kesempatan untuk mengeksplorasi kekayaan alam yang luar biasa dan menikmati
-                        kelezatan kuliner lokal. 
+                        kelezatan kuliner lokal.
                 </span></p>
             </div>
         </div>

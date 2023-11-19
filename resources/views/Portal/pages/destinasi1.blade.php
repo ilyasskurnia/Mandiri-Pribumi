@@ -15,7 +15,7 @@
         background-repeat: no-repeat;
         background-position: left center;
         color: #fff;
-        padding: 200px 0;
+        padding: 170px 0;
     }
 
     .banner-content {
@@ -151,7 +151,7 @@
     /* Responsive Styles */
     @media (max-width: 768px) {
         .banner-content {
-            padding: 100px 0;
+            padding: 50px 0;
             /* Sesuaikan padding sesuai kebutuhan di layar kecil */
             text-align: center;
         }
@@ -171,6 +171,10 @@
 
         .tagline-content h2 {
             font-size: 24px;
+        }
+
+        .box-card {
+            padding-left: 0px;
         }
     }
 </style>
