@@ -388,95 +388,95 @@
     }
 
     /* Section 7: Artikel Kami */
-.artikel {
-    background-color: #F2EEEB;
-    padding: 50px;
-}
+    .artikel {
+        background-color: #F2EEEB;
+        padding: 50px;
+    }
 
-.artikel-heading {
-    text-align: center;
-    font-size: 36px;
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
+    .artikel-heading {
+        text-align: center;
+        font-size: 36px;
+        color: #333;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
 
-.artikel-box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+    .artikel-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-.artikel-foreach {
-    display: flex;
-    width: 45%;
-    margin: 15px;
-    padding: 15px;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    .artikel-foreach {
+        display: flex;
+        width: 45%;
+        margin: 15px;
+        padding: 15px;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-.artikel-image {
-    flex: 0 0 30%;
-    margin-right: 20px;
-}
+    .artikel-image {
+        flex: 0 0 30%;
+        margin-right: 20px;
+    }
 
-.artikel-image img {
-    width: 100%;
-    border-radius: 8px;
-}
+    .artikel-image img {
+        width: 100%;
+        border-radius: 8px;
+    }
 
-.right-content {
-    flex: 1;
-}
+    .right-content {
+        flex: 1;
+    }
 
-.artikel-jenis {
-    background-color: rgb(247, 16, 0);
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    width: fit-content;
-}
+    .artikel-jenis {
+        background-color: rgb(247, 16, 0);
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        width: fit-content;
+    }
 
-.artikel-title {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
-}
+    .artikel-title {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
+    }
 
-.artikel-content {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 20px;
-    line-height: 1.5;
-}
+    .artikel-content {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
 
-.bottom-detail {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    .bottom-detail {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-.artikel-date,
-.artikel-created {
-    display: flex;
-    align-items: center;
-    color: #777;
-}
+    .artikel-date,
+    .artikel-created {
+        display: flex;
+        align-items: center;
+        color: #777;
+    }
 
-.artikel-icon {
-    margin-right: 5px;
-}
+    .artikel-icon {
+        margin-right: 5px;
+    }
 
-.date {
-    font-style: italic;
-}
+    .date {
+        font-style: italic;
+    }
 
-.artikel-user {
-    font-style: italic;
-}
+    .artikel-user {
+        font-style: italic;
+    }
 
 
 
@@ -655,6 +655,7 @@
         .tagline-wa {
             text-align: center;
         }
+
         .floating-word3 a {
             text-align: center;
         }
@@ -774,41 +775,52 @@
         .text-muted {
             font-size: 10px;
         }
+
         .artikel {
             padding: 0px;
             margin-left: 10px;
             align-content: center;
         }
+
         .artikel-box {
             margin-left: 0px;
         }
+
         .right-content {
             padding-left: 0px;
         }
+
         .artikel-box {
             margin-left: 0px;
         }
-        .judul-card{
+
+        .judul-card {
             padding-top: 20px;
         }
+
         .artikel-foreach {
             flex-direction: column;
             align-content: center;
         }
+
         .right-content {
             padding-right: 0px;
             padding-left: 20px;
         }
+
         .artikel-image {
             padding-top: 50px;
             padding-left: 3px;
         }
+
         .artikel-created {
             padding-left: 20px;
         }
-        .btn-brosur1{
+
+        .btn-brosur1 {
             margin-bottom: 15px;
         }
+
         /* .artikel-jenis {
             padding-top: 10px;
         } */
@@ -899,7 +911,7 @@
                         pernah Anda alami sebelumnya. Kami telah merancang rangkaian perjalanan yang menakjubkan dan
                         unik, memberi Anda kesempatan untuk mengeksplorasi kekayaan alam yang luar biasa dan menikmati
                         kelezatan kuliner lokal.
-                </span></p>
+                    </span></p>
             </div>
         </div>
     </div>

@@ -202,8 +202,10 @@
     }
 
     .image-with-caption img {
-        width: 100%; /* membuat gambar memenuhi lebar kolom */
-        height: auto; /* menjaga rasio aspek gambar */
+        width: 100%;
+        /* membuat gambar memenuhi lebar kolom */
+        height: auto;
+        /* menjaga rasio aspek gambar */
     }
 
 
@@ -216,7 +218,7 @@
         /* Tambahkan gaya tambahan seperti background, padding, dll. */
     }
 
-    .caption h3{
+    .caption h3 {
         margin-top: 20px;
     }
 
@@ -328,11 +330,11 @@
     }
 
     .card {
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255, 1);
         border: none;
-        border-radius: 8px;
+        border-radius: 0px;
         margin-bottom: 30px;
-        margin-left: 50px;
+        margin-left: 0px;
         height: 100%;
         /* Card akan mengisi tinggi sesuai konten */
     }
@@ -366,6 +368,95 @@
         box-shadow: 0 20px 10px rgba(0, 0, 0, 0.3);
     }
 
+    @media only screen and (max-width: 768px) {
+        /* Contoh untuk mengubah ukuran teks */
+        .mitra-container {
+            padding: 10px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .why2 {
+            font-size: 90%;
+        }
+
+        .image-with-caption {
+            padding-bottom: 5px;
+        }
+
+        .banner-text {
+            margin-top: 80px;
+            margin-left: 100px;
+        }
+
+        .logo-container {
+            display: none;
+        }
+
+        .history-image {
+            padding-left: 50px;
+        }
+
+        .banner-text,
+        .about-us-details h2,
+        .about-us-details h3,
+        .history-details h2,
+        .history-details h3,
+        .vision-mission-content h2,
+        .section-title,
+        .title {
+            font-size: 1.5em;
+            /* Mengubah ukuran font */
+        }
+
+        /* Mengatur ulang padding dan margin */
+        .about-us-content,
+        .company-history,
+        .company-vision-mission,
+        .why-choose-us,
+        .what-we-offer {
+            padding: 30px 0;
+        }
+
+        /* Mengubah ukuran logo */
+        .logo-container img {
+            height: 150px;
+            /* Mengurangi ukuran logo */
+        }
+
+        /* Mengatur ulang tata letak kolom */
+        .about-us-details,
+        .history-details,
+        .vision-mission-content,
+        .caption-content {
+            padding: 15px;
+        }
+
+        .col-md-6,
+        .col-md-4,
+        .col-md-3,
+        .col-md-2 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            /* Membuat semua kolom memenuhi 100% lebar layar */
+        }
+
+        /* Mengatur ulang ukuran dan posisi elemen lain */
+        .banner-text {
+            left: 10%;
+            /* Mengubah posisi teks banner */
+        }
+
+        /* Mengatur ulang tampilan card */
+        .card {
+            margin-bottom: 20px;
+        }
+
+        /* Mengatur ulang ukuran gambar pada section Client Kami */
+        .mitra-container img {
+            max-height: 60vh;
+        }
+    }
 </style>
 
 
@@ -467,7 +558,7 @@
 <section class="why-choose-us">
     <div class="container">
         <h2 class="section-title text-center mb-5">Mengapa Harus Kami</h2>
-        <div class="row">
+        <div class="row why">
             <div class="col-md-4">
                 <div class="image-with-caption">
                     <img src="{{URL::asset('/images/cardtentangkami1.png') }}" alt="Image 1">
@@ -482,8 +573,8 @@
                 <div class="image-with-caption">
                     <img src="{{URL::asset('/images/cardtentangkami1.png') }}" alt="Image 1">
                     <div class="caption">
-                        <h3>Terpercaya</h3>
-                        <p>Kami sebagai perusahaan yang berpengalaman sejak tahun 2004,
+                        <h3 class="why1">Terpercaya</h3>
+                        <p class="why2">Kami sebagai perusahaan yang berpengalaman sejak tahun 2004,
                             telah melayani lebih dari 100 pelanggan sehingga dapat diandalkan dalam
                             memenuhi kepuasan pelanggan</p>
                     </div>
@@ -496,7 +587,7 @@
                     <div class="caption">
                         <h3>Dukungan Lokal</h3>
                         <p>Memberikan nuansa lokal yang
-                            berkesan bagi pelanggan dan bermanfaat  bagi sektor pariwisata</p>
+                            berkesan bagi pelanggan dan bermanfaat bagi sektor pariwisata</p>
                     </div>
                 </div>
             </div>
@@ -518,7 +609,7 @@
             <div class="col-md-3">
                 <div class="card text-center">
                     <div class="card-body">
-                    <i class="fa-solid fa-earth-asia" style="color: #023997;"></i>
+                        <i class="fa-solid fa-earth-asia" style="color: #023997;"></i>
                         <h5 class="card-title">#JelajahPesona</h5>
                         <p class="card-text">Mengajak anda untuk menjelajahi pesona alam nusantara</p>
                     </div>
@@ -527,7 +618,7 @@
             <div class="col-md-3">
                 <div class="card text-center">
                     <div class="card-body">
-                    <i class="fa-solid fa-utensils" style="color: #023997;"></i>
+                        <i class="fa-solid fa-utensils" style="color: #023997;"></i>
                         <h5 class="card-title">#JelajahRasa</h5>
                         <p class="card-text">Mengajak anda untuk menjelajahi citra rasa kuliner nusantara</p>
                     </div>
@@ -536,7 +627,7 @@
             <div class="col-md-3">
                 <div class="card text-center">
                     <div class="card-body">
-                    <i class="fa-solid fa-gopuram" style="color: #023997;"></i>
+                        <i class="fa-solid fa-gopuram" style="color: #023997;"></i>
                         <h5 class="card-title">#JelajahBudaya</h5>
                         <p class="card-text">Mengajak anda untuk menjelajahi dan melestarikan aneka ragam nusantara</p>
                     </div>
@@ -570,7 +661,6 @@
             });
         }
     });
-
 </script>
 
 
