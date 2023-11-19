@@ -44,6 +44,15 @@
                             {{ session('success') }}
                         </div>
                         @endif
+                        @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
                         <div class="card-header pb-2">
                             <div class="d-flex align-items-center">
                                 <h4 class="card-title">Edit Data Galeri</h4>
@@ -58,22 +67,20 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="form-control-label">Author</label>
-                                            <input name="author" class="form-control" type="text"
-                                                value="{{ $data->author }}">
+                                            <input name="author" class="form-control" type="text" value="{{ $data->author }}">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Title</label>
-                                            <input name="title" class="form-control" type="text"
-                                                value="{{ $data->title }}">
+                                            <input name="title_galeri" class="form-control" type="text" value="{{ $data->title_galeri }}">
                                         </div>
                                         <div class="form-group">
-                                            <label class="form-control-label">Thumbnail</label>
-                                            <input name="thumbnail" class="form-control" type="file">
+                                            <label class="form-control-label">Foto Galeri</label>
+                                            <input name="thumbnail_galeri" class="form-control" type="file">
                                             <img style="max-height: 100px"
-                                                src="{{ asset('storage/' . $data->thumbnail) }}" alt="">
+                                                src="{{ asset('storage/' . $data->thumbnail_galeri) }}" alt="">            
                                         </div>
                                         <div class="form-group">
-                                            <label class="form-control-label">Deskripsi</label>
+                                            <label class="form-control-label">Keterangan Gambar</label>
                                             <textarea name="keterangan" class="form-control"
                                                 type="text">{{ $data->keterangan }}</textarea>
                                         </div>

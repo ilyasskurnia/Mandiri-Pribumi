@@ -65,7 +65,7 @@ class DestinasiController extends Controller
     {
         $data = Destinasi_children::find($id);
         $data = Destinasi_children::where('destinasi_id', $id)->get();
-        dd($data);
+        // dd($data);
     
         return view('dashboard.pages.detail_destinasi.edit', ['data' => $data]);
     }

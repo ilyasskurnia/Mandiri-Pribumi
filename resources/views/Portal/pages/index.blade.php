@@ -388,61 +388,96 @@
     }
 
     /* Section 7: Artikel Kami */
-    .artikel {
-        background-color: #F2EEEB;
-        padding: 50px;
-    }
+.artikel {
+    background-color: #F2EEEB;
+    padding: 50px;
+}
 
-    .artikel-heading {
-        text-align: center;
-    }
+.artikel-heading {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
-    .artikel-sub-heading {
-        text-align: center;
-    }
+.artikel-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-    .artikel-box {
-        display: flex;
-        margin-top: 50px;
-    }
+.artikel-foreach {
+    display: flex;
+    width: 45%;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-    .artikel-foreach {
-        display: flex;
-    }
+.artikel-image {
+    flex: 0 0 30%;
+    margin-right: 20px;
+}
 
-    .artikel-jenis {
-        background-color: rgb(247, 16, 0);
-        width: fit-content;
-        height: fit-content;
-    }
+.artikel-image img {
+    width: 100%;
+    border-radius: 8px;
+}
 
-    .right-content {
-        padding-left: 20px;
-    }
+.right-content {
+    flex: 1;
+}
 
-    .bottom-detail {
-        display: flex;
-    }
+.artikel-jenis {
+    background-color: rgb(247, 16, 0);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: fit-content;
+}
 
-    .artikel-date {
-        display: flex;
-    }
-    .date {
-        padding-left: 10px;
-    }
+.artikel-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
 
-    .artikel-created {
-        display: flex;
-        padding-left: 20px;
-    }
+.artikel-content {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
 
-    .right-content {
-        padding-top: 20px;
-        padding-right: 80px;
-    }
-    .artikel-user {
-        padding-left: 10px;
-    }
+.bottom-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.artikel-date,
+.artikel-created {
+    display: flex;
+    align-items: center;
+    color: #777;
+}
+
+.artikel-icon {
+    margin-right: 5px;
+}
+
+.date {
+    font-style: italic;
+}
+
+.artikel-user {
+    font-style: italic;
+}
+
 
 
     /* Section 8: Mitra Kami */
@@ -750,12 +785,15 @@
         .right-content {
             padding-left: 0px;
         }
+<<<<<<< HEAD
         .artikel-box {
             margin-left: 0px;
         }
         .judul-card{
             padding-top: 20px;
         }
+=======
+>>>>>>> fb5bfb721ed1acde973f66f8647dfa9b549c5f0e
         .artikel-foreach {
             flex-direction: column;
             align-content: center;
@@ -1330,7 +1368,7 @@
 <!-- Section 7: Artikel Kami -->
 <section class="artikel-kami">
     <div class="artikel">
-        <div class="judul-card">
+        <div class="artikel-heading">
             <img style="max-height: 40px" src="{{URL::asset('/images/logonama.png') }}" alt="Logo">
             <h1 style="margin-top: 10px;">Artikel Kami</h1>
         </div>
@@ -1340,74 +1378,57 @@
                     <img src="{{URL::asset('/images/destinasi2.png') }}" alt="">
                 </div>
                 <div class="right-content">
-                    <div class="artikel-jenis">
-                        <p>Jenis Apa</p>
-                    </div>
-                    <div class="artikel-title">
-                        <h5>sdada</h5>
-                    </div>
-                    <div class="artikel-content">
-                        <p>sdkkajdk adjkajfijan kmfakjfkajf</p>
-                    </div>
+                    <div class="artikel-jenis">Jenis Apa</div>
+                    <div class="artikel-title">Judul Artikel</div>
+                    <div class="artikel-content">Isi artikel singkat dapat ditampilkan di sini.</div>
                     <div class="bottom-detail">
                         <div class="artikel-date">
                             <div class="artikel-icon">
                                 <img src="{{URL::asset('/images/admin.png') }}" alt="">
                             </div>
-                            <div class="date">
-                                11/10/2023
-                            </div>
+                            <div class="date">11/10/2023</div>
                         </div>
                         <div class="artikel-created">
                             <div class="artikel-created-icon">
                                 <img src="{{URL::asset('/images/admin.png') }}" alt="">
                             </div>
-                            <div class="artikel-user">
-                                By Admin
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="artikel-image">
-                    <img src="{{URL::asset('/images/destinasi2.png') }}" alt="">
-                </div>
-                <div class="right-content">
-                    <div class="artikel-jenis">
-                        <p>Jenis Apa</p>
-                    </div>
-                    <div class="artikel-title">
-                        <h5>sdada</h5>
-                    </div>
-                    <div class="artikel-content">
-                        <p>sdkkajdk adjkajfijan kmfakjfkajf</p>
-                    </div>
-                    <div class="bottom-detail">
-                        <div class="artikel-date">
-                            <div class="artikel-icon">
-                                <img src="{{URL::asset('/images/admin.png') }}" alt="">
-                            </div>
-                            <div class="date">
-                                11/10/2023
-                            </div>
-                        </div>
-                        <div class="artikel-created">
-                            <div class="artikel-created-icon">
-                                <img src="{{URL::asset('/images/admin.png') }}" alt="">
-                            </div>
-                            <div class="artikel-user">
-                                By Admin
-                            </div>
+                            <div class="artikel-user">By Admin</div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="artikel-foreach">
+                <div class="artikel-image">
+                    <img src="{{URL::asset('/images/destinasi2.png') }}" alt="">
+                </div>
+                <div class="right-content">
+                    <div class="artikel-jenis">Jenis Apa</div>
+                    <div class="artikel-title">Judul Artikel</div>
+                    <div class="artikel-content">Isi artikel singkat dapat ditampilkan di sini.</div>
+                    <div class="bottom-detail">
+                        <div class="artikel-date">
+                            <div class="artikel-icon">
+                                <img src="{{URL::asset('/images/admin.png') }}" alt="">
+                            </div>
+                            <div class="date">11/10/2023</div>
+                        </div>
+                        <div class="artikel-created">
+                            <div class="artikel-created-icon">
+                                <img src="{{URL::asset('/images/admin.png') }}" alt="">
+                            </div>
+                            <div class="artikel-user">By Admin</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ... (ulangi struktur artikel-foreach sesuai kebutuhan) ... -->
         </div>
-        <br><br><br>
         <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
-            <a href="/portal/destinasi" class="btn-brosur1" style="width: 150px;">View More</a>
+            <a href="/portal/artikel" class="btn-brosur1" style="width: 150px;">View More</a>
         </div>
     </div>
 </section>
+
 
 <!-- Section 8: Mitra Kami -->
 <section class="text-center mt-5">
@@ -1433,40 +1454,6 @@
     </div>
 </section>
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-4 text-center">
-            <div class="floating-content1" id="floating-content1">
-                <a href="" target="" style="text-decoration: none; color: inherit;">
-                    <i class="fab fa-whatsapp fa-2x"></i>
-                </a>
-                <h6 class="ps-md-3 mt-2 mt-md-0"><b>Ada Yang Bisa Kami Bantu?</b></h6>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="overlay" id="overlay">
-    <div class="card mb-3" style="max-width: 360px;">
-        <div class="row g-0">
-            <div class="col-md-4 iconwa">
-                <img src="{{URL::asset('/images/float.png') }}" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8 word-iconwa">
-                <div class="card-body ">
-                    <h5 class="card-title1"><b>Ada Yang Bisa Kami Bantu?</b></h5>
-                    <p class="card-text1">Tanyakan pada admin <b>Mandiri Pribumi</b> <a
-                            href="https://wa.me/your-whatsapp-number">di sini</a></p>
-                    <p class="card-text1"><small class="text-muted">Atau hubungi kami langsung <a
-                                href="/portal/kontak">di sini</a></small></p>
-                    <span class="close" id="close">&times;</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <script>
     // Fungsi untuk menambahkan class "active" saat elemen berada dalam viewport
     function handleScroll() {
@@ -1482,22 +1469,6 @@
             }
         });
     }
-
-    // Memanggil fungsi saat halaman dimuat dan saat menggulir
-    window.addEventListener('load', handleScroll);
-    window.addEventListener('scroll', handleScroll);
-
-    const floatingContent1 = document.getElementById('floating-content1');
-    const overlay = document.getElementById('overlay');
-    const closeButton = document.getElementById('close');
-
-    floatingContent1.addEventListener('click', () => {
-        overlay.style.display = 'block';
-    });
-
-    closeButton.addEventListener('click', () => {
-        overlay.style.display = 'none';
-    });
 </script>
 
 

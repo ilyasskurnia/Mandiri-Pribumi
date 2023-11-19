@@ -18,10 +18,23 @@
     }
 
     /* Container Styles */
-    .container-konten {
-        background-color: #D9D9D9;
-        margin: 20px;
-    }
+ .container-konten {
+    background-color: #D9D9D9;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-konten h4 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 
     .konten1 {
         padding-left: 50px;

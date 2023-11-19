@@ -10,6 +10,10 @@ use App\Models\Pesan;
 
 class PortalController extends Controller
 {
+    public function coba() 
+    {
+        return view('portal.pages.coba');    
+    }
     public function index()
     {
         return view('portal.pages.index');
@@ -17,11 +21,6 @@ class PortalController extends Controller
     public function tentang()
     {
         return view('portal.pages.tentang');
-    }
-
-    public function tentang1()
-    {
-        return view('portal.pages.tentang1');
     }
     public function kontak()
     {
