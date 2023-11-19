@@ -40,6 +40,7 @@ Route::group(['prefix' => 'portal'], function () {
     Route::get('/galeri', [PortalController::class, 'galeri']);
     Route::get('/tentang1', [PortalController::class, 'tentang1']);
     Route::get('/destinasi1', [PortalController::class, 'destinasi1']);
+    Route::get('/coba', [PortalController::class, 'coba']);
 });
 
 Auth::routes();

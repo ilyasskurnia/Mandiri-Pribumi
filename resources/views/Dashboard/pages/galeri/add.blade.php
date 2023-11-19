@@ -69,11 +69,11 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Title</label>
-                                            <input name="title" class="form-control" type="text">
+                                            <input name="title_galeri" class="form-control" type="text">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Foto Galeri</label>
-                                            <input name="thumbnail" class="form-control" type="file">
+                                            <input name="thumbnail_galeri" class="form-control" type="file">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Keterangan Gambar</label>

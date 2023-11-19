@@ -10,6 +10,10 @@ use App\Models\Pesan;
 
 class PortalController extends Controller
 {
+    public function coba() 
+    {
+        return view('portal.pages.coba');    
+    }
     public function index()
     {
         return view('portal.pages.index');

@@ -74,9 +74,9 @@ $nomor=1;
                                     <tr>
                                         <td class="text-center">{{ $nomor++ }}</td>
                                         <td class="text-center">{{ $galeri->author }}</td>
-                                        <td class="text-center">{{ $galeri->title }}</td>
+                                        <td class="text-center">{{ $galeri->title_galeri }}</td>
                                         <td class="text-center"><img style="max-height: 100px"
-                                                src="{{ asset('storage/' . $galeri->thumbnail) }}" alt=""></td>
+                                                src="{{ asset('storage/' . $galeri->thumbnail_galeri) }}" alt=""></td>
                                         <td class="text-center">{{ $galeri->keterangan }}</td>
                                         <td>
                                             <div class="d-flex">

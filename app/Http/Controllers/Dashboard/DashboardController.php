@@ -213,16 +213,16 @@ class DashboardController extends Controller
     {
         $data = $request->validate([
             'author' => 'required|string',
-            'title' => 'required|string',
-            'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif',
+            'title_galeri' => 'required|string',
+            'thumbnail_galeri' => 'required|image|mimes:jpeg,png,jpg,gif',
             'keterangan' => 'required|string',
         ]);
 
         // Simpan data ke database menggunakan model galeri
         $galeri = new Galeri;
         $galeri->author = $request->author;
-        $galeri->title = $request->title;
-        $galeri->thumbnail = $request->file('thumbnail')->store('galeri/thumbnail');
+        $galeri->title_galeri = $request->title_galeri;
+        $galeri->thumbnail_galeri = $request->file('thumbnail_galeri')->store('galeri/thumbnail');
         $galeri->keterangan = $request->keterangan;
 
         $galeri->save();
@@ -235,8 +235,8 @@ class DashboardController extends Controller
     public function destroygaleri ($id)
     {
         $data = Galeri::find($id);
-        if ($data->thumbnail) {
-            Storage::delete($data->thumbnail);
+        if ($data->thumbnail_galeri) {
+            Storage::delete($data->thumbnail_galeri);
         }
         $data->delete();
         return redirect()->route('galeri');
@@ -254,16 +254,19 @@ class DashboardController extends Controller
 
         $input = $request->all();
 
-        if ($thumbnail = $request->file('thumbnail')) {
+        // Update data galeri
+        if ($thumbnail = $request->file('thumbnail_galeri')) {
             // Hapus thumbnail lama jika ada
-            Storage::delete($data->thumbnail);
+            Storage::delete($data->thumbnail_galeri);
             $thumbnailPath = $thumbnail->store('galeri/thumbnail');
             $input['thumbnail'] = $thumbnailPath;
         }else{
             unset($input['thumbnail']);
         }
-        // Update data galeri
+        
         $data->update($input);
+        
+        
 
         // Redirect ke halaman lain atau tampilkan pesan sukses
         return redirect()->route('galeri');
@@ -331,7 +334,7 @@ class DashboardController extends Controller
     public function editpaket ($id)
     {
         $data = Destinasi::find($id);
-        dd($data);
+        
         
         return view('dashboard.pages.destinasi.edit', ['data' => $data]);
     }
