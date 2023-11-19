@@ -15,7 +15,7 @@
         background-repeat: no-repeat;
         background-position: left center;
         color: #fff;
-        padding: 210px 0;
+        padding: 170px 0;
     }
 
     .banner-content {
