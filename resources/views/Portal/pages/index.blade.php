@@ -1412,7 +1412,7 @@
             <!-- ... (ulangi struktur artikel-foreach sesuai kebutuhan) ... -->
         </div>
         <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
-            <a href="/portal/destinasi" class="btn-brosur1" style="width: 150px;">View More</a>
+            <a href="/portal/artikel" class="btn-brosur1" style="width: 150px;">View More</a>
         </div>
     </div>
 </section>
@@ -1442,40 +1442,6 @@
     </div>
 </section>
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-4 text-center">
-            <div class="floating-content1" id="floating-content1">
-                <a href="" target="" style="text-decoration: none; color: inherit;">
-                    <i class="fab fa-whatsapp fa-2x"></i>
-                </a>
-                <h6 class="ps-md-3 mt-2 mt-md-0"><b>Ada Yang Bisa Kami Bantu?</b></h6>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="overlay" id="overlay">
-    <div class="card mb-3" style="max-width: 360px;">
-        <div class="row g-0">
-            <div class="col-md-4 iconwa">
-                <img src="{{URL::asset('/images/float.png') }}" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8 word-iconwa">
-                <div class="card-body ">
-                    <h5 class="card-title1"><b>Ada Yang Bisa Kami Bantu?</b></h5>
-                    <p class="card-text1">Tanyakan pada admin <b>Mandiri Pribumi</b> <a
-                            href="https://wa.me/your-whatsapp-number">di sini</a></p>
-                    <p class="card-text1"><small class="text-muted">Atau hubungi kami langsung <a
-                                href="/portal/kontak">di sini</a></small></p>
-                    <span class="close" id="close">&times;</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <script>
     // Fungsi untuk menambahkan class "active" saat elemen berada dalam viewport
     function handleScroll() {
@@ -1491,22 +1457,6 @@
             }
         });
     }
-
-    // Memanggil fungsi saat halaman dimuat dan saat menggulir
-    window.addEventListener('load', handleScroll);
-    window.addEventListener('scroll', handleScroll);
-
-    const floatingContent1 = document.getElementById('floating-content1');
-    const overlay = document.getElementById('overlay');
-    const closeButton = document.getElementById('close');
-
-    floatingContent1.addEventListener('click', () => {
-        overlay.style.display = 'block';
-    });
-
-    closeButton.addEventListener('click', () => {
-        overlay.style.display = 'none';
-    });
 </script>
 
 
