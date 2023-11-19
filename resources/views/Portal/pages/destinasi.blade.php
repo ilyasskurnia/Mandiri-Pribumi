@@ -15,7 +15,7 @@
         background-repeat: no-repeat;
         background-position: left center;
         color: #fff;
-        padding: 200px 0;
+        padding: 210px 0;
     }
 
     .banner-content {
@@ -130,15 +130,23 @@
     }
 
     .review-section {
-        background-color: #A89090;
+        background-color: #a4cee6;
         text-align: center;
-        height: 250px;
+        height: 300px;
+        border-radius: 88px 88px 0 0;
+    }
+
+    .background-khusus {
+        background-color: #c0e6f9;
     }
 
     /* Gaya untuk bagian "Paket Destinasi" */
     .paket-destinasi {
+        margin-top: 90px;
         padding: 50px 0;
         color: #fff;
+        background-color: #c0e6f9;
+        border-radius: 88px 88px 0 0;
     }
 
     .section-title {
@@ -292,6 +300,9 @@
     .review-coloumn {
         padding-left: 20px;
     }
+    .sub-title {
+        margin-top: 30px;
+    }
 
     .bintang {
         display: flex;
@@ -352,8 +363,16 @@
     </div>
 </section>
 
+
+
+{{-- <section class="text-center mt-5">
+    <h2>Menghadirkan Wisata sebagai Bagian Tak Terpisahkan dari Kehidupan Anda.</h2>
+    <h4>Ini Nanti isinya adalah quotes</h4>
+    <h6>Ini author</h6>
+</section> --}}
+
 <!-- Section 2: Penawaran Spesial -->
-<section class="special-offers">
+<section class="special-offers mt-5">
     <div class="container">
         <h4 class="special-title1 text-center mb-5"><b>Jangan Lewatkan</b></h4>
         <h2 class="special-title2 text-center mb-5"><b>Penawaran Spesial</b></h2>
@@ -386,187 +405,185 @@
     </div>
 </section>
 
-
-<section class="paket-destinasi my-5" style="background-color: #9C8585;">
-    <div class="container">
-        <h2 class="destinasi-title text-center mb-5">Paket Destinasi Yang Kami Tawarkan</h2>
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card" style="background-color: #D9D9D9;">
-                    <img src="{{URL::asset('/images/carddestinasi1.png')}}" class="card-img-top"
-                        alt="Destination Image">
-                    <div class="card-body">
-                        <div class="floating-container">
-                            <p class="highlighted-text">3 Hari 2 Malam</p>
-                        </div>
-                        <h5 class="card-title">Karimun Jawa</h5>
-                        <p class="card-subtitle">Karimun Jawa, Jawa Tengah, Indonesia</p>
-                        <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
-                                        2.100.000</span></p>
+<div class="background-khusus">
+    <section class="paket-destinasi">
+        <div class="container">
+            <h2 class="destinasi-title text-center mb-5">Paket Destinasi Yang Kami Tawarkan</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="background-color: #D9D9D9;">
+                        <img src="{{URL::asset('/images/carddestinasi1.png')}}" class="card-img-top"
+                            alt="Destination Image">
+                        <div class="card-body">
+                            <div class="floating-container">
+                                <p class="highlighted-text">3 Hari 2 Malam</p>
                             </div>
-                            <div class="col-md-6 text-right">
-                                <a href="/portal/detaildestinasikarimun" class="selengkapnya">Selengkapnya -></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card" style="background-color: #D9D9D9;">
-                    <img src="{{URL::asset('/images/carddestinasi2.png')}}" class="card-img-top"
-                        alt="Destination Image">
-                    <div class="card-body">
-                        <div class="floating-container">
-                            <p class="highlighted-text">3 Hari 2 Malam</p>
-                        </div>
-                        <h5 class="card-title">Bali</h5>
-                        <p class="card-subtitle">Pulau Bali, Indonesia</p>
-                        <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
-                                        2.100.000</span></p>
-                            </div>
-                            <div class="col-md-6 text-right">
-                                <a href="/portal/detaildestinasibali" class="selengkapnya">Selengkapnya -></a>
+                            <h5 class="card-title">Karimun Jawa</h5>
+                            <p class="card-subtitle">Karimun Jawa, Jawa Tengah, Indonesia</p>
+                            <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
+                                            2.100.000</span></p>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <a href="/portal/detaildestinasikarimun" class="selengkapnya">Selengkapnya -></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card" style="background-color: #D9D9D9;">
-                    <img src="{{URL::asset('/images/carddestinasi3.png')}}" class="card-img-top"
-                        alt="Destination Image">
-                    <div class="card-body">
-                        <div class="floating-container">
-                            <p class="highlighted-text">3 Hari 2 Malam</p>
-                        </div>
-                        <h5 class="card-title">Yogyakarta</h5>
-                        <p class="card-subtitle">Daerah Istimewa Jogjakarta, Jawa Tengah, Indonesia</p>
-                        <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
-                                        2.100.000</span></p>
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="background-color: #D9D9D9;">
+                        <img src="{{URL::asset('/images/carddestinasi2.png')}}" class="card-img-top"
+                            alt="Destination Image">
+                        <div class="card-body">
+                            <div class="floating-container">
+                                <p class="highlighted-text">3 Hari 2 Malam</p>
                             </div>
-                            <div class="col-md-6 text-right">
-                                <a href="/portal/detaildestinasijogja" class="selengkapnya">Selengkapnya -></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card" style="background-color: #D9D9D9;">
-                    <img src="{{URL::asset('/images/carddestinasi4.png')}}" class="card-img-top"
-                        alt="Destination Image">
-                    <div class="card-body">
-                        <div class="floating-container">
-                            <p class="highlighted-text">3 Hari 2 Malam</p>
-                        </div>
-                        <h5 class="card-title">Malang - Bromo</h5>
-                        <p class="card-subtitle">Malang, Jawa Timur, Indonesia</p>
-                        <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
-                                        2.100.000</span></p>
-                            </div>
-                            <div class="col-md-6 text-right">
-                                <a href="/portal/detaildestinasimalang" class="selengkapnya">Selengkapnya -></a>
+                            <h5 class="card-title">Bali</h5>
+                            <p class="card-subtitle">Pulau Bali, Indonesia</p>
+                            <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
+                                            2.100.000</span></p>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <a href="/portal/detaildestinasibali" class="selengkapnya">Selengkapnya -></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card" style="background-color: #D9D9D9;">
-                    <img src="{{URL::asset('/images/carddestinasi5.png')}}" class="card-img-top"
-                        alt="Destination Image">
-                    <div class="card-body">
-                        <div class="floating-container">
-                            <p class="highlighted-text">3 Hari 2 Malam</p>
-                        </div>
-                        <h5 class="card-title">Raja Ampat</h5>
-                        <p class="card-subtitle">Raja Ampat, Papua Barat, Indonesia</p>
-                        <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
-                                        2.100.000</span></p>
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="background-color: #D9D9D9;">
+                        <img src="{{URL::asset('/images/carddestinasi3.png')}}" class="card-img-top"
+                            alt="Destination Image">
+                        <div class="card-body">
+                            <div class="floating-container">
+                                <p class="highlighted-text">3 Hari 2 Malam</p>
                             </div>
-                            <div class="col-md-6 text-right">
-                                <a href="#" class="selengkapnya">Selengkapnya -></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card" style="background-color: #D9D9D9;">
-                    <img src="{{URL::asset('/images/carddestinasi6.png')}}" class="card-img-top"
-                        alt="Destination Image">
-                    <div class="card-body">
-                        <div class="floating-container">
-                            <p class="highlighted-text">3 Hari 2 Malam</p>
-                        </div>
-                        <h5 class="card-title">Pulau Komodo</h5>
-                        <p class="card-subtitle">Pulau Komodo, Nusa Tenggara Timur, Indonesia</p>
-                        <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
-                                        2.100.000</span></p>
-                            </div>
-                            <div class="col-md-6 text-right">
-                                <a href="#" class="selengkapnya">Selengkapnya -></a>
+                            <h5 class="card-title">Yogyakarta</h5>
+                            <p class="card-subtitle">Daerah Istimewa Jogjakarta, Jawa Tengah, Indonesia</p>
+                            <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
+                                            2.100.000</span></p>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <a href="/portal/detaildestinasijogja" class="selengkapnya">Selengkapnya -></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Tambahkan card lain jika diperlukan -->
-        </div>
-    </div>
-</section>
-
-
-<section class="review-section mt-5">
-    <div class="container">
-        <div class="review">
-            <div class="review-title">
-                <h3>Testimoni</h3>
-            </div>
-            <div class="sub-title">
-                <h5>Review dari para pelanggan kami</h5>
-            </div>
-            <div class="review-content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam repellat iste, cumque, nostrum
-                illum reiciendis reprehenderit nemo sed ab nobis corrupti excepturi esse atque obcaecati libero
-                veritatis exercitationem ratione!
-            </div>
-            <div class="review-profile">
-                <img src="{{URL::asset('/images/profile-picture.png')}}" alt="">
-                <div class="review-coloumn">
-                    <div class="profile-user">
-                        Rani Raharjo
-                    </div>
-                    <div class="bintang">
-                        <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
-                        <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
-                        <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
-                        <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
-                        <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="background-color: #D9D9D9;">
+                        <img src="{{URL::asset('/images/carddestinasi4.png')}}" class="card-img-top"
+                            alt="Destination Image">
+                        <div class="card-body">
+                            <div class="floating-container">
+                                <p class="highlighted-text">3 Hari 2 Malam</p>
+                            </div>
+                            <h5 class="card-title">Malang - Bromo</h5>
+                            <p class="card-subtitle">Malang, Jawa Timur, Indonesia</p>
+                            <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
+                                            2.100.000</span></p>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <a href="/portal/detaildestinasimalang" class="selengkapnya">Selengkapnya -></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="background-color: #D9D9D9;">
+                        <img src="{{URL::asset('/images/carddestinasi5.png')}}" class="card-img-top"
+                            alt="Destination Image">
+                        <div class="card-body">
+                            <div class="floating-container">
+                                <p class="highlighted-text">3 Hari 2 Malam</p>
+                            </div>
+                            <h5 class="card-title">Raja Ampat</h5>
+                            <p class="card-subtitle">Raja Ampat, Papua Barat, Indonesia</p>
+                            <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
+                                            2.100.000</span></p>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <a href="#" class="selengkapnya">Selengkapnya -></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="background-color: #D9D9D9;">
+                        <img src="{{URL::asset('/images/carddestinasi6.png')}}" class="card-img-top"
+                            alt="Destination Image">
+                        <div class="card-body">
+                            <div class="floating-container">
+                                <p class="highlighted-text">3 Hari 2 Malam</p>
+                            </div>
+                            <h5 class="card-title">Pulau Komodo</h5>
+                            <p class="card-subtitle">Pulau Komodo, Nusa Tenggara Timur, Indonesia</p>
+                            <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
+                                            2.100.000</span></p>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <a href="#" class="selengkapnya">Selengkapnya -></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tambahkan card lain jika diperlukan -->
             </div>
         </div>
-    </div>
-    </div>
-</section>
-
+    </section>
+    <section class="review-section">
+        <div class="container">
+            <div class="review">
+                <div class="review-title">
+                    <h3>Testimoni</h3>
+                </div>
+                <div class="sub-title">
+                    <h5>Review dari para pelanggan kami</h5>
+                </div>
+                <div class="review-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam repellat iste, cumque, nostrum
+                    illum reiciendis reprehenderit nemo sed ab nobis corrupti excepturi esse atque obcaecati libero
+                    veritatis exercitationem ratione!
+                </div>
+                <div class="review-profile">
+                    <img src="{{URL::asset('/images/profile-picture.png')}}" alt="">
+                    <div class="review-coloumn">
+                        <div class="profile-user">
+                            Rani Raharjo
+                        </div>
+                        <div class="bintang">
+                            <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
+                            <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
+                            <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
+                            <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
+                            <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</div>
 @endsection
