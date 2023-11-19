@@ -195,6 +195,32 @@
         padding: 50px 0;
     }
 
+    .image-with-caption {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+
+    .image-with-caption img {
+        width: 100%; /* membuat gambar memenuhi lebar kolom */
+        height: auto; /* menjaga rasio aspek gambar */
+    }
+
+
+    .caption {
+        margin-bottom: 12px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* Tambahkan gaya tambahan seperti background, padding, dll. */
+    }
+
+    .caption h3{
+        margin-top: 20px;
+    }
+
+
     .section-title {
         font-size: 2.5em;
         color: #333;
@@ -258,7 +284,7 @@
 
     /* Gaya untuk bagian "Apa Yang Kami Tawarkan" */
     .what-we-offer {
-        padding: 100px 0;
+        padding: 70px 0;
         background-size: cover;
         background-position: center;
         color: #fff;
@@ -443,24 +469,19 @@
         <h2 class="section-title text-center mb-5">Mengapa Harus Kami</h2>
         <div class="row">
             <div class="col-md-4">
-                <div class="image-caption mb-4">
-                    Kualitas Pelayanan
-                </div>
-                <div class="image-with-overlay">
+                <div class="image-with-caption">
                     <img src="{{URL::asset('/images/cardtentangkami1.png') }}" alt="Image 1">
-                    <div class="overlay">
+                    <div class="caption">
                         <h3>Kualitas Pelayanan</h3>
                         <p>Konsistensi dan berdedikasi dalam memberikan pelayanan sepenuh hati</p>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-4">
-                <div class="image-caption mb-4">
-                    Terpercaya
-                </div>
-                <div class="image-with-overlay">
-                    <img src="{{URL::asset('/images/cardtentangkami2.png') }}" alt="Image 2">
-                    <div class="overlay">
+                <div class="image-with-caption">
+                    <img src="{{URL::asset('/images/cardtentangkami1.png') }}" alt="Image 1">
+                    <div class="caption">
                         <h3>Terpercaya</h3>
                         <p>Kami sebagai perusahaan yang berpengalaman sejak tahun 2004,
                             telah melayani lebih dari 100 pelanggan sehingga dapat diandalkan dalam
@@ -468,16 +489,14 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-md-4">
-                <div class="image-caption mb-4">
-                    Dukungan Lokal
-                </div>
-                <div class="image-with-overlay">
-                    <img src="{{URL::asset('/images/cardtentangkami3.png') }}" alt="Image 3">
-                    <div class="overlay">
+                <div class="image-with-caption">
+                    <img src="{{URL::asset('/images/cardtentangkami1.png') }}" alt="Image 1">
+                    <div class="caption">
                         <h3>Dukungan Lokal</h3>
                         <p>Memberikan nuansa lokal yang
-                            berkesan bagi pelanggan dan bermanfaat bagi sektor pariwisata</p>
+                            berkesan bagi pelanggan dan bermanfaat  bagi sektor pariwisata</p>
                     </div>
                 </div>
             </div>
