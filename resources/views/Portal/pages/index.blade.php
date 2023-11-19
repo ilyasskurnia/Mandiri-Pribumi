@@ -388,61 +388,96 @@
     }
 
     /* Section 7: Artikel Kami */
-    .artikel {
-        background-color: #F2EEEB;
-        padding: 50px;
-    }
+.artikel {
+    background-color: #F2EEEB;
+    padding: 50px;
+}
 
-    .artikel-heading {
-        text-align: center;
-    }
+.artikel-heading {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
-    .artikel-sub-heading {
-        text-align: center;
-    }
+.artikel-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-    .artikel-box {
-        display: flex;
-        margin-top: 50px;
-    }
+.artikel-foreach {
+    display: flex;
+    width: 45%;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-    .artikel-foreach {
-        display: flex;
-    }
+.artikel-image {
+    flex: 0 0 30%;
+    margin-right: 20px;
+}
 
-    .artikel-jenis {
-        background-color: rgb(247, 16, 0);
-        width: fit-content;
-        height: fit-content;
-    }
+.artikel-image img {
+    width: 100%;
+    border-radius: 8px;
+}
 
-    .right-content {
-        padding-left: 20px;
-    }
+.right-content {
+    flex: 1;
+}
 
-    .bottom-detail {
-        display: flex;
-    }
+.artikel-jenis {
+    background-color: rgb(247, 16, 0);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: fit-content;
+}
 
-    .artikel-date {
-        display: flex;
-    }
-    .date {
-        padding-left: 10px;
-    }
+.artikel-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
 
-    .artikel-created {
-        display: flex;
-        padding-left: 20px;
-    }
+.artikel-content {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
 
-    .right-content {
-        padding-top: 20px;
-        padding-right: 80px;
-    }
-    .artikel-user {
-        padding-left: 10px;
-    }
+.bottom-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.artikel-date,
+.artikel-created {
+    display: flex;
+    align-items: center;
+    color: #777;
+}
+
+.artikel-icon {
+    margin-right: 5px;
+}
+
+.date {
+    font-style: italic;
+}
+
+.artikel-user {
+    font-style: italic;
+}
+
 
 
     /* Section 8: Mitra Kami */
@@ -749,9 +784,6 @@
         }
         .right-content {
             padding-left: 0px;
-        }
-        .artikel-box {
-            margin-left: 0px;
         }
         .artikel-foreach {
             flex-direction: column;
@@ -1324,7 +1356,7 @@
 <!-- Section 7: Artikel Kami -->
 <section class="artikel-kami">
     <div class="artikel">
-        <div class="judul-card">
+        <div class="artikel-heading">
             <img style="max-height: 40px" src="{{URL::asset('/images/logonama.png') }}" alt="Logo">
             <h1 style="margin-top: 10px;">Artikel Kami</h1>
         </div>
@@ -1334,74 +1366,57 @@
                     <img src="{{URL::asset('/images/destinasi2.png') }}" alt="">
                 </div>
                 <div class="right-content">
-                    <div class="artikel-jenis">
-                        <p>Jenis Apa</p>
-                    </div>
-                    <div class="artikel-title">
-                        <h5>sdada</h5>
-                    </div>
-                    <div class="artikel-content">
-                        <p>sdkkajdk adjkajfijan kmfakjfkajf</p>
-                    </div>
+                    <div class="artikel-jenis">Jenis Apa</div>
+                    <div class="artikel-title">Judul Artikel</div>
+                    <div class="artikel-content">Isi artikel singkat dapat ditampilkan di sini.</div>
                     <div class="bottom-detail">
                         <div class="artikel-date">
                             <div class="artikel-icon">
                                 <img src="{{URL::asset('/images/admin.png') }}" alt="">
                             </div>
-                            <div class="date">
-                                11/10/2023
-                            </div>
+                            <div class="date">11/10/2023</div>
                         </div>
                         <div class="artikel-created">
                             <div class="artikel-created-icon">
                                 <img src="{{URL::asset('/images/admin.png') }}" alt="">
                             </div>
-                            <div class="artikel-user">
-                                By Admin
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="artikel-image">
-                    <img src="{{URL::asset('/images/destinasi2.png') }}" alt="">
-                </div>
-                <div class="right-content">
-                    <div class="artikel-jenis">
-                        <p>Jenis Apa</p>
-                    </div>
-                    <div class="artikel-title">
-                        <h5>sdada</h5>
-                    </div>
-                    <div class="artikel-content">
-                        <p>sdkkajdk adjkajfijan kmfakjfkajf</p>
-                    </div>
-                    <div class="bottom-detail">
-                        <div class="artikel-date">
-                            <div class="artikel-icon">
-                                <img src="{{URL::asset('/images/admin.png') }}" alt="">
-                            </div>
-                            <div class="date">
-                                11/10/2023
-                            </div>
-                        </div>
-                        <div class="artikel-created">
-                            <div class="artikel-created-icon">
-                                <img src="{{URL::asset('/images/admin.png') }}" alt="">
-                            </div>
-                            <div class="artikel-user">
-                                By Admin
-                            </div>
+                            <div class="artikel-user">By Admin</div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="artikel-foreach">
+                <div class="artikel-image">
+                    <img src="{{URL::asset('/images/destinasi2.png') }}" alt="">
+                </div>
+                <div class="right-content">
+                    <div class="artikel-jenis">Jenis Apa</div>
+                    <div class="artikel-title">Judul Artikel</div>
+                    <div class="artikel-content">Isi artikel singkat dapat ditampilkan di sini.</div>
+                    <div class="bottom-detail">
+                        <div class="artikel-date">
+                            <div class="artikel-icon">
+                                <img src="{{URL::asset('/images/admin.png') }}" alt="">
+                            </div>
+                            <div class="date">11/10/2023</div>
+                        </div>
+                        <div class="artikel-created">
+                            <div class="artikel-created-icon">
+                                <img src="{{URL::asset('/images/admin.png') }}" alt="">
+                            </div>
+                            <div class="artikel-user">By Admin</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ... (ulangi struktur artikel-foreach sesuai kebutuhan) ... -->
         </div>
-        <br><br><br>
         <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
             <a href="/portal/destinasi" class="btn-brosur1" style="width: 150px;">View More</a>
         </div>
     </div>
 </section>
+
 
 <!-- Section 8: Mitra Kami -->
 <section class="text-center mt-5">
