@@ -77,8 +77,14 @@
 
     .galeri {
         max-width: 100%;
+        transition: transform 0.3s ease;
         /* Sesuaikan lebar maksimal card sesuai kebutuhan */
     }
+
+    .galeri:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
     .galeri-kami-judul {
         margin-top: 10px;
@@ -328,7 +334,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- Galeri Item 2 -->
             <div class="col-md-3">
                 <div class="galeri">
@@ -393,6 +398,7 @@
                 </div>
             </div>
         </div>
+
 
         <div class="row mt-5 artikel-item">
             <!-- Galeri Item 1 -->

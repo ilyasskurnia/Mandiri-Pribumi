@@ -87,6 +87,12 @@ class PortalController extends Controller
 
     }
 
+    public function artikel1()
+    {
+        return view('portal.pages.artikel1');
+
+    }
+
     public function detailDestinasiBali()
     {
         return view('portal.pages.detaildestinasibali');
