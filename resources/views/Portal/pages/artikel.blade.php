@@ -4,6 +4,7 @@
 
 <style>
     /* Section 1: Banner */
+    
     .banner-section {
         font-family: 'Sora', sans-serif;
         background-image: url('{{ asset('images/bali1.jpg') }}');
@@ -63,7 +64,7 @@
     }
 
     .artikel-item {
-        padding-left: 250px;
+        padding-left: 0px;
         padding-bottom: 30px;
     }
 
@@ -77,8 +78,10 @@
 
     .galeri {
         max-width: 100%;
-        transition: transform 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ubah nilai sesuai kebutuhan */
+    transition: box-shadow 0.3s ease; /* Tambahkan transition agar efeknya lebih halus */
         /* Sesuaikan lebar maksimal card sesuai kebutuhan */
+        border-radius: 10px;
     }
 
     .galeri:hover {
@@ -150,6 +153,19 @@
     }
 
     /* Section 7: Artikel Kami */
+
+    .art-title {
+        padding-top: 30px;
+        color: #000;
+        font-size: 36px;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        /* Efek bayangan pada teks */
+    }
+
     .artikel {
         background-color: #F2EEEB;
         padding: 50px;
@@ -195,15 +211,17 @@
     }
 
     .artikel-jenis {
-        background-color: rgb(247, 16, 0);
+        background-color: red;
         color: #fff;
-        padding: 5px 10px;
-        border-radius: 4px;
+        border-radius: 2px;
         margin-bottom: 10px;
         width: fit-content;
+        font-style: italic;
     }
 
     .artikel-title {
+        text-transform: uppercase;
+        font-style: bold;
         font-size: 24px;
         color: #333;
         margin-bottom: 10px;
@@ -220,6 +238,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-top: 10px;
     }
 
     .artikel-date,
@@ -240,6 +259,32 @@
     .artikel-user {
         font-style: italic;
     }
+
+    .btn-read-more {
+        background-color: #777;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        transition: background-color 
+    }
+
+    .btn-read-more:hover {
+        background-color: #333;
+    }
+
+    .artikel-jenis,
+    .artikel-title,
+    .artikel-content,
+    .bottom-detail {
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 
 
@@ -293,9 +338,7 @@
 
 <div class="container-konten mt-5">
     <div class="row">
-        <h4 style="text-align: left">
-            <b>Artikel Terbaru</b>
-        </h4>
+    <h2 class="art-title text-center">Artikel Terbaru</h2>
     </div>
 </div>
 
@@ -304,7 +347,7 @@
     <div class="container my-5">
         <div class="row mt-5 artikel-item">
             <!-- Galeri Item 1 -->
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="galeri">
                     <div style="width: 100%; padding-bottom: 100%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
@@ -317,6 +360,7 @@
                         <div class="artikel-jenis">Jenis Apa</div>
                         <div class="artikel-title">Judul Artikel</div>
                         <div class="artikel-content">Isi artikel singkat dapat ditampilkan di sini.</div>
+                        <a href="#" class="btn-read-more">Read More</a>
                         <div class="bottom-detail">
                             <div class="artikel-date">
                                 <div class="artikel-icon">
@@ -335,7 +379,7 @@
                 </div>
             </div>
             <!-- Galeri Item 2 -->
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="galeri">
                     <div style="width: 100%; padding-bottom: 100%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
@@ -348,6 +392,7 @@
                         <div class="artikel-jenis">Jenis Apa</div>
                         <div class="artikel-title">Judul Artikel</div>
                         <div class="artikel-content">Isi artikel singkat dapat ditampilkan di sini.</div>
+                        <a href="#" class="btn-read-more">Read More</a>
                         <div class="bottom-detail">
                             <div class="artikel-date">
                                 <div class="artikel-icon">
@@ -367,7 +412,7 @@
             </div>
 
             <!-- Galeri Item 3 -->
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="galeri">
                     <div style="width: 100%; padding-bottom: 100%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
@@ -380,6 +425,7 @@
                         <div class="artikel-jenis">Jenis Apa</div>
                         <div class="artikel-title">Judul Artikel</div>
                         <div class="artikel-content">Isi artikel singkat dapat ditampilkan di sini.</div>
+                        <a href="#" class="btn-read-more">Read More</a>
                         <div class="bottom-detail">
                             <div class="artikel-date">
                                 <div class="artikel-icon">
@@ -402,7 +448,7 @@
 
         <div class="row mt-5 artikel-item">
             <!-- Galeri Item 1 -->
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="galeri">
                     <div style="width: 100%; padding-bottom: 100%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
@@ -415,6 +461,7 @@
                         <div class="artikel-jenis">Jenis Apa</div>
                         <div class="artikel-title">Judul Artikel</div>
                         <div class="artikel-content">Isi artikel singkat dapat ditampilkan di sini.</div>
+                        <a href="#" class="btn-read-more">Read More</a>
                         <div class="bottom-detail">
                             <div class="artikel-date">
                                 <div class="artikel-icon">
@@ -432,9 +479,8 @@
                     </div>
                 </div>
             </div>
-
             <!-- Galeri Item 2 -->
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="galeri">
                     <div style="width: 100%; padding-bottom: 100%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
@@ -447,6 +493,7 @@
                         <div class="artikel-jenis">Jenis Apa</div>
                         <div class="artikel-title">Judul Artikel</div>
                         <div class="artikel-content">Isi artikel singkat dapat ditampilkan di sini.</div>
+                        <a href="#" class="btn-read-more">Read More</a>
                         <div class="bottom-detail">
                             <div class="artikel-date">
                                 <div class="artikel-icon">
@@ -466,7 +513,7 @@
             </div>
 
             <!-- Galeri Item 3 -->
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="galeri">
                     <div style="width: 100%; padding-bottom: 100%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
@@ -479,6 +526,7 @@
                         <div class="artikel-jenis">Jenis Apa</div>
                         <div class="artikel-title">Judul Artikel</div>
                         <div class="artikel-content">Isi artikel singkat dapat ditampilkan di sini.</div>
+                        <a href="#" class="btn-read-more">Read More</a>
                         <div class="bottom-detail">
                             <div class="artikel-date">
                                 <div class="artikel-icon">
@@ -500,7 +548,7 @@
 
         <div class="row mt-5 artikel-item">
             <!-- Galeri Item 1 -->
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="galeri">
                     <div style="width: 100%; padding-bottom: 100%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
@@ -513,6 +561,7 @@
                         <div class="artikel-jenis">Jenis Apa</div>
                         <div class="artikel-title">Judul Artikel</div>
                         <div class="artikel-content">Isi artikel singkat dapat ditampilkan di sini.</div>
+                        <a href="#" class="btn-read-more">Read More</a>
                         <div class="bottom-detail">
                             <div class="artikel-date">
                                 <div class="artikel-icon">
@@ -530,9 +579,8 @@
                     </div>
                 </div>
             </div>
-
             <!-- Galeri Item 2 -->
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="galeri">
                     <div style="width: 100%; padding-bottom: 100%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
@@ -545,6 +593,7 @@
                         <div class="artikel-jenis">Jenis Apa</div>
                         <div class="artikel-title">Judul Artikel</div>
                         <div class="artikel-content">Isi artikel singkat dapat ditampilkan di sini.</div>
+                        <a href="#" class="btn-read-more">Read More</a>
                         <div class="bottom-detail">
                             <div class="artikel-date">
                                 <div class="artikel-icon">
@@ -564,7 +613,7 @@
             </div>
 
             <!-- Galeri Item 3 -->
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="galeri">
                     <div style="width: 100%; padding-bottom: 100%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
@@ -577,6 +626,7 @@
                         <div class="artikel-jenis">Jenis Apa</div>
                         <div class="artikel-title">Judul Artikel</div>
                         <div class="artikel-content">Isi artikel singkat dapat ditampilkan di sini.</div>
+                        <a href="#" class="btn-read-more">Read More</a>
                         <div class="bottom-detail">
                             <div class="artikel-date">
                                 <div class="artikel-icon">
