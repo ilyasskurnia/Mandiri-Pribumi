@@ -10,24 +10,30 @@ use Illuminate\Support\Facades\Storage;
 
 class DestinasiController extends Controller
 {
-    public function index($id)
-    {
-        // Ambil data destinasi berdasarkan ID
-        $destinasi = Destinasi::find($id);
-        $get_destinasi = Destinasi::select('destinasi')->find($id);
-        $get_data = Destinasi_children::where('destinasi_id', $id)->paginate(5);
-        $get_id = Destinasi_children::where('destinasi_id', $id)->pluck('id');
-        
-        $card = [
-            'destinasi' => $destinasi,
-            'get_destinasi' => $get_destinasi,
-            'get_data' => $get_data,
-            'get_id' => $get_id
-        ];
+public function index($id)
+{
+    // Ambil data destinasi berdasarkan ID
+    $destinasi = Destinasi::find($id);
+    $get_destinasi = Destinasi::select('destinasi')->find($id);
 
-        // Kirim data destinasi ke view
-        return view('dashboard.pages.detail_destinasi', ['card' => $card]);
-    }
+    // Ambil data destinasi_children
+    $get_data = Destinasi_children::where('destinasi_id', $id)->paginate(5);
+
+    // Ambil ID dari destinasi_children yang pertama kali ditampilkan
+    $first_id = $get_data->first()->id;
+
+    $card = [
+        'destinasi' => $destinasi,
+        'get_destinasi' => $get_destinasi,
+        'get_data' => $get_data,
+        'get_id' => $first_id
+    ];
+
+    // Kirim data destinasi ke view
+    return view('dashboard.pages.detail_destinasi', ['card' => $card]);
+}
+
+    
     public function tambah_detail($id)
     {
         $destinasi = Destinasi::find($id);

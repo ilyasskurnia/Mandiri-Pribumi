@@ -130,14 +130,9 @@
     }
 
     .review-section {
-        background-color: #a4cee6;
+        background-color: #F9F4F0;
         text-align: center;
-        height: 300px;
-        border-radius: 88px 88px 0 0;
-    }
-
-    .background-khusus {
-        background-color: #c0e6f9;
+        height: fit-content;
     }
 
     /* Gaya untuk bagian "Paket Destinasi" */
@@ -145,8 +140,7 @@
         margin-top: 90px;
         padding: 50px 0;
         color: #fff;
-        background-color: #c0e6f9;
-        border-radius: 88px 88px 0 0;
+        background-color: #F9F4F0;
     }
 
     .section-title {
@@ -200,6 +194,7 @@
         text-align: left;
         margin-bottom: 10px;
         margin-top: -35px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
         /* Mengatur letak elemen floating container */
     }
 
@@ -255,6 +250,17 @@
         font-size: 16px;
         margin-bottom: 0;
     }
+    .quotes-section {
+        background-image: url('{{ asset('images/quotesdestinasi.png') }}');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        padding: 200px 0;
+    }
+
+    .quotes-section2 {
+        display: none;
+    }
 
     /* CSS untuk teks 'Selengkapnya' */
     .selengkapnya {
@@ -293,8 +299,9 @@
     }
 
     .review-profile img {
-        max-width: 50px;
+        max-width: 100px;
         height: auto;
+        margin-bottom: 50px
     }
 
     .review-coloumn {
@@ -307,6 +314,7 @@
     .bintang {
         display: flex;
         max-width: 10px;
+        margin-bottom: 50px;
     }
 
     /* Responsive Styles */
@@ -347,6 +355,17 @@
             margin-left: 0;
             margin-right: 0;
         }
+        .quotes-section {
+            display: none;
+        }
+        .quotes-section2 {
+            background-image: url('{{ asset('images/quotesdestinasikanan.png') }}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            padding: 134px 0;
+            display: block; /* Menampilkan quotes-section2 pada media 768px */
+        }
 
     }
 
@@ -362,14 +381,6 @@
             Kami</a>
     </div>
 </section>
-
-
-
-{{-- <section class="text-center mt-5">
-    <h2>Menghadirkan Wisata sebagai Bagian Tak Terpisahkan dari Kehidupan Anda.</h2>
-    <h4>Ini Nanti isinya adalah quotes</h4>
-    <h6>Ini author</h6>
-</section> --}}
 
 <!-- Section 2: Penawaran Spesial -->
 <section class="special-offers mt-5">
@@ -405,13 +416,12 @@
     </div>
 </section>
 
-<div class="background-khusus">
     <section class="paket-destinasi">
         <div class="container">
             <h2 class="destinasi-title text-center mb-5">Paket Destinasi Yang Kami Tawarkan</h2>
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <div class="card" style="background-color: #D9D9D9;">
+                    <div class="card" style="background-color: #ffffff;">
                         <img src="{{URL::asset('/images/carddestinasi1.png')}}" class="card-img-top"
                             alt="Destination Image">
                         <div class="card-body">
@@ -434,7 +444,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card" style="background-color: #D9D9D9;">
+                    <div class="card" style="background-color: #ffffff;">
                         <img src="{{URL::asset('/images/carddestinasi2.png')}}" class="card-img-top"
                             alt="Destination Image">
                         <div class="card-body">
@@ -457,7 +467,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card" style="background-color: #D9D9D9;">
+                    <div class="card" style="background-color: white;">
                         <img src="{{URL::asset('/images/carddestinasi3.png')}}" class="card-img-top"
                             alt="Destination Image">
                         <div class="card-body">
@@ -480,7 +490,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card" style="background-color: #D9D9D9;">
+                    <div class="card" style="background-color: #ffff;">
                         <img src="{{URL::asset('/images/carddestinasi4.png')}}" class="card-img-top"
                             alt="Destination Image">
                         <div class="card-body">
@@ -503,7 +513,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card" style="background-color: #D9D9D9;">
+                    <div class="card" style="background-color: #ffff;">
                         <img src="{{URL::asset('/images/carddestinasi5.png')}}" class="card-img-top"
                             alt="Destination Image">
                         <div class="card-body">
@@ -526,7 +536,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card" style="background-color: #D9D9D9;">
+                    <div class="card" style="background-color: #ffff;">
                         <img src="{{URL::asset('/images/carddestinasi6.png')}}" class="card-img-top"
                             alt="Destination Image">
                         <div class="card-body">
@@ -552,6 +562,8 @@
             </div>
         </div>
     </section>
+    <section class="quotes-section"></section>
+    <section class="quotes-section2"></section>
     <section class="review-section">
         <div class="container">
             <div class="review">
@@ -585,5 +597,4 @@
         </div>
         </div>
     </section>
-</div>
 @endsection

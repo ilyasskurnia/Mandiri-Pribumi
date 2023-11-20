@@ -255,18 +255,16 @@ class DashboardController extends Controller
         $input = $request->all();
 
         // Update data galeri
-        if ($thumbnail = $request->file('thumbnail_galeri')) {
+        if ($thumbnail_galeri = $request->file('thumbnail_galeri')) {
             // Hapus thumbnail lama jika ada
             Storage::delete($data->thumbnail_galeri);
-            $thumbnailPath = $thumbnail->store('galeri/thumbnail');
-            $input['thumbnail'] = $thumbnailPath;
+            $thumbnailPath = $thumbnail_galeri->store('galeri/thumbnail');
+            $input['thumbnail_galeri'] = $thumbnailPath;
         }else{
-            unset($input['thumbnail']);
+            unset($input['thumbnail_galeri']);
         }
         
         $data->update($input);
-        
-        
 
         // Redirect ke halaman lain atau tampilkan pesan sukses
         return redirect()->route('galeri');
