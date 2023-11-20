@@ -79,9 +79,9 @@ $nomor=1;
                                         </td>
                                         <td>
                                             <div class="d-flex">
-                                                <a href="{{ url('/dashboard/' . $card['destinasi']->id . '/detail_destinasi/' . $card['get_data'] . '/editdetail') }}" class="btn btn-xs
+                                                <a href="{{ url('/dashboard/' . $card['destinasi']->id . '/detail_destinasi/' . $detail_destinasi->id . '/editdetail') }}" class="btn btn-xs
                                                 bg-primary me-1 text-white">Edit</a>
-                                                <form action="{{ url('/dashboard/' . $card['destinasi']->id . '/detail_destinasi') }}" method="POST">
+                                                <form action="{{ url('/dashboard/' . $card['destinasi']->id . '/detail_destinasi/'. $detail_destinasi->id) }}" method="POST">
                                                 @csrf
                                                 @method('delete')
                                                 <input type="submit" name="submit" value="delete"

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Destinasi_children extends Model
 {
     use HasFactory;
-    protected $primaryKey = 'id';
+    protected $guarded = ['id'];
     protected $table = 'destinasi_children';
     protected $fillable = ['days', 'detail_rute', 'deskripsi','thumbnail'];
 
