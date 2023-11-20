@@ -87,9 +87,9 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
         Route::get('/', [DestinasiController::class, 'index'])->name('detail_destinasi');
         Route::get('/tambah_detail', [DestinasiController::class, 'tambah_detail']);
         Route::post('/tambah_detail', [DestinasiController::class, 'post_detail']);
-        Route::get('/{id}/editdetail', [DestinasiController::class, 'editdetail']);
-        Route::put('/{id}', [DestinasiController::class, 'update_detail']);
-        Route::delete('/{id}', [DestinasiController::class, 'destroy_detail']);
+        Route::get('/{child_id}/editdetail', [DestinasiController::class, 'editdetail']);
+        Route::put('/{child_id}', [DestinasiController::class, 'update_detail'])->name('update_detail');
+        Route::delete('/{child_id}', [DestinasiController::class, 'destroy_detail']);
     });
 });
 

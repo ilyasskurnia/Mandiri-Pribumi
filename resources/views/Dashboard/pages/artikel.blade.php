@@ -77,7 +77,7 @@ $nomor=1;
                                         <td class="text-center">{{ $artikel->jenis_artikel }}</td>
                                         <td class="text-center">{{ $artikel->author }}</td>
                                         <td class="text-center">{{ $artikel->title }}</td>
-                                        <td class="text-center">{{ $artikel->content }}</td>
+                                        <td class="text-center">{!! $artikel->content !!}</td>
                                         <td class="text-center"><img style="max-height: 100px"
                                                 src="{{ asset('storage/' . $artikel->thumbnail) }}" alt=""></td>
                                         <td class="text-center">{{ $artikel->created_at }}</td>

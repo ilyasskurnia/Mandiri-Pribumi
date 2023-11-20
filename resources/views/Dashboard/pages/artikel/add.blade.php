@@ -68,8 +68,9 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Isi Konten</label>
-                                            <textarea name="content" class="form-control" type="text"
-                                                rows="4"></textarea>
+                                            <textarea name="content" id="summernote" class="form-control" type="text"
+                                                rows="10" cols="30">
+                                            </textarea>
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Thumbnail</label>
@@ -100,6 +101,15 @@
     function goBack() {
         window.history.back();
     }
+</script>
+<script>
+    $(document).ready(function() {
+        $('#summernote').summernote({
+            placeholder : 'Masukkan isi konten artikel anda disini',
+            tabsize : 2,
+            height : 350
+        });
+    });
 </script>
 
 @endsection

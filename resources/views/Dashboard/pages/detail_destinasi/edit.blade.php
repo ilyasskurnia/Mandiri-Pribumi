@@ -55,13 +55,13 @@
                         @endif
                         <div class="card-header pb-2">
                             <div class="d-flex align-items-center">
-                                <h4 class="card-title">Tambah Detail Destinasi</h4>
+                                <h4 class="card-title">Edit Detail Destinasi</h4>
                             </div>
                         </div>
                         <div class="card-body">
-                            <form action="/dashboard/' . $destinasi->id . '/detail_destinasi/' . $children->id . '/editdetail'"
-                                {{-- <form action="/dashboard/{{ $card['destinasi']->id }}/detail_destinasi/{{ $detail_destinasi->id }}/editdetail" method="post" enctype="multipart/form-data"> --}}
-                                method="post" enctype="multipart/form-data">
+                            <form action="{{ route('update_detail', ['destinasi_id' => $destinasi->id, 'child_id' => $data->id]) }}" method="post" enctype="multipart/form-data">
+                                {{-- enctype="multipart/form-data"> --}}
+                                @method('put')
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-12">
