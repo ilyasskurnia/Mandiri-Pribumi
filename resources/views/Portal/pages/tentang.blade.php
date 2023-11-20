@@ -195,6 +195,34 @@
         padding: 50px 0;
     }
 
+    .image-with-caption {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+
+    .image-with-caption img {
+        width: 100%;
+        /* membuat gambar memenuhi lebar kolom */
+        height: auto;
+        /* menjaga rasio aspek gambar */
+    }
+
+
+    .caption {
+        margin-bottom: 12px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* Tambahkan gaya tambahan seperti background, padding, dll. */
+    }
+
+    .caption h3 {
+        margin-top: 20px;
+    }
+
+
     .section-title {
         font-size: 2.5em;
         color: #333;
@@ -258,7 +286,7 @@
 
     /* Gaya untuk bagian "Apa Yang Kami Tawarkan" */
     .what-we-offer {
-        padding: 100px 0;
+        padding: 70px 0;
         background-size: cover;
         background-position: center;
         color: #fff;
@@ -302,11 +330,11 @@
     }
 
     .card {
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255, 1);
         border: none;
-        border-radius: 8px;
+        border-radius: 0px;
         margin-bottom: 30px;
-        margin-left: 50px;
+        margin-left: 0px;
         height: 100%;
         /* Card akan mengisi tinggi sesuai konten */
     }
@@ -326,6 +354,109 @@
         font-size: 16px;
     }
 
+    .mitra-container {
+        display: block;
+        background-color: gainsboro;
+        justify-content: center;
+        align-items: center;
+        overflow-x: auto;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 30px 0;
+        border: 1px solid gainsboro;
+        border-radius: 10px;
+        box-shadow: 0 20px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    @media only screen and (max-width: 768px) {
+        /* Contoh untuk mengubah ukuran teks */
+        .mitra-container {
+            padding: 10px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .why2 {
+            font-size: 90%;
+        }
+
+        .image-with-caption {
+            padding-bottom: 5px;
+        }
+
+        .banner-text {
+            margin-top: 80px;
+            margin-left: 100px;
+        }
+
+        .logo-container {
+            display: none;
+        }
+
+        .history-image {
+            padding-left: 50px;
+        }
+
+        .banner-text,
+        .about-us-details h2,
+        .about-us-details h3,
+        .history-details h2,
+        .history-details h3,
+        .vision-mission-content h2,
+        .section-title,
+        .title {
+            font-size: 1.5em;
+            /* Mengubah ukuran font */
+        }
+
+        /* Mengatur ulang padding dan margin */
+        .about-us-content,
+        .company-history,
+        .company-vision-mission,
+        .why-choose-us,
+        .what-we-offer {
+            padding: 30px 0;
+        }
+
+        /* Mengubah ukuran logo */
+        .logo-container img {
+            height: 150px;
+            /* Mengurangi ukuran logo */
+        }
+
+        /* Mengatur ulang tata letak kolom */
+        .about-us-details,
+        .history-details,
+        .vision-mission-content,
+        .caption-content {
+            padding: 15px;
+        }
+
+        .col-md-6,
+        .col-md-4,
+        .col-md-3,
+        .col-md-2 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            /* Membuat semua kolom memenuhi 100% lebar layar */
+        }
+
+        /* Mengatur ulang ukuran dan posisi elemen lain */
+        .banner-text {
+            left: 10%;
+            /* Mengubah posisi teks banner */
+        }
+
+        /* Mengatur ulang tampilan card */
+        .card {
+            margin-bottom: 20px;
+        }
+
+        /* Mengatur ulang ukuran gambar pada section Client Kami */
+        .mitra-container img {
+            max-height: 60vh;
+        }
+    }
 </style>
 
 
@@ -427,40 +558,33 @@
 <section class="why-choose-us">
     <div class="container">
         <h2 class="section-title text-center mb-5">Mengapa Harus Kami</h2>
-        <div class="row">
+        <div class="row why">
             <div class="col-md-4">
-                <div class="image-caption mb-4">
-                    Kualitas Pelayanan
-                </div>
-                <div class="image-with-overlay">
+                <div class="image-with-caption">
                     <img src="{{URL::asset('/images/cardtentangkami1.png') }}" alt="Image 1">
-                    <div class="overlay">
+                    <div class="caption">
                         <h3>Kualitas Pelayanan</h3>
                         <p>Konsistensi dan berdedikasi dalam memberikan pelayanan sepenuh hati</p>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-4">
-                <div class="image-caption mb-4">
-                    Terpercaya
-                </div>
-                <div class="image-with-overlay">
-                    <img src="{{URL::asset('/images/cardtentangkami2.png') }}" alt="Image 2">
-                    <div class="overlay">
-                        <h3>Terpercaya</h3>
-                        <p>Kami sebagai perusahaan yang berpengalaman sejak tahun 2004,
+                <div class="image-with-caption">
+                    <img src="{{URL::asset('/images/cardtentangkami1.png') }}" alt="Image 1">
+                    <div class="caption">
+                        <h3 class="why1">Terpercaya</h3>
+                        <p class="why2">Kami sebagai perusahaan yang berpengalaman sejak tahun 2004,
                             telah melayani lebih dari 100 pelanggan sehingga dapat diandalkan dalam
                             memenuhi kepuasan pelanggan</p>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-4">
-                <div class="image-caption mb-4">
-                    Dukungan Lokal
-                </div>
-                <div class="image-with-overlay">
-                    <img src="{{URL::asset('/images/cardtentangkami3.png') }}" alt="Image 3">
-                    <div class="overlay">
+                <div class="image-with-caption">
+                    <img src="{{URL::asset('/images/cardtentangkami1.png') }}" alt="Image 1">
+                    <div class="caption">
                         <h3>Dukungan Lokal</h3>
                         <p>Memberikan nuansa lokal yang
                             berkesan bagi pelanggan dan bermanfaat bagi sektor pariwisata</p>
@@ -485,7 +609,7 @@
             <div class="col-md-3">
                 <div class="card text-center">
                     <div class="card-body">
-                    <i class="fa-solid fa-earth-asia" style="color: #023997;"></i>
+                        <i class="fa-solid fa-earth-asia" style="color: #023997;"></i>
                         <h5 class="card-title">#JelajahPesona</h5>
                         <p class="card-text">Mengajak anda untuk menjelajahi pesona alam nusantara</p>
                     </div>
@@ -494,7 +618,7 @@
             <div class="col-md-3">
                 <div class="card text-center">
                     <div class="card-body">
-                    <i class="fa-solid fa-utensils" style="color: #023997;"></i>
+                        <i class="fa-solid fa-utensils" style="color: #023997;"></i>
                         <h5 class="card-title">#JelajahRasa</h5>
                         <p class="card-text">Mengajak anda untuk menjelajahi citra rasa kuliner nusantara</p>
                     </div>
@@ -503,7 +627,7 @@
             <div class="col-md-3">
                 <div class="card text-center">
                     <div class="card-body">
-                    <i class="fa-solid fa-gopuram" style="color: #023997;"></i>
+                        <i class="fa-solid fa-gopuram" style="color: #023997;"></i>
                         <h5 class="card-title">#JelajahBudaya</h5>
                         <p class="card-text">Mengajak anda untuk menjelajahi dan melestarikan aneka ragam nusantara</p>
                     </div>
@@ -513,8 +637,17 @@
     </div>
 </section>
 
+<!-- Section 9: Client Kami -->
+<section class="text-center mt-5">
+    <h2 class="title">Client Kami</h2>
+    <div class="container my-5">
+        <div class="mitra-container">
 
+            <img style="max-height: 80vh" src="{{URL::asset('/images/clientkami.png') }}" alt="Logo">
 
+        </div>
+    </div>
+</section>
 
 <script>
     document.addEventListener('visibilitychange', function () {
@@ -528,7 +661,6 @@
             });
         }
     });
-
 </script>
 
 
