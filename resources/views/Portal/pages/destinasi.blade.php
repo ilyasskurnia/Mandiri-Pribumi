@@ -420,145 +420,31 @@
         <div class="container">
             <h2 class="destinasi-title text-center mb-5">Paket Destinasi Yang Kami Tawarkan</h2>
             <div class="row">
+                @foreach ($data['get_destinasi'] as $destinasi)
                 <div class="col-md-4 mb-4">
                     <div class="card" style="background-color: #ffffff;">
-                        <img src="{{URL::asset('/images/carddestinasi1.png')}}" class="card-img-top"
+                        <img style="max-height: 220px" src="{{ asset('storage/' . $destinasi->thumbnail) }}" class="card-img-top"
                             alt="Destination Image">
                         <div class="card-body">
                             <div class="floating-container">
-                                <p class="highlighted-text">3 Hari 2 Malam</p>
+                                <p class="highlighted-text">{{ $destinasi->total_waktu }}</p>
                             </div>
-                            <h5 class="card-title">Karimun Jawa</h5>
-                            <p class="card-subtitle">Karimun Jawa, Jawa Tengah, Indonesia</p>
+                            <h5 class="card-title">{{ $destinasi->destinasi }}</h5>
+                            <p class="card-subtitle">{{ $destinasi->rute }}</p>
                             <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
                             <div class="row">
                                 <div class="col-md-6">
                                     <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
-                                            2.100.000</span></p>
+                                            {{ $destinasi->biaya }}</span></p>
                                 </div>
                                 <div class="col-md-6 text-right">
-                                    <a href="/portal/detaildestinasikarimun" class="selengkapnya">Selengkapnya -></a>
+                                    <a href="/portal/detaildestinasi/{{ $destinasi->id }}" class="selengkapnya">Selengkapnya -></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card" style="background-color: #ffffff;">
-                        <img src="{{URL::asset('/images/carddestinasi2.png')}}" class="card-img-top"
-                            alt="Destination Image">
-                        <div class="card-body">
-                            <div class="floating-container">
-                                <p class="highlighted-text">3 Hari 2 Malam</p>
-                            </div>
-                            <h5 class="card-title">Bali</h5>
-                            <p class="card-subtitle">Pulau Bali, Indonesia</p>
-                            <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
-                                            2.100.000</span></p>
-                                </div>
-                                <div class="col-md-6 text-right">
-                                    <a href="/portal/detaildestinasibali" class="selengkapnya">Selengkapnya -></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card" style="background-color: white;">
-                        <img src="{{URL::asset('/images/carddestinasi3.png')}}" class="card-img-top"
-                            alt="Destination Image">
-                        <div class="card-body">
-                            <div class="floating-container">
-                                <p class="highlighted-text">3 Hari 2 Malam</p>
-                            </div>
-                            <h5 class="card-title">Yogyakarta</h5>
-                            <p class="card-subtitle">Daerah Istimewa Jogjakarta, Jawa Tengah, Indonesia</p>
-                            <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
-                                            2.100.000</span></p>
-                                </div>
-                                <div class="col-md-6 text-right">
-                                    <a href="/portal/detaildestinasijogja" class="selengkapnya">Selengkapnya -></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card" style="background-color: #ffff;">
-                        <img src="{{URL::asset('/images/carddestinasi4.png')}}" class="card-img-top"
-                            alt="Destination Image">
-                        <div class="card-body">
-                            <div class="floating-container">
-                                <p class="highlighted-text">3 Hari 2 Malam</p>
-                            </div>
-                            <h5 class="card-title">Malang - Bromo</h5>
-                            <p class="card-subtitle">Malang, Jawa Timur, Indonesia</p>
-                            <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
-                                            2.100.000</span></p>
-                                </div>
-                                <div class="col-md-6 text-right">
-                                    <a href="/portal/detaildestinasimalang" class="selengkapnya">Selengkapnya -></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card" style="background-color: #ffff;">
-                        <img src="{{URL::asset('/images/carddestinasi5.png')}}" class="card-img-top"
-                            alt="Destination Image">
-                        <div class="card-body">
-                            <div class="floating-container">
-                                <p class="highlighted-text">3 Hari 2 Malam</p>
-                            </div>
-                            <h5 class="card-title">Raja Ampat</h5>
-                            <p class="card-subtitle">Raja Ampat, Papua Barat, Indonesia</p>
-                            <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
-                                            2.100.000</span></p>
-                                </div>
-                                <div class="col-md-6 text-right">
-                                    <a href="#" class="selengkapnya">Selengkapnya -></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card" style="background-color: #ffff;">
-                        <img src="{{URL::asset('/images/carddestinasi6.png')}}" class="card-img-top"
-                            alt="Destination Image">
-                        <div class="card-body">
-                            <div class="floating-container">
-                                <p class="highlighted-text">3 Hari 2 Malam</p>
-                            </div>
-                            <h5 class="card-title">Pulau Komodo</h5>
-                            <p class="card-subtitle">Pulau Komodo, Nusa Tenggara Timur, Indonesia</p>
-                            <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
-                                            2.100.000</span></p>
-                                </div>
-                                <div class="col-md-6 text-right">
-                                    <a href="#" class="selengkapnya">Selengkapnya -></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Tambahkan card lain jika diperlukan -->
+                @endforeach
             </div>
         </div>
     </section>

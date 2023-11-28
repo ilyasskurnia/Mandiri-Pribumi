@@ -925,227 +925,23 @@
             <h1>Galeri Kami</h1>
         </div>
         <div class="row mt-5">
-            <!-- Galeri Item 1 -->
-            <div class="col-md-3">
+            @foreach ($data['get_galeri'] as $galeri)
+            <div class="col-md-3 mt-5">
                 <div class="galeri">
                     <div style="width: 100%; padding-bottom: 100%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card1.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
+                            <source srcset="{{ asset('storage/' . $galeri->thumbnail_galeri) }}" media="(min-width: 768px)">
+                            <img src="{{ asset('storage/' . $galeri->thumbnail_galeri) }}" alt=""
                                 style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
                     </div>
                     <div class="galeri-body">
-                        <h4 class="galeri-title">Bali</h4>
-                        {{-- <p class="galeri-subtitle mb-2 text-muted">4 Hari 3 Malam</p> --}}
-                        <!-- Isi galeri 1 -->
+                        <h4 class="galeri-title">{{ $galeri->title_galeri }}</h4>
                     </div>
                 </div>
             </div>
-
-            <!-- Galeri Item 2 -->
-            <div class="col-md-3">
-                <div class="galeri">
-                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta"
-                                style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                    </div>
-                    <div class="galeri-body">
-                        <h4 class="galeri-title">Yogyakarta</h4>
-                        {{-- <p class="galeri-subtitle mb-2 text-muted">2 Hari 1 Malam</p> --}}
-                        <!-- Isi galeri 2 -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Galeri Item 3 -->
-            <div class="col-md-3">
-                <div class="galeri">
-                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa"
-                                style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                    </div>
-                    <div class="galeri-body">
-                        <h4 class="galeri-title">Karimun Jawa</h4>
-                        {{-- <p class="galeri-subtitle mb-2 text-muted">3 Hari 2 Malam</p> --}}
-                        <!-- Isi galeri 3 -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Galeri Item 4-->
-            <div class="col-md-3">
-                <div class="galeri">
-                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta"
-                                style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                    </div>
-                    <div class="galeri-body">
-                        <h4 class="galeri-title">Yogyakarta</h4>
-                        {{-- <p class="galeri-subtitle mb-2 text-muted">2 Hari 1 Malam</p> --}}
-                        <!-- Isi galeri 4 -->
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
-
-        <div class="row mt-5">
-            <!-- Galeri Item 1 -->
-            <div class="col-md-3">
-                <div class="galeri">
-                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card1.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
-                                style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                    </div>
-                    <div class="galeri-body">
-                        <h4 class="galeri-title">Bali</h4>
-                        {{-- <p class="galeri-subtitle mb-2 text-muted">4 Hari 3 Malam</p> --}}
-                        <!-- Isi galeri 1 -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Galeri Item 2 -->
-            <div class="col-md-3">
-                <div class="galeri">
-                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta"
-                                style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                    </div>
-                    <div class="galeri-body">
-                        <h4 class="galeri-title">Yogyakarta</h4>
-                        {{-- <p class="galeri-subtitle mb-2 text-muted">2 Hari 1 Malam</p> --}}
-                        <!-- Isi galeri 2 -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Galeri Item 3 -->
-            <div class="col-md-3">
-                <div class="galeri">
-                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa"
-                                style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                    </div>
-                    <div class="galeri-body">
-                        <h4 class="galeri-title">Karimun Jawa</h4>
-                        {{-- <p class="galeri-subtitle mb-2 text-muted">3 Hari 2 Malam</p> --}}
-                        <!-- Isi galeri 3 -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Galeri Item 4-->
-            <div class="col-md-3">
-                <div class="galeri">
-                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta"
-                                style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                    </div>
-                    <div class="galeri-body">
-                        <h4 class="galeri-title">Yogyakarta</h4>
-                        {{-- <p class="galeri-subtitle mb-2 text-muted">2 Hari 1 Malam</p> --}}
-                        <!-- Isi galeri 4 -->
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mt-5">
-            <!-- Galeri Item 1 -->
-            <div class="col-md-3">
-                <div class="galeri">
-                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card1.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
-                                style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                    </div>
-                    <div class="galeri-body">
-                        <h4 class="galeri-title">Bali</h4>
-                        {{-- <p class="galeri-subtitle mb-2 text-muted">4 Hari 3 Malam</p> --}}
-                        <!-- Isi galeri 1 -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Galeri Item 2 -->
-            <div class="col-md-3">
-                <div class="galeri">
-                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta"
-                                style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                    </div>
-                    <div class="galeri-body">
-                        <h4 class="galeri-title">Yogyakarta</h4>
-                        {{-- <p class="galeri-subtitle mb-2 text-muted">2 Hari 1 Malam</p> --}}
-                        <!-- Isi galeri 2 -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Galeri Item 3 -->
-            <div class="col-md-3">
-                <div class="galeri">
-                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa"
-                                style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                    </div>
-                    <div class="galeri-body">
-                        <h4 class="galeri-title">Karimun Jawa</h4>
-                        {{-- <p class="galeri-subtitle mb-2 text-muted">3 Hari 2 Malam</p> --}}
-                        <!-- Isi galeri 3 -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Galeri Item 4-->
-            <div class="col-md-3">
-                <div class="galeri">
-                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta"
-                                style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                    </div>
-                    <div class="galeri-body">
-                        <h4 class="galeri-title">Yogyakarta</h4>
-                        {{-- <p class="galeri-subtitle mb-2 text-muted">2 Hari 1 Malam</p> --}}
-                        <!-- Isi galeri 4 -->
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
 </section>
 
@@ -1385,12 +1181,12 @@
             @foreach ($data['get_artikel'] as $artikel)
             <div class="artikel-foreach">
                 <div class="artikel-image">
-                    <img src="{{URL::asset('/images/destinasi2.png') }}" alt="">
+                    <img style="max-height: 170px" src="{{ asset('storage/' . $artikel->thumbnail) }}" alt="">
                 </div>
                 <div class="right-content">
                     <div class="artikel-jenis">{{ $artikel->jenis_artikel }}</div>
                     <div class="artikel-title">{{ $artikel->title }}</div>
-                    <div class="artikel-content">Isi artikel singkat dapat ditampilkan di sini.</div>
+                    <div class="artikel-content">{{ $artikel->deskripsi_singkat }}</div>
                     <div class="bottom-detail">
                         <div class="artikel-date">
                             <div class="artikel-icon">

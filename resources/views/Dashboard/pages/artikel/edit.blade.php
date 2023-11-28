@@ -71,6 +71,11 @@
                                                 value="{{ $data->title }}">
                                         </div>
                                         <div class="form-group">
+                                            <label class="form-control-label">Deskripsi Singkat (maksimal 255 karakter)</label>
+                                            <input name="deskripsi_singkat" class="form-control" type="text"
+                                            value="{{ $data->deskripsi_singkat }}">
+                                        </div>
+                                        <div class="form-group">
                                             <label class="form-control-label">Isi Konten</label>
                                             <textarea name="content" id="summernote" class="form-control" type="text"
                                             rows="10" cols="30">{!! $data->content !!}

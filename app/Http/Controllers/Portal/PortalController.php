@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Artikel;
 use App\Models\Destinasi;
+use App\Models\Destinasi_children;
 use App\Models\Faq;
 use App\Models\Galeri;
 use App\Models\Penawaran;
@@ -19,7 +20,7 @@ class PortalController extends Controller
     }
     public function index()
     {
-        $get_galeri = Galeri::select('*')->get();
+        $get_galeri = Galeri::limit('8')->get();
         $get_destinasi = Destinasi::select('*')->get();
         $get_artikel = Artikel::orderBy('created_at', 'desc')->limit(2)->get();
 
@@ -146,5 +147,17 @@ class PortalController extends Controller
         ];
 
        return view('portal.pages.galeri', ['data'=>$data]);
+   }
+   public function detaildestinasi($id)
+   {
+        $get_data = Destinasi_children::where('destinasi_id', $id)->get();
+        $get_destinasi = Destinasi::where('id', $id)->get();
+
+        $data = [
+            'get_destinasi' => $get_destinasi,
+            'get_data' => $get_data
+        ];
+
+       return view('portal.pages.detaildestinasi', ['data'=>$data]);
    }
 }

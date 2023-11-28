@@ -38,6 +38,7 @@ Route::group(['prefix' => 'portal'], function () {
     Route::get('/detaildestinasijogja', [PortalController::class, 'detaildestinasijogja']);
     Route::get('/detaildestinasikarimun', [PortalController::class, 'detaildestinasikarimun']);
     Route::get('/detaildestinasimalang', [PortalController::class, 'detaildestinasimalang']);
+    Route::get('/detaildestinasi/{id}', [PortalController::class, 'detaildestinasi']);
     Route::get('/coba', [PortalController::class, 'coba']);
 });
 

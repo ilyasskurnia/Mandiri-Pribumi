@@ -67,7 +67,7 @@
                                             <input name="title" class="form-control" type="text">
                                         </div>
                                         <div class="form-group">
-                                            <label class="form-control-label">Deskripsi Singkat</label>
+                                            <label class="form-control-label">Deskripsi Singkat (maksimal 255 karakter)</label>
                                             <input name="deskripsi_singkat" class="form-control" type="text">
                                         </div>
                                         <div class="form-group">

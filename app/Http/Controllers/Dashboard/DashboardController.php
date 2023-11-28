@@ -67,6 +67,7 @@ class DashboardController extends Controller
             'jenis_artikel' => 'required|string',
             'author' => 'required|string',
             'title' => 'required|string',
+            'deskripsi_singkat' => 'required|string',
             'content' => 'required|string',
             'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif',
         ]);
@@ -76,6 +77,7 @@ class DashboardController extends Controller
         $artikel->jenis_artikel = $request->jenis_artikel;
         $artikel->author = $request->author;
         $artikel->title = $request->title;
+        $artikel->deskripsi_singkat = $request->deskripsi_singkat;
         $artikel->content = $request->content;
         $artikel->thumbnail = $request->file('thumbnail')->store('artikel/thumbnail');
 
