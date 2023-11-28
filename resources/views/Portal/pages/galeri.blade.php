@@ -241,12 +241,11 @@
 <div class="container mt-5">
     <div class="row justify-content-between">
         <div class="col-4 mt-4">
-            <h4 class="mt-2" style="color: #FFBE2C; font-size: 24px;">Mandiri Pribumi</h4>
-            <h2 class="mt-2" style="color: #51604F; font-size: 48px; font-family: 'Bebas Neue', sans-serif;">Galeri Kami</h2>
-            <p style="font-size: 18px;">
+            <h4 class="mt-2" style="color: #FFBE2C; font-size: 30px;">Mandiri Pribumi</h4>
+            <h2 class="mt-2" style="color: #51604F; font-size: 60px; font-family: 'Bebas Neue', sans-serif;">Galeri Kami</h2>
+            <p style="font-size: 24px;">
                 Berikut adalah beberapa testimoni dari customer kami di beberapa destinasi wisata yang kami layankan.
             </p>
-            <a href="#Galeri" class="btn btn-primary">Lihat lebih</a>
         </div>
         <div class="col-md-4 mb-4">
             <h3>Momen Bersama</h3>
