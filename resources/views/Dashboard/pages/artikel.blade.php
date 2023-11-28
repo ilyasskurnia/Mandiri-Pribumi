@@ -64,6 +64,7 @@ $nomor=1;
                                         <th class="text-center">Jenis Artikel</th>
                                         <th class="text-center">Author</th>
                                         <th class="text-center">Judul Artikel</th>
+                                        <th class="text-center">Deskripsi Singkat</th>
                                         <th class="text-center">Isi konten</th>
                                         <th class="text-center">Thumbnail</th>
                                         <th class="text-center">Artikel Dibuat Pada</th>
@@ -77,6 +78,7 @@ $nomor=1;
                                         <td class="text-center">{{ $artikel->jenis_artikel }}</td>
                                         <td class="text-center">{{ $artikel->author }}</td>
                                         <td class="text-center">{{ $artikel->title }}</td>
+                                        <td class="text-center">{{ $artikel->deskripsi_singkat }}</td>
                                         <td class="text-center">{!! $artikel->content !!}</td>
                                         <td class="text-center"><img style="max-height: 100px"
                                                 src="{{ asset('storage/' . $artikel->thumbnail) }}" alt=""></td>

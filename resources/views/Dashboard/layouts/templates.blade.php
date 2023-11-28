@@ -92,6 +92,8 @@
                     Galeri
                     @elseif(Request::is('dashboard/paketdestinasi'))
                     Paket Destinasi
+                    @elseif(Request::is('dashboard/penawaranspesial'))
+                    Penawaran Spesial
                     @else
                     Dashboard
                     @endif

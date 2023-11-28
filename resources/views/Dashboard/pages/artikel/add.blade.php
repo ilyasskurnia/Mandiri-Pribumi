@@ -67,6 +67,10 @@
                                             <input name="title" class="form-control" type="text">
                                         </div>
                                         <div class="form-group">
+                                            <label class="form-control-label">Deskripsi Singkat</label>
+                                            <input name="deskripsi_singkat" class="form-control" type="text">
+                                        </div>
+                                        <div class="form-group">
                                             <label class="form-control-label">Isi Konten</label>
                                             <textarea name="content" id="summernote" class="form-control" type="text"
                                                 rows="10" cols="30">

@@ -1382,55 +1382,32 @@
             <h1 style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">Artikel Kami</h1>
         </div>
         <div class="artikel-box">
+            @foreach ($data['get_artikel'] as $artikel)
             <div class="artikel-foreach">
                 <div class="artikel-image">
                     <img src="{{URL::asset('/images/destinasi2.png') }}" alt="">
                 </div>
                 <div class="right-content">
-                    <div class="artikel-jenis">Jenis Apa</div>
-                    <div class="artikel-title">Judul Artikel</div>
+                    <div class="artikel-jenis">{{ $artikel->jenis_artikel }}</div>
+                    <div class="artikel-title">{{ $artikel->title }}</div>
                     <div class="artikel-content">Isi artikel singkat dapat ditampilkan di sini.</div>
                     <div class="bottom-detail">
                         <div class="artikel-date">
                             <div class="artikel-icon">
                                 <img src="{{URL::asset('/images/calender.png') }}" alt="">
                             </div>
-                            <div class="date">11/10/2023</div>
+                            <div class="date">{{ $artikel->created_at }}</div>
                         </div>
                         <div class="artikel-created">
                             <div class="artikel-created-icon">
                                 <img src="{{URL::asset('/images/admin.png') }}" alt="">
                             </div>
-                            <div class="artikel-user">By Admin</div>
+                            <div class="artikel-user">{{ $artikel->author }}</div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="artikel-foreach">
-                <div class="artikel-image">
-                    <img src="{{URL::asset('/images/destinasi2.png') }}" alt="">
-                </div>
-                <div class="right-content">
-                    <div class="artikel-jenis">Jenis Apa</div>
-                    <div class="artikel-title">Judul Artikel</div>
-                    <div class="artikel-content">Isi artikel singkat dapat ditampilkan di sini.</div>
-                    <div class="bottom-detail">
-                        <div class="artikel-date">
-                            <div class="artikel-icon">
-                                <img src="{{URL::asset('/images/calender.png') }}" alt="">
-                            </div>
-                            <div class="date">11/10/2023</div>
-                        </div>
-                        <div class="artikel-created">
-                            <div class="artikel-created-icon">
-                                <img src="{{URL::asset('/images/admin.png') }}" alt="">
-                            </div>
-                            <div class="artikel-user">By Admin</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ... (ulangi struktur artikel-foreach sesuai kebutuhan) ... -->
+            @endforeach
         </div>
         <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
             <a href="/portal/artikel" class="btn-brosur1" style="width: 150px;">View More</a>

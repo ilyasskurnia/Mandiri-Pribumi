@@ -18,7 +18,7 @@
     }
 
     .nav-links {
-        margin-top: 5rem;
+        margin-top: 4rem;
     }
 
     .sidebar-content .nav-links li {
@@ -63,12 +63,6 @@
     } */
 </style>
 <div class="sidebar-content">
-    {{-- <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
-    <li><a href="{{ route('pesan.baru') }}">Pesan Baru</a></li>
-    <li><a href="{{ route('paket.destinasi') }}">Paket Destinasi</a></li>
-    <li><a href="{{ route('total.pesanan') }}">Total Pesanan</a></li>
-    <li><a href="{{ route('pesan') }}">Pesan</a></li>
-    <li><a href="{{ route('artikel') }}">Artikel</a></li> --}}
     <div class="logo-details">
         <img src="{{URL::asset('/images/Logo-tentang.png')}}">
     </div>
@@ -101,20 +95,26 @@
         </li>
         <li>
             <a href="{{ url('/dashboard/artikel') }}">
-                <i class="fa-solid fa-envelope-open-text" style="color: #2b78ff;"></i>
+                <i class="fa-solid fa-newspaper" style="color: #2b78ff;"></i>
                 <span class="links_name">Artikel</span>
             </a>
         </li>
         <li>
             <a href="{{ url('/dashboard/faq') }}">
-                <i class="fa-solid fa-envelope-open-text" style="color: #2b78ff;"></i>
+                <i class="fa-regular fa-circle-question"></i>
                 <span class="links_name">FAQ</span>
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('/dashboard/penawaranspesial') }}">
+                <i class="fa-solid fa-tags" style="color: #2b78ff;"></i>
+                <span class="links_name">Penawaran Spesial</span>
             </a>
         </li>
     </ul>
     <ul class="nav-links">
         <li>
-            <div class="logout" style="margin-top: 150px">
+            <div class="logout" style="margin-top: -35px">
                 <form id="logout-form" action="/logout" method="POST">
                     @csrf
                     <button type="submit" class="btn"><i class="fa-solid fa-right-from-bracket"></i>Logout</button>

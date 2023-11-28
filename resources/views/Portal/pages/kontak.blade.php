@@ -204,7 +204,7 @@
 </div>
 
 <div class="container">
-    <div class="col mt-5 justify-content-between">
+    <div class="col mt-5 mb-5 justify-content-between">
         <div class="col-1">
             <h5><b>FAQ</b></h5>
             <h1><b>Frequently asked question.</b></h1>

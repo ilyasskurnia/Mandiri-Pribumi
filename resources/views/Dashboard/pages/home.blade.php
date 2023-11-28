@@ -177,7 +177,7 @@
                         <div class="col-1">
                             <img width="200" height="150" src="{{ asset('storage/' . $destinasi->thumbnail) }}" alt="">
                         </div>
-                        <div class="col-7 mt-4">
+                        <div class="col-6 mt-4">
                             <h5>{{ $destinasi->destinasi }}</h5>
                             <p style="color: #626262">{{ $destinasi->total_waktu }}</p>
                             <h6>Start from {{ $destinasi->biaya }}</h6>
