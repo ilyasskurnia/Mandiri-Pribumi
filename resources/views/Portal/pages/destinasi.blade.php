@@ -280,15 +280,16 @@
 
 
     .review-title {
+        font-family: 'Satisfy', cursive;
         padding-top: 30px;
         color: #661b2b;
         /* Warna teks yang menarik */
-        font-size: 28px;
+        font-size: large;
         text-align: center;
         font-weight: bold;
-        text-transform: uppercase;
         letter-spacing: 1px;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        font-family: 
         /* Efek bayangan pada teks */
     }
 
@@ -418,7 +419,7 @@
 
     <section class="paket-destinasi">
         <div class="container">
-            <h2 class="destinasi-title text-center mb-5">Paket Destinasi Yang Kami Tawarkan</h2>
+            <h2 class="text-center" style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-bottom: 7px; color: #000;">Paket Destinasi Yang Kami Tawarkan</h2>
             <div class="row">
                 @foreach ($data['get_destinasi'] as $destinasi)
                 <div class="col-md-4 mb-4">
@@ -454,7 +455,7 @@
         <div class="container">
             <div class="review">
                 <div class="review-title">
-                    <h3>Testimoni</h3>
+                    <h1>Testimoni</h1>
                 </div>
                 <div class="sub-title">
                     <h5>Review dari para pelanggan kami</h5>

@@ -239,11 +239,13 @@
     </div>
 </section>
 <div class="container mt-5">
-    <div class="preview">
-        <div class="col-md-4 mb-4">
-            <h3>Destinasi Wisata</h3>
-            <hr>
-            <img src="{{URL::asset('/images/carddestinasi3.png')}}" class="card-img-top"alt="preview Image">
+    <div class="row justify-content-between">
+        <div class="col-4 mt-4">
+            <h4 class="mt-2" style="color: #FFBE2C; font-size: 30px;">Mandiri Pribumi</h4>
+            <h2 class="mt-2" style="color: #51604F; font-size: 60px; font-family: 'Bebas Neue', sans-serif;">Galeri Kami</h2>
+            <p style="font-size: 24px;">
+                Berikut adalah beberapa testimoni dari customer kami di beberapa destinasi wisata yang kami layankan.
+            </p>
         </div>
         <div class="col-md-4 mb-4">
             <h3>Momen Bersama</h3>
@@ -265,7 +267,7 @@
         <h3 style="color: #FFBE2C">Mandiri Pribumi</h3>
     </div>
     <div class="row">
-        <h2 style="color: #51604F">Testimoni Foto dari Pelanggan Kami</h2>
+        <h1 style="color: #51604F; font-family: 'Bebas Neue', sans-serif; font-size: 48px;">Testimoni Foto dari Pelanggan Kami</h1>
     </div>
     <div class="row">
         <hr>

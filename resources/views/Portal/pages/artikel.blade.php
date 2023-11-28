@@ -4,7 +4,7 @@
 
 <style>
     /* Section 1: Banner */
-    
+
     .banner-section {
         font-family: 'Sora', sans-serif;
         background-image: url('{{ asset('images/bali1.jpg') }}');
@@ -78,16 +78,18 @@
 
     .galeri {
         max-width: 100%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ubah nilai sesuai kebutuhan */
-    transition: box-shadow 0.3s ease; /* Tambahkan transition agar efeknya lebih halus */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Ubah nilai sesuai kebutuhan */
+        transition: box-shadow 0.3s ease;
+        /* Tambahkan transition agar efeknya lebih halus */
         /* Sesuaikan lebar maksimal card sesuai kebutuhan */
         border-radius: 10px;
     }
 
     .galeri:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
     .galeri-kami-judul {
         margin-top: 10px;
@@ -271,7 +273,7 @@
         margin-left: 10px;
         margin-bottom: 10px;
         margin-top: 10px;
-        transition: background-color 
+        transition: background-color
     }
 
     .btn-read-more:hover {
@@ -282,11 +284,98 @@
     .artikel-title,
     .artikel-content,
     .bottom-detail {
-    padding-left: 10px;
-    padding-right: 10px;
-}
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
+    /* Artikel Row Section */
+    .artikel-row {
+        padding: 50px 0;
+    }
 
+    /* Konten Box */
+    .content-box {
+        position: relative;
+        height: 200px;
+        /* Sesuaikan tinggi konten */
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+    }
+
+    /* Teks di Atas Gambar */
+    .text-overlay {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.7);
+        /* Opacity untuk latar belakang teks */
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    /* Gaya teks */
+    .text-overlay h4 {
+        margin: 0;
+        color: #333;
+        /* Warna teks */
+        font-size: 16px;
+        /* Ukuran teks */
+        font-weight: bold;
+        /* Ketebalan teks */
+    }
+
+    /* Gaya untuk Mini Artikel */
+    .mini-artikel {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.7);
+        /* Opacity untuk latar belakang teks */
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        width: 80%;
+        /* Sesuaikan lebar mini-artikel */
+    }
+
+    /* Gaya teks di dalam Mini Artikel */
+    .mini-artikel h4 {
+        margin: 0;
+        color: #333;
+        /* Warna teks */
+        font-size: 14px;
+        /* Ukuran teks */
+        font-style: italic;
+        /* Gaya teks */
+    }
+
+    .mini-artikel h3 {
+        margin: 10px 0;
+        color: #333;
+        /* Warna teks */
+        font-size: 18px;
+        /* Ukuran teks */
+        font-weight: bold;
+        /* Ketebalan teks */
+    }
+
+    .mini-artikel a {
+        color: #4AA580;
+        /* Warna tautan */
+        text-decoration: none;
+        /* Menghilangkan garis bawah pada tautan */
+        transition: color 0.3s ease;
+        /* Animasi saat mengubah warna tautan */
+    }
+
+    .mini-artikel a:hover {
+        color: #777;
+        /* Warna tautan saat hover */
+    }
 
     @media (max-width: 768px) {
         .konten1 {
@@ -325,6 +414,7 @@
             flex-direction: column;
         }
     }
+
 </style>
 
 <!-- Section 1: Banner -->
@@ -338,50 +428,19 @@
 
 <div class="container-konten mt-5">
     <div class="row">
-    <h2 class="art-title text-center">Artikel Terbaru</h2>
+        <h2 class="text-center" style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">
+            Artikel Terbaru</h2>
     </div>
 </div>
 
 <!-- Section 2: Artikel -->
-<section class="galeri-section" >
-    <div class="container my-5">
-        <div class="row mt-5 artikel-item">
-            <!-- Galeri Item 1 -->
-            <div class="col-md-4">
-                <div class="galeri">
-                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card1.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
-                                style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                    </div>
-                    <div class="right-content">
-                        <div class="artikel-jenis">Jenis Apa</div>
-                        <div class="artikel-title">Judul Artikel</div>
-                        <div class="artikel-content">Isi artikel singkat dapat ditampilkan di sini.</div>
-                        <a href="#" class="btn-read-more">Read More</a>
-                        <div class="bottom-detail">
-                            <div class="artikel-date">
-                                <div class="artikel-icon">
-                                    <img src="{{URL::asset('/images/calender.png') }}" alt="">
-                                </div>
-                                <div class="date">11/10/2023</div>
-                            </div>
-                            <div class="artikel-created">
-                                <div class="artikel-created-icon">
-                                    <img src="{{URL::asset('/images/admin.png') }}" alt="">
-                                </div>
-                                <div class="artikel-user">By Admin</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Galeri Item 2 -->
-            <div class="col-md-4">
-                <div class="galeri">
-                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
+<section class="galeri-section">
+    <div class="container">
+        <div class="row artikel-item">
+            <!-- Galeri Item 1 - Highlighted -->
+            <div class="col-md-6">
+                <div class="galeri galeri-highlighted">
+                    <div style="width: 100%; padding-bottom: 110%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                             <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
                             <img src="{{URL::asset('/images/card2.jpg')}}" alt="Yogyakarta"
@@ -411,37 +470,209 @@
                 </div>
             </div>
 
-            <!-- Galeri Item 3 -->
-            <div class="col-md-4">
-                <div class="galeri">
-                    <div style="width: 100%; padding-bottom: 100%; position: relative;">
-                        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
-                            <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa"
-                                style="width: 100%; height: 100%; object-fit: cover;">
-                        </picture>
-                    </div>
-                    <div class="right-content">
-                        <div class="artikel-jenis">Jenis Apa</div>
-                        <div class="artikel-title">Judul Artikel</div>
-                        <div class="artikel-content">Isi artikel singkat dapat ditampilkan di sini.</div>
-                        <a href="#" class="btn-read-more">Read More</a>
-                        <div class="bottom-detail">
-                            <div class="artikel-date">
-                                <div class="artikel-icon">
-                                    <img src="{{URL::asset('/images/calender.png') }}" alt="">
-                                </div>
-                                <div class="date">11/10/2023</div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12 mb-4">
+                        <div class="galeri">
+                            <div style="width: 100%; padding-bottom: 70%; position: relative;">
+                                <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                    <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
+                                    <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa"
+                                        style="width: 100%; height: 100%; object-fit: cover;">
+                                </picture>
                             </div>
-                            <div class="artikel-created">
-                                <div class="artikel-created-icon">
-                                    <img src="{{URL::asset('/images/admin.png') }}" alt="">
+                            <div class="right-content">
+                                <div class="artikel-jenis">Jenis Apa</div>
+                                <div class="artikel-title">Judul Artikel</div>
+                                <div class="artikel-content">Isi artikel singkat dapat ditampilkan di sini.</div>
+                                <a href="#" class="btn-read-more">Read More</a>
+                                <div class="bottom-detail">
+                                    <div class="artikel-date">
+                                        <div class="artikel-icon">
+                                            <img src="{{URL::asset('/images/calender.png') }}" alt="">
+                                        </div>
+                                        <div class="date">11/10/2023</div>
+                                    </div>
+                                    <div class="artikel-created">
+                                        <div class="artikel-created-icon">
+                                            <img src="{{URL::asset('/images/admin.png') }}" alt="">
+                                        </div>
+                                        <div class="artikel-user">By Admin</div>
+                                    </div>
                                 </div>
-                                <div class="artikel-user">By Admin</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-4">
+                        <div class="galeri">
+                            <div style="width: 100%; padding-bottom: 70%; position: relative;">
+                                <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                    <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
+                                    <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa"
+                                        style="width: 100%; height: 100%; object-fit: cover;">
+                                </picture>
+                            </div>
+                            <div class="right-content">
+                                <div class="artikel-jenis">Jenis Apa</div>
+                                <div class="artikel-title">Judul Artikel</div>
+                                <div class="artikel-content">Isi artikel singkat dapat ditampilkan di sini.</div>
+                                <a href="#" class="btn-read-more">Read More</a>
+                                <div class="bottom-detail">
+                                    <div class="artikel-date">
+                                        <div class="artikel-icon">
+                                            <img src="{{URL::asset('/images/calender.png') }}" alt="">
+                                        </div>
+                                        <div class="date">11/10/2023</div>
+                                    </div>
+                                    <div class="artikel-created">
+                                        <div class="artikel-created-icon">
+                                            <img src="{{URL::asset('/images/admin.png') }}" alt="">
+                                        </div>
+                                        <div class="artikel-user">By Admin</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Galeri Item 4 dan 5 -->
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12 mb-4">
+                        <div class="galeri">
+                            <div style="width: 100%; padding-bottom: 70%; position: relative;">
+                                <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                    <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
+                                    <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa"
+                                        style="width: 100%; height: 100%; object-fit: cover;">
+                                </picture>
+                            </div>
+                            <div class="right-content">
+                                <div class="artikel-jenis">Jenis Apa</div>
+                                <div class="artikel-title">Judul Artikel</div>
+                                <div class="artikel-content">Isi artikel singkat dapat ditampilkan di sini.</div>
+                                <a href="#" class="btn-read-more">Read More</a>
+                                <div class="bottom-detail">
+                                    <div class="artikel-date">
+                                        <div class="artikel-icon">
+                                            <img src="{{URL::asset('/images/calender.png') }}" alt="">
+                                        </div>
+                                        <div class="date">11/10/2023</div>
+                                    </div>
+                                    <div class="artikel-created">
+                                        <div class="artikel-created-icon">
+                                            <img src="{{URL::asset('/images/admin.png') }}" alt="">
+                                        </div>
+                                        <div class="artikel-user">By Admin</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-4">
+                        <div class="galeri">
+                            <div style="width: 100%; padding-bottom: 70%; position: relative;">
+                                <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                    <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
+                                    <img src="{{URL::asset('/images/card3.jpg')}}" alt="Karimun Jawa"
+                                        style="width: 100%; height: 100%; object-fit: cover;">
+                                </picture>
+                            </div>
+                            <div class="right-content">
+                                <div class="artikel-jenis">Jenis Apa</div>
+                                <div class="artikel-title">Judul Artikel</div>
+                                <div class="artikel-content">Isi artikel singkat dapat ditampilkan di sini.</div>
+                                <a href="#" class="btn-read-more">Read More</a>
+                                <div class="bottom-detail">
+                                    <div class="artikel-date">
+                                        <div class="artikel-icon">
+                                            <img src="{{URL::asset('/images/calender.png') }}" alt="">
+                                        </div>
+                                        <div class="date">11/10/2023</div>
+                                    </div>
+                                    <div class="artikel-created">
+                                        <div class="artikel-created-icon">
+                                            <img src="{{URL::asset('/images/admin.png') }}" alt="">
+                                        </div>
+                                        <div class="artikel-user">By Admin</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="artikel-row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="content-box" style="background-image: url('{{ asset('images/card1.jpg') }}');">
+                            <div class="text-overlay mini-artikel">
+                                <h4 style="font-size: 10px;">Author: Nama Penulis | Tanggal: 19 November 2023</h4>
+                                <h3>Judul Artikel</h3>
+                                <a href="/portal/detailartikel"><b>Read More</b></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="content-box" style="background-image: url('{{ asset('images/card1.jpg') }}');">
+                            <div class="text-overlay mini-artikel">
+                                <h4 style="font-size: 10px;">Author: Nama Penulis | Tanggal: 19 November 2023</h4>
+                                <h3>Judul Artikel</h3>
+                                <a href="/portal/detailartikel"><b>Read More</b></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="content-box" style="background-image: url('{{ asset('images/card1.jpg') }}');">
+                            <div class="text-overlay mini-artikel">
+                                <h4 style="font-size: 10px;">Author: Nama Penulis | Tanggal: 19 November 2023</h4>
+                                <h3>Judul Artikel</h3>
+                                <a href="/portal/detailartikel"><b>Read More</b></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="content-box" style="background-image: url('{{ asset('images/card1.jpg') }}');">
+                            <div class="text-overlay mini-artikel">
+                                <h4 style="font-size: 10px;">Author: Nama Penulis | Tanggal: 19 November 2023</h4>
+                                <h3>Judul Artikel</h3>
+                                <a href="/portal/detailartikel"><b>Read More</b></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="content-box" style="background-image: url('{{ asset('images/card1.jpg') }}');">
+                            <div class="text-overlay mini-artikel">
+                                <h4 style="font-size: 10px;">Author: Nama Penulis | Tanggal: 19 November 2023</h4>
+                                <h3>Judul Artikel</h3>
+                                <a href="/portal/detailartikel"><b>Read More</b></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="content-box" style="background-image: url('{{ asset('images/card1.jpg') }}');">
+                            <div class="text-overlay mini-artikel">
+                                <h4 style="font-size: 10px;">Author: Nama Penulis | Tanggal: 19 November 2023</h4>
+                                <h3>Judul Artikel</h3>
+                                <a href="/portal/detailartikel"><b>Read More</b></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="container-konten mt-5">
+            <div class="row">
+                <h2 class="text-center"
+                    style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 5px;">
+                    Semua Artikel</h2>
             </div>
         </div>
 
