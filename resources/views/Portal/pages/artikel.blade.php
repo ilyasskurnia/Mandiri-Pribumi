@@ -338,14 +338,14 @@
 
 <div class="container-konten mt-5">
     <div class="row">
-    <h2 class="art-title text-center">Artikel Terbaru</h2>
+    <h2 class="text-center" style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">Artikel Terbaru</h2>
     </div>
 </div>
 
 <!-- Section 2: Artikel -->
 <section class="galeri-section" >
-    <div class="container my-5">
-        <div class="row mt-5 artikel-item">
+    <div class="container">
+        <div class="row artikel-item">
             <!-- Galeri Item 1 -->
             <div class="col-md-4">
                 <div class="galeri">
@@ -360,7 +360,7 @@
                         <div class="artikel-jenis">Jenis Apa</div>
                         <div class="artikel-title">Judul Artikel</div>
                         <div class="artikel-content">Isi artikel singkat dapat ditampilkan di sini.</div>
-                        <a href="#" class="btn-read-more">Read More</a>
+                        <a href="/portal/detailartikel" class="btn-read-more">Read More</a>
                         <div class="bottom-detail">
                             <div class="artikel-date">
                                 <div class="artikel-icon">

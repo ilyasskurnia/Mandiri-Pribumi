@@ -503,7 +503,7 @@
         <div class="row justify-content-between">
             <div class="col-md-6">
                 <div class="history-details">
-                    <h2>Sejarah Perusahaan</h2>
+                    <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">Sejarah Perusahaan</h2>
                     <p class="mt-4">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua.
@@ -533,7 +533,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="vision-mission-content">
-                        <h2>Visi Perusahaan</h2>
+                        <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">Visi Perusahaan</h2>
                         <p>
                             Perusahaan tour dan travel yang terpercaya dengan mengedepankan kepuasan pelanggan melalui
                             layanan yang berkualitas dan berdedikasi untuk memberikan manfaat dalam sektor pariwisata.
@@ -542,7 +542,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="vision-mission-content">
-                        <h2>Misi Perusahaan</h2>
+                        <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">Misi Perusahaan</h2>
                         <p>
                             Menjamin pelayanan perjalanan dan wisata yang aman serta nyaman kepada pelanggan Berkomitmen
                             dengan standar yang tinggi dalam melayani pelanggan .Melengkapi dengan pelayanan handal,
@@ -557,7 +557,7 @@
 
 <section class="why-choose-us">
     <div class="container">
-        <h2 class="section-title text-center mb-5">Mengapa Harus Kami</h2>
+        <h2 class="section-title text-center mb-5" style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">Mengapa Harus Kami</h2>
         <div class="row why">
             <div class="col-md-4">
                 <div class="image-with-caption">
@@ -595,7 +595,7 @@
     </div>
 </section>
 
-<h2 class="title mb-5">Apa Yang Kami Tawarkan?</h2>
+<h2 class="section-title text-center mb-5" style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">Apa Yang Kami Tawarkan</h2>
 <section class="what-we-offer" style="background-image: url('{{ asset('images/bannertentangkami9.png') }}');">
     <div class="container">
         <div class="row">
@@ -639,7 +639,7 @@
 
 <!-- Section 9: Client Kami -->
 <section class="text-center mt-5">
-    <h2 class="title">Client Kami</h2>
+    <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">Client Kami</h2>
     <div class="container my-5">
         <div class="mitra-container">
 

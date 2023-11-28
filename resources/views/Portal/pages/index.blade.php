@@ -922,7 +922,7 @@
     <div class="container my-5 mt-5">
         <div class="judul-galeri">
             <img style="max-height: 40px" src="{{URL::asset('/images/logonama.png') }}" alt="Logo">
-            <h1>Galeri Kami</h1>
+            <h1 style="font-family: 'Bebas Neue', sans-serif; font-size: 60px;">Galeri Kami</h1>
         </div>
         <div class="row mt-5">
             <!-- Galeri Item 1 -->
@@ -1163,7 +1163,7 @@
     <div class="container my-5 mt-5">
         <div class="judul-card">
             <img style="max-height: 40px" src="{{URL::asset('/images/logonama.png') }}" alt="Logo">
-            <h1>Penawaran Jasa</h1>
+            <h1 style="font-family: 'Bebas Neue', sans-serif; font-size: 60px;">Penawaran Jasa</h1>
         </div>
         <div id="carouselExample" class="carousel slide mt-5" data-ride="carousel">
             <div class="carousel-inner">
@@ -1379,7 +1379,7 @@
     <div class="artikel">
         <div class="artikel-heading">
             <img style="max-height: 40px" src="{{URL::asset('/images/logonama.png') }}" alt="Logo">
-            <h1 style="margin-top: 10px;">Artikel Kami</h1>
+            <h1 style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">Artikel Kami</h1>
         </div>
         <div class="artikel-box">
             <div class="artikel-foreach">
@@ -1441,7 +1441,7 @@
 
 <!-- Section 8: Mitra Kami -->
 <section class="text-center mt-5">
-    <h2 class="title">Mitra Kami</h2>
+    <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">Mitra Kami</h2>
     <div class="container my-5">
         <div class="mitra-container">
 
@@ -1453,7 +1453,7 @@
 
 <!-- Section 9: Client Kami -->
 <section class="text-center mt-5">
-    <h2 class="title">Client Kami</h2>
+    <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">Client Kami</h2>
     <div class="container my-5">
         <div class="mitra-container">
 
