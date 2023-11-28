@@ -4,8 +4,11 @@ namespace App\Http\Controllers\Portal;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Artikel;
 use App\Models\Destinasi;
 use App\Models\Faq;
+use App\Models\Galeri;
+use App\Models\Penawaran;
 use App\Models\Pesan;
 
 class PortalController extends Controller
@@ -16,7 +19,17 @@ class PortalController extends Controller
     }
     public function index()
     {
-        return view('portal.pages.index');
+        $get_galeri = Galeri::select('*')->get();
+        $get_destinasi = Destinasi::select('*')->get();
+        $get_artikel = Artikel::orderBy('created_at', 'desc')->limit(2)->get();
+
+        $data = [
+            'get_galeri' => $get_galeri,
+            'get_destinasi' => $get_destinasi,
+            'get_artikel' => $get_artikel
+        ];
+
+        return view('portal.pages.index',['data' => $data]);
     }
     public function tentang()
     {
@@ -67,7 +80,16 @@ class PortalController extends Controller
     }
     public function destinasi()
     {
-        return view('portal.pages.destinasi');
+        $get_penawaran = Penawaran::select('*')->get();
+        $get_destinasi = Destinasi::select('*')->get();
+
+        $data = [
+            'get_penawaran' => $get_penawaran,
+            'get_destinasi' => $get_destinasi
+        ];
+        
+
+        return view('portal.pages.destinasi',['data' => $data]);
     }
 
     public function destinasi1()
@@ -83,7 +105,13 @@ class PortalController extends Controller
 
     public function artikel()
     {
-        return view('portal.pages.artikel');
+        $get_artikel = Artikel::select('*')->get();
+
+        $data = [
+            "get_artikel" => $get_artikel
+        ];
+
+        return view('portal.pages.artikel',['data' => $data]);
 
     }
 
@@ -111,6 +139,12 @@ class PortalController extends Controller
     }
    public function galeri()
    {
-       return view('portal.pages.galeri');
+        $get_galeri = Galeri::select('*')->get();
+
+        $data = [
+            'get_galeri' => $get_galeri
+        ];
+
+       return view('portal.pages.galeri', ['data'=>$data]);
    }
 }

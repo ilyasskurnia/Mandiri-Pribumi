@@ -485,7 +485,7 @@
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua.
                     </p>
-                    <a href="{{ asset('path/to/company/profile.pdf') }}" class="btn btn-primary">Unduh Company
+                    <a href="{{ asset('compro/Compro mandiri pribumi.pdf') }}" download target="_blank" class="btn btn-primary">Unduh Company
                         Profile</a>
                 </div>
             </div>

@@ -9,6 +9,7 @@ use Carbon\Carbon;
 use App\Models\Destinasi;
 use App\Models\Faq;
 use App\Models\Galeri;
+use App\Models\Penawaran;
 use App\Models\Pesan;
 use Illuminate\Support\Facades\Storage;
 
@@ -41,7 +42,7 @@ class DashboardController extends Controller
 
     public function artikel()
     {
-        $get_data = Artikel::select('*')->paginate(5);
+        $get_data = Artikel::select('*')->paginate(3);
         $total_item = Artikel::count();
 
         foreach ($get_data as $artikel) {
@@ -373,6 +374,7 @@ class DashboardController extends Controller
         // Redirect ke halaman lain atau tampilkan pesan sukses
         return redirect()->route('paketdestinasi');
     }
+    
     public function faq()
     {
         $get_data = Faq::select('*')->paginate(5);
@@ -425,5 +427,60 @@ class DashboardController extends Controller
         $data = Faq::find($id);
         $data->update($request->except(['_token','submit']));
         return redirect()->route('faq');
+    }
+    public function penawaran()
+    {
+        $get_data = Penawaran::select('*')->paginate(5);
+        // dd($get_data);
+        $total_item = Penawaran::count();
+
+        $data = [
+            'get_data' => $get_data,
+            'total_item' => $total_item
+        ];
+
+        return view('dashboard.pages.penawaran', ['data' => $data]);
+    }
+    public function tambahpenawaran()
+    {
+        return view('dashboard.pages.penawaran.add');
+    }
+    public function postpenawaran(Request $request)
+    {
+        $data = $request->validate([
+            'deskripsi' => 'required|string'
+        ]);
+
+        // Simpan data ke database menggunakan model pesan
+        $penawaran = new Penawaran();
+        $penawaran->deskripsi = $request->deskripsi;
+
+        $penawaran->save();
+
+        session()->flash('success', 'Data berhasil disimpan.');
+
+        return view('dashboard.pages.penawaran.add');
+    }
+    public function editpenawaran ($id)
+    {
+        $data = Penawaran::find($id);
+
+        return view('dashboard.pages.penawaran.edit',['data' => $data]);
+    }
+    public function updatepenawaran ($id, Request $request)
+    {
+        $data = Penawaran::find($id);
+
+        $input = $request->all();
+        $data->update($input);
+
+        // Redirect ke halaman lain atau tampilkan pesan sukses
+        return redirect()->route('penawaran');
+    }
+    public function destroypenawaran ($id)
+    {
+        $data = Penawaran::find($id);
+        $data->delete();
+        return redirect()->route('penawaran');
     }
 }

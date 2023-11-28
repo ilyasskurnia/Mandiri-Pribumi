@@ -83,6 +83,13 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::get('/{id}/editfaq', [DashboardController::class, 'editfaq']);
     Route::put('/faq/{id}', [DashboardController::class, 'updatefaq']);
 
+    Route::get('/penawaranspesial', [DashboardController::class, 'penawaran'])->name('penawaran');
+    Route::get('/tambahpenawaran', [DashboardController::class, 'tambahpenawaran']);
+    Route::post('/tambahpenawaran', [DashboardController::class, 'postpenawaran']);
+    Route::delete('/penawaran/{id}', [DashboardController::class, 'destroypenawaran']);
+    Route::get('/{id}/editpenawaran', [DashboardController::class, 'editpenawaran']);
+    Route::put('/penawaran/{id}', [DashboardController::class, 'updatepenawaran']);
+
     Route::group(['prefix' => '{destinasi_id}/detail_destinasi'], function () {
         Route::get('/', [DestinasiController::class, 'index'])->name('detail_destinasi');
         Route::get('/tambah_detail', [DestinasiController::class, 'tambah_detail']);
