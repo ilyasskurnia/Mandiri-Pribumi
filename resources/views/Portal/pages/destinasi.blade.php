@@ -1,5 +1,14 @@
 @extends('portal.layouts.templates')
 
+@section('custom_head')
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Testimonials</title>
+<link rel="stylesheet" href="path_to_your_css/owl.carousel.min.css">
+<link rel="stylesheet" href="path_to_your_css/owl.theme.default.min.css">
+<link rel="stylesheet" href="path_to_your_css/bootstrap.min.css">
+<link rel="stylesheet" href="path_to_your_css/your_custom_styles.css">
+@endsection
+
 @section('content')
 <style>
     /* General Styles */
@@ -117,7 +126,7 @@
         margin-left: 55px;
     }
 
-    .special-card1{
+    .special-card1 {
         background-color: #f6e3d3;
     }
 
@@ -331,6 +340,113 @@
         margin-bottom: 50px;
     }
 
+    /* client section start */
+    .client_section {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.heading_container {
+  margin-bottom: 45px;
+}
+
+.heading_container h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+.heading_container h2 span {
+  color: #6c63ff; /* Atau warna lain yang Anda inginkan */
+}
+
+/* Styling untuk carousel */
+.owl-carousel .item {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 15px;
+  text-align: left;
+}
+
+/* Styling untuk profil dan kotak testimoni */
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.img-box {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.img-box img {
+  width: 100%;
+  height: auto;
+}
+
+.client_info h6 {
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.client_info p {
+  font-size: 0.9em;
+  color: #666;
+  margin: 0;
+}
+
+.box {
+  background: #fff;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.box p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.detail-box p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Styling untuk navigasi carousel */
+.owl-nav {
+  text-align: center;
+}
+
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+  background: #6c63ff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.owl-nav .owl-prev:hover,
+.owl-nav .owl-next:hover {
+  background: #5a52d5;
+}
+
+
+
     /* Responsive Styles */
     @media (max-width: 768px) {
         .banner-content {
@@ -384,6 +500,20 @@
             /* Menampilkan quotes-section2 pada media 768px */
         }
 
+        .owl-carousel .item {
+    flex-direction: column;
+  }
+
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .img-box {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
     }
 </style>
 
@@ -393,7 +523,8 @@
         <h1><b>Your Adventure</b></h1>
         <h1><b>Travel Expert With</b></h1>
         <h1><b>Mandiri Pribumi</b></h1>
-        <a href="/portal/kontak" class="btn-brosur" style="text-align: left; display: inline-block; margin-top: 20px;">Hubungi
+        <a href="/portal/kontak" class="btn-brosur"
+            style="text-align: left; display: inline-block; margin-top: 20px;">Hubungi
             Kami</a>
     </div>
 </section>
@@ -473,45 +604,78 @@
 </section>
 <section class="quotes-section"></section>
 <section class="quotes-section2"></section>
-<section class="review-section">
-    <section class="special-offers mt-5">
-        <div class="container">
-            <h2 class="special-title2 text-center mb-5"><b>Penawaran Spesial</b></h2>
-            <div class="row box-special-card">
-                <div class="col-md-4">
-                    <div class="special-card special-card1 text-center">
-                        <div class="special-card-body">
-                            <div class="review-profile">
-                                <img src="{{URL::asset('/images/profile-picture.png')}}" alt="">
-                            </div>
-                                <div class="review-coloumn">
-                                    <div class="profile-user">
-                                        Rani Raharjo
-                                    </div>
-                                </div>
-                            <h3 class="special-card-title">Studi Tour Sekolah</h3>
-                            <p class="special-card-text">Up to 20% off</p>
+
+
+<section class="client_section layout_padding">
+    <div class="container">
+        <div class="heading_container heading_center">
+            <h2>What says our <span>Customers</span></h2>
+        </div>
+        <div class="row">
+            <!-- Customer 1 -->
+            <div class="col-md-4">
+                <div class="box">
+                    <div class="profile">
+                        <div class="img-box">
+                            <img src="/images/client1.jpg" alt="Client 1">
+                        </div>
+                        <div class="client_info">
+                            <h6>LusDen</h6>
+                            <p>magna aliqua. Ut</p>
                         </div>
                     </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="special-card special-card1 text-center">
-                        <div class="special-card-body">
-                            <h3 class="special-card-title">Liburan Musim Panas</h3>
-                            <p class="special-card-text">Up to 20% off</p>
+            </div>
+            <!-- Customer 2 -->
+            <div class="col-md-4">
+                <div class="box">
+                    <div class="profile">
+                        <div class="img-box">
+                            <img src="/images/client2.jpg" alt="Client 2">
+                        </div>
+                        <div class="client_info">
+                            <h6>Zen Court</h6>
+                            <p>magna aliqua. Ut</p>
                         </div>
                     </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="special-card special-card1 text-center">
-                        <div class="special-card-body">
-                            <h3 class="special-card-title">Member Exclusive</h3>
-                            <p class="special-card-text">Up to 20% off</p>
+            </div>
+            <!-- Customer 3 -->
+            <div class="col-md-4">
+                <div class="box">
+                    <div class="profile">
+                        <div class="img-box">
+                            <img src="/images/client2.jpg" alt="Client 2">
+                        </div>
+                        <div class="client_info">
+                            <h6>Zen Court</h6>
+                            <p>magna aliqua. Ut</p>
                         </div>
                     </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </section>
+
+
+<!-- Include jQuery and other necessary scripts -->
+<script src="path_to_your_scripts/jquery.min.js"></script>
+<script src="path_to_your_scripts/owl.carousel.min.js"></script>
+<script src="path_to_your_scripts/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".client_owl-carousel").owlCarousel({
+    margin:10,
+    loop:true,
+    autoWidth:false,
+    items:3 // Adjust number of items to display according to your needs
+  });
+});
+</script>
+
+
 @endsection
