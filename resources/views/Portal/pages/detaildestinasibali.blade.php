@@ -70,52 +70,59 @@
     }
 
     /* Section 3: Detail Destination */
-    .detail-destination {
-        padding: 40px 0;
+    .detail-destinasi {
+        margin-top: 50px;
     }
 
-    .destination-item {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 60px;
-        margin-bottom: 60px;
+    .destination-picture img {
+        width: 100%;
+        height: auto;
     }
 
-    .destination-item1 {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 60px;
-        margin-bottom: 60px;
-    }
-
-    .destination-layer {
-        flex: 1;
-    }
-
-    .destination-image img,
-    .destination-description {
-        max-width: 100%;
-        border: 4px solid #fff;
-        /* Menambahkan border putih sekeliling gambar */
+    .destination-layer .card {
+        border: none;
         border-radius: 15px;
-        /* Memberikan sudut gambar yang membulat */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        background-color: #ffffff;
     }
 
-    .destination-description {
-        padding: 15px;
-        background: #fff;
-        margin-top: 10px;
-        padding-right: 50px;
+    .destination-layer .card-body {
+        padding: 30px;
     }
 
-    .destination-image {
-        padding: 15px;
-        margin-top: 10px;
+    /* Gaya untuk highlight yang lebih menarik */
+    .destination-layer .highlight {
+        color: #fff;
+        /* Warna untuk highlight */
+        font-weight: bold;
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: #ffbe2c;
+        /* Warna latar belakang untuk highlight */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        /* Efek bayangan */
     }
 
-    .destination-tagline {
-        color: red;
-        /* Mengatur warna merah */
+    /* Gaya untuk judul destinasi yang lebih menarik */
+    .destination-layer .judul-destinasi {
+        font-size: 28px;
+        /* Ukuran font yang lebih besar */
+        margin-bottom: 15px;
+        color: #333;
+        /* Warna teks yang lebih gelap */
+        font-weight: bold;
+        /* Teks menjadi lebih tebal */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        /* Bayangan teks */
+        line-height: 1.4;
+        /* Jarak antar baris teks */
+    }
+
+    .destination-layer .keterangan {
+        font-size: 16px;
+        line-height: 1.6;
     }
 
     /* Styling for Left Image, Right Description */
@@ -213,6 +220,7 @@
 
 
     }
+
 </style>
 
 <!-- Section 1: Banner -->
@@ -235,107 +243,94 @@
 </section>
 
 <!-- Section 3: Detail Destination -->
-<section class="detail-destination">
+<section class="detail-destinasi">
     <div class="container">
-        <div class="destination-item">
-            <div class="destination-layer">
-                <div class="destination-image">
-                    <img src="{{URL::asset('/images/detailbali1.png')}}" alt="Image 1">
+        <div class="row">
+            <div class="col-md-6 destination-picture mt-5">
+                <!-- Konten untuk gambar destinasi bisa dimasukkan di sini -->
+                <img src="{{URL::asset('/images/detailjogja1.png')}}" alt="Gambar Destinasi">
+            </div>
+            <div class="col-md-6 destination-layer mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h4><span class="highlight">Hari 1</span></h4>
+                        <h2 class="judul-destinasi">Tiba di Bali - Danau Beratan - Ubud Monkey Forest - Ubud Palace -
+                            Tanah Lot
+                        </h2>
+                        <p class="keterangan">
+                            Ini adalah keterangan mengenai rute destinasi. Anda dapat menambahkan informasi menarik
+                            mengenai tempat-tempat yang akan dikunjungi pada hari pertama ini.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="destination-layer">
-                <div class="destination-description">
-                    <h4 style="" class="destination-tagline"><b><span><img style="max-height: 30px"
-                                    src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 1</b></h4>
-                    <h3><b>Tiba di Bali-Danau Beratan-Ubud Monkey Forest
-                            -Ubud Palace-Tanah Lot</b></h3>
-                    <p style="text-align: justify">Selamat datang di Pulau Bali! Hari ini, kami akan membawa Anda untuk
-                        menikmati keindahan alam dan
-                        budaya pulau ini. Kami akan memulai hari dengan sarapan pagi di pinggir Danau Beretan sambil
-                        menikmati matahari terbit. Kemudian, Anda akan berpetualang ke Ubud Monkey Forest,
-                        mengeksplorasi alam dan keanekaragaman fauna Bali. Di samping itu, Anda akan merasakan
-                        kebudayaan Bali dengan mengunjungi Ubud Palace. Hari ini akan ditutup dengan pemandangan
-                        matahari terbenam yang spektakuler di Tanah Lot.</p>
+            <div class="col-md-6 destination-picture mt-5">
+                <!-- Konten untuk gambar destinasi bisa dimasukkan di sini -->
+                <img src="{{URL::asset('/images/detailjogja1.png')}}" alt="Gambar Destinasi">
+            </div>
+            <div class="col-md-6 destination-layer mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h4><span class="highlight">Hari 1</span></h4>
+                        <h2 class="judul-destinasi">Tiba di Bali - Danau Beratan - Ubud Monkey Forest - Ubud Palace -
+                            Tanah Lot
+                        </h2>
+                        <p class="keterangan">
+                            Ini adalah keterangan mengenai rute destinasi. Anda dapat menambahkan informasi menarik
+                            mengenai tempat-tempat yang akan dikunjungi pada hari pertama ini.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 destination-picture mt-5">
+                <!-- Konten untuk gambar destinasi bisa dimasukkan di sini -->
+                <img src="{{URL::asset('/images/detailjogja1.png')}}" alt="Gambar Destinasi">
+            </div>
+            <div class="col-md-6 destination-layer mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h4><span class="highlight">Hari 1</span></h4>
+                        <h2 class="judul-destinasi">Tiba di Bali - Danau Beratan - Ubud Monkey Forest - Ubud Palace -
+                            Tanah Lot
+                        </h2>
+                        <p class="keterangan">
+                            Ini adalah keterangan mengenai rute destinasi. Anda dapat menambahkan informasi menarik
+                            mengenai tempat-tempat yang akan dikunjungi pada hari pertama ini.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="destination-item1">
-            <div class="destination-layer">
-                <div class="destination-description">
-                    <h4 style="" class="destination-tagline"><b><span><img style="max-height: 30px"
-                                    src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 2</b></h4>
-                    <h3><b>Monumen Bajra Sandhi-GWK Cultural Park-Pura Uluwatu</b></h3>
-                    <p style="text-align: justify">Petualangan kita pada hari ini, dibuka dengan mempelajari dan
-                        menghayati riwayat perjuangan
-                        Rakyat Bali dalam menghadapi penjajah dengan mengunjungi Monumen
-                        Braja Sandhi, Selepas dari Monumen Braja Sandhi, kita
-                        akan menuju Bali Selatan untuk menyaksikan karya
-                        seniman bangsa I Nyoman Nuarta dengan berkunjung di Garuda Wisnu Kencana Cultural Park. Hari
-                        kedua kita akan ditutup dengan mengunjungi Pura Uluwatu untuk menyaksikan pertunjukan teater
-                        tari Kecak dengan
-                        ditemani matahari terbenam dan lautan lepas yang indah</p>
-                </div>
-            </div>
-            <div class="destination-layer">
-                <div class="destination-image">
-                    <img src="{{URL::asset('/images/detailbali2.png')}}" alt="Image 2">
-                </div>
-            </div>
-        </div>
+    </div>
+    <div class="text-center mt-5">
+        <h1> PETA BALI </h1>
+        <a class="zoom-image" href="/images/Balimap.jpg">
+            <img class="peta-image" src="/images/Balimap.jpg" alt="">
+        </a>
+    </div>
 
 
-        <div class="destination-item">
-            <div class="destination-layer">
-                <div class="destination-image">
-                    <img src="{{URL::asset('/images/detailbali3.png')}}" alt="Image 3">
-                </div>
-            </div>
-            <div class="destination-layer">
-                <div class="destination-description">
-                    <h4 style="" class="destination-tagline"><b><span><img style="max-height: 30px"
-                                    src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> Day 3</b></h4>
-                    <h3><b>Tanjung Benoa Water sports-Pantai Jimbaran</b></h3>
-                    <p style="text-align: justify">Hari terakhir kita di Pulau Dewata dimulai dengan berbelanja
-                        cinderamata khas Bali di salah satu
-                        toko pilihan kami. Puncak kegiatan kita adalah
-                        berpetualang di wisata bahari Tanjung Benoa Watersports yang memacu adrenalin. Kita akan
-                        mengucapkan selamat tinggal kepada Pulau Bali dengan menikmati santapan makan malam,
-                        sembari ditemani matahari Terbenam di Pantai Jimbaran..</p>
-                </div>
-
-            </div>
-
-        </div>
-        <div class="text-center">
-            <h1> PETA BALI </h1>
-            <a class="zoom-image" href="/images/Balimap.jpg">
-                <img class="peta-image" src="/images/Balimap.jpg" alt="">
-            </a>
-        </div>
-        
-        
     </div>
 </section>
 
 <script>
-$(document).ready(function() {
-    $('.zoom-image').magnificPopup({
-        type: 'image',
-        closeOnContentClick: true,
-        closeBtnInside: false,
-        fixedContentPos: true,
-        mainClass: 'mfp-no-margins mfp-with-zoom',
-        image: {
-            verticalFit: true
-        },
-        zoom: {
-            enabled: true,
-            duration: 300,
-            easing: 'ease-in-out'
-        }
+    $(document).ready(function () {
+        $('.zoom-image').magnificPopup({
+            type: 'image',
+            closeOnContentClick: true,
+            closeBtnInside: false,
+            fixedContentPos: true,
+            mainClass: 'mfp-no-margins mfp-with-zoom',
+            image: {
+                verticalFit: true
+            },
+            zoom: {
+                enabled: true,
+                duration: 300,
+                easing: 'ease-in-out'
+            }
+        });
     });
-});
 
 </script>
 
