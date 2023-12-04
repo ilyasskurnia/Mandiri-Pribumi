@@ -66,7 +66,7 @@
             </div>
             <div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
                 <div>
-                    <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">Tags</div>
+                    <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">Kategori</div>
                 </div>
                 <div class="clearfix"></div>
                 <div class="fh5co_tags_all">
@@ -89,7 +89,7 @@
                 <div class="fh5co_hover_news_img">
                     <div class="fh5co_news_img"><img src="{{ asset('storage/' . $random->thumbnail) }}" alt=""/></div>
                     <div>
-                        <a href="#" class="d-block fh5co_small_post_heading"><span class="">{{ $random->title }}</span></a>
+                        <a href="/portal/{{ $random->id }}/detailartikel" class="d-block fh5co_small_post_heading"><span class="">{{ $random->title }}</span></a>
                         <div class="c_g"><i class="fa-regular fa-calendar-days"></i> {{ $random->created_at_formatted }}</div>
                     </div>
                 </div>

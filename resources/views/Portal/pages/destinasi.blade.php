@@ -497,7 +497,10 @@
             background-position: center center;
             padding: 134px 0;
             display: block;
+<<<<<<< HEAD
             /* Menampilkan quotes-section2 pada media 768px */
+=======
+>>>>>>> d31af639db97a32511772957bdead5b191936b53
         }
 
         .owl-carousel .item {
@@ -657,8 +660,11 @@
         </div>
     </div>
 </section>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d31af639db97a32511772957bdead5b191936b53
 <!-- Include jQuery and other necessary scripts -->
 <script src="path_to_your_scripts/jquery.min.js"></script>
 <script src="path_to_your_scripts/owl.carousel.min.js"></script>
