@@ -459,23 +459,9 @@
                                 <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
                                         {{ $destinasi->biaya }}</span></p>
                             </div>
-<<<<<<< HEAD
-                            <h5 class="card-title">{{ $destinasi->destinasi }}</h5>
-                            <p class="card-subtitle">{{ $destinasi->rute }}</p>
-                            <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
-                                            {{ $destinasi->biaya }}</span></p>
-                                </div>
-                                <div class="col-md-6 text-right">
-                                    <a href="/portal/detaildestinasi/{{ $destinasi->id }}" class="selengkapnya">Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
-                                </div>
-=======
                             <div class="col-md-6 text-right">
                                 <a href="/portal/detaildestinasi/{{ $destinasi->id }}" class="selengkapnya">Selengkapnya
                                     -></a>
->>>>>>> 49d468a2b7dbaf343163d669a7620d1f8e9cdf52
                             </div>
                         </div>
                     </div>
