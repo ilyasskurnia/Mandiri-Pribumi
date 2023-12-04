@@ -78,29 +78,20 @@
         z-index: 1;
         /* Atur gambar pertama agar berada di depan */
     }
-
-    /* Responsivitas Banner Section */
-    @media (max-width: 768px) {
-        .banner-section {
-            padding: 100px 0;
-            /* Atur padding agar lebih kompak */
-        }
+    .quotes-section {
+        background-image: url('{{ asset('images/quotesdestinasi.png') }}');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        padding: 200px 0;
     }
 
-    /* Responsivitas Galeri Kami Section */
-    @media (max-width: 768px) {
-        .image-container {
-            flex-direction: column;
-            /* Tumpuk gambar di perangkat seluler */
-        }
-
-        .image {
-            flex: 0 0 100%;
-            /* Lebar gambar 100% */
-            margin-top: 10px;
-            /* Berikan jarak atas antar gambar */
-        }
+    .quotes-section2 {
+        display: none;
     }
+
+
+
 
     /* Section 4: Galeri Carousel */
     .galeri-section {
@@ -209,17 +200,31 @@
         flex-wrap: wrap;
         padding: 50px 0;
     }
-    .welcome-section {
-        background-image: url('{{ asset('images/quotesdestinasi.png') }}');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        padding: 200px 0;
-    }
 
+@media screen and (max-width: 1024px) {
+    .welcome-section {
+        padding: 150px 0;
+    }
+}
 
     /* Responsivitas Testimoni Foto Section */
     @media (max-width: 768px) {
+        .banner-section {
+            padding: 100px 0;
+            /* Atur padding agar lebih kompak */
+        }
+
+        .image-container {
+            flex-direction: column;
+            /* Tumpuk gambar di perangkat seluler */
+        }
+
+        .image {
+            flex: 0 0 100%;
+            /* Lebar gambar 100% */
+            margin-top: 10px;
+            /* Berikan jarak atas antar gambar */
+        }
         .gallery-container {
             flex-direction: column;
             /* Tumpuk galeri di perangkat seluler */
@@ -231,7 +236,26 @@
             margin: 10px 0;
             /* Berikan jarak atas dan bawah antar galeri */
         }
+        .quotes-section {
+            display: none;
+        }
+
+        .quotes-section2 {
+            background-image: url('{{ asset('images/quotesdestinasikanan.png') }}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            padding: 134px 0;
+            display: block;
+            /* Menampilkan quotes-section2 pada media 768px */
+            margin-top: 50px;
+        }
+        .momen{
+            margin-top: 50px;
+        }
+
     }
+
 </style>
 <section class="banner-section">
     <div class="container text-center my-5">
@@ -240,29 +264,35 @@
 </section>
 <div class="container mt-5">
     <div class="row justify-content-between">
-        <div class="col-4">
+        <div class="col-md-6 col-lg-4">
             <h4 class="mt-2" style="color: #FFBE2C; font-size: 30px;">Mandiri Pribumi</h4>
             <h2 class="mt-2" style="color: #51604F; font-size: 60px; font-family: 'Bebas Neue', sans-serif;">Galeri Kami</h2>
             <p style="font-size: 24px;">
-                Berikut adalah beberapa testimoni dari customer kami di beberapa destinasi wisata yang kami layankan.
+                Berikut adalah beberapa testimoni dari customer kami di beberapa destinasi wisata yang kami layani.
             </p>
         </div>
-        <div class="col-md-4 mb-4">
-            <h3>Momen Bersama</h3>
-            <hr>
-            <img src="{{URL::asset('/images/carddestinasi3.png')}}" class="card-img-top"alt="preview Image">
+        <div class="col-md-6 col-lg-4 mb-4 momen">
+            <div class="text-center">
+                <h3>Momen Bersama</h3>
+                <hr>
+                <img src="{{ URL::asset('/images/carddestinasi3.png') }}" class="img-fluid" alt="preview Image">
+            </div>
         </div>
-        <div class="col-md-4 mb-4">
-            <h3>Informasi Lokasi</h3>
-            <hr>
-            <img src="{{URL::asset('/images/carddestinasi3.png')}}" class="card-img-top"alt="preview Image">
+        <div class="col-md-6 col-lg-4 mb-4 momen">
+            <div class="text-center">
+                <h3>Informasi Lokasi</h3>
+                <hr>
+                <img src="{{ URL::asset('/images/carddestinasi3.png') }}" class="img-fluid" alt="preview Image">
+            </div>
         </div>
     </div>
 </div>
 
-<section class="welcome-section mt-5"></section>
 
-<div class="container  text-center" style="margin-top: 180px">
+<section class="quotes-section"></section>
+<section class="quotes-section2"></section>
+
+<div class="container  text-center" style="margin-top: 50px">
     <div class="row">
         <h3 style="color: #FFBE2C">Mandiri Pribumi</h3>
     </div>

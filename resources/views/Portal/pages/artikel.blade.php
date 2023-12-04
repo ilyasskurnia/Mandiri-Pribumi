@@ -113,7 +113,7 @@
   <div class="container-fluid fh5co_video_news_bg pb-4">
     <div class="container animate-box" data-animate-effect="fadeIn">
         <div>
-            <div class="fh5co_heading fh5co_heading_border_bottom pt-5 pb-2 mb-4 ">Jelajah Pesona Alam Indonesia</div>
+            <div class="fh5co_heading fh5co_heading_border_bottom pt-5 pb-2 mb-4 ">Jelajah Alam Indonesia</div>
         </div>
         <div>
             <div class="owl-carousel owl-theme" id="slider3">

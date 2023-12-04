@@ -1,5 +1,14 @@
 @extends('portal.layouts.templates')
 
+@section('custom_head')
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Testimonials</title>
+<link rel="stylesheet" href="path_to_your_css/owl.carousel.min.css">
+<link rel="stylesheet" href="path_to_your_css/owl.theme.default.min.css">
+<link rel="stylesheet" href="path_to_your_css/bootstrap.min.css">
+<link rel="stylesheet" href="path_to_your_css/your_custom_styles.css">
+@endsection
+
 @section('content')
 <style>
     /* General Styles */
@@ -15,7 +24,7 @@
         background-repeat: no-repeat;
         background-position: left center;
         color: #fff;
-        padding: 210px 0;
+        padding: 170px 0;
     }
 
     .banner-content {
@@ -58,15 +67,36 @@
 
 
     /* Section 2: Penawaran Spesial */
+    .special-card img {
+        width: 100%;
+        /* Sesuaikan dengan ukuran yang diinginkan */
+        height: 100%;
+        /* Menjaga rasio aspek gambar */
+        position: absolute;
+        /* Mengatur gambar secara absolut relatif terhadap card */
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        image-rendering: -webkit-optimize-contrast;
+    }
+
+    .special-card-body {
+        position: relative;
+        /* Menjadikan teks di atas gambar */
+        z-index: ;
+        /* Pastikan teks di atas gambar */
+    }
+
     .special-offers {
         align-self: center;
+        align-content: center;
     }
 
     .special-title1 {
-        margin-top: 30px;
+        margin-top: 90px;
         font-size: 2.5em;
         color: #333;
-        font-family: 'Fira Sans', sans-serif;
+        font-family: 'Satisfy', cursive;
     }
 
     .special-title2 {
@@ -85,27 +115,19 @@
 
     .special-card {
         border: none;
-        border-radius: 8px;
         margin-bottom: 30px;
-        height: 150px;
-        width: 400px;
+        height: 427px;
+        width: 304px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 20px;
+        margin-left: 55px;
     }
 
     .special-card1 {
-        background-color: rgb(128, 141, 219);
-    }
-
-    .special-card2 {
-        background-color: #C98B8B;
-    }
-
-    .special-card3 {
-        background-color: #FF5858;
+        background-color: #f6e3d3;
     }
 
     .special-card-title {
@@ -130,14 +152,8 @@
     }
 
     .review-section {
-        background-color: #a4cee6;
         text-align: center;
-        height: 300px;
-        border-radius: 88px 88px 0 0;
-    }
-
-    .background-khusus {
-        background-color: #c0e6f9;
+        height: fit-content;
     }
 
     /* Gaya untuk bagian "Paket Destinasi" */
@@ -145,8 +161,7 @@
         margin-top: 90px;
         padding: 50px 0;
         color: #fff;
-        background-color: #c0e6f9;
-        border-radius: 88px 88px 0 0;
+        background-color: #F9F4F0;
     }
 
     .section-title {
@@ -200,6 +215,7 @@
         text-align: left;
         margin-bottom: 10px;
         margin-top: -35px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
         /* Mengatur letak elemen floating container */
     }
 
@@ -215,14 +231,14 @@
     }
 
     .card-title {
-    font-size: 1.5em;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    background: linear-gradient(to right, #2c3e50, #3498db);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline;
-}
+        font-size: 1.5em;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        background: linear-gradient(to right, #2c3e50, #3498db);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline;
+    }
 
 
     .card-subtitle {
@@ -256,9 +272,21 @@
         margin-bottom: 0;
     }
 
+    .quotes-section {
+        background-image: url('{{ asset('images/quotesdestinasi.png') }}');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        padding: 200px 0;
+    }
+
+    .quotes-section2 {
+        display: none;
+    }
+
     /* CSS untuk teks 'Selengkapnya' */
     .selengkapnya {
-        font-size: 20px;
+        font-size: 18px;
         color: #42A0E4;
         text-decoration: none;
         display: block;
@@ -274,40 +302,150 @@
 
 
     .review-title {
+        font-family: 'Satisfy', cursive;
         padding-top: 30px;
         color: #661b2b;
         /* Warna teks yang menarik */
-        font-size: 28px;
+        font-size: large;
         text-align: center;
         font-weight: bold;
-        text-transform: uppercase;
         letter-spacing: 1px;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-        /* Efek bayangan pada teks */
+        font-family:
+            /* Efek bayangan pada teks */
     }
 
     .review-profile {
-        margin-top: 20px;
+        margin-top: 0px;
         display: flex;
-        justify-content: center;
     }
 
     .review-profile img {
-        max-width: 50px;
+        max-width: 80px;
         height: auto;
+        margin-bottom: 50px
     }
 
     .review-coloumn {
         padding-left: 20px;
     }
+
     .sub-title {
         margin-top: 30px;
     }
 
     .bintang {
         display: flex;
-        max-width: 10px;
+        max-width: 1px;
+        margin-bottom: 50px;
     }
+
+    /* client section start */
+    .client_section {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.heading_container {
+  margin-bottom: 45px;
+}
+
+.heading_container h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+.heading_container h2 span {
+  color: #6c63ff; /* Atau warna lain yang Anda inginkan */
+}
+
+/* Styling untuk carousel */
+.owl-carousel .item {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 15px;
+  text-align: left;
+}
+
+/* Styling untuk profil dan kotak testimoni */
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.img-box {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.img-box img {
+  width: 100%;
+  height: auto;
+}
+
+.client_info h6 {
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.client_info p {
+  font-size: 0.9em;
+  color: #666;
+  margin: 0;
+}
+
+.box {
+  background: #fff;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.box p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.detail-box p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Styling untuk navigasi carousel */
+.owl-nav {
+  text-align: center;
+}
+
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+  background: #6c63ff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.owl-nav .owl-prev:hover,
+.owl-nav .owl-next:hover {
+  background: #5a52d5;
+}
+
+
 
     /* Responsive Styles */
     @media (max-width: 768px) {
@@ -348,8 +486,35 @@
             margin-right: 0;
         }
 
-    }
+        .quotes-section {
+            display: none;
+        }
 
+        .quotes-section2 {
+            background-image: url('{{ asset('images/quotesdestinasikanan.png') }}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            padding: 134px 0;
+            display: block;
+            /* Menampilkan quotes-section2 pada media 768px */
+        }
+
+        .owl-carousel .item {
+    flex-direction: column;
+  }
+
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .img-box {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+    }
 </style>
 
 <!-- Section 1: Banner -->
@@ -358,18 +523,11 @@
         <h1><b>Your Adventure</b></h1>
         <h1><b>Travel Expert With</b></h1>
         <h1><b>Mandiri Pribumi</b></h1>
-        <a href="#" class="btn-brosur" style="text-align: left; display: inline-block; margin-top: 20px;">Hubungi
+        <a href="/portal/kontak" class="btn-brosur"
+            style="text-align: left; display: inline-block; margin-top: 20px;">Hubungi
             Kami</a>
     </div>
 </section>
-
-
-
-{{-- <section class="text-center mt-5">
-    <h2>Menghadirkan Wisata sebagai Bagian Tak Terpisahkan dari Kehidupan Anda.</h2>
-    <h4>Ini Nanti isinya adalah quotes</h4>
-    <h6>Ini author</h6>
-</section> --}}
 
 <!-- Section 2: Penawaran Spesial -->
 <section class="special-offers mt-5">
@@ -378,26 +536,26 @@
         <h2 class="special-title2 text-center mb-5"><b>Penawaran Spesial</b></h2>
         <div class="row box-special-card">
             <div class="col-md-4">
-                <div class="special-card special-card1 text-center">
+                <div class="special-card text-center" style="position: relative;">
+                    <img src="/images/penawaran-spesial1.png" alt="Studi Tour Sekolah">
                     <div class="special-card-body">
-                        <h3 class="special-card-title">Studi Tour Sekolah</h3>
-                        <p class="special-card-text">Up to 20% off</p>
+                        <p class="special-card-text">{{ $data['get_penawaran1'] }}</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="special-card special-card2 text-center">
+                <div class="special-card text-center" style="position: relative;">
+                    <img src="/images/penawaran-spesial2.png" alt="Liburan Musim Panas">
                     <div class="special-card-body">
-                        <h3 class="special-card-title">Liburan Musim Panas</h3>
-                        <p class="special-card-text">Up to 20% off</p>
+                        <p class="special-card-text">{{ $data['get_penawaran2'] }}</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="special-card special-card3 text-center">
+                <div class="special-card text-center" style="position: relative;">
+                    <img src="/images/penawaran-spesial3.png" alt="Member Exclusive">
                     <div class="special-card-body">
-                        <h3 class="special-card-title">Member Exclusive</h3>
-                        <p class="special-card-text">Up to 20% off</p>
+                        <p class="special-card-text">{{ $data['get_penawaran3'] }}</p>
                     </div>
                 </div>
             </div>
@@ -405,106 +563,65 @@
     </div>
 </section>
 
-<div class="background-khusus">
-    <section class="paket-destinasi">
-        <div class="container">
-            <h2 class="destinasi-title text-center mb-5">Paket Destinasi Yang Kami Tawarkan</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card" style="background-color: #D9D9D9;">
-                        <img src="{{URL::asset('/images/carddestinasi1.png')}}" class="card-img-top"
-                            alt="Destination Image">
-                        <div class="card-body">
-                            <div class="floating-container">
-                                <p class="highlighted-text">3 Hari 2 Malam</p>
+
+<section class="paket-destinasi">
+    <div class="container">
+        <h2 class="text-center"
+            style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-bottom: 7px; color: #000;">Paket
+            Destinasi Yang Kami Tawarkan</h2>
+        <div class="row">
+            @foreach ($data['get_destinasi'] as $destinasi)
+            <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #ffffff;">
+                    <img style="max-height: 220px" src="{{ asset('storage/' . $destinasi->thumbnail) }}"
+                        class="card-img-top" alt="Destination Image">
+                    <div class="card-body">
+                        <div class="floating-container">
+                            <p class="highlighted-text">{{ $destinasi->total_waktu }}</p>
+                        </div>
+                        <h5 class="card-title">{{ $destinasi->destinasi }}</h5>
+                        <p class="card-subtitle">{{ $destinasi->rute }}</p>
+                        <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
+                                        {{ $destinasi->biaya }}</span></p>
                             </div>
-                            <h5 class="card-title">Karimun Jawa</h5>
-                            <p class="card-subtitle">Karimun Jawa, Jawa Tengah, Indonesia</p>
-                            <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
-                                            2.100.000</span></p>
-                                </div>
-                                <div class="col-md-6 text-right">
-                                    <a href="/portal/detaildestinasikarimun" class="selengkapnya">Selengkapnya -></a>
-                                </div>
+                            <div class="col-md-6 text-right">
+                                <a href="/portal/detaildestinasi/{{ $destinasi->id }}" class="selengkapnya">Selengkapnya
+                                    -></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card" style="background-color: #D9D9D9;">
-                        <img src="{{URL::asset('/images/carddestinasi2.png')}}" class="card-img-top"
-                            alt="Destination Image">
-                        <div class="card-body">
-                            <div class="floating-container">
-                                <p class="highlighted-text">3 Hari 2 Malam</p>
-                            </div>
-                            <h5 class="card-title">Bali</h5>
-                            <p class="card-subtitle">Pulau Bali, Indonesia</p>
-                            <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
-                                            2.100.000</span></p>
-                                </div>
-                                <div class="col-md-6 text-right">
-                                    <a href="/portal/detaildestinasibali" class="selengkapnya">Selengkapnya -></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card" style="background-color: #D9D9D9;">
-                        <img src="{{URL::asset('/images/carddestinasi3.png')}}" class="card-img-top"
-                            alt="Destination Image">
-                        <div class="card-body">
-                            <div class="floating-container">
-                                <p class="highlighted-text">3 Hari 2 Malam</p>
-                            </div>
-                            <h5 class="card-title">Yogyakarta</h5>
-                            <p class="card-subtitle">Daerah Istimewa Jogjakarta, Jawa Tengah, Indonesia</p>
-                            <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
-                                            2.100.000</span></p>
-                                </div>
-                                <div class="col-md-6 text-right">
-                                    <a href="/portal/detaildestinasijogja" class="selengkapnya">Selengkapnya -></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card" style="background-color: #D9D9D9;">
-                        <img src="{{URL::asset('/images/carddestinasi4.png')}}" class="card-img-top"
-                            alt="Destination Image">
-                        <div class="card-body">
-                            <div class="floating-container">
-                                <p class="highlighted-text">3 Hari 2 Malam</p>
-                            </div>
-                            <h5 class="card-title">Malang - Bromo</h5>
-                            <p class="card-subtitle">Malang, Jawa Timur, Indonesia</p>
-                            <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
-                                            2.100.000</span></p>
-                                </div>
-                                <div class="col-md-6 text-right">
-                                    <a href="/portal/detaildestinasimalang" class="selengkapnya">Selengkapnya -></a>
-                                </div>
-                            </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+<section class="quotes-section"></section>
+<section class="quotes-section2"></section>
+
+
+<section class="client_section layout_padding">
+    <div class="container">
+        <div class="heading_container heading_center">
+            <h2>Testimoni <span>Pelanggan</span></h2>
+        </div>
+        <div class="row">
+            <!-- Customer 1 -->
+            <div class="col-md-4">
+                <div class="box">
+                    <div class="profile">
+                        <div class="img-box">
+                            <img src="/images/client1.jpg" alt="Client 1">
                         </div>
                         <div class="client_info">
-                            <h6>LusDen</h6>
+                            <h6>LusDen2</h6>
                             <p>magna aliqua. Ut</p>
                         </div>
                     </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
                 </div>
             </div>
             <!-- Customer 2 -->
@@ -515,44 +632,47 @@
                             <img src="/images/client2.jpg" alt="Client 2">
                         </div>
                         <div class="client_info">
-                            <h6>Zen Court</h6>
+                            <h6>Zen Court2</h6>
                             <p>magna aliqua. Ut</p>
                         </div>
                     </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
                 </div>
-                <!-- Tambahkan card lain jika diperlukan -->
             </div>
-        </div>
-    </section>
-    <section class="review-section">
-        <div class="container">
-            <div class="review">
-                <div class="review-title">
-                    <h3>Testimoni</h3>
-                </div>
-                <div class="sub-title">
-                    <h5>Review dari para pelanggan kami</h5>
-                </div>
-                <div class="review-content">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam repellat iste, cumque, nostrum
-                    illum reiciendis reprehenderit nemo sed ab nobis corrupti excepturi esse atque obcaecati libero
-                    veritatis exercitationem ratione!
-                </div>
-                <div class="review-profile">
-                    <img src="{{URL::asset('/images/profile-picture.png')}}" alt="">
-                    <div class="review-coloumn">
-                        <div class="profile-user">
-                            Rani Raharjo
+            <!-- Customer 3 -->
+            <div class="col-md-4">
+                <div class="box">
+                    <div class="profile">
+                        <div class="img-box">
+                            <img src="/images/client2.jpg" alt="Client 2">
                         </div>
                         <div class="client_info">
-                            <h6>Zen Court</h6>
+                            <h6>Zen Court3</h6>
                             <p>magna aliqua. Ut</p>
                         </div>
                     </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
                 </div>
             </div>
         </div>
-        </div>
-    </section>
-</div>
+    </div>
+</section>
+
+
+<!-- Include jQuery and other necessary scripts -->
+<script src="path_to_your_scripts/jquery.min.js"></script>
+<script src="path_to_your_scripts/owl.carousel.min.js"></script>
+<script src="path_to_your_scripts/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".client_owl-carousel").owlCarousel({
+    margin:10,
+    loop:true,
+    autoWidth:false,
+    items:3 // Adjust number of items to display according to your needs
+  });
+});
+</script>
+
+
 @endsection
