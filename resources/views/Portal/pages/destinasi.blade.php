@@ -617,7 +617,7 @@
                             <img src="/images/client1.jpg" alt="Client 1">
                         </div>
                         <div class="client_info">
-                            <h6>LusDen</h6>
+                            <h6>LusDen2</h6>
                             <p>magna aliqua. Ut</p>
                         </div>
                     </div>
@@ -632,7 +632,7 @@
                             <img src="/images/client2.jpg" alt="Client 2">
                         </div>
                         <div class="client_info">
-                            <h6>Zen Court</h6>
+                            <h6>Zen Court2</h6>
                             <p>magna aliqua. Ut</p>
                         </div>
                     </div>
@@ -647,7 +647,7 @@
                             <img src="/images/client2.jpg" alt="Client 2">
                         </div>
                         <div class="client_info">
-                            <h6>Zen Court</h6>
+                            <h6>Zen Court3</h6>
                             <p>magna aliqua. Ut</p>
                         </div>
                     </div>
