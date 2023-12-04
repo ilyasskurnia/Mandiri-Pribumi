@@ -70,52 +70,59 @@
     }
 
     /* Section 3: Detail Destination */
-    .detail-destination {
-        padding: 40px 0;
+    .detail-destinasi {
+        margin-top: 50px;
     }
 
-    .destination-item {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 60px;
-        margin-bottom: 60px;
+    .destination-picture img {
+        width: 100%;
+        height: auto;
     }
 
-    .destination-item1 {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 60px;
-        margin-bottom: 60px;
-    }
-
-    .destination-layer {
-        flex: 1;
-    }
-
-    .destination-image img,
-    .destination-description {
-        max-width: 100%;
-        border: 4px solid #fff;
-        /* Menambahkan border putih sekeliling gambar */
+    .destination-layer .card {
+        border: none;
         border-radius: 15px;
-        /* Memberikan sudut gambar yang membulat */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        background-color: #ffffff;
     }
 
-    .destination-description {
-        padding: 15px;
-        background: #fff;
-        margin-top: 10px;
-        padding-right: 50px;
+    .destination-layer .card-body {
+        padding: 30px;
     }
 
-    .destination-image {
-        padding: 15px;
-        margin-top: 10px;
+    /* Gaya untuk highlight yang lebih menarik */
+    .destination-layer .highlight {
+        color: #fff;
+        /* Warna untuk highlight */
+        font-weight: bold;
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: #ffbe2c;
+        /* Warna latar belakang untuk highlight */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        /* Efek bayangan */
     }
 
-    .destination-tagline {
-        color: red;
-        /* Mengatur warna merah */
+    /* Gaya untuk judul destinasi yang lebih menarik */
+    .destination-layer .judul-destinasi {
+        font-size: 28px;
+        /* Ukuran font yang lebih besar */
+        margin-bottom: 15px;
+        color: #333;
+        /* Warna teks yang lebih gelap */
+        font-weight: bold;
+        /* Teks menjadi lebih tebal */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        /* Bayangan teks */
+        line-height: 1.4;
+        /* Jarak antar baris teks */
+    }
+
+    .destination-layer .keterangan {
+        font-size: 16px;
+        line-height: 1.6;
     }
 
     /* Styling for Left Image, Right Description */
@@ -143,6 +150,7 @@
         width: 15cm;
         height: 10cm;
     }
+
     .hub-section {
         margin-top: 30px;
         margin-bottom: 80px
@@ -216,14 +224,17 @@
         }
 
     }
+
 </style>
 
 <!-- Section 1: Banner -->
-<section class="banner-section" style="background-image: url('{{ asset('storage/' . $data['get_destinasi']->first()->thumbnail) }}');">
+<section class="banner-section"
+    style="background-image: url('{{ asset('storage/' . $data['get_destinasi']->first()->thumbnail) }}');">
     <div class="container text-right mt-5">
         <h1><b>Paket Tour {{ $data['get_destinasi']->first()->destinasi }}</b></h1>
         <h2><b>{{ $data['get_destinasi']->first()->total_waktu }}</b></h2>
-        <a href="{{ asset('storage/' . $data['get_destinasi']->first()->brosure) }}" target="_blank" class="btn-brosur" style="text-align: left; display: inline-block; margin-top: 20px;">Unduh
+        <a href="{{ asset('storage/' . $data['get_destinasi']->first()->brosure) }}" target="_blank" class="btn-brosur"
+            style="text-align: left; display: inline-block; margin-top: 20px;">Unduh
             Brosur</a>
     </div>
 </section>
@@ -238,34 +249,36 @@
 </section>
 
 <!-- Section 3: Detail Destination -->
-<section class="detail-destination">
+<section class="detail-destinasi">
     <div class="container">
-        @foreach ($data['get_data'] as $detail)
-        <div class="destination-item">
-            <div class="destination-layer">
-                <div class="destination-image">
-                    <img style="max-height: 250px" src="{{ asset('storage/' . $detail->thumbnail) }}" alt="Image 1">
+        <div class="row">
+            @foreach ($data['get_data'] as $detail)
+            <div class="col-md-6 destination-picture mt-5">
+                <img style="" src="{{ asset('storage/' . $detail->thumbnail) }}" alt="Image 1">
+            </div>
+            <div class="col-md-6 destination-layer mt-5">
+                <div class="card">
+                    <div class="card-body">
+                    <h4><span class="highlight"> <img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt="">  Hari {{$detail->days }}</span></h4> 
+                        <h2 class="judul-destinasi">{{ $detail->detail_rute }}</h2>
+                        <p class="keterangan">
+                        {{ $detail->deskripsi }}
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="destination-layer">
-                <div class="destination-description">
-                    <h4 style="" class="destination-tagline"><b><span><img style="max-height: 30px"
-                                    src="{{ URL::asset('/images/iconwisata.png') }}" alt=""></span> {{ $detail->days }}</b></h4>
-                    <h3><b>{{ $detail->detail_rute }}</b></h3>
-                    <p style="text-align: justify">{{ $detail->deskripsi }}</p>
-                </div>
+            @endforeach
+            <div class="text-center mt-5">
+                <h1> PETA {{ $data['get_destinasi']->first()->destinasi }}</h1>
+                <a class="zoom-image" href="{{ asset('storage/' . $data['get_destinasi']->first()->peta_wisata) }}"
+                    target="_blank">
+                    <img class="peta-image" src="{{ asset('storage/' . $data['get_destinasi']->first()->peta_wisata) }}"
+                        alt="">
+                </a>
             </div>
+
+
         </div>
-        @endforeach
-        <div class="text-center">
-            <h1> PETA {{ $data['get_destinasi']->first()->destinasi }}</h1>
-            <a class="zoom-image" href="{{ asset('storage/' . $data['get_destinasi']->first()->peta_wisata) }}" target="_blank">
-                <img class="peta-image" src="{{ asset('storage/' . $data['get_destinasi']->first()->peta_wisata) }}" alt="">
-            </a>
-        </div>
-        
-        
-    </div>
 </section>
 <section class="hub-section text-center">
     <h3>
@@ -275,23 +288,23 @@
 </section>
 
 <script>
-$(document).ready(function() {
-    $('.zoom-image').magnificPopup({
-        type: 'image',
-        closeOnContentClick: true,
-        closeBtnInside: false,
-        fixedContentPos: true,
-        mainClass: 'mfp-no-margins mfp-with-zoom',
-        image: {
-            verticalFit: true
-        },
-        zoom: {
-            enabled: true,
-            duration: 300,
-            easing: 'ease-in-out'
-        }
+    $(document).ready(function () {
+        $('.zoom-image').magnificPopup({
+            type: 'image',
+            closeOnContentClick: true,
+            closeBtnInside: false,
+            fixedContentPos: true,
+            mainClass: 'mfp-no-margins mfp-with-zoom',
+            image: {
+                verticalFit: true
+            },
+            zoom: {
+                enabled: true,
+                duration: 300,
+                easing: 'ease-in-out'
+            }
+        });
     });
-});
 
 </script>
 

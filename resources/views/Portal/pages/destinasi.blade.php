@@ -87,7 +87,7 @@
         margin-top: 90px;
         font-size: 2.5em;
         color: #333;
-        font-family: 'Satisfy', cursive;
+        font-family: 'Fira Sans', sans-serif;
     }
 
     .special-title2 {
