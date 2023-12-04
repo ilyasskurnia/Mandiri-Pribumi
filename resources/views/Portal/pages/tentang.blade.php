@@ -313,11 +313,12 @@
     }
 
     .caption-content {
-        padding: 20px;
+        padding: 50px;
         border-radius: 8px;
         margin-bottom: 30px;
         text-align: left;
         /* Ubah alignment teks menjadi kiri */
+        
     }
 
     .caption-content h3 {
@@ -327,6 +328,7 @@
 
     .caption-content p {
         font-size: 18px;
+        
     }
 
     .card {
@@ -367,7 +369,33 @@
         border-radius: 10px;
         box-shadow: 0 20px 10px rgba(0, 0, 0, 0.3);
     }
+    .gallery-container {
+  padding: 30px 0;
+}
 
+.gallery-container .row > div {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center; /* Tambahkan ini untuk memusatkan gambar */
+}
+
+.img-fluid {
+  width: auto; /* Ini akan memastikan bahwa aspek rasio gambar tetap sama */
+  max-width: 100%; /* Ini akan memastikan gambar tidak melebihi kolomnya */
+  height: auto; /* Ini akan menyesuaikan tinggi secara otomatis berdasarkan lebar */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+/* Class untuk menetapkan ukuran spesifik */
+.fixed-size-image {
+  max-width: 286px; /* Lebar maksimum gambar */
+  max-height: 300px; /* Tinggi maksimum gambar */
+}
+
+.img-fluid:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
     @media only screen and (max-width: 768px) {
         /* Contoh untuk mengubah ukuran teks */
         .mitra-container {
@@ -457,6 +485,7 @@
             max-height: 60vh;
         }
     }
+    
 </style>
 
 
@@ -571,7 +600,7 @@
 
             <div class="col-md-4">
                 <div class="image-with-caption">
-                    <img src="{{URL::asset('/images/cardtentangkami1.png') }}" alt="Image 1">
+                    <img src="{{URL::asset('/images/cardtentangkami2.png') }}" alt="Image 1">
                     <div class="caption">
                         <h3 class="why1">Terpercaya</h3>
                         <p class="why2">Kami sebagai perusahaan yang berpengalaman sejak tahun 2004,
@@ -583,7 +612,7 @@
 
             <div class="col-md-4">
                 <div class="image-with-caption">
-                    <img src="{{URL::asset('/images/cardtentangkami1.png') }}" alt="Image 1">
+                    <img src="{{URL::asset('/images/cardtentangkami3.png') }}" alt="Image 1">
                     <div class="caption">
                         <h3>Dukungan Lokal</h3>
                         <p>Memberikan nuansa lokal yang
@@ -596,42 +625,27 @@
 </section>
 
 <h2 class="section-title text-center mb-5" style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">Apa Yang Kami Tawarkan</h2>
-<section class="what-we-offer" style="background-image: url('{{ asset('images/bannertentangkami9.png') }}');">
+<section class="what-we-offer" style="background-image: url('{{ asset('images/penawaran-spesial1.png') }}');">
     <div class="container">
+        <!-- Use the 'row' div to contain all columns -->
         <div class="row">
+            <!-- Text Column with left margin (adjust 'ml-md-1' to 'ml-md-5' as needed) -->
             <div class="col-md-3">
                 <div class="caption-content">
                     <h3>#JelajahNusantara -</h3>
-                    <p>Tagline ini mempresentasikan akar dari nilai Mandiri Pribumi,dengan semangat memberikan
-                        pengalaman menjelajahi lanskap Nusantara demi membantu orang orang merekam kebahagiaan.</p>
+                    <p>Tagline ini mempresentasikan akar dari nilai Mandiri Pribumi, dengan semangat memberikan
+                        pengalaman menjelajahi lanskap Nusantara demi membantu orang-orang merekam kebahagiaan.</p>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <i class="fa-solid fa-earth-asia" style="color: #023997;"></i>
-                        <h5 class="card-title">#JelajahPesona</h5>
-                        <p class="card-text">Mengajak anda untuk menjelajahi pesona alam nusantara</p>
-                    </div>
-                </div>
+            <!-- Image Columns -->
+            <div class="col-md-3 ">
+                <img src="/images/tentangkamicard1.png" alt="#JelajahNusantara" class="img-fluid">
             </div>
             <div class="col-md-3">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <i class="fa-solid fa-utensils" style="color: #023997;"></i>
-                        <h5 class="card-title">#JelajahRasa</h5>
-                        <p class="card-text">Mengajak anda untuk menjelajahi citra rasa kuliner nusantara</p>
-                    </div>
-                </div>
+                <img src="/images/tentangkamicard2.png" alt="#JelajahPesona" class="img-fluid">
             </div>
             <div class="col-md-3">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <i class="fa-solid fa-gopuram" style="color: #023997;"></i>
-                        <h5 class="card-title">#JelajahBudaya</h5>
-                        <p class="card-text">Mengajak anda untuk menjelajahi dan melestarikan aneka ragam nusantara</p>
-                    </div>
-                </div>
+                <img src="/images/tentangkamicard3.png" alt="#JelajahBudaya" class="img-fluid">
             </div>
         </div>
     </div>
@@ -661,6 +675,8 @@
             });
         }
     });
+    <script src="path_to_your_scripts/jquery.min.js"></script>
+<script src="path_to_your_scripts/bootstrap.min.js"></script>
 </script>
 
 
