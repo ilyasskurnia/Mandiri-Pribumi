@@ -74,13 +74,8 @@ $nomor=1;
                                         <td>
                                             <div class="d-flex">
                                                 <a href="/dashboard/{{ $penawaran->id }}/editpenawaran"
-                                                    class="btn btn-xs bg-primary me-1 text-white">Edit</a>
-                                                <form action="/dashboard/penawaran/{{ $penawaran->id }}" method="POST">
-                                                    @csrf
-                                                    @method('delete')
-                                                    <input type="submit" name="submit" value="delete"
-                                                        class="btn btn-xs btn-danger me-1">
-                                                </form>
+                                                    class="btn btn-xs bg-primary me-1 text-white">Edit
+                                                </a>
                                             </div>
                                         </td>
                                     </tr>

@@ -539,8 +539,7 @@
                 <div class="special-card text-center" style="position: relative;">
                     <img src="/images/penawaran-spesial1.png" alt="Studi Tour Sekolah">
                     <div class="special-card-body">
-                        <h3 class="special-card-title">Studi Tour Sekolah</h3>
-                        <p class="special-card-text">Up to 20% off</p>
+                        <p class="special-card-text">{{ $data['get_penawaran1'] }}</p>
                     </div>
                 </div>
             </div>
@@ -548,8 +547,7 @@
                 <div class="special-card text-center" style="position: relative;">
                     <img src="/images/penawaran-spesial2.png" alt="Liburan Musim Panas">
                     <div class="special-card-body">
-                        <h3 class="special-card-title">Liburan Musim Panas</h3>
-                        <p class="special-card-text">Up to 20% off</p>
+                        <p class="special-card-text">{{ $data['get_penawaran2'] }}</p>
                     </div>
                 </div>
             </div>
@@ -557,8 +555,7 @@
                 <div class="special-card text-center" style="position: relative;">
                     <img src="/images/penawaran-spesial3.png" alt="Member Exclusive">
                     <div class="special-card-body">
-                        <h3 class="special-card-title">Member Exclusive</h3>
-                        <p class="special-card-text">Up to 20% off</p>
+                        <p class="special-card-text">{{ $data['get_penawaran3'] }}</p>
                     </div>
                 </div>
             </div>

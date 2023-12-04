@@ -88,10 +88,16 @@ class PortalController extends Controller
     {
         $get_penawaran = Penawaran::select('*')->get();
         $get_destinasi = Destinasi::select('*')->get();
+        $get_penawaran1 = Penawaran::where('id', 1)->pluck('deskripsi')->first();
+        $get_penawaran2 = Penawaran::where('id', 2)->pluck('deskripsi')->first();
+        $get_penawaran3 = Penawaran::where('id', 3)->pluck('deskripsi')->first();
 
         $data = [
+            'get_destinasi' => $get_destinasi,
             'get_penawaran' => $get_penawaran,
-            'get_destinasi' => $get_destinasi
+            'get_penawaran1' => $get_penawaran1,
+            'get_penawaran2' => $get_penawaran2,
+            'get_penawaran3' => $get_penawaran3
         ];
         
 
@@ -110,9 +116,17 @@ class PortalController extends Controller
             $item->created_at_formatted = Carbon::parse($item->created_at)->format('d-m-Y');
             return $item;
         });
+        $get_kategori = Artikel::pluck('jenis_artikel');
+        $get_random = Artikel::inRandomOrder()->limit(6)->get();
+        $get_random->transform(function ($item) {
+            $item->created_at_formatted = Carbon::parse($item->created_at)->format('d-m-Y');
+            return $item;
+        });
 
         $data = [
-            'get_data' => $get_data
+            'get_data' => $get_data,
+            'get_kategori' => $get_kategori,
+            'get_random' => $get_random
         ];
 
         return view('portal.pages.detailartikel', ['data' => $data]);
