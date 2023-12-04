@@ -11,6 +11,7 @@ use App\Models\Faq;
 use App\Models\Galeri;
 use App\Models\Penawaran;
 use App\Models\Pesan;
+use Carbon\Carbon;
 
 class PortalController extends Controller
 {
@@ -23,6 +24,10 @@ class PortalController extends Controller
         $get_galeri = Galeri::limit('8')->get();
         $get_destinasi = Destinasi::select('*')->get();
         $get_artikel = Artikel::orderBy('created_at', 'desc')->limit(2)->get();
+        $get_artikel->transform(function ($item) {
+            $item->created_at_formatted = Carbon::parse($item->created_at)->format('d-m-Y');
+            return $item;
+        });
 
         $data = [
             'get_galeri' => $get_galeri,
@@ -98,27 +103,57 @@ class PortalController extends Controller
         return view('portal.pages.destinasi1');
     }
 
-    public function detailartikel()
+    public function detailartikel($id)
     {
-        return view('portal.pages.detailartikel');
+        $get_data = Artikel::where('id', $id)->get();
+        $get_data->transform(function ($item) {
+            $item->created_at_formatted = Carbon::parse($item->created_at)->format('d-m-Y');
+            return $item;
+        });
 
+        $data = [
+            'get_data' => $get_data
+        ];
+
+        return view('portal.pages.detailartikel', ['data' => $data]);
     }
 
     public function artikel()
     {
-        $get_artikel = Artikel::select('*')->get();
+        $get_artikel = Artikel::select('*')->paginate(5);
+        $get_artikel->transform(function ($item) {
+            $item->created_at_formatted = Carbon::parse($item->created_at)->format('d-m-Y');
+            return $item;
+        });
+        $get_new = Artikel::orderBy('created_at', 'desc')->limit(1)->get();
+        $get_new->transform(function ($item) {
+            $item->created_at_formatted = Carbon::parse($item->created_at)->format('d-m-Y');
+            return $item;
+        });
+        $get_new2 = Artikel::orderBy('created_at', 'desc')->offset(1)->limit(4)->get();
+        $get_new2->transform(function ($item) {
+            $item->created_at_formatted = Carbon::parse($item->created_at)->format('d-m-Y');
+            return $item;
+        });
+        $get_random = Artikel::inRandomOrder()->limit(6)->get();
+        $get_random->transform(function ($item) {
+            $item->created_at_formatted = Carbon::parse($item->created_at)->format('d-m-Y');
+            return $item;
+        });
+        $get_kategori = Artikel::pluck('jenis_artikel');
+
+
 
         $data = [
-            "get_artikel" => $get_artikel
+            "get_artikel" => $get_artikel,
+            "get_new" => $get_new,
+            'get_new2' => $get_new2,
+            "get_random" => $get_random,
+            'get_kategori' => $get_kategori
         ];
+        
 
         return view('portal.pages.artikel',['data' => $data]);
-
-    }
-
-    public function artikel1()
-    {
-        return view('portal.pages.artikel1');
 
     }
 

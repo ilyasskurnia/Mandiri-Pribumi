@@ -240,7 +240,7 @@
 </section>
 <div class="container mt-5">
     <div class="row justify-content-between">
-        <div class="col-4 mt-4">
+        <div class="col-4">
             <h4 class="mt-2" style="color: #FFBE2C; font-size: 30px;">Mandiri Pribumi</h4>
             <h2 class="mt-2" style="color: #51604F; font-size: 60px; font-family: 'Bebas Neue', sans-serif;">Galeri Kami</h2>
             <p style="font-size: 24px;">

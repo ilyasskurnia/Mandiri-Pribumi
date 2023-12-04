@@ -95,7 +95,7 @@ $nomor=1;
                             </table>
                         </div>
                         <div class="px-4 mt-4">
-                            {{-- {{ $data['get_data']->links() }} --}}
+                            {{ $card['get_data']->links() }}
                         </div>
                     </div>
                 </div>

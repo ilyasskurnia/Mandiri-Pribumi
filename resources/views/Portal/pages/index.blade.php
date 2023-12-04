@@ -274,7 +274,7 @@
         width: 100%;
         max-width: 18rem;
         /* Sesuaikan dengan lebar maksimal card */
-        margin-right: 20px;
+        /* margin-right: 20px; */
         /* Atur jarak antara card */
         margin-bottom: 20px;
         /* Atur jarak bawah antara card */
@@ -799,6 +799,7 @@
         }
 
         .artikel-foreach {
+            width: 100%;
             flex-direction: column;
             align-content: center;
         }
@@ -806,6 +807,7 @@
         .right-content {
             padding-right: 0px;
             padding-left: 20px;
+            padding-top: 35px;
         }
 
         .artikel-image {
@@ -904,7 +906,7 @@
                 <iframe class="video-youtube" width="100%" height="315" src="https://www.youtube.com/embed/pFXrf10y3-U"
                     frameborder="0" allowfullscreen></iframe>
             </div>
-            <div class="col-lg-6 mt-4 video-welcome">
+            <div class="col-lg-6  video-welcome">
                 <h2>Selamat Datang di Mandiri Pribumi</h2>
                 <p><span style="font-size : 20px">Selamat datang di perjalanan petualangan tak terlupakan bersama
                         Mandiri Pribumi! Kami mengundang Anda untuk merasakan keajaiban Indonesia dengan cara yang belum
@@ -964,195 +966,30 @@
         <div id="carouselExample" class="carousel slide mt-5" data-ride="carousel">
             <div class="carousel-inner">
                 <!-- Carousel Item 1 -->
+                
                 <div class="carousel-item active">
                     <div class="carousel-container">
                         <div class="row">
+                            @foreach ($data['get_destinasi'] as $destinasi)
                             <div class="col-md-4 card-container">
                                 <!-- Card 1 -->
                                 <div class="card">
                                     <picture>
-                                        <source srcset="{{URL::asset('/images/card1.jpg')}}" media="(min-width: 768px)">
-                                        <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
-                                            style="max-width: 100%; height: 400px;">
+                                        <source srcset="{{ asset('storage/' . $destinasi->thumbnail) }}" media="(min-width: 768px)">
+                                        <img src="{{ asset('storage/' . $destinasi->thumbnail) }}" alt="Bali"
+                                            style="max-width: 100%; height: 200px;">
                                     </picture>
                                     <div class="card-body">
-                                        <h4 class="card-title">Bali</h4>
-                                        <p class="card-subtitle mb-2 text-muted">4 Hari 3 Malam</p>
-                                        {{-- <div class="card-price">
-                                            <p class="start-from">Start from</p>
-                                            <p class="price">Rp. 1.250K/pax</p>
-                                        </div>
-                                        <p class="card-text mt-4"><b>Monumen Bajra Sandhi - GWK Cultural Park - Pura
-                                                Uluwatu - dll.</b></p>
-                                        <a href="/portal/detaildestinasibali" class="btn btn-primary"
-                                            style="background-color: #2622DE; color: #fff;">Selengkapnya</a> --}}
+                                        <h4 class="card-title">{{ $destinasi->destinasi }}</h4>
+                                        <p class="card-subtitle mb-2 text-muted">{{ $destinasi->total_waktu }}</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 card-container">
-                                <!-- Card 2 -->
-                                <div class="card">
-                                    <picture>
-                                        <source srcset="{{URL::asset('/images/card2.jpg')}}" media="(min-width: 768px)">
-                                        <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
-                                            style="max-width: 100%; height: 400px;">
-                                    </picture>
-                                    <div class="card-body">
-                                        <h4 class="card-title">Yogyakarta</h4>
-                                        <p class="card-subtitle mb-2 text-muted">2 Hari 1 Malam</p>
-                                        {{-- <div class="card-price">
-                                            <p class="start-from">Start from</p>
-                                            <p class="price">Rp. 330K/pax</p>
-                                        </div>
-                                        <p class="card-text mt-4"><b>Candi Borobudur-Candi Prambanan-Keraton
-                                                Yogyakarta-Gua Pindul</b></p>
-                                        <a href="/portal/detaildestinasijogja" class="btn btn-primary"
-                                            style="background-color: #2622DE; color: #fff;">Selengkapnya</a> --}}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 card-container">
-                                <!-- Card 3 -->
-                                <div class="card">
-                                    <picture>
-                                        <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
-                                        <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
-                                            style="max-width: 100%; height: 400px;">
-                                    </picture>
-                                    <div class="card-body">
-                                        <h4 class="card-title">Karimun Jawa</h4>
-                                        <p class="card-subtitle mb-2 text-muted">3 Hari 2 Malam</p>
-                                        {{-- <div class="card-price">
-                                            <p class="start-from">Start from</p>
-                                            <p class="price">Rp. 1.500K/pax</p>
-                                        </div>
-                                        <p class="card-text mt-4"><b>Pantai Tanjung Gelam-Sonrkeling: Karang Bintang
-                                                Maer</b></p>
-                                        <a href="/portal/detaildestinasikarimun" class="btn btn-primary"
-                                            style="background-color: #2622DE; color: #fff;">Selengkapnya</a> --}}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 card-container">
-                                <!-- Card 4 -->
-                                <div class="card">
-                                    <picture>
-                                        <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
-                                        <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
-                                            style="max-width: 100%; height: 400px;">
-                                    </picture>
-                                    <div class="card-body">
-                                        <h4 class="card-title">Karimun Jawa</h4>
-                                        <p class="card-subtitle mb-2 text-muted">3 Hari 2 Malam</p>
-                                        {{-- <div class="card-price">
-                                            <p class="start-from">Start from</p>
-                                            <p class="price">Rp. 1.500K/pax</p>
-                                        </div>
-                                        <p class="card-text mt-4"><b>Pantai Tanjung Gelam-Sonrkeling: Karang Bintang
-                                                Maer</b></p>
-                                        <a href="/portal/detaildestinasikarimun" class="btn btn-primary"
-                                            style="background-color: #2622DE; color: #fff;">Selengkapnya</a> --}}
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
                 <!-- Carousel Item 2 -->
-                <div class="carousel-item">
-                    <div class="carousel-container">
-                        <div class="row">
-                            <div class="col-md-4 card-container">
-                                <!-- Card 5 -->
-                                <div class="card">
-                                    <picture>
-                                        <source srcset="{{URL::asset('/images/card4.jpg')}}" media="(min-width: 768px)">
-                                        <img src="{{URL::asset('/images/card4.jpg')}}" alt="Bali"
-                                            style="max-width: 100%; height: 400px;">
-                                    </picture>
-                                    <div class="card-body">
-                                        <h4 class="card-title">Banda Neira</h4>
-                                        <p class="card-subtitle mb-2 text-muted">4 Hari 3 Malam</p>
-                                        {{-- <div class="card-price">
-                                            <p class="start-from">Start from</p>
-                                            <p class="price">Rp. 330K/pax</p>
-                                        </div>
-                                        <p class="card-text mt-4"><b>Candi Borobudur-Candi Prambanan-Keraton
-                                                Yogyakarta-Gua Pindul</b></p>
-                                        <a href="#" class="btn btn-primary"
-                                            style="background-color: #2622DE; color: #fff;">Selengkapnya</a> --}}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 card-container">
-                                <!-- Card 6 -->
-                                <div class="card">
-                                    <picture>
-                                        <source srcset="{{URL::asset('/images/card5.jpg')}}" media="(min-width: 768px)">
-                                        <img src="{{URL::asset('/images/card5.jpg')}}" alt="Bali"
-                                            style="max-width: 100%; height: 400px;">
-                                    </picture>
-                                    <div class="card-body">
-                                        <h4 class="card-title">Pantai Seribu</h4>
-                                        <p class="card-subtitle mb-2 text-muted">2 Hari 1 Malam</p>
-                                        {{-- <div class="card-price">
-                                            <p class="start-from">Start from</p>
-                                            <p class="price">Rp. 330K/pax</p>
-                                        </div>
-                                        <p class="card-text mt-4"><b>Candi Borobudur-Candi Prambanan-Keraton
-                                                Yogyakarta-Gua Pindul</b></p>
-                                        <a href="#" class="btn btn-primary"
-                                            style="background-color: #2622DE; color: #fff;">Selengkapnya</a> --}}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 card-container">
-                                <!-- Card 7 -->
-                                <div class="card">
-                                    <picture>
-                                        <source srcset="{{URL::asset('/images/card6.jpg')}}" media="(min-width: 768px)">
-                                        <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
-                                            style="max-width: 100%; height: 400px;">
-                                    </picture>
-                                    <div class="card-body">
-                                        <h4 class="card-title">Malang Batu Bromo</h4>
-                                        <p class="card-subtitle mb-2 text-muted">2 Hari 1 Malam</p>
-                                        {{-- <div class="card-price">
-                                            <p class="start-from">Start from</p>
-                                            <p class="price">Rp. 330K/pax</p>
-                                        </div>
-                                        <p class="card-text mt-4"><b>Candi Borobudur-Candi Prambanan-Keraton
-                                                Yogyakarta-Gua Pindul</b></p>
-                                        <a href="#" class="btn btn-primary"
-                                            style="background-color: #2622DE; color: #fff;">Selengkapnya</a> --}}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 card-container">
-                                <!-- Card 8 -->
-                                <div class="card">
-                                    <picture>
-                                        <source srcset="{{URL::asset('/images/card3.jpg')}}" media="(min-width: 768px)">
-                                        <img src="{{URL::asset('/images/card1.jpg')}}" alt="Bali"
-                                            style="max-width: 100%; height: 400px;">
-                                    </picture>
-                                    <div class="card-body">
-                                        <h4 class="card-title">Karimun Jawa</h4>
-                                        <p class="card-subtitle mb-2 text-muted">3 Hari 2 Malam</p>
-                                        {{-- <div class="card-price">
-                                            <p class="start-from">Start from</p>
-                                            <p class="price">Rp. 1.500K/pax</p>
-                                        </div>
-                                        <p class="card-text mt-4"><b>Pantai Tanjung Gelam-Sonrkeling: Karang Bintang
-                                                Maer</b></p>
-                                        <a href="/portal/detaildestinasikarimun" class="btn btn-primary"
-                                            style="background-color: #2622DE; color: #fff;">Selengkapnya</a> --}}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
@@ -1192,7 +1029,7 @@
                             <div class="artikel-icon">
                                 <img src="{{URL::asset('/images/calender.png') }}" alt="">
                             </div>
-                            <div class="date">{{ $artikel->created_at }}</div>
+                            <div class="date">{{ $artikel->created_at_formatted }}</div>
                         </div>
                         <div class="artikel-created">
                             <div class="artikel-created-icon">

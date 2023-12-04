@@ -82,7 +82,7 @@ $nomor=1;
                                         <td class="text-center">{!! $artikel->content !!}</td>
                                         <td class="text-center"><img style="max-height: 100px"
                                                 src="{{ asset('storage/' . $artikel->thumbnail) }}" alt=""></td>
-                                        <td class="text-center">{{ $artikel->created_at }}</td>
+                                        <td class="text-center">{{ $artikel->created_at_formatted }}</td>
                                         <td>
                                             <div class="d-flex">
                                                 <a href="/dashboard/{{ $artikel->id }}/editartikel"

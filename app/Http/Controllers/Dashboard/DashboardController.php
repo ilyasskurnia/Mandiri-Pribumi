@@ -44,11 +44,10 @@ class DashboardController extends Controller
     {
         $get_data = Artikel::select('*')->paginate(3);
         $total_item = Artikel::count();
-
-        foreach ($get_data as $artikel) {
-            $artikel->created_at = Carbon::parse($artikel->created_at)->timezone('Asia/Jakarta');
-
-        }
+        $get_data->transform(function ($item) {
+            $item->created_at_formatted = Carbon::parse($item->created_at)->format('d-m-Y');
+            return $item;
+        });
 
         $data = [
             'get_data' => $get_data,

@@ -264,7 +264,7 @@
 
     /* CSS untuk teks 'Selengkapnya' */
     .selengkapnya {
-        font-size: 20px;
+        font-size: 18px;
         color: #42A0E4;
         text-decoration: none;
         display: block;
@@ -378,7 +378,7 @@
         <h1><b>Your Adventure</b></h1>
         <h1><b>Travel Expert With</b></h1>
         <h1><b>Mandiri Pribumi</b></h1>
-        <a href="#" class="btn-brosur" style="text-align: left; display: inline-block; margin-top: 20px;">Hubungi
+        <a href="/portal/kontak" class="btn-brosur" style="text-align: left; display: inline-block; margin-top: 20px;">Hubungi
             Kami</a>
     </div>
 </section>
@@ -439,7 +439,7 @@
                                             {{ $destinasi->biaya }}</span></p>
                                 </div>
                                 <div class="col-md-6 text-right">
-                                    <a href="/portal/detaildestinasi/{{ $destinasi->id }}" class="selengkapnya">Selengkapnya -></a>
+                                    <a href="/portal/detaildestinasi/{{ $destinasi->id }}" class="selengkapnya">Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>

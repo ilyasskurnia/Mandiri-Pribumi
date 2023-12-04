@@ -143,6 +143,10 @@
         width: 15cm;
         height: 10cm;
     }
+    .hub-section {
+        margin-top: 30px;
+        margin-bottom: 80px
+    }
 
     /* Responsive Styles */
     @media (max-width: 768px) {
@@ -211,7 +215,6 @@
             font-size: 20px;
         }
 
-
     }
 </style>
 
@@ -263,6 +266,12 @@
         
         
     </div>
+</section>
+<section class="hub-section text-center">
+    <h3>
+        Siap Mengelilingi Bumi Nusantara Bersama Kami ?
+    </h3>
+    <a href="/portal/kontak" class="btn btn-primary" style="width: 150px;">Hubungi Kami</a>
 </section>
 
 <script>
