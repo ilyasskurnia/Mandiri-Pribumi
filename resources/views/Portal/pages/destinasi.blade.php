@@ -15,7 +15,7 @@
         background-repeat: no-repeat;
         background-position: left center;
         color: #fff;
-        padding: 170px 0;
+        padding: 210px 0;
     }
 
     .banner-content {
@@ -58,33 +58,12 @@
 
 
     /* Section 2: Penawaran Spesial */
-    .special-card img {
-        width: 100%;
-        /* Sesuaikan dengan ukuran yang diinginkan */
-        height: 100%;
-        /* Menjaga rasio aspek gambar */
-        position: absolute;
-        /* Mengatur gambar secara absolut relatif terhadap card */
-        top: 0;
-        left: 0;
-        object-fit: cover;
-        image-rendering: -webkit-optimize-contrast;
-    }
-
-    .special-card-body {
-        position: relative;
-        /* Menjadikan teks di atas gambar */
-        z-index: ;
-        /* Pastikan teks di atas gambar */
-    }
-
     .special-offers {
         align-self: center;
-        align-content: center;
     }
 
     .special-title1 {
-        margin-top: 90px;
+        margin-top: 30px;
         font-size: 2.5em;
         color: #333;
         font-family: 'Fira Sans', sans-serif;
@@ -106,19 +85,27 @@
 
     .special-card {
         border: none;
+        border-radius: 8px;
         margin-bottom: 30px;
-        height: 427px;
-        width: 304px;
+        height: 150px;
+        width: 400px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 20px;
-        margin-left: 55px;
     }
 
-    .special-card1{
-        background-color: #f6e3d3;
+    .special-card1 {
+        background-color: rgb(128, 141, 219);
+    }
+
+    .special-card2 {
+        background-color: #C98B8B;
+    }
+
+    .special-card3 {
+        background-color: #FF5858;
     }
 
     .special-card-title {
@@ -143,8 +130,14 @@
     }
 
     .review-section {
+        background-color: #a4cee6;
         text-align: center;
-        height: fit-content;
+        height: 300px;
+        border-radius: 88px 88px 0 0;
+    }
+
+    .background-khusus {
+        background-color: #c0e6f9;
     }
 
     /* Gaya untuk bagian "Paket Destinasi" */
@@ -152,7 +145,8 @@
         margin-top: 90px;
         padding: 50px 0;
         color: #fff;
-        background-color: #F9F4F0;
+        background-color: #c0e6f9;
+        border-radius: 88px 88px 0 0;
     }
 
     .section-title {
@@ -206,7 +200,6 @@
         text-align: left;
         margin-bottom: 10px;
         margin-top: -35px;
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
         /* Mengatur letak elemen floating container */
     }
 
@@ -222,14 +215,14 @@
     }
 
     .card-title {
-        font-size: 1.5em;
-        margin-top: 10px;
-        margin-bottom: 5px;
-        background: linear-gradient(to right, #2c3e50, #3498db);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        display: inline;
-    }
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline;
+}
 
 
     .card-subtitle {
@@ -263,21 +256,9 @@
         margin-bottom: 0;
     }
 
-    .quotes-section {
-        background-image: url('{{ asset('images/quotesdestinasi.png') }}');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        padding: 200px 0;
-    }
-
-    .quotes-section2 {
-        display: none;
-    }
-
     /* CSS untuk teks 'Selengkapnya' */
     .selengkapnya {
-        font-size: 18px;
+        font-size: 20px;
         color: #42A0E4;
         text-decoration: none;
         display: block;
@@ -293,42 +274,39 @@
 
 
     .review-title {
-        font-family: 'Satisfy', cursive;
         padding-top: 30px;
         color: #661b2b;
         /* Warna teks yang menarik */
-        font-size: large;
+        font-size: 28px;
         text-align: center;
         font-weight: bold;
+        text-transform: uppercase;
         letter-spacing: 1px;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-        font-family:
-            /* Efek bayangan pada teks */
+        /* Efek bayangan pada teks */
     }
 
     .review-profile {
-        margin-top: 0px;
+        margin-top: 20px;
         display: flex;
+        justify-content: center;
     }
 
     .review-profile img {
-        max-width: 80px;
+        max-width: 50px;
         height: auto;
-        margin-bottom: 50px
     }
 
     .review-coloumn {
         padding-left: 20px;
     }
-
     .sub-title {
         margin-top: 30px;
     }
 
     .bintang {
         display: flex;
-        max-width: 1px;
-        margin-bottom: 50px;
+        max-width: 10px;
     }
 
     /* Responsive Styles */
@@ -370,21 +348,8 @@
             margin-right: 0;
         }
 
-        .quotes-section {
-            display: none;
-        }
-
-        .quotes-section2 {
-            background-image: url('{{ asset('images/quotesdestinasikanan.png') }}');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-            padding: 134px 0;
-            display: block;
-            /* Menampilkan quotes-section2 pada media 768px */
-        }
-
     }
+
 </style>
 
 <!-- Section 1: Banner -->
@@ -393,10 +358,18 @@
         <h1><b>Your Adventure</b></h1>
         <h1><b>Travel Expert With</b></h1>
         <h1><b>Mandiri Pribumi</b></h1>
-        <a href="/portal/kontak" class="btn-brosur" style="text-align: left; display: inline-block; margin-top: 20px;">Hubungi
+        <a href="#" class="btn-brosur" style="text-align: left; display: inline-block; margin-top: 20px;">Hubungi
             Kami</a>
     </div>
 </section>
+
+
+
+{{-- <section class="text-center mt-5">
+    <h2>Menghadirkan Wisata sebagai Bagian Tak Terpisahkan dari Kehidupan Anda.</h2>
+    <h4>Ini Nanti isinya adalah quotes</h4>
+    <h6>Ini author</h6>
+</section> --}}
 
 <!-- Section 2: Penawaran Spesial -->
 <section class="special-offers mt-5">
@@ -405,8 +378,7 @@
         <h2 class="special-title2 text-center mb-5"><b>Penawaran Spesial</b></h2>
         <div class="row box-special-card">
             <div class="col-md-4">
-                <div class="special-card text-center" style="position: relative;">
-                    <img src="/images/penawaran-spesial1.png" alt="Studi Tour Sekolah">
+                <div class="special-card special-card1 text-center">
                     <div class="special-card-body">
                         <h3 class="special-card-title">Studi Tour Sekolah</h3>
                         <p class="special-card-text">Up to 20% off</p>
@@ -414,8 +386,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="special-card text-center" style="position: relative;">
-                    <img src="/images/penawaran-spesial2.png" alt="Liburan Musim Panas">
+                <div class="special-card special-card2 text-center">
                     <div class="special-card-body">
                         <h3 class="special-card-title">Liburan Musim Panas</h3>
                         <p class="special-card-text">Up to 20% off</p>
@@ -423,8 +394,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="special-card text-center" style="position: relative;">
-                    <img src="/images/penawaran-spesial3.png" alt="Member Exclusive">
+                <div class="special-card special-card3 text-center">
                     <div class="special-card-body">
                         <h3 class="special-card-title">Member Exclusive</h3>
                         <p class="special-card-text">Up to 20% off</p>
@@ -435,83 +405,184 @@
     </div>
 </section>
 
-
-<section class="paket-destinasi">
-    <div class="container">
-        <h2 class="text-center"
-            style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-bottom: 7px; color: #000;">Paket
-            Destinasi Yang Kami Tawarkan</h2>
-        <div class="row">
-            @foreach ($data['get_destinasi'] as $destinasi)
-            <div class="col-md-4 mb-4">
-                <div class="card" style="background-color: #ffffff;">
-                    <img style="max-height: 220px" src="{{ asset('storage/' . $destinasi->thumbnail) }}"
-                        class="card-img-top" alt="Destination Image">
-                    <div class="card-body">
-                        <div class="floating-container">
-                            <p class="highlighted-text">{{ $destinasi->total_waktu }}</p>
-                        </div>
-                        <h5 class="card-title">{{ $destinasi->destinasi }}</h5>
-                        <p class="card-subtitle">{{ $destinasi->rute }}</p>
-                        <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
-                                        {{ $destinasi->biaya }}</span></p>
-                            </div>
-                            <div class="col-md-6 text-right">
-                                <a href="/portal/detaildestinasi/{{ $destinasi->id }}" class="selengkapnya">Selengkapnya
-                                    -></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-<section class="quotes-section"></section>
-<section class="quotes-section2"></section>
-<section class="review-section">
-    <section class="special-offers mt-5">
+<div class="background-khusus">
+    <section class="paket-destinasi">
         <div class="container">
-            <h2 class="special-title2 text-center mb-5"><b>Penawaran Spesial</b></h2>
-            <div class="row box-special-card">
-                <div class="col-md-4">
-                    <div class="special-card special-card1 text-center">
-                        <div class="special-card-body">
-                            <div class="review-profile">
-                                <img src="{{URL::asset('/images/profile-picture.png')}}" alt="">
+            <h2 class="destinasi-title text-center mb-5">Paket Destinasi Yang Kami Tawarkan</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="background-color: #D9D9D9;">
+                        <img src="{{URL::asset('/images/carddestinasi1.png')}}" class="card-img-top"
+                            alt="Destination Image">
+                        <div class="card-body">
+                            <div class="floating-container">
+                                <p class="highlighted-text">3 Hari 2 Malam</p>
                             </div>
-                                <div class="review-coloumn">
-                                    <div class="profile-user">
-                                        Rani Raharjo
-                                    </div>
+                            <h5 class="card-title">Karimun Jawa</h5>
+                            <p class="card-subtitle">Karimun Jawa, Jawa Tengah, Indonesia</p>
+                            <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
+                                            2.100.000</span></p>
                                 </div>
-                            <h3 class="special-card-title">Studi Tour Sekolah</h3>
-                            <p class="special-card-text">Up to 20% off</p>
+                                <div class="col-md-6 text-right">
+                                    <a href="/portal/detaildestinasikarimun" class="selengkapnya">Selengkapnya -></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="special-card special-card1 text-center">
-                        <div class="special-card-body">
-                            <h3 class="special-card-title">Liburan Musim Panas</h3>
-                            <p class="special-card-text">Up to 20% off</p>
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="background-color: #D9D9D9;">
+                        <img src="{{URL::asset('/images/carddestinasi2.png')}}" class="card-img-top"
+                            alt="Destination Image">
+                        <div class="card-body">
+                            <div class="floating-container">
+                                <p class="highlighted-text">3 Hari 2 Malam</p>
+                            </div>
+                            <h5 class="card-title">Bali</h5>
+                            <p class="card-subtitle">Pulau Bali, Indonesia</p>
+                            <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
+                                            2.100.000</span></p>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <a href="/portal/detaildestinasibali" class="selengkapnya">Selengkapnya -></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="special-card special-card1 text-center">
-                        <div class="special-card-body">
-                            <h3 class="special-card-title">Member Exclusive</h3>
-                            <p class="special-card-text">Up to 20% off</p>
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="background-color: #D9D9D9;">
+                        <img src="{{URL::asset('/images/carddestinasi3.png')}}" class="card-img-top"
+                            alt="Destination Image">
+                        <div class="card-body">
+                            <div class="floating-container">
+                                <p class="highlighted-text">3 Hari 2 Malam</p>
+                            </div>
+                            <h5 class="card-title">Yogyakarta</h5>
+                            <p class="card-subtitle">Daerah Istimewa Jogjakarta, Jawa Tengah, Indonesia</p>
+                            <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
+                                            2.100.000</span></p>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <a href="/portal/detaildestinasijogja" class="selengkapnya">Selengkapnya -></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="background-color: #D9D9D9;">
+                        <img src="{{URL::asset('/images/carddestinasi4.png')}}" class="card-img-top"
+                            alt="Destination Image">
+                        <div class="card-body">
+                            <div class="floating-container">
+                                <p class="highlighted-text">3 Hari 2 Malam</p>
+                            </div>
+                            <h5 class="card-title">Malang - Bromo</h5>
+                            <p class="card-subtitle">Malang, Jawa Timur, Indonesia</p>
+                            <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
+                                            2.100.000</span></p>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <a href="/portal/detaildestinasimalang" class="selengkapnya">Selengkapnya -></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="background-color: #D9D9D9;">
+                        <img src="{{URL::asset('/images/carddestinasi5.png')}}" class="card-img-top"
+                            alt="Destination Image">
+                        <div class="card-body">
+                            <div class="floating-container">
+                                <p class="highlighted-text">3 Hari 2 Malam</p>
+                            </div>
+                            <h5 class="card-title">Raja Ampat</h5>
+                            <p class="card-subtitle">Raja Ampat, Papua Barat, Indonesia</p>
+                            <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
+                                            2.100.000</span></p>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <a href="#" class="selengkapnya">Selengkapnya -></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="background-color: #D9D9D9;">
+                        <img src="{{URL::asset('/images/carddestinasi6.png')}}" class="card-img-top"
+                            alt="Destination Image">
+                        <div class="card-body">
+                            <div class="floating-container">
+                                <p class="highlighted-text">3 Hari 2 Malam</p>
+                            </div>
+                            <h5 class="card-title">Pulau Komodo</h5>
+                            <p class="card-subtitle">Pulau Komodo, Nusa Tenggara Timur, Indonesia</p>
+                            <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
+                                            2.100.000</span></p>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <a href="#" class="selengkapnya">Selengkapnya -></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tambahkan card lain jika diperlukan -->
             </div>
         </div>
     </section>
-</section>
+    <section class="review-section">
+        <div class="container">
+            <div class="review">
+                <div class="review-title">
+                    <h3>Testimoni</h3>
+                </div>
+                <div class="sub-title">
+                    <h5>Review dari para pelanggan kami</h5>
+                </div>
+                <div class="review-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam repellat iste, cumque, nostrum
+                    illum reiciendis reprehenderit nemo sed ab nobis corrupti excepturi esse atque obcaecati libero
+                    veritatis exercitationem ratione!
+                </div>
+                <div class="review-profile">
+                    <img src="{{URL::asset('/images/profile-picture.png')}}" alt="">
+                    <div class="review-coloumn">
+                        <div class="profile-user">
+                            Rani Raharjo
+                        </div>
+                        <div class="bintang">
+                            <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
+                            <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
+                            <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
+                            <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</div>
 @endsection
