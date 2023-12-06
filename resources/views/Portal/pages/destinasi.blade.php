@@ -498,7 +498,10 @@
             background-position: center center;
             padding: 134px 0;
             display: block;
+<<<<<<< HEAD
             /* Menampilkan quotes-section2 pada media 768px */
+=======
+>>>>>>> d31af639db97a32511772957bdead5b191936b53
         }
 
         .owl-carousel .item {
@@ -618,7 +621,7 @@
                             <img src="/images/client1.jpg" alt="Client 1">
                         </div>
                         <div class="client_info">
-                            <h6>LusDen</h6>
+                            <h6>LusDen2</h6>
                             <p>magna aliqua. Ut</p>
                         </div>
                     </div>
@@ -633,7 +636,7 @@
                             <img src="/images/client2.jpg" alt="Client 2">
                         </div>
                         <div class="client_info">
-                            <h6>Zen Court</h6>
+                            <h6>Zen Court2</h6>
                             <p>magna aliqua. Ut</p>
                         </div>
                     </div>
@@ -648,7 +651,7 @@
                             <img src="/images/client2.jpg" alt="Client 2">
                         </div>
                         <div class="client_info">
-                            <h6>Zen Court</h6>
+                            <h6>Zen Court3</h6>
                             <p>magna aliqua. Ut</p>
                         </div>
                     </div>
@@ -658,8 +661,11 @@
         </div>
     </div>
 </section>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d31af639db97a32511772957bdead5b191936b53
 <!-- Include jQuery and other necessary scripts -->
 <script src="path_to_your_scripts/jquery.min.js"></script>
 <script src="path_to_your_scripts/owl.carousel.min.js"></script>
