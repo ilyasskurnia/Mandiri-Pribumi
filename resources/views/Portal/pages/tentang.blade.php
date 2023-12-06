@@ -511,8 +511,8 @@
                     <h2>Mandiri Pribumi</h2>
                     <h3>TOUR & TRAVEL</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
+                        Mandiri Pribumi tour and travel adalah travel agent terpercaya di Indonesia yang telah berdiri sejak 2004 dengan kantor yang berada di Kota Semarang dan Kota Bandung. Kami hadir untuk memberikan perjalanan 
+                        terbaik untuk anda.
                     </p>
                     <a href="{{ asset('compro/Compro mandiri pribumi.pdf') }}" download target="_blank" class="btn btn-primary">Unduh Company
                         Profile</a>
@@ -534,16 +534,13 @@
                 <div class="history-details">
                     <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">Sejarah Perusahaan</h2>
                     <p class="mt-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
+                        Didirikan pada tahun 2004 sebagai travel agent terpercaya di Kota Bandung, oleh Drs Edy Suroso. Mandiri Pribumi tour and travel telah melayani pelanggan dari lingkup sekolah hingga perusahaan.
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
+                        Karena tingginya permintaan jumlah pelanggan, pada tahun 2023, Mandiri Pribumi tour and travel membuka kantor cabang di Kota Semarang.
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
+                        Hingga saat ini, kami telah melayani 245 pelanggan dari berbagai kalangan, dan akan terus bertambah.
                     </p>
                 </div>
             </div>

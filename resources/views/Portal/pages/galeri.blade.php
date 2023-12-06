@@ -210,11 +210,11 @@
         padding: 50px 0;
     }
     .welcome-section {
-        background-image: url('{{ asset('images/quotesdestinasi.png') }}');
+        background-image: url('{{ asset('images/welcomegaleri.png') }}');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
-        padding: 200px 0;
+        padding: 250px 0;
     }
 
 

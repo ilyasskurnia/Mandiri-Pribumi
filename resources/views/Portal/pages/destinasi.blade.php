@@ -96,7 +96,8 @@
         margin-top: 90px;
         font-size: 2.5em;
         color: #333;
-        font-family: 'Satisfy', cursive;
+        font-family: 'Fira Sans', sans-serif;
+        font-weight: 100;
     }
 
     .special-title2 {
@@ -273,7 +274,7 @@
     }
 
     .quotes-section {
-        background-image: url('{{ asset('images/quotesdestinasi.png') }}');
+        background-image: url('{{ asset('images/quotesgambar1.png') }}');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -491,7 +492,7 @@
         }
 
         .quotes-section2 {
-            background-image: url('{{ asset('images/quotesdestinasikanan.png') }}');
+            background-image: url('{{ asset('images/quoteskanan1.png') }}');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
