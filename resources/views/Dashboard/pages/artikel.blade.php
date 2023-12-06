@@ -44,9 +44,10 @@ $nomor=1;
                     Artikel <br> <a style="font-size: 18px">Anda memiliki total {{ $data['total_item'] }} Artikel.</a>
                 </h4>
                 <div class="d-flex align-items-center ">
-                    <div class="search ">
-                        <input style="border-radius: 5px;" type="text" class="form-control" placeholder="Search for...">
-                    </div>
+                    <a href="{{ url('/dashboard/kategori')}}" type="button"
+                        class="btn btn-warning rounded-lg ml-auto mx-2">
+                        <div class="fa fa-fw fa-plus mr-2"></div> Add Kategori
+                    </a>
                     <a href="{{ url('/dashboard/tambahartikel')}}" type="button"
                         class="btn btn-primary rounded-lg ml-auto">
                         <div class="fa fa-fw fa-plus mr-2"></div> Add Data

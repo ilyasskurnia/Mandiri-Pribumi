@@ -379,12 +379,13 @@ a:hover {
     -o-transition: all all 0.5s ease;
     -webkit-transition: all all 0.5s ease;
     -ms-transition: all all 0.5s ease;
-    transition: all all 0.5s ease
+    transition: all all 0.5s ease;
+    text-decoration: none;
 }
 
 .fh5co_small_post_heading:hover {
     color: #777;
-    text-decoration: none
+    text-decoration: underline
 }
 
 .fh5co_hover_news_img:hover>.fh5co_news_img {

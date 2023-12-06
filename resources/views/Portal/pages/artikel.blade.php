@@ -252,7 +252,7 @@
                   <div class="clearfix"></div>
                   <div class="fh5co_tags_all">
                     @foreach ($data['get_kategori'] as $kategori)
-                      <a href="#" class="fh5co_tagg">{{ $kategori }}</a>
+                      <a href="/portal/artikel/kategori/{{ $kategori }}" class="fh5co_tagg">{{ $kategori }}</a>
                     @endforeach
                   </div>
               </div>

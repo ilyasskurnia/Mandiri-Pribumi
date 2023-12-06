@@ -50,42 +50,45 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <form action="\dashboard\artikel\{{ $data->id }}" method="post"
+                            <form action="\dashboard\artikel\{{ $card['data']->id }}" method="post"
                                 enctype="multipart/form-data">
                                 @method('put')
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label class="form-control-label">Jenis Artikel</label>
-                                            <input name="jenis_artikel" class="form-control" type="text" value="{{ $data->jenis_artikel}}">
-                                        </div>
+                                        <label for="jenis_artikel" class="form-label">Kategori Artikel</label>
+                                        <select class="form-select" id="jenis_artikel" name="jenis_artikel" required>
+                                            <option value="">pilih kategori</option>
+                                            @foreach($card['kategori'] as $kategori)
+                                            <option value="{{ $kategori}}">{{ $kategori }}</option>
+                                            @endforeach
+                                        </select>
                                         <div class="form-group">
                                             <label class="form-control-label">Author</label>
                                             <input name="author" class="form-control" type="text"
-                                                value="{{ $data->author }}">
+                                                value="{{ $card['data']->author }}">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Judul Artikel</label>
                                             <input name="title" class="form-control" type="text"
-                                                value="{{ $data->title }}">
+                                                value="{{ $card['data']->title }}">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Deskripsi Singkat (maksimal 255 karakter)</label>
                                             <input name="deskripsi_singkat" class="form-control" type="text"
-                                            value="{{ $data->deskripsi_singkat }}">
+                                            value="{{ $card['data']->deskripsi_singkat }}">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Isi Konten</label>
                                             <textarea name="content" id="summernote" class="form-control" type="text"
-                                            rows="10" cols="30">{!! $data->content !!}
+                                            rows="10" cols="30">{!! $card['data']->content !!}
                                             </textarea>
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Thumbnail</label>
                                             <input name="thumbnail" class="form-control" type="file">
                                             <img style="max-height: 100px"
-                                                src="{{ asset('storage/' . $data->thumbnail) }}" alt="">
+                                                src="{{ asset('storage/' . $card['data']->thumbnail) }}" alt="">
                                         </div>
                                     </div>
                                     <div class="d-flex justify-content-end mt-4">
