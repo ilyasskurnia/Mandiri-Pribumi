@@ -79,7 +79,7 @@
         /* Atur gambar pertama agar berada di depan */
     }
     .quotes-section {
-        background-image: url('{{ asset('images/quotesdestinasi.png') }}');
+        background-image: url('{{ asset('images/welcomegaleri.png') }}');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -249,7 +249,7 @@
         }
 
         .quotes-section2 {
-            background-image: url('{{ asset('images/quotesdestinasikanan.png') }}');
+            background-image: url('{{ asset('images/welcomegalerikanan.png') }}');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
