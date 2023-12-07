@@ -224,7 +224,6 @@
         }
 
     }
-
 </style>
 
 <!-- Section 1: Banner -->
@@ -259,10 +258,12 @@
             <div class="col-md-6 destination-layer mt-5">
                 <div class="card">
                     <div class="card-body">
-                    <h4><span class="highlight"> <img style="max-height: 30px" src="{{ URL::asset('/images/iconwisata.png') }}" alt="">  Hari {{$detail->days }}</span></h4> 
+                        <h4><span class="highlight"> <img style="max-height: 30px"
+                                    src="{{ URL::asset('/images/iconwisata.png') }}" alt=""> Hari
+                                {{$detail->days }}</span></h4>
                         <h2 class="judul-destinasi">{{ $detail->detail_rute }}</h2>
                         <p class="keterangan">
-                        {{ $detail->deskripsi }}
+                            {{ $detail->deskripsi }}
                         </p>
                     </div>
                 </div>
@@ -305,7 +306,6 @@
             }
         });
     });
-
 </script>
 
 @endsection

@@ -45,9 +45,6 @@ $nomor=1;
                         Penawaran Spesial</a>
                 </h4>
                 <div class="d-flex align-items-center ">
-                    <div class="search ">
-                        <input style="border-radius: 5px;" type="text" class="form-control" placeholder="Search for...">
-                    </div>
                     <a href="{{ url('/dashboard/tambahpenawaran')}}"" type=" button"
                         class="btn btn-primary rounded-lg ml-auto">
                         <div class="fa fa-fw fa-plus mr-2"></div> Add Data

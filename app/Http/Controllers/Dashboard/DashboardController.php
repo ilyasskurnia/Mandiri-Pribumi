@@ -9,6 +9,7 @@ use Carbon\Carbon;
 use App\Models\Destinasi;
 use App\Models\Faq;
 use App\Models\Galeri;
+use App\Models\Kategori;
 use App\Models\Penawaran;
 use App\Models\Pesan;
 use Illuminate\Support\Facades\Storage;
@@ -58,10 +59,22 @@ class DashboardController extends Controller
     }
     public function tambahartikel()
     {
-        return view('dashboard.pages.artikel.add');
+        $kategori = Kategori::pluck('jenis_artikel');
+
+        $card = [
+            'kategori' => $kategori
+        ];
+
+        return view('dashboard.pages.artikel.add', ['card' => $card]);
     }
     public function postartikel (Request $request)
     {
+        $kategori = Kategori::pluck('jenis_artikel');
+
+        $card = [
+            'kategori' => $kategori
+        ];
+
         $data = $request->validate([
             'jenis_artikel' => 'required|string',
             'author' => 'required|string',
@@ -84,7 +97,7 @@ class DashboardController extends Controller
 
         session()->flash('success', 'Data berhasil disimpan.');
 
-        return view('dashboard.pages.artikel.add');
+        return view('dashboard.pages.artikel.add',['data'=>$data, 'card'=>$card]);
 
     }
     public function destroyartikel ($id)
@@ -99,8 +112,14 @@ class DashboardController extends Controller
     public function editartikel ($id)
     {
         $data = Artikel::find($id);
+        $kategori = Kategori::pluck('jenis_artikel');
 
-        return view('dashboard.pages.artikel.edit', ['data' => $data]);
+        $card = [
+            'kategori' => $kategori,
+            'data' => $data
+        ];
+
+        return view('dashboard.pages.artikel.edit', ['card' => $card]);
     }
     public function updateartikel($id, Request $request)
     {
@@ -483,5 +502,60 @@ class DashboardController extends Controller
         $data = Penawaran::find($id);
         $data->delete();
         return redirect()->route('penawaran');
+    }
+    public function kategori()
+    {
+        $get_data = Kategori::select('*')->paginate(5);
+        // dd($data);
+        $total_item = Kategori::count();
+
+        $data = [
+            'get_data' => $get_data,
+            'total_item' => $total_item
+        ];
+
+        return view('dashboard.pages.kategori', ['data' => $data]);
+    }
+    public function tambahkategori()
+    {
+        return view('dashboard.pages.kategori.add');
+    }
+    public function postkategori(Request $request)
+    {
+        $data = $request->validate([
+            'jenis_artikel' => 'required|string'
+        ]);
+
+        // Simpan data ke database menggunakan model pesan
+        $kategori = new Kategori();
+        $kategori->jenis_artikel = $request->jenis_artikel;
+
+        $kategori->save();
+
+        session()->flash('success', 'Data berhasil disimpan.');
+
+        return view('dashboard.pages.kategori.add');
+    }
+    public function editkategori ($id)
+    {
+        $data = Kategori::find($id);
+
+        return view('dashboard.pages.kategori.edit',['data' => $data]);
+    }
+    public function updatekategori ($id, Request $request)
+    {
+        $data = Kategori::find($id);
+
+        $input = $request->all();
+        $data->update($input);
+
+        // Redirect ke halaman lain atau tampilkan pesan sukses
+        return redirect()->route('kategori');
+    }
+    public function destroykategori ($id)
+    {
+        $data = Kategori::find($id);
+        $data->delete();
+        return redirect()->route('kategori');
     }
 }

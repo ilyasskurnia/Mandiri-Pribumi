@@ -55,8 +55,13 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label class="form-control-label">Jenis Artikel</label>
-                                            <input name="jenis_artikel" class="form-control" type="text">
+                                            <label for="jenis_artikel" class="form-label">Kategori Artikel</label>
+                                            <select class="form-select" id="jenis_artikel" name="jenis_artikel" required>
+                                                <option value="">pilih kategori</option>
+                                                @foreach($card['kategori'] as $kategori)
+                                                <option value="{{ $kategori}}">{{ $kategori }}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">Author</label>

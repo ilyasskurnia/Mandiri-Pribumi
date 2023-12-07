@@ -45,9 +45,6 @@ $nomor=1;
                         destinasi.</a>
                 </h4>
                 <div class="d-flex align-items-center ">
-                    <div class="search ">
-                        <input style="border-radius: 5px;" type="text" class="form-control" placeholder="Search for...">
-                    </div>
                     <a href="{{ url('/dashboard/tambahpaket')}}" type="button"
                         class="btn btn-primary rounded-lg ml-auto">
                         <div class="fa fa-fw fa-plus mr-2"></div> Add Data
@@ -92,7 +89,8 @@ $nomor=1;
                                                 <a href="/dashboard/{{ $destinasi->id }}/paketdestinasi"
                                                     class="btn btn-xs bg-primary me-1 text-white">Edit</a>
                                                 <form action="/dashboard/paketdestinasi/{{ $destinasi->id }}"
-                                                    method="POST">
+                                                    method="POST"
+                                                    onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
                                                     @csrf
                                                     @method('delete')
                                                     <input type="submit" name="submit" value="delete"

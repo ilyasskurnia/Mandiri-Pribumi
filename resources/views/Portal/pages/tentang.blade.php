@@ -318,7 +318,7 @@
         margin-bottom: 30px;
         text-align: left;
         /* Ubah alignment teks menjadi kiri */
-        
+
     }
 
     .caption-content h3 {
@@ -328,7 +328,7 @@
 
     .caption-content p {
         font-size: 18px;
-        
+
     }
 
     .card {
@@ -369,34 +369,43 @@
         border-radius: 10px;
         box-shadow: 0 20px 10px rgba(0, 0, 0, 0.3);
     }
+
     .gallery-container {
-  padding: 30px 0;
-}
+        padding: 30px 0;
+    }
 
-.gallery-container .row > div {
-  margin-bottom: 15px;
-  display: flex;
-  justify-content: center; /* Tambahkan ini untuk memusatkan gambar */
-}
+    .gallery-container .row>div {
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        /* Tambahkan ini untuk memusatkan gambar */
+    }
 
-.img-fluid {
-  width: auto; /* Ini akan memastikan bahwa aspek rasio gambar tetap sama */
-  max-width: 100%; /* Ini akan memastikan gambar tidak melebihi kolomnya */
-  height: auto; /* Ini akan menyesuaikan tinggi secara otomatis berdasarkan lebar */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-}
+    .img-fluid {
+        width: auto;
+        /* Ini akan memastikan bahwa aspek rasio gambar tetap sama */
+        max-width: 100%;
+        /* Ini akan memastikan gambar tidak melebihi kolomnya */
+        height: auto;
+        /* Ini akan menyesuaikan tinggi secara otomatis berdasarkan lebar */
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+    }
 
-/* Class untuk menetapkan ukuran spesifik */
-.fixed-size-image {
-  max-width: 286px; /* Lebar maksimum gambar */
-  max-height: 300px; /* Tinggi maksimum gambar */
-}
+    /* Class untuk menetapkan ukuran spesifik */
+    .fixed-size-image {
+        max-width: 286px;
+        /* Lebar maksimum gambar */
+        max-height: 300px;
+        /* Tinggi maksimum gambar */
+    }
 
-.img-fluid:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
+    .img-fluid:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
     @media only screen and (max-width: 768px) {
+
         /* Contoh untuk mengubah ukuran teks */
         .mitra-container {
             padding: 10px;
@@ -485,7 +494,6 @@
             max-height: 60vh;
         }
     }
-    
 </style>
 
 
@@ -511,10 +519,13 @@
                     <h2>Mandiri Pribumi</h2>
                     <h3>TOUR & TRAVEL</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
+                        Mandiri Pribumi tour and travel adalah travel agent terpercaya di Indonesia yang telah berdiri
+                        sejak 2004 dengan kantor yang berada di Kota Semarang dan Kota Bandung. Kami hadir untuk
+                        memberikan perjalanan
+                        terbaik untuk anda.
                     </p>
-                    <a href="{{ asset('compro/Compro mandiri pribumi.pdf') }}" download target="_blank" class="btn btn-primary">Unduh Company
+                    <a href="{{ asset('compro/Compro mandiri pribumi.pdf') }}" download target="_blank"
+                        class="btn btn-primary">Unduh Company
                         Profile</a>
                 </div>
             </div>
@@ -532,18 +543,19 @@
         <div class="row justify-content-between">
             <div class="col-md-6">
                 <div class="history-details">
-                    <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">Sejarah Perusahaan</h2>
+                    <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">Sejarah
+                        Perusahaan</h2>
                     <p class="mt-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
+                        Didirikan pada tahun 2004 sebagai travel agent terpercaya di Kota Bandung, oleh Drs Edy Suroso.
+                        Mandiri Pribumi tour and travel telah melayani pelanggan dari lingkup sekolah hingga perusahaan.
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
+                        Karena tingginya permintaan jumlah pelanggan, pada tahun 2023, Mandiri Pribumi tour and travel
+                        membuka kantor cabang di Kota Semarang.
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
+                        Hingga saat ini, kami telah melayani 245 pelanggan dari berbagai kalangan, dan akan terus
+                        bertambah.
                     </p>
                 </div>
             </div>
@@ -562,7 +574,8 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="vision-mission-content">
-                        <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">Visi Perusahaan</h2>
+                        <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">Visi
+                            Perusahaan</h2>
                         <p>
                             Perusahaan tour dan travel yang terpercaya dengan mengedepankan kepuasan pelanggan melalui
                             layanan yang berkualitas dan berdedikasi untuk memberikan manfaat dalam sektor pariwisata.
@@ -571,7 +584,8 @@
                 </div>
                 <div class="col-md-6">
                     <div class="vision-mission-content">
-                        <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">Misi Perusahaan</h2>
+                        <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">Misi
+                            Perusahaan</h2>
                         <p>
                             Menjamin pelayanan perjalanan dan wisata yang aman serta nyaman kepada pelanggan Berkomitmen
                             dengan standar yang tinggi dalam melayani pelanggan .Melengkapi dengan pelayanan handal,
@@ -586,7 +600,8 @@
 
 <section class="why-choose-us">
     <div class="container">
-        <h2 class="section-title text-center mb-5" style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">Mengapa Harus Kami</h2>
+        <h2 class="section-title text-center mb-5"
+            style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">Mengapa Harus Kami</h2>
         <div class="row why">
             <div class="col-md-4">
                 <div class="image-with-caption">
@@ -624,7 +639,8 @@
     </div>
 </section>
 
-<h2 class="section-title text-center mb-5" style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">Apa Yang Kami Tawarkan</h2>
+<h2 class="section-title text-center mb-5"
+    style="font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-top: 10px;">Apa Yang Kami Tawarkan</h2>
 <section class="what-we-offer" style="background-image: url('{{ asset('images/penawaran-spesial1.png') }}');">
     <div class="container">
         <!-- Use the 'row' div to contain all columns -->
@@ -674,8 +690,9 @@
                 video.play();
             });
         }
-    });
-    <script src="path_to_your_scripts/jquery.min.js"></script>
+    }); <
+    script src = "path_to_your_scripts/jquery.min.js" >
+</script>
 <script src="path_to_your_scripts/bootstrap.min.js"></script>
 </script>
 

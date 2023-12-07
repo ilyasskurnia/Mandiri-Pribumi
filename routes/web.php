@@ -92,6 +92,13 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::get('/{id}/editpenawaran', [DashboardController::class, 'editpenawaran']);
     Route::put('/penawaran/{id}', [DashboardController::class, 'updatepenawaran']);
 
+    Route::get('/kategori', [DashboardController::class, 'kategori'])->name('kategori');
+    Route::get('/tambahkategori', [DashboardController::class, 'tambahkategori']);
+    Route::post('/tambahkategori', [DashboardController::class, 'postkategori']);
+    Route::delete('/kategori/{id}', [DashboardController::class, 'destroykategori']);
+    Route::get('/{id}/editkategori', [DashboardController::class, 'editkategori']);
+    Route::put('/kategori/{id}', [DashboardController::class, 'updatekategori']);
+
     Route::group(['prefix' => '{destinasi_id}/detail_destinasi'], function () {
         Route::get('/', [DestinasiController::class, 'index'])->name('detail_destinasi');
         Route::get('/tambah_detail', [DestinasiController::class, 'tambah_detail']);
