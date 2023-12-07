@@ -34,13 +34,9 @@ Route::group(['prefix' => 'portal'], function () {
     Route::get('/artikel', [PortalController::class, 'artikel']);
     Route::get('/artikel1', [PortalController::class, 'artikel1']);
     Route::get('/galeri', [PortalController::class, 'galeri']);
-    Route::get('/detaildestinasibali', [PortalController::class, 'detaildestinasibali']);
-    Route::get('/detaildestinasijogja', [PortalController::class, 'detaildestinasijogja']);
-    Route::get('/detaildestinasikarimun', [PortalController::class, 'detaildestinasikarimun']);
-    Route::get('/detaildestinasimalang', [PortalController::class, 'detaildestinasimalang']);
     Route::get('/detaildestinasi/{id}', [PortalController::class, 'detaildestinasi']);
     Route::get('/coba', [PortalController::class, 'coba']);
-    Route::get('/kategoriartikel', [PortalController::class, 'kategoriartikel']);
+    Route::get('/artikel/kategori/{$kategori}', [PortalController::class, 'kategoriartikel']);
 });
 
 Auth::routes();

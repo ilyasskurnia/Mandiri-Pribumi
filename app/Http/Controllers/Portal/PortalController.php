@@ -15,9 +15,9 @@ use Carbon\Carbon;
 
 class PortalController extends Controller
 {
-    public function coba() 
+    public function coba()
     {
-        return view('portal.pages.coba');    
+        return view('portal.pages.coba');
     }
     public function index()
     {
@@ -99,7 +99,7 @@ class PortalController extends Controller
             'get_penawaran2' => $get_penawaran2,
             'get_penawaran3' => $get_penawaran3
         ];
-        
+
 
         return view('portal.pages.destinasi',['data' => $data]);
     }
@@ -165,7 +165,7 @@ class PortalController extends Controller
             "get_random" => $get_random,
             'get_kategori' => $get_kategori
         ];
-        
+
 
         return view('portal.pages.artikel',['data' => $data]);
 
@@ -188,8 +188,9 @@ class PortalController extends Controller
         return view('portal.pages.detaildestinasimalang');
     }
 
-    public function kategoriArtikel()
+    public function kategoriArtikel($kategori)
     {
+        dd($kategori);
         return view('portal.pages.kategoriartikel');
     }
    public function galeri()

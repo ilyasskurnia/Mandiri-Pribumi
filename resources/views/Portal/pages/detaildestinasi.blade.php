@@ -270,7 +270,7 @@
             </div>
             @endforeach
             <div class="text-center mt-5">
-                <h1> PETA {{ $data['get_destinasi']->first()->destinasi }}</h1>
+                <h1> Peta {{ $data['get_destinasi']->first()->destinasi }}</h1>
                 <a class="zoom-image" href="{{ asset('storage/' . $data['get_destinasi']->first()->peta_wisata) }}"
                     target="_blank">
                     <img class="peta-image" src="{{ asset('storage/' . $data['get_destinasi']->first()->peta_wisata) }}"
@@ -280,13 +280,13 @@
 
 
         </div>
-</section>
-<section class="hub-section text-center">
+</section><br><br>
+{{-- <section class="hub-section text-center">
     <h3>
         Siap Mengelilingi Bumi Nusantara Bersama Kami ?
     </h3>
     <a href="/portal/kontak" class="btn btn-primary" style="width: 150px;">Hubungi Kami</a>
-</section>
+</section> --}}
 
 <script>
     $(document).ready(function () {
