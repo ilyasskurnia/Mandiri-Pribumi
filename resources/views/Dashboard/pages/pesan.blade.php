@@ -44,9 +44,6 @@ $nomor=1;
                     Pesan Masuk <br> <a style="font-size: 18px">Anda memiliki {{ $data['total_item'] }} Pesan Masuk.</a>
                 </h4>
                 <div class="d-flex align-items-center ">
-                    <div class="search ">
-                        <input style="border-radius: 5px;" type="text" class="form-control" placeholder="Search for...">
-                    </div>
                     <a href="{{ url('/dashboard/tambahpesan')}}"" type=" button"
                         class="btn btn-primary rounded-lg ml-auto">
                         <div class="fa fa-fw fa-plus mr-2"></div> Add Data
@@ -88,7 +85,8 @@ $nomor=1;
                                             <div class="d-flex">
                                                 <a href="/dashboard/{{ $pesan->id }}/editpesan"
                                                     class="btn btn-xs bg-primary me-1 text-white">Edit</a>
-                                                <form action="/dashboard/pesan/{{ $pesan->id }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
+                                                <form action="/dashboard/pesan/{{ $pesan->id }}" method="POST"
+                                                    onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
                                                     @csrf
                                                     @method('delete')
                                                     <input type="submit" name="submit" value="delete"

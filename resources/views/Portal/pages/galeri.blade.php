@@ -78,6 +78,7 @@
         z-index: 1;
         /* Atur gambar pertama agar berada di depan */
     }
+
     .quotes-section {
         background-image: url('{{ asset('images/welcomegaleri.png') }}');
         background-size: cover;
@@ -196,21 +197,22 @@
     .image-container:hover .image-overlay {
         opacity: 1;
     }
+
     .preview {
         display: flex;
         flex-wrap: wrap;
         padding: 50px 0;
     }
 
-@media screen and (max-width: 1024px) {
-    .welcome-section {
-        background-image: url('{{ asset('images/welcomegaleri.png') }}');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        padding: 250px 0;
+    @media screen and (max-width: 1024px) {
+        .welcome-section {
+            background-image: url('{{ asset('images/welcomegaleri.png') }}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            padding: 250px 0;
+        }
     }
-}
 
     /* Responsivitas Testimoni Foto Section */
     @media (max-width: 768px) {
@@ -230,6 +232,7 @@
             margin-top: 10px;
             /* Berikan jarak atas antar gambar */
         }
+
         .gallery-container {
             flex-direction: column;
             /* Tumpuk galeri di perangkat seluler */
@@ -241,6 +244,7 @@
             margin: 10px 0;
             /* Berikan jarak atas dan bawah antar galeri */
         }
+
         .quotes-section {
             display: none;
         }
@@ -255,12 +259,12 @@
             /* Menampilkan quotes-section2 pada media 768px */
             margin-top: 50px;
         }
-        .momen{
+
+        .momen {
             margin-top: 50px;
         }
 
     }
-
 </style>
 <section class="banner-section">
     <div class="container text-center my-5">
@@ -271,7 +275,8 @@
     <div class="row justify-content-between">
         <div class="col-md-6 col-lg-4">
             <h4 class="mt-2" style="color: #FFBE2C; font-size: 30px;">Mandiri Pribumi</h4>
-            <h2 class="mt-2" style="color: #51604F; font-size: 60px; font-family: 'Bebas Neue', sans-serif;">Galeri Kami</h2>
+            <h2 class="mt-2" style="color: #51604F; font-size: 60px; font-family: 'Bebas Neue', sans-serif;">Galeri Kami
+            </h2>
             <p style="font-size: 24px;">
                 Berikut adalah beberapa testimoni dari customer kami di beberapa destinasi wisata yang kami layani.
             </p>
@@ -302,7 +307,8 @@
         <h3 style="color: #FFBE2C">Mandiri Pribumi</h3>
     </div>
     <div class="row">
-        <h1 style="color: #51604F; font-family: 'Bebas Neue', sans-serif; font-size: 48px;">Testimoni Foto dari Pelanggan Kami</h1>
+        <h1 style="color: #51604F; font-family: 'Bebas Neue', sans-serif; font-size: 48px;">Testimoni Foto dari
+            Pelanggan Kami</h1>
     </div>
     <div class="row">
         <hr>

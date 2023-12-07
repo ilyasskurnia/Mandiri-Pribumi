@@ -932,7 +932,8 @@
                 <div class="galeri">
                     <div style="width: 100%; padding-bottom: 100%; position: relative;">
                         <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                            <source srcset="{{ asset('storage/' . $galeri->thumbnail_galeri) }}" media="(min-width: 768px)">
+                            <source srcset="{{ asset('storage/' . $galeri->thumbnail_galeri) }}"
+                                media="(min-width: 768px)">
                             <img src="{{ asset('storage/' . $galeri->thumbnail_galeri) }}" alt=""
                                 style="width: 100%; height: 100%; object-fit: cover;">
                         </picture>
@@ -966,7 +967,7 @@
         <div id="carouselExample" class="carousel slide mt-5" data-ride="carousel">
             <div class="carousel-inner">
                 <!-- Carousel Item 1 -->
-                
+
                 <div class="carousel-item active">
                     <div class="carousel-container">
                         <div class="row">
@@ -975,7 +976,8 @@
                                 <!-- Card 1 -->
                                 <div class="card">
                                     <picture>
-                                        <source srcset="{{ asset('storage/' . $destinasi->thumbnail) }}" media="(min-width: 768px)">
+                                        <source srcset="{{ asset('storage/' . $destinasi->thumbnail) }}"
+                                            media="(min-width: 768px)">
                                         <img src="{{ asset('storage/' . $destinasi->thumbnail) }}" alt="Bali"
                                             style="max-width: 100%; height: 200px;">
                                     </picture>

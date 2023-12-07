@@ -220,7 +220,6 @@
 
 
     }
-
 </style>
 
 <!-- Section 1: Banner -->
@@ -331,7 +330,6 @@
             }
         });
     });
-
 </script>
 
 @endsection

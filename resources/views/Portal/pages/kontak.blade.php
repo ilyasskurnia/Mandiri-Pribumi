@@ -88,6 +88,12 @@
             width: 250px;
             height: 350px;
             border: none;
+            padding-left: -100px;
+        }
+
+        .peta{
+            padding-left: -120px;
+            margin-left: -20px;
         }
 
         .side-detail {

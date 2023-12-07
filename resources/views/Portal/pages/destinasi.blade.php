@@ -343,108 +343,109 @@
 
     /* client section start */
     .client_section {
-  text-align: center;
-  padding: 50px 0;
-}
+        text-align: center;
+        padding: 50px 0;
+    }
 
-.heading_container {
-  margin-bottom: 45px;
-}
+    .heading_container {
+        margin-bottom: 45px;
+    }
 
-.heading_container h2 {
-  font-size: 2em;
-  margin-bottom: 0.5em;
-  color: #333;
-}
+    .heading_container h2 {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+        color: #333;
+    }
 
-.heading_container h2 span {
-  color: #6c63ff; /* Atau warna lain yang Anda inginkan */
-}
+    .heading_container h2 span {
+        color: #6c63ff;
+        /* Atau warna lain yang Anda inginkan */
+    }
 
-/* Styling untuk carousel */
-.owl-carousel .item {
-  display: flex;
-  justify-content: center;
-}
+    /* Styling untuk carousel */
+    .owl-carousel .item {
+        display: flex;
+        justify-content: center;
+    }
 
-.box {
-  padding: 20px;
-  background: #fff;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  margin: 15px;
-  text-align: left;
-}
+    .box {
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin: 15px;
+        text-align: left;
+    }
 
-/* Styling untuk profil dan kotak testimoni */
-.profile {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-}
+    /* Styling untuk profil dan kotak testimoni */
+    .profile {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
 
-.img-box {
-  width: 80px;
-  height: 80px;
-  overflow: hidden;
-  border-radius: 50%;
-  margin-right: 15px;
-}
+    .img-box {
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
 
-.img-box img {
-  width: 100%;
-  height: auto;
-}
+    .img-box img {
+        width: 100%;
+        height: auto;
+    }
 
-.client_info h6 {
-  font-weight: bold;
-  margin: 0;
-  color: #333;
-}
+    .client_info h6 {
+        font-weight: bold;
+        margin: 0;
+        color: #333;
+    }
 
-.client_info p {
-  font-size: 0.9em;
-  color: #666;
-  margin: 0;
-}
+    .client_info p {
+        font-size: 0.9em;
+        color: #666;
+        margin: 0;
+    }
 
-.box {
-  background: #fff;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 30px;
-}
+    .box {
+        background: #fff;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
 
-.box p {
-  color: #666;
-  line-height: 1.6;
-}
+    .box p {
+        color: #666;
+        line-height: 1.6;
+    }
 
-.detail-box p {
-  color: #666;
-  line-height: 1.6;
-}
+    .detail-box p {
+        color: #666;
+        line-height: 1.6;
+    }
 
-/* Styling untuk navigasi carousel */
-.owl-nav {
-  text-align: center;
-}
+    /* Styling untuk navigasi carousel */
+    .owl-nav {
+        text-align: center;
+    }
 
-.owl-nav .owl-prev,
-.owl-nav .owl-next {
-  background: #6c63ff;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 30px;
-  margin: 5px;
-  cursor: pointer;
-}
+    .owl-nav .owl-prev,
+    .owl-nav .owl-next {
+        background: #6c63ff;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 30px;
+        margin: 5px;
+        cursor: pointer;
+    }
 
-.owl-nav .owl-prev:hover,
-.owl-nav .owl-next:hover {
-  background: #5a52d5;
-}
+    .owl-nav .owl-prev:hover,
+    .owl-nav .owl-next:hover {
+        background: #5a52d5;
+    }
 
 
 
@@ -502,18 +503,18 @@
         }
 
         .owl-carousel .item {
-    flex-direction: column;
-  }
+            flex-direction: column;
+        }
 
-  .profile {
-    flex-direction: column;
-    text-align: center;
-  }
+        .profile {
+            flex-direction: column;
+            text-align: center;
+        }
 
-  .img-box {
-    margin-right: 0;
-    margin-bottom: 15px;
-  }
+        .img-box {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
 
     }
 </style>
@@ -622,7 +623,8 @@
                             <p>magna aliqua. Ut</p>
                         </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
                 </div>
             </div>
             <!-- Customer 2 -->
@@ -637,7 +639,8 @@
                             <p>magna aliqua. Ut</p>
                         </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
                 </div>
             </div>
             <!-- Customer 3 -->
@@ -652,7 +655,8 @@
                             <p>magna aliqua. Ut</p>
                         </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
                 </div>
             </div>
         </div>
@@ -665,14 +669,14 @@
 <script src="path_to_your_scripts/owl.carousel.min.js"></script>
 <script src="path_to_your_scripts/bootstrap.min.js"></script>
 <script>
-$(document).ready(function(){
-  $(".client_owl-carousel").owlCarousel({
-    margin:10,
-    loop:true,
-    autoWidth:false,
-    items:3 // Adjust number of items to display according to your needs
-  });
-});
+    $(document).ready(function () {
+        $(".client_owl-carousel").owlCarousel({
+            margin: 10,
+            loop: true,
+            autoWidth: false,
+            items: 3 // Adjust number of items to display according to your needs
+        });
+    });
 </script>
 
 

@@ -228,7 +228,6 @@
         font-style: italic;
         margin-top: 0;
     }
-
 </style>
 
 <!-- Section 1: Banner -->

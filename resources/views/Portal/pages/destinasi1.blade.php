@@ -123,26 +123,32 @@
         padding-top: 25px;
         font-size: 16px;
     }
+
     .review-section {
         background-color: #A89090;
         text-align: center;
         height: 250px;
     }
+
     .review-title {
         padding-top: 30px;
     }
+
     .review-profile {
         margin-top: 20px;
         display: flex;
         justify-content: center;
     }
+
     .review-profile img {
         max-width: 50px;
         height: auto;
     }
+
     .review-coloumn {
         padding-left: 20px;
     }
+
     .bintang {
         display: flex;
         max-width: 10px;
@@ -225,34 +231,36 @@
 </section>
 
 <section class="review-section">
-        <div class="container">
-            <div class="review">
-                <div class="review-title">
-                    <h3>Testimoni</h3>
-                </div>
-                <div class="sub-title">
-                    <h5>Review dari para pelanggan kami</h5>
-                </div>
-                <div class="review-content">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam repellat iste, cumque, nostrum illum reiciendis reprehenderit nemo sed ab nobis corrupti excepturi esse atque obcaecati libero veritatis exercitationem ratione!
-                </div>
-                <div class="review-profile">
-                    <img src="{{URL::asset('/images/profile-picture.png')}}" alt="">
-                    <div class="review-coloumn">
-                        <div class="profile-user">
-                            Rani Raharjo
-                        </div>
-                        <div class="bintang">
-                            <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
-                            <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
-                            <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
-                            <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
-                            <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
-                        </div>
+    <div class="container">
+        <div class="review">
+            <div class="review-title">
+                <h3>Testimoni</h3>
+            </div>
+            <div class="sub-title">
+                <h5>Review dari para pelanggan kami</h5>
+            </div>
+            <div class="review-content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam repellat iste, cumque, nostrum
+                illum reiciendis reprehenderit nemo sed ab nobis corrupti excepturi esse atque obcaecati libero
+                veritatis exercitationem ratione!
+            </div>
+            <div class="review-profile">
+                <img src="{{URL::asset('/images/profile-picture.png')}}" alt="">
+                <div class="review-coloumn">
+                    <div class="profile-user">
+                        Rani Raharjo
+                    </div>
+                    <div class="bintang">
+                        <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
+                        <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
+                        <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
+                        <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
+                        <img src="{{URL::asset('/images/icon-bintang.png')}}" alt="">
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </section>
 

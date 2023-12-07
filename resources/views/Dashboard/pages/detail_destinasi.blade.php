@@ -44,12 +44,10 @@ $nomor=1;
                     Ini adalah detail dari destinasi <strong>{{ $card['get_destinasi']->destinasi }}</strong>
                 </h4>
                 <div class="d-flex align-items-center ">
-                    <div class="search ">
-                        <input style="border-radius: 5px;" type="text" class="form-control" placeholder="Search for...">
-                    </div>
-                    <a href="{{ url('/dashboard/' . $card['destinasi']->id . '/detail_destinasi/tambah_detail') }}" type="button" class="btn btn-primary rounded-lg ml-auto">
-                        <div class="fa fa-fw fa-plus mr-2"></div> Add Data 
-                    </a>                    
+                    <a href="{{ url('/dashboard/' . $card['destinasi']->id . '/detail_destinasi/tambah_detail') }}"
+                        type="button" class="btn btn-primary rounded-lg ml-auto">
+                        <div class="fa fa-fw fa-plus mr-2"></div> Add Data
+                    </a>
                 </div>
             </section>
             <section class="d-flex dlex-column gap-2 mt-4">
@@ -79,13 +77,17 @@ $nomor=1;
                                         </td>
                                         <td>
                                             <div class="d-flex">
-                                                <a href="{{ url('/dashboard/' . $card['destinasi']->id . '/detail_destinasi/' . $detail_destinasi->id . '/editdetail') }}" class="btn btn-xs
+                                                <a href="{{ url('/dashboard/' . $card['destinasi']->id . '/detail_destinasi/' . $detail_destinasi->id . '/editdetail') }}"
+                                                    class="btn btn-xs
                                                 bg-primary me-1 text-white">Edit</a>
-                                                <form action="{{ url('/dashboard/' . $card['destinasi']->id . '/detail_destinasi/'. $detail_destinasi->id) }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
-                                                @csrf
-                                                @method('delete')
-                                                <input type="submit" name="submit" value="delete"
-                                                    class="btn btn-xs btn-danger me-1">
+                                                <form
+                                                    action="{{ url('/dashboard/' . $card['destinasi']->id . '/detail_destinasi/'. $detail_destinasi->id) }}"
+                                                    method="POST"
+                                                    onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <input type="submit" name="submit" value="delete"
+                                                        class="btn btn-xs btn-danger me-1">
                                                 </form>
                                             </div>
                                         </td>
