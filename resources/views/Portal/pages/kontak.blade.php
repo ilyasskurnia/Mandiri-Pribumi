@@ -14,6 +14,20 @@
         /* Hapus padding dari elemen .container */
     }
 
+    /* Gaya untuk judul h1 */
+h1 {
+    font-size: 2.5em; /* Ukuran font */
+    color: #333; /* Warna teks */
+    margin-top: 20px; /* Jarak atas */
+}
+
+/* Gaya untuk subjudul h3 */
+h3 {
+    font-size: 1.5em; /* Ukuran font */
+    color: #555; /* Warna teks */
+    margin-top: 10px; /* Jarak atas */
+}
+
     .vl {
         border-left: 1px solid #000000;
         height: 55%;
@@ -102,7 +116,7 @@
 
 <div class="container banner">
     <div class="row justify-content-between">
-        <div class="col-lg-5 col-md-12 mt-4">
+        <div class="col-lg-5 col-md-12 mt-4" style=>
             <h1 class="mt-2">Mandiri Pribumi</h1>
             <h3 class="mt-2">Tour & Travel</h3>
             <p>
@@ -123,11 +137,6 @@
             <p>
                 Ajukan pertanyaan, pesan, atau kesan terhadap pelayanan kami.
             </p>
-            @if(session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-            @endif
             @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -236,5 +245,12 @@
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script>
+    // Cek jika terdapat session 'success' di PHP
+    let successMessage = "{{ session('success') }}";
+    if (successMessage) {
+        alert(successMessage); // Menampilkan pop-up alert
+    }
+</script>
 
 @endsection

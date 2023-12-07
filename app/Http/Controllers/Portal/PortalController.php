@@ -80,7 +80,7 @@ class PortalController extends Controller
 
         $pesan->save();
 
-        session()->flash('success', 'Pesan Anda Sudah kami terima, terimakasih atas kepercayaan anda. Untuk info lebih lanjut kami akan menghubungi anda');
+        session()->put('success', 'Pesan Anda Sudah kami terima, terimakasih atas kepercayaan anda. Untuk info lebih lanjut kami akan menghubungi anda');
 
         return view('portal.pages.kontak', ['data' => $data, 'data_destinasi' => $data_destinasi, 'get_faq' => $get_faq]);
     }
@@ -186,6 +186,11 @@ class PortalController extends Controller
     public function detailDestinasiMalang()
     {
         return view('portal.pages.detaildestinasimalang');
+    }
+
+    public function kategoriArtikel()
+    {
+        return view('portal.pages.kategoriartikel');
     }
    public function galeri()
    {
