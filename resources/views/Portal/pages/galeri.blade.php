@@ -84,6 +84,7 @@
         background-repeat: no-repeat;
         background-position: center center;
         padding: 200px 0;
+        margin-top: 50px;
     }
 
     .quotes-section2 {
@@ -203,15 +204,11 @@
 
 @media screen and (max-width: 1024px) {
     .welcome-section {
-<<<<<<< HEAD
         background-image: url('{{ asset('images/welcomegaleri.png') }}');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
         padding: 250px 0;
-=======
-        padding: 150px 0;
->>>>>>> d5b32fd02382ddf4de54d4117966dca5c8e9ad1a
     }
 }
 
