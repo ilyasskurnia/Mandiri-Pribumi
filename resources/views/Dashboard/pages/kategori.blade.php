@@ -76,7 +76,7 @@ $nomor=1;
                                             <div class="d-flex">
                                                 <a href="/dashboard/{{ $kategori->id }}/editkategori"
                                                     class="btn btn-xs bg-primary me-1 text-white">Edit</a>
-                                                <form action="/dashboard/kategori/{{ $kategori->id }}" method="POST">
+                                                <form action="/dashboard/kategori/{{ $kategori->id }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
                                                     @csrf
                                                     @method('delete')
                                                     <input type="submit" name="submit" value="delete"

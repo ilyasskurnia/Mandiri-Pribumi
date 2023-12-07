@@ -92,7 +92,7 @@ $nomor=1;
                                                 <a href="/dashboard/{{ $destinasi->id }}/paketdestinasi"
                                                     class="btn btn-xs bg-primary me-1 text-white">Edit</a>
                                                 <form action="/dashboard/paketdestinasi/{{ $destinasi->id }}"
-                                                    method="POST">
+                                                    method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
                                                     @csrf
                                                     @method('delete')
                                                     <input type="submit" name="submit" value="delete"
