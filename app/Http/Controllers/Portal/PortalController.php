@@ -175,9 +175,20 @@ class PortalController extends Controller
     public function kategori($kategori)
     {
         $artikel = Artikel::where('jenis_artikel', $kategori)->get();
+        $artikel->transform(function ($item) {
+            $item->created_at_formatted = Carbon::parse($item->created_at)->format('d-m-Y');
+            return $item;
+        });
+        $get_kategori = Kategori::pluck('jenis_artikel');
 
-        dd($artikel);
-        return view('portal.pages.kategoriartikel');
+        $card = [
+            "artikel" => $artikel,
+            "get_kategori" => $get_kategori
+        ];
+
+    
+        return view('portal.pages.kategoriartikel', ['card' => $card, 'kategori' => $kategori]);
+
     }
    public function galeri()
    {
