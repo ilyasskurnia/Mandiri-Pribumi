@@ -541,7 +541,7 @@
                 <div class="special-card text-center" style="position: relative;">
                     <img src="/images/penawaran-spesial1.png" alt="Studi Tour Sekolah">
                     <div class="special-card-body">
-                        <p class="special-card-text">{{ $data['get_penawaran1'] }}</p>
+                        <p class="special-card-text">{!! $data['get_penawaran1'] !!}</p>
                     </div>
                 </div>
             </div>
@@ -549,7 +549,7 @@
                 <div class="special-card text-center" style="position: relative;">
                     <img src="/images/penawaran-spesial2.png" alt="Liburan Musim Panas">
                     <div class="special-card-body">
-                        <p class="special-card-text">{{ $data['get_penawaran2'] }}</p>
+                        <p class="special-card-text">{!! $data['get_penawaran2'] !!}</p>
                     </div>
                 </div>
             </div>
@@ -557,7 +557,7 @@
                 <div class="special-card text-center" style="position: relative;">
                     <img src="/images/penawaran-spesial3.png" alt="Member Exclusive">
                     <div class="special-card-body">
-                        <p class="special-card-text">{{ $data['get_penawaran3'] }}</p>
+                        <p class="special-card-text">{!! $data['get_penawaran3'] !!}</p>
                     </div>
                 </div>
             </div>
@@ -586,8 +586,8 @@
                         <hr class="my-2" style="border-color: #000;"> <!-- Penambahan garis horizontal -->
                         <div class="row">
                             <div class="col-md-6">
-                                <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp.
-                                        {{ $destinasi->biaya }}</span></p>
+                                <p class="card-text detail-title">Mulai dari <br> <span style="color: red;">Rp. {{ number_format(floatval($destinasi->biaya), 0, ',', '.') }}
+                                </span></p>
                             </div>
                             <div class="col-md-6 text-right">
                                 <a href="/portal/detaildestinasi/{{ $destinasi->id }}" class="selengkapnya">Selengkapnya

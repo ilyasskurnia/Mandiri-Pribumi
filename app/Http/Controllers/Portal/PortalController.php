@@ -9,15 +9,16 @@ use App\Models\Destinasi;
 use App\Models\Destinasi_children;
 use App\Models\Faq;
 use App\Models\Galeri;
+use App\Models\Kategori;
 use App\Models\Penawaran;
 use App\Models\Pesan;
 use Carbon\Carbon;
 
 class PortalController extends Controller
 {
-    public function coba() 
+    public function coba()
     {
-        return view('portal.pages.coba');    
+        return view('portal.pages.coba');
     }
     public function index()
     {
@@ -99,7 +100,7 @@ class PortalController extends Controller
             'get_penawaran2' => $get_penawaran2,
             'get_penawaran3' => $get_penawaran3
         ];
-        
+
 
         return view('portal.pages.destinasi',['data' => $data]);
     }
@@ -154,7 +155,7 @@ class PortalController extends Controller
             $item->created_at_formatted = Carbon::parse($item->created_at)->format('d-m-Y');
             return $item;
         });
-        $get_kategori = Artikel::pluck('jenis_artikel');
+        $get_kategori = Kategori::pluck('jenis_artikel');
 
 
 
@@ -165,32 +166,29 @@ class PortalController extends Controller
             "get_random" => $get_random,
             'get_kategori' => $get_kategori
         ];
-        
+
 
         return view('portal.pages.artikel',['data' => $data]);
 
     }
 
-    public function detailDestinasiBali()
+    public function kategori($kategori)
     {
-        return view('portal.pages.detaildestinasibali');
-    }
-    public function detailDestinasiJogja()
-    {
-        return view('portal.pages.detaildestinasijogja');
-    }
-    public function detailDestinasiKarimun()
-    {
-        return view('portal.pages.detaildestinasikarimun');
-    }
-    public function detailDestinasiMalang()
-    {
-        return view('portal.pages.detaildestinasimalang');
-    }
+        $artikel = Artikel::where('jenis_artikel', $kategori)->get();
+        $artikel->transform(function ($item) {
+            $item->created_at_formatted = Carbon::parse($item->created_at)->format('d-m-Y');
+            return $item;
+        });
+        $get_kategori = Kategori::pluck('jenis_artikel');
 
-    public function kategoriArtikel()
-    {
-        return view('portal.pages.kategoriartikel');
+        $card = [
+            "artikel" => $artikel,
+            "get_kategori" => $get_kategori
+        ];
+
+    
+        return view('portal.pages.kategoriartikel', ['card' => $card, 'kategori' => $kategori]);
+
     }
    public function galeri()
    {

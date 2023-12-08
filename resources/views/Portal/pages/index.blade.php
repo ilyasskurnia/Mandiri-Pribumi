@@ -945,6 +945,9 @@
             </div>
             @endforeach
         </div>
+        <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
+            <a href="/portal/galeri" class="btn-brosur1" style="width: 150px;">View More</a>
+        </div>
     </div>
 </section>
 

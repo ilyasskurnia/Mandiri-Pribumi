@@ -76,7 +76,7 @@
 <br><br><br><br><br>
 
 <section class="judul-kategori ">
-    Kategori Lifestyle
+    Kategori {{$kategori}}
 </section>
 
 <div class="container-fluid pb-4 pt-4 paddding">
@@ -84,131 +84,36 @@
         <div class="row mx-0">
             <div class="col-md-8 animate-box" data-animate-effect="fadeInLeft">
                 <div>
-                    <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">Jelajahi Artikel <b>Lifestyle</b></div>
+                    <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">Jelajahi Kategori <b>{{$kategori}}</b></div>
                 </div>
                 <div class="container-fluid">
                     <div class="row pb-4">
                         <!-- Baris 1 -->
+                        @foreach ($card['artikel'] as $artikel)
+                            
+                       
                         <div class="col-md-6 mt-5">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="fh5co_hover_news_img">
                                         <div class="fh5co_news_img">
-                                            <img src="{{URL::asset('/images/komodo1.jpg') }}" alt="" />
+                                            <img src="{{ asset('storage/' . $artikel->thumbnail) }}" alt="" />
                                         </div>
                                         <div></div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="animate-box">
-                                        <a href="" class="fh5co_magna py-2"> Ini Title </a><br>
-                                        <a class="fh5co_mini_time py-3"> Ini Author - 07-12-2023 </a>
-                                        <div class="fh5co_consectetur"> ini deskripsi singkatnya</div>
+                                        <a href="/portal/{{ $artikel->id }}/detailartikel" class="fh5co_magna py-2"> {{$artikel->title}} </a><br>
+                                        <a class="fh5co_mini_time py-3"> {{$artikel->author}} -{{$artikel->created_at_formatted}} </a>
+                                        <div class="fh5co_consectetur"> {{$artikel->deskripsi_singkat}}</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        @endforeach
 
-                        <!-- Baris 2 -->
-                        <div class="col-md-6 mt-5">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="fh5co_hover_news_img">
-                                        <div class="fh5co_news_img">
-                                            <img src="{{URL::asset('/images/komodo1.jpg') }}" alt="" />
-                                        </div>
-                                        <div></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="animate-box">
-                                        <a href="" class="fh5co_magna py-2"> Ini Title 2 </a><br>
-                                        <a class="fh5co_mini_time py-3"> Ini Author - 07-12-2023 </a>
-                                        <div class="fh5co_consectetur"> ini deskripsi singkatnya</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="col-md-6 mt-5">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="fh5co_hover_news_img">
-                                        <div class="fh5co_news_img">
-                                            <img src="{{URL::asset('/images/komodo1.jpg') }}" alt="" />
-                                        </div>
-                                        <div></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="animate-box">
-                                        <a href="" class="fh5co_magna py-2"> Ini Title 2 </a><br>
-                                        <a class="fh5co_mini_time py-3"> Ini Author - 07-12-2023 </a>
-                                        <div class="fh5co_consectetur"> ini deskripsi singkatnya</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 mt-5">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="fh5co_hover_news_img">
-                                        <div class="fh5co_news_img">
-                                            <img src="{{URL::asset('/images/komodo1.jpg') }}" alt="" />
-                                        </div>
-                                        <div></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="animate-box">
-                                        <a href="" class="fh5co_magna py-2"> Ini Title 2 </a><br>
-                                        <a class="fh5co_mini_time py-3"> Ini Author - 07-12-2023 </a>
-                                        <div class="fh5co_consectetur"> ini deskripsi singkatnya</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 mt-5">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="fh5co_hover_news_img">
-                                        <div class="fh5co_news_img">
-                                            <img src="{{URL::asset('/images/komodo1.jpg') }}" alt="" />
-                                        </div>
-                                        <div></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="animate-box">
-                                        <a href="" class="fh5co_magna py-2"> Ini Title 2 </a><br>
-                                        <a class="fh5co_mini_time py-3"> Ini Author - 07-12-2023 </a>
-                                        <div class="fh5co_consectetur"> ini deskripsi singkatnya</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 mt-5">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="fh5co_hover_news_img">
-                                        <div class="fh5co_news_img">
-                                            <img src="{{URL::asset('/images/komodo1.jpg') }}" alt="" />
-                                        </div>
-                                        <div></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="animate-box">
-                                        <a href="" class="fh5co_magna py-2"> Ini Title 2 </a><br>
-                                        <a class="fh5co_mini_time py-3"> Ini Author - 07-12-2023 </a>
-                                        <div class="fh5co_consectetur"> ini deskripsi singkatnya</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <!-- Dan seterusnya, ulangi struktur ini untuk setiap pasangan kolom baru -->
 
                     </div>
@@ -220,10 +125,9 @@
                 </div>
                 <div class="clearfix"></div>
                 <div class="fh5co_tags_all mt-2">
-                    <a href="#" class="fh5co_tagg mt-3" style="margin-left: 25px;">Kategori 1</a>
-                    <a href="#" class="fh5co_tagg mt-3" style="margin-left: 25px;">Kategori 2</a>
-                    <a href="#" class="fh5co_tagg mt-3" style="margin-left: 25px;">Kategori 3</a>
-                    <a href="#" class="fh5co_tagg mt-3" style="margin-left: 25px;">Kategori 4</a>
+                    @foreach ($card['get_kategori'] as $kategori)
+                    <a href="/portal/artikel/kategori/{{$kategori}}" class="fh5co_tagg mt-3" style="margin-left: 25px;">{{$kategori}}</a>
+                    @endforeach
                 </div>
             </div>
         </div>
