@@ -36,7 +36,7 @@ Route::group(['prefix' => 'portal'], function () {
     Route::get('/galeri', [PortalController::class, 'galeri']);
     Route::get('/detaildestinasi/{id}', [PortalController::class, 'detaildestinasi']);
     Route::get('/coba', [PortalController::class, 'coba']);
-    Route::get('/artikel/kategori/{$kategori}', [PortalController::class, 'kategoriartikel']);
+    Route::get('/artikel/kategori/{kategori}', [PortalController::class, 'kategori']);
 });
 
 Auth::routes();

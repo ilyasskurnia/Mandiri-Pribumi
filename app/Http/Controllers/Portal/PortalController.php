@@ -188,9 +188,11 @@ class PortalController extends Controller
         return view('portal.pages.detaildestinasimalang');
     }
 
-    public function kategoriArtikel($kategori)
+    public function kategori($kategori)
     {
-        dd($kategori);
+        $artikel = Artikel::where('jenis_artikel', $kategori)->get();
+
+        dd($artikel);
         return view('portal.pages.kategoriartikel');
     }
    public function galeri()
